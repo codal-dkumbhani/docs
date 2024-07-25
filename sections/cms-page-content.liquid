@@ -1,0 +1,22 @@
+{{ 'cms-page-content.css' | asset_url | stylesheet_tag }}
+
+<div class="cms-content legal-content">
+  {% if section.settings.text != blank %}
+    {{ section.settings.text }}
+  {% else %}
+    {{ page.content }}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "CMS Content",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ]
+}
+{% endschema %}

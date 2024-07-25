@@ -1,0 +1,207 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq-0": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Product Questions",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "faq-2": {
+          "type": "question",
+          "settings": {
+            "title": "How do I remove discoloration on the inside of my Thermos product? Text question",
+            "text": "<p>If you see discoloration, it’s almost always a coffee/tea build-up in your container. Coffee pot cleaner or denture tablets usually work the best for getting out stubborn stains and odors. Put two denture tablets in your product with hot water and let it soak overnight then wash with soap and water and rinse well, and if applicable, allow to dry, prior to use. Lemon juice can also be used for removing odors.</p><p></p><p>Test Answer Update </p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-1": {
+          "type": "question",
+          "settings": {
+            "title": "How should I clean my Thermos product?",
+            "text": "<p>Each product on our website links to their own Care and Use manual with cleaning instructions. Most of our products are top-rack dishwasher safe, but we still recommend washing by hand to keep the beautiful finish looking great. Never use bleach or any cleaner that contains bleach on your Thermos® product.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_GHTFLt": {
+          "type": "question",
+          "settings": {
+            "title": "Is there a coating on the interior of your stainless steel products?",
+            "text": "<p>No, Thermos brand stainless steel products have no interior coating.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_dHEkRa": {
+          "type": "question",
+          "settings": {
+            "title": "Are Thermos products lead-free?",
+            "text": "<p>Thermos products are tested rigorously by independent testing labs. As a result of this testing, we can assure you that Thermos products do not pose a risk of lead exposure to consumers.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_pr6aXf": {
+          "type": "question",
+          "settings": {
+            "title": "Are FUNtainer®, Foogo®, and Thermos Baby products BPA-free?",
+            "text": "<p>Yes, our FUNtainer®, Foogo®, and Thermos Baby products are made with love from BPA-free materials; including Polypropylene #5 and food grade 18/8 stainless steel.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_aPTgtP": {
+          "type": "question",
+          "settings": {
+            "title": "What is the FUNtainer® bottle’s lid and straw made of?",
+            "text": "<p>The FUNtainer® bottle lid is made of polypropylene. The straw spout is made of silicone and the stem is made of LDPE (low-density polyethylene). None of these materials contain BPA.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_F8ajrN": {
+          "type": "question",
+          "settings": {
+            "title": "How do the Foogo® products and Thermos Baby stainless steel products inhibit bacteria growth?",
+            "text": "<p>Our Foogo® and Thermos Baby stainless steel products inhibit bacteria growth based on the ability of the product to keep contents cold. Testing results show that liquids placed inside of these products inhibit bacteria growth while the liquid stays cold.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_6hYLqE": {
+          "type": "question",
+          "settings": {
+            "title": "Can I store milk in my FUNtainer® bottle?",
+            "text": "<p>Our FUNtainer® bottles keep beverages cold for up to 12 hours. That being said, storing milk requires special attention so we don’t recommend keeping dairy inside the bottles for long periods due to the risk of spoilage.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_4xM3XB": {
+          "type": "question",
+          "settings": {
+            "title": "How do I get the best temperature retention from my vacuum insulated product?",
+            "text": "<p>For max performance and heat retention, preheat the inside of your Thermos product with hot water according to the care and use instructions for best results. If you’re preparing a Thermos food jar to fill with soup, pasta or any other hot foods, they should be heated on a stove to a boiling point or microwaved piping hot prior to filling the food jar. Please use caution when handling hot contents. Remember, you’re not heating up the food to eat now; you’re heating it so that it can be safely eaten hours later.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_KUDW9Q": {
+          "type": "question",
+          "settings": {
+            "title": "Where are Thermos L.L.C. products manufactured?",
+            "text": "<p>Our headquarters is located in Schaumburg, IL, though we have offices all over the world to service and support our customers. All of our products are responsibly manufactured. Most of our stainless steel products and lids are manufactured in China and most of our plastic bottles are U.S. manufactured in Batesville, MS.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_e7Uani": {
+          "type": "question",
+          "settings": {
+            "title": "Is my product covered under a warranty or guarantee?",
+            "text": "<p>Yes, please visit our <a href=\"/pages/warranty\">warranty page</a></p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_FkYCdN": {
+          "type": "question",
+          "settings": {
+            "title": "What is the difference between the Alta™ Series by Thermos and Guardian Collection?",
+            "text": "<p>They are the same great products you have come to know and love but with a new name. </p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_3PMDJ8": {
+          "type": "question",
+          "settings": {
+            "title": "Does Thermos L.L.C. have replacement parts?",
+            "text": "<p>Yes, we offer replacement parts for certain products. To<br/>find more information about replacement parts please <a href=\"https://thermos.com/pages/contact-us\">contact us</a>. </p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_qmRkAR": {
+          "type": "question",
+          "settings": {
+            "title": "Can I customize my product?",
+            "text": "<p>Yes, you can customize your product!  We offer an assortment of kid and adult water bottles that can be personalized with text, monogram, graphic, or your own design. Please review our <a href=\"/pages/customization-terms-conditions\" target=\"_blank\" title=\"Customization Terms & Conditions\">Customization Terms & Conditions</a>, or for additional information, visit the <a href=\"/pages/customization-faq\" target=\"_blank\" title=\"Customization FAQ\">Customization FAQ</a>.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_JrWT9h": {
+          "type": "question",
+          "settings": {
+            "title": "How do bundles work?",
+            "text": "<p>Thermos Bundles include two predetermined Thermos Brand products that customers frequently buy together. Each bundle offers customers<br/>20% off the two items listed and will be automatically applied to your cart. Bundles cannot be combined with any other offer. Customers may remove the bundle discount, and apply a different coupon code or promotion (if applicable).<br/>Previous purchase not eligible. Restrictions apply, and subject to early termination without notice. </p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-3": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Order Questions",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "faq-4": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship to my country?",
+            "text": "<p>We only ship to the United States at this time.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "question_MEjEkr": {
+          "type": "question",
+          "settings": {
+            "title": "When will my order ship?",
+            "text": "<p>Visit our <a href=\"https://thermos.com/pages/shipping\">shipping page</a> for estimated delivery times and carriers.</p>",
+            "dev_use_only": "<div id=\"livechat-thermos-order\"></div>"
+          }
+        },
+        "question_EgfwTH": {
+          "type": "question",
+          "settings": {
+            "title": "Can I return my Thermos product?",
+            "text": "<p>We want you to love your Thermos product, but if you’re dissatisfied for any reason, we want to make it<br/>right. Visit our <a href=\"https://thermos.com/pages/returns\">returns page</a> for our policy and instructions.</p>",
+            "dev_use_only": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq-0",
+        "faq-2",
+        "faq-1",
+        "question_GHTFLt",
+        "question_dHEkRa",
+        "question_pr6aXf",
+        "question_aPTgtP",
+        "question_F8ajrN",
+        "question_6hYLqE",
+        "question_4xM3XB",
+        "question_KUDW9Q",
+        "question_e7Uani",
+        "question_FkYCdN",
+        "question_3PMDJ8",
+        "question_qmRkAR",
+        "question_JrWT9h",
+        "faq-3",
+        "faq-4",
+        "question_MEjEkr",
+        "question_EgfwTH"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "<p>Can't find the answer you're looking for?</p><p>Call us at 1-800-831-9242 or email us at <a href=\"mailto:consumer.service@thermos.com\" target=\"_blank\">consumer.service@thermos.com</a> for extra help.</p>",
+        "button_label": "ASK US ANYTHING",
+        "button_link": "shopify://pages/contact-us",
+        "image": "shopify://shop_images/IS1102MS4_IS1112SN4_ICON_OctMed_23_CAL_Home_17F_11270_FAQ_3000x928_a7ed8afc-ee7e-4775-b823-6632d58454ef.jpg",
+        "footerlink1": "shopify://pages/contact-us",
+        "footerlink1text": "Need more help? Contact us here.",
+        "footerlink2text": "Back to top of page"
+      }
+    }
+  },
+  "order": ["main", "faq"]
+}

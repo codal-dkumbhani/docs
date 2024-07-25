@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "main": {
+      "type": "holiday-gifting-page",
+      "blocks": {
+        "featured_image_WEjVQQ": {
+          "type": "featured-image",
+          "settings": {
+            "featuredimage1": "shopify://shop_images/2023_Icon_GiftGuide_Refresh_FA_Desktop_Banner_3000x1330_24613181-59e2-4880-b48a-aa941bc64b31.jpg",
+            "featuredimage1_mob": "shopify://shop_images/2023_Icon_GiftGuide_Refresh_FA_Mobile_Banner_640x1000_14ba2b4b-acd4-4e0d-9017-8676e8a2db6b.jpg",
+            "featuredimage1_heading": "SHOP OUR GIFT GUIDE",
+            "featuredimage1_subheading": ""
+          }
+        },
+        "featured_collections_fzPYEN": {
+          "type": "featured-collections",
+          "settings": {
+            "featuredcollection1": "gift-guide-kids",
+            "featuredcollection1_label": "View all",
+            "featuredcollection1_link": "shopify://collections/gift-guide-kids"
+          }
+        },
+        "featured_product_MzdtRW": {
+          "type": "featured-product",
+          "settings": {
+            "designated_product": "funtainer-r-water-bottle-12oz",
+            "section_title": "<p>,</p>",
+            "section_url": "shopify://products/funtainer-r-water-bottle-12oz",
+            "buttonInDesktop": false,
+            "buttonInMobile": false,
+            "background_image": "shopify://shop_images/2023_Icon_GiftGuide_Refresh_FA_Lifestyle_Kids_Desktop_3000x1130_2fa58bbf-f5b9-4454-84ec-96efd4a96ccf.jpg"
+          }
+        },
+        "featured_collections_6mTUh8": {
+          "type": "featured-collections",
+          "settings": {
+            "featuredcollection1": "gifts-for-life-in-motion",
+            "featuredcollection1_label": "View all",
+            "featuredcollection1_link": "shopify://collections/gifts-for-life-in-motion"
+          }
+        },
+        "featured_product_H8UEXL": {
+          "type": "featured-product",
+          "settings": {
+            "designated_product": "icon-dual-temp-beverage-bottle-32oz",
+            "section_title": "<p>;</p>",
+            "section_url": "shopify://products/icon-dual-temp-beverage-bottle-32oz",
+            "buttonInDesktop": false,
+            "buttonInMobile": false,
+            "background_image": "shopify://shop_images/2023_Icon_GiftGuide_Refresh_FA_Lifestyle_Adventure_Desktop_3000x1130_374d5264-e227-4547-a3e7-ebf6e39ecf19.jpg"
+          }
+        },
+        "featured_collections_8UB3K6": {
+          "type": "featured-collections",
+          "settings": {
+            "featuredcollection1": "favorite-stocking-stuffers",
+            "featuredcollection1_label": "View all",
+            "featuredcollection1_link": "shopify://collections/favorite-stocking-stuffers"
+          }
+        },
+        "3collections_diEQxp": {
+          "type": "3collections",
+          "settings": {
+            "column_1_heading": "GO-TO GIFTS SINCE 1904",
+            "column_1_sub-heading": "",
+            "column_1_image_picker": "shopify://shop_images/2023_Icon_GiftGuide_Refresh_FA_Gifting_Feature_1434x1454_1089cb39-b1b6-45e5-82d9-892f7897eca5.jpg",
+            "column_1_collection_handle": "shopify://collections/icon-series",
+            "column_1_btn_text": "Shop the Icon Series",
+            "column_2_heading": "PERFECT STOCKING STUFFERS",
+            "column_2_sub-heading": "",
+            "column_2_image_picker_row": "shopify://shop_images/2023_Icon_GiftGuide_Refresh_FA_Kids_Feature_583x358_3ba12a56-af3d-40b9-aaa2-def5f37c50cc.jpg",
+            "column_2_collection_handle": "shopify://collections/kids",
+            "column_2_btn_text": "Shop Kids",
+            "column_3_heading": "WARM UP AFTER YOUR ADVENTURE",
+            "column_3_sub-heading": "",
+            "column_3_image_picker_row": "shopify://shop_images/2023_Icon_GiftGuide_Refresh_FA_WarmBev_Feature_583x358_557e363c-5b4f-4e36-ace7-88c23087ae45.jpg",
+            "column_3_collection_handle": "shopify://collections/best-sellers",
+            "column_3_btn_text": "Shop Best Sellers"
+          }
+        }
+      },
+      "block_order": [
+        "featured_image_WEjVQQ",
+        "featured_collections_fzPYEN",
+        "featured_product_MzdtRW",
+        "featured_collections_6mTUh8",
+        "featured_product_H8UEXL",
+        "featured_collections_8UB3K6",
+        "3collections_diEQxp"
+      ],
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

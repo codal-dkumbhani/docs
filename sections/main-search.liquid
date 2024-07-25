@@ -1,0 +1,85 @@
+{{ 'search.css' | asset_url | stylesheet_tag: preload: true }}
+
+{%- paginate search.results by 12 -%}
+  <div class="page-width page-content">
+    {%- render 'breadcrumbs' -%}
+
+    {%- if search.performed -%}
+      <div data-section-id="{{ section.id }}" data-section-type="collection-template">
+        <div class="section-header">
+          {%- if search.results_count != 0 -%}
+            <h2 class="section-header__title">
+              <b>{{ 'general.search.result_count' | t: count: search.results_count }}</b>
+              {{ 'general.search.no_results_html' | t -}}
+              <b>"{{ search.terms }}"</b>
+            </h2>
+          {% endif %}
+          {%- if search.results_count == 0 -%}
+            <h2 class="section-header__title">
+              <b>{{ 'general.search.result_count' | t: count: search.results_count }}</b>
+              {{ 'general.search.no_results_html' | t -}}
+              <b>"{{ search.terms }}"</b>
+            </h2>
+            {% render 'search-recommendation' %}
+          {%- endif -%}
+        </div>
+
+        <div class="grid grid--uniform">
+          {%- for item in search.results -%}
+            {%- if item.object_type == 'product' -%}
+              {%- render 'product-grid-item-4', product: item -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- for item in search.results -%}
+            {%- if item.object_type == 'product' -%}
+              {%- if settings.quick_shop_enable -%}
+                {%- assign product = item -%}
+                {%- render 'quick-shop-modal', product: product -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Search recommendations",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_product_recommendations",
+      "label": "Show dynamic recommendations",
+      "info": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "product_recommendations_heading",
+      "label": "Heading",
+      "default": "You may also like"
+    },
+    {
+      "type": "range",
+      "id": "related_count",
+      "label": "Maybe You'd Like to See some other products",
+      "default": 4,
+      "min": 1,
+      "max": 4,
+      "step": 1
+    }
+  ]
+}
+{% endschema %}
+
+<script
+  src="{{ 'search.js' | asset_url }}"
+  defer="defer"
+></script>

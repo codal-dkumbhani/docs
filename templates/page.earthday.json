@@ -1,0 +1,117 @@
+{
+  "wrapper": ".holiday-gifting.template-page",
+  "sections": {
+    "holiday-gifting-featured-image": {
+      "type": "earthday",
+      "blocks": {
+        "7a2d1b3e-faa2-45e5-b3d7-d12b657e1ace": {
+          "type": "featured-image",
+          "settings": {
+            "featuredimage1": "shopify://shop_images/EarthDay_LandingPageBanner_3000x1330_6a0e3b27-f986-4116-b618-e43f7e36a5e4.jpg",
+            "featuredimage1_mob": "shopify://shop_images/EarthDay_LandingPageBanner_Mobile_640x1000_d7a4aaf6-4bd6-4bce-9da6-710ae592fb64.jpg",
+            "featuredimage1_heading": "Celebrate Earth Day",
+            "featuredimage1_subheading": "Go Reusable"
+          }
+        },
+        "af6b8e0e-362c-468c-82d7-a264df4157a1": {
+          "type": "featured-collections",
+          "settings": {
+            "featuredcollection1": "earth-day-water-bottles",
+            "featuredcollection1_label": "View all",
+            "featuredcollection1_link": "shopify://collections/earth-day-water-bottles"
+          }
+        },
+        "0b87deee-3f86-4e5a-9bd0-a6b9cca8a65d": {
+          "type": "featured-product",
+          "settings": {
+            "designated_product": "funtainer-r-water-bottle-16oz-patterns",
+            "section_title": "<p>,</p>",
+            "section_url": "shopify://collections/funtainer",
+            "buttonInDesktop": false,
+            "buttonInMobile": false,
+            "background_image": "shopify://shop_images/EarthDay_Wireframe_Banners_Feature_Product_1_3000x1130_b7afecab-7ca7-4ce6-88bb-99197bbdf290.jpg"
+          }
+        },
+        "fc90dd6c-f28f-4d7d-bd1d-243326fa773c": {
+          "type": "featured-collections",
+          "settings": {
+            "featuredcollection1": "kids",
+            "featuredcollection1_label": "View all",
+            "featuredcollection1_link": "shopify://collections/kids"
+          }
+        },
+        "0914ecb1-a452-462e-8711-a836637b2e65": {
+          "type": "featured-product",
+          "settings": {
+            "designated_product": "icon-water-bottle-with-spout-24oz",
+            "section_title": "<p>.</p>",
+            "section_url": "shopify://collections/stainless-king-collection-1",
+            "buttonInDesktop": false,
+            "buttonInMobile": false,
+            "background_image": "shopify://shop_images/EarthDay_IS2202MS_ProductFeature_3000x1130_R1.jpg"
+          }
+        },
+        "c9a3bd39-40b7-4835-bd95-ec082e0db6f5": {
+          "type": "featured-collections",
+          "settings": {
+            "featuredcollection1": "earth-day-mugs-tumblers",
+            "featuredcollection1_label": "View all",
+            "featuredcollection1_link": "shopify://collections/earth-day-mugs-tumblers"
+          }
+        },
+        "365cfb59-2443-4e0e-ae66-ee6ee31db9b4": {
+          "type": "featured-product",
+          "settings": {
+            "designated_product": "18-can-icon-backpack-cooler",
+            "section_title": "<p>;</p>",
+            "section_url": "shopify://collections/stainless-king-collection-1",
+            "buttonInDesktop": false,
+            "buttonInMobile": false,
+            "background_image": "shopify://shop_images/EarthDay_ICON_Cooler_ProductFeature_3000x1130_ae639660-d5cd-4cad-8e4b-c66ffa9b172d.jpg"
+          }
+        },
+        "e6071f0e-2555-4027-9888-9e88f8a190f6": {
+          "type": "featured-collections",
+          "settings": {
+            "featuredcollection1": "earth-day-food-storage",
+            "featuredcollection1_label": "View all",
+            "featuredcollection1_link": "shopify://collections/earth-day-food-storage"
+          }
+        },
+        "e2fdbdd8-cbc1-48d1-b843-0b71fe9d84a1": {
+          "type": "3collections",
+          "settings": {
+            "column_1_heading": "Reusable from home to on the go.",
+            "column_1_sub-heading": "<h3>Reusable from at home to on the go</h3>",
+            "column_1_image_picker": "shopify://shop_images/ry.roams_Ryan_Kimball_1.jpg",
+            "column_1_collection_handle": "shopify://collections/alta",
+            "column_1_btn_text": "Shop the Series",
+            "column_2_heading": "Go Reusable for future Generations",
+            "column_2_sub-heading": "",
+            "column_2_image_picker_row": "shopify://shop_images/EarthDay_Wireframe_Banners_Small_Image_1_583x358_7ee93182-4bbd-4765-8a52-f509370ed68d.jpg",
+            "column_2_collection_handle": "shopify://collections/kids",
+            "column_2_btn_text": "Shop Kids",
+            "column_3_heading": "Outdoor Favorites",
+            "column_3_sub-heading": "",
+            "column_3_image_picker_row": "shopify://shop_images/EarthDay_ICON_Cooler_IS220_IS301_Collage_1436x728_bb647d93-a59e-407a-984e-8815ba3320c0.jpg",
+            "column_3_collection_handle": "shopify://collections/best-sellers",
+            "column_3_btn_text": "Shop Best Sellers"
+          }
+        }
+      },
+      "block_order": [
+        "7a2d1b3e-faa2-45e5-b3d7-d12b657e1ace",
+        "af6b8e0e-362c-468c-82d7-a264df4157a1",
+        "0b87deee-3f86-4e5a-9bd0-a6b9cca8a65d",
+        "fc90dd6c-f28f-4d7d-bd1d-243326fa773c",
+        "0914ecb1-a452-462e-8711-a836637b2e65",
+        "c9a3bd39-40b7-4835-bd95-ec082e0db6f5",
+        "365cfb59-2443-4e0e-ae66-ee6ee31db9b4",
+        "e6071f0e-2555-4027-9888-9e88f8a190f6",
+        "e2fdbdd8-cbc1-48d1-b843-0b71fe9d84a1"
+      ],
+      "settings": {}
+    }
+  },
+  "order": ["holiday-gifting-featured-image"]
+}

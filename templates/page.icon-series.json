@@ -1,0 +1,214 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "icon_series_banner_yag3Je": {
+      "type": "icon-series-banner",
+      "settings": {
+        "image": "shopify://shop_images/Icon_HomePage_Refresh_R10_HomePageBanner_1920x530_Desktop_0d9d8e65-a40a-424e-aa2a-dc902565c18a.jpg",
+        "mimage": "shopify://shop_images/Icon_HomePage_Refresh_R10_Icon_Banner_Mobile_375x430_b8e41706-3a0a-4789-9e28-3e995853629b.jpg",
+        "title1": "",
+        "title2": "",
+        "title3": "",
+        "titlecolor1": "#ffffff",
+        "titlecolor2": "#ffffff",
+        "titlecolor3": "#e4c156"
+      }
+    },
+    "icon_series_three_image_dw7FNp": {
+      "type": "icon-series-threeImage",
+      "blocks": {
+        "image_dJj4cF": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_FeatureOne_Desktop_636x781_cc7e5bb2-fff9-4876-bb2d-b8c82aa121d8.jpg",
+            "title": "designed to endure",
+            "subtitle": "Water Bottles >",
+            "url": "shopify://collections/icon-water-bottles",
+            "colorfortitle": "#fffdfd",
+            "colorforsubtitle": "#ffffff"
+          }
+        },
+        "image_nLw84H": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_FeatureThree_Desktop_636x781_51178d8b-325e-4124-bfb0-7f1ca5c7b441.jpg",
+            "title": "starts cold. stays cold",
+            "subtitle": "cold collection >",
+            "url": "",
+            "colorfortitle": "#ffffff",
+            "colorforsubtitle": "#ffffff"
+          }
+        },
+        "image_JwgExW": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_FeatureTwo_Desktop_636x781_4a82146b-3112-4181-9213-091939b369ce.jpg",
+            "title": "Iconic Insulation",
+            "subtitle": "hot collection >",
+            "url": "",
+            "colorfortitle": "#ffffff",
+            "colorforsubtitle": "#ffffff"
+          }
+        }
+      },
+      "block_order": ["image_dJj4cF", "image_nLw84H", "image_JwgExW"],
+      "settings": {}
+    },
+    "featured_collection_qrU4xe": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop water bottles",
+        "home_featured_products": "icon-water-bottles",
+        "collection_view_all_label": "View all Water Bottles",
+        "collection_view_all_link": "shopify://collections/water-bottles",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "icon_series_imagetext_9AETaC": {
+      "type": "icon-series-imagetext",
+      "settings": {
+        "image": "shopify://shop_images/Icon_Tech_Banner_Desktop_1248x546_262265ea-8036-47e2-8a48-9ca950cd912d.jpg",
+        "mobileimage": "shopify://shop_images/Icon_Feature_Inset_Mobile_375x500_9e929700-4bae-44b7-b705-61b1035cd3ee.jpg",
+        "title": "No Detail Left Behind",
+        "description": "<p>From the non-slip GRIPTEC™ base to superior vacuum insulation and durable TRUE-COAT™ finishes, the ICON™ SERIES is a celebration of what's made us thrive for over a century.</p>",
+        "background_text_color": "#000000",
+        "btnText": "shop icon",
+        "btnurl": "shopify://collections/icon-series",
+        "btnbgcolor": "#ffffff",
+        "btntextcolor": "#000000",
+        "btnbghover": "#000000",
+        "btntexthover": "#ffffff",
+        "position": "right_image"
+      }
+    },
+    "icon_categories_yhgDjR": {
+      "type": "icon-categories",
+      "blocks": {
+        "category_6MRE6B": {
+          "type": "category",
+          "settings": {
+            "block_image": "shopify://shop_images/Icon_Color_Swatches_2024_Icon_Color_Swatch_Desktop_315x229_PLUM.jpg",
+            "title": "PLUM",
+            "image_url": "shopify://collections/plum"
+          }
+        },
+        "category_naU3hp": {
+          "type": "category",
+          "settings": {
+            "block_image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_315x229_Glacier_9264a2dd-1aab-4e9b-8de2-813e85b25a36.jpg",
+            "title": "glacier",
+            "image_url": "shopify://collections/glacier"
+          }
+        },
+        "category_p3R3qQ": {
+          "type": "category",
+          "settings": {
+            "block_image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_315x229_Sunset_Pink_0c3516fc-d6dc-417f-acfa-7677d2092ff1.jpg",
+            "title": "sunset pink",
+            "image_url": "shopify://collections/sunset-pink"
+          }
+        },
+        "category_kAjyGM": {
+          "type": "category",
+          "settings": {
+            "block_image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_315x229_Sandstone.jpg",
+            "title": "sand stone",
+            "image_url": "shopify://collections/sandstone"
+          }
+        },
+        "category_6HXfLE": {
+          "type": "category",
+          "settings": {
+            "block_image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_315x229_Granite.jpg",
+            "title": "granite",
+            "image_url": "shopify://collections/granite"
+          }
+        },
+        "category_aLAdRd": {
+          "type": "category",
+          "settings": {
+            "block_image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_215x229_Saddle_a680d0a0-d1bb-4491-922b-abdc0480a380.jpg",
+            "title": "Saddle",
+            "image_url": "shopify://collections/saddle"
+          }
+        },
+        "category_cYx7tC": {
+          "type": "category",
+          "settings": {
+            "block_image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_315x229_SS_1d6c5f1e-6f52-44c8-bfb6-6c12a9a69a32.jpg",
+            "title": "Matte stainless steel",
+            "image_url": "shopify://collections/icon-matte-stainless-steel"
+          }
+        }
+      },
+      "block_order": [
+        "category_6MRE6B",
+        "category_naU3hp",
+        "category_p3R3qQ",
+        "category_kAjyGM",
+        "category_6HXfLE",
+        "category_aLAdRd",
+        "category_cYx7tC"
+      ],
+      "settings": {}
+    },
+    "featured_collection_NYVg6E": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "SHOP BEVERAGE BOTTLES",
+        "home_featured_products": "icon-beverage-bottles",
+        "collection_view_all_label": "View all Beverage Bottles",
+        "collection_view_all_link": "shopify://collections/beverage-bottles",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "single_product_banner_QMaDpG": {
+      "type": "single-product-banner",
+      "settings": {
+        "designated_product": "icon-water-bottle-with-spout-24oz",
+        "section_title": "",
+        "button_text": "",
+        "section_url": "",
+        "background_image": "shopify://shop_images/IS2202GT_Lifestyle_Popup_Desktop_3000x1130_2f931142-5987-4a36-8e2d-3110866ee766.png",
+        "background_image_position": "center center"
+      }
+    },
+    "featured_collection_Wq3jig": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "SHOP YOUR FAVORITE COLORS",
+        "home_featured_products": "icon-color-collection",
+        "collection_view_all_label": "View all Colors",
+        "collection_view_all_link": "shopify://collections/icon-color-collection",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "icon_series_banner_yag3Je",
+    "icon_series_three_image_dw7FNp",
+    "featured_collection_qrU4xe",
+    "icon_series_imagetext_9AETaC",
+    "icon_categories_yhgDjR",
+    "featured_collection_NYVg6E",
+    "single_product_banner_QMaDpG",
+    "featured_collection_Wq3jig"
+  ]
+}

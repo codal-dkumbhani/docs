@@ -1,0 +1,57 @@
+.customize-banner-section .customize-banner-PLP .customize-banner-PLP-contain {
+  padding: 225px 0 172px;
+}
+.customizer_plp .customize-engraving-PLP {
+  padding: 400px 0 268px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.customize-banner-section .customize-banner-PLP .customize-banner-PLP-contain h1 {
+  font-weight: var(--thermos-font-Weight-700);
+  font-size: var(--thermos-font-size-70);
+  line-height: var(--thermos-line-height-70);
+  text-align: center;
+  color: var(--thermos-white);
+  margin: 0 auto 27px;
+  max-width: 581px;
+  font-family: var(--thermos-din-condensed);
+}
+.customize-banner-section .customize-banner-PLP .customize-banner-PLP-contain p {
+  font-weight: var(--thermos-font-Weight-400);
+  font-size: var(--thermos-font-size-22);
+  line-height: var(--thermos-line-height-36);
+  text-align: center;
+  color: var(--thermos-white);
+  max-width: 499px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--thermos-dinot);
+}
+.customize-banner-section .customize-banner-PLP .customize-banner-PLP-contain span {
+  font-weight: var(--thermos-font-Weight-700);
+  font-size: var(--thermos-font-size-22);
+  line-height: var(--thermos-line-height-36);
+  text-align: center;
+  color: var(--thermos-white);
+  font-family: var(--thermos-dinot);
+}
+@media (max-width: 767px) {
+  .customize-banner-section .customize-banner-PLP {
+    margin-bottom: 10px;
+  }
+  .customize-banner-section .customize-banner-PLP .customize-banner-PLP-contain {
+    padding: 42px 27px 42px 28px;
+  }
+  .customize-banner-section .customize-banner-PLP .customize-banner-PLP-contain h1 {
+    font-size: var(--thermos-font-size-28);
+    line-height: var(--thermos-line-height-28);
+    margin-bottom: 10px;
+    max-width: 210px;
+  }
+  .customize-banner-section .customize-banner-PLP .customize-banner-PLP-contain p,
+  .customize-banner-section .customize-banner-PLP .customize-banner-PLP-contain span {
+    font-size: var(--thermos-font-size-14);
+    line-height: var(--thermos-line-height-20);
+    max-width: 265px;
+  }
+}

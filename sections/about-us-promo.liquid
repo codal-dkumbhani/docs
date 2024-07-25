@@ -1,0 +1,148 @@
+{% comment %}
+  This section refers to the promo section of about us page
+{% endcomment %}
+
+{{ 'about-us-promo.css' | asset_url | stylesheet_tag }}
+
+<div class="about-us-promo-1">
+  <div class="container-fluid pt-5">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        {% if section.settings.title != blank %}
+          <h1 class="text-center about-us-promo-1-heading">
+            {{ section.settings.title | escape }}
+          </h1>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <p class="text-center about-us-promo-1-description">
+            {{ section.settings.description }}
+          </p>
+        {% endif %}
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="container-fluid about-us-promo-1-heading">
+          <div class="row">
+            <div class="col-6 col-md-4 ml-auto text-center">
+              {% if section.settings.image1_url != blank %}
+                {% render 'image-element',
+                  img: section.settings.image1_url,
+                  img_width: 200,
+                  alt: section.settings.image1_url.alt,
+                  classes: 'img-fluid about-promo-icon',
+                  loading: 'lazy'
+                %}
+              {% endif %}
+              {% if section.settings.first_image_text1 != blank %}
+                <h1 class="mb-0 mt-3 about-promo-icon-heading">
+                  {{ section.settings.first_image_text1 }}
+                </h1>
+              {% endif %}
+              {% if section.settings.first_image_text2 != blank %}
+                <h1 class="text-cold about-promo-icon-heading txt-color1">
+                  {{ section.settings.first_image_text2 }}
+                </h1>
+              {% endif %}
+            </div>
+            <div class="col-6  col-md-4 mr-auto text-center">
+              {% if section.settings.image2_url != blank %}
+                {% render 'image-element',
+                  img: section.settings.image2_url,
+                  img_width: 200,
+                  alt: section.settings.image2_url.alt,
+                  classes: 'img-fluid about-promo-icon',
+                  loading: 'lazy'
+                %}
+              {% endif %}
+              {% if section.settings.second_image_text1 != blank %}
+                <h1 class="mb-0 mt-3  about-promo-icon-heading">
+                  {{ section.settings.second_image_text1 }}
+                </h1>
+              {% endif %}
+              {% if section.settings.second_image_text2 != blank %}
+                <h1 class="mb-0  about-promo-icon-heading txt-color2">
+                  {{ section.settings.second_image_text2 }}
+                </h1>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Temperature section",
+  "class": "temperature_retention",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1_url",
+      "label": "Upload First Image"
+    },
+    {
+      "type": "text",
+      "id": "first_image_text1",
+      "label": "About Image"
+    },
+    {
+      "type": "text",
+      "id": "first_image_text2",
+      "label": "About Image"
+    },
+    {
+      "type": "color",
+      "id": "text12_color",
+      "label": "Select Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2_url",
+      "label": "Upload Second Image"
+    },
+    {
+      "type": "text",
+      "id": "second_image_text1",
+      "label": "About Image"
+    },
+    {
+      "type": "text",
+      "id": "second_image_text2",
+      "label": "About Image"
+    },
+    {
+      "type": "color",
+      "id": "text22_color",
+      "label": "Select Text Color",
+      "default": "#000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Temperature Retentions"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}
+
+{% style %}
+  .about-us-promo-1-heading .txt-color1 {
+    color : {{ section.settings.text12_color }}
+  }
+  .about-us-promo-1-heading .txt-color2{
+    Color : {{ section.settings.text22_color }}
+  }
+{% endstyle %}

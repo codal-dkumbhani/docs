@@ -1,0 +1,148 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "blocks": {
+        "image_KpDn8M": {
+          "type": "image",
+          "settings": {
+            "maincollection": "sunset-pink",
+            "header_alignment": "full_width_image_with_text",
+            "backgroundcolor": ""
+          }
+        },
+        "image_FpQqLY": {
+          "type": "image",
+          "settings": {
+            "maincollection": "kids-bundles",
+            "header_alignment": "image_with_solid_block_of_text",
+            "backgroundcolor": "#39b0cb"
+          }
+        },
+        "image_MtG9jK": {
+          "type": "image",
+          "settings": {
+            "maincollection": "icon-bundles",
+            "header_alignment": "image_with_solid_block_of_text",
+            "backgroundcolor": ""
+          }
+        }
+      },
+      "block_order": ["image_KpDn8M", "image_FpQqLY", "image_MtG9jK"],
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": true
+      }
+    },
+    "bundle_rhFHEm": {
+      "type": "bundle",
+      "blocks": {
+        "bundle_zxa6Uk": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wme\"></div>"
+          }
+        },
+        "bundle_rbHzYk": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wmg\"></div>"
+          }
+        },
+        "bundle_rDmhfV": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wnm\"></div>"
+          }
+        },
+        "bundle_pMG8aB": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wnz\"></div>"
+          }
+        },
+        "bundle_qkXKEp": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wo0\"></div>"
+          }
+        },
+        "bundle_3N7m4F": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x1m\"></div>"
+          }
+        },
+        "image_nRKzUJ": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/F4019BL_Solid_Blue_POG_PDP_1c44e309-9ea8-4e0e-b85b-8ef2f4177d6a.jpg",
+            "url": "#"
+          }
+        },
+        "bundle_Uw9DXV": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x23\"></div>"
+          }
+        },
+        "bundle_EyH7Wd": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x1w\"></div>"
+          }
+        },
+        "bundle_etEd6d": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x1o\"></div>"
+          }
+        },
+        "bundle_wxLxWR": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x2b\"></div>"
+          }
+        },
+        "bundle_K6zdVF": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x2d\"></div>"
+          }
+        },
+        "bundle_MmYHFD": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x3k\"></div>"
+          }
+        },
+        "bundle_GqniiL": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x52\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "bundle_zxa6Uk",
+        "bundle_rbHzYk",
+        "bundle_rDmhfV",
+        "bundle_pMG8aB",
+        "bundle_qkXKEp",
+        "bundle_3N7m4F",
+        "image_nRKzUJ",
+        "bundle_Uw9DXV",
+        "bundle_EyH7Wd",
+        "bundle_etEd6d",
+        "bundle_wxLxWR",
+        "bundle_K6zdVF",
+        "bundle_MmYHFD",
+        "bundle_GqniiL"
+      ],
+      "settings": {}
+    }
+  },
+  "order": ["collection-header", "bundle_rhFHEm"]
+}

@@ -1,0 +1,81 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "blocks": {
+        "image_KpDn8M": {
+          "type": "image",
+          "settings": {
+            "maincollection": "sunset-pink",
+            "header_alignment": "full_width_image_with_text",
+            "backgroundcolor": ""
+          }
+        },
+        "image_edFpbX": {
+          "type": "image",
+          "settings": {
+            "maincollection": "sandstone",
+            "header_alignment": "full_width_image_with_text",
+            "backgroundcolor": ""
+          }
+        }
+      },
+      "block_order": ["image_KpDn8M", "image_edFpbX"],
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": true
+      }
+    },
+    "collection_filter_zxiPCd": {
+      "type": "collection-filter",
+      "blocks": {
+        "color_group_Lg6wCM": {
+          "type": "color_group",
+          "settings": {
+            "title": "Color",
+            "tag_list": "Black\nRed\nWhit",
+            "collapsed": false
+          }
+        }
+      },
+      "block_order": ["color_group_Lg6wCM"],
+      "settings": {
+        "enable_sidebar": true,
+        "filter_style": "drawer",
+        "tags_combine": true,
+        "enable_sort": true
+      }
+    },
+    "icon-series-collection": {
+      "type": "icon-series-collection",
+      "blocks": {
+        "subcollections": {
+          "type": "subcollections",
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 4,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": ["subcollections", "product_grid"],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "drawer",
+        "enable_color_swatches": true,
+        "enable_swatch_labels": true,
+        "enable_sort": true
+      }
+    }
+  },
+  "order": ["collection-header", "collection_filter_zxiPCd", "icon-series-collection"]
+}

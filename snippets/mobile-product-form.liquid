@@ -1,0 +1,342 @@
+{%- form 'product', product, id: form_id, class: 'product-single__form' -%}
+  <div class="stikcy-add-cart">
+    <div class="d-flex align-items-center justify-content-between">
+      {%- unless product.has_only_default_variant -%}
+        {%- for option in product.options_with_values -%}
+          {%- liquid
+            if settings.product_color_swatches
+              assign is_color = false
+              assign color_option_index = 0
+              assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
+              assign color_option_index = forloop.index0
+              assign downcased_option = option.name | downcase
+              if downcased_option contains swatch_trigger
+                assign is_color = true
+              elsif swatch_trigger == 'color' and downcased_option contains 'colour'
+                assign is_color = true
+              endif
+            endif
+          -%}
+
+          {%- if settings.variant_type == 'button' -%}
+            {%- render 'variant-button',
+              section_id: section_id,
+              option: option,
+              forloop: forloop,
+              is_color: is_color,
+              color_option_index: color_option_index
+            -%}
+          {%- else -%}
+            {%- render 'variant-dropdown',
+              section_id: section_id,
+              option: option,
+              forloop: forloop
+            -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endunless -%}
+      {%- if settings.quantity_enable -%}
+        <div class="d-md-none product__quantity product__quantity--{{ settings.variant_type }}">
+          <!--
+            <label for="Quantity-{{ section_id }}">{{ 'products.product.quantity' | t }}</label>
+          -->
+          {%- render 'quantity-input', id: section_id, qty: 1, min: 1 -%}
+        </div>
+      {%- endif -%}
+    </div>
+    <select name="id" id="ProductSelect-{{ section_id }}" class="product-single__variants no-js">
+      {%- for variant in product.variants -%}
+        {%- if variant.available -%}
+          <option
+            {% if variant == product.selected_or_first_available_variant %}
+              selected="selected"
+            {% endif %}
+            value="{{ variant.id }}"
+          >
+            {{ variant.title }} - {{ variant.price | money_with_currency }}
+          </option>
+        {%- else -%}
+          <option disabled="disabled">
+            {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+          </option>
+        {%- endif -%}
+      {%- endfor -%}
+    </select>
+
+    {%- assign inventory_visible = false -%}
+    {%- if settings.inventory_enable and current_variant.inventory_management == 'shopify' -%}
+      {%- if current_variant.inventory_quantity <= settings.inventory_threshold
+        and current_variant.inventory_quantity >= 0
+      -%}
+        {%- assign inventory_visible = true -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- liquid
+      if current_variant.inventory_quantity == 0 or current_variant.inventory_policy == 'continue'
+        assign inventory_visible = false
+      endif
+
+      assign show_incoming = false
+      if current_variant.incoming and inventory_visible == false and current_variant.inventory_quantity <= settings.inventory_threshold
+        assign show_incoming = true
+      endif
+    -%}
+
+    {%- if settings.inventory_enable -%}
+      <div
+        id="ProductInventory-{{ section_id }}"
+        class="product__inventory{% unless inventory_visible %} hide{% endunless %}"
+      >
+        {%- if current_variant.available -%}
+          {{ 'products.product.stock_label' | t: count: current_variant.inventory_quantity }}
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if settings.inventory_transfers_enable -%}
+      <div
+        id="ProductIncomingInventory-{{ section_id }}"
+        class="product__inventory{% if inventory_visible %} hide{% endif %}"
+      >
+        {%- if show_incoming == true -%}
+          {%- if current_variant.next_incoming_date -%}
+            {%- assign date = current_variant.next_incoming_date | date: format: 'date' -%}
+            {%- if current_variant.available -%}
+              {{ 'products.product.will_not_ship_until' | t: date: date }}
+            {%- else -%}
+              {{ 'products.product.will_be_in_stock_after' | t: date: date }}
+            {%- endif -%}
+          {%- else -%}
+            {{ 'products.product.waiting_for_stock' | t }}
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- liquid
+      assign enable_dynamic_buttons = false
+      if settings.enable_payment_button and template != 'product.preorder'
+        assign enable_dynamic_buttons = true
+      endif
+    -%}
+
+    {% if product.metafields.custom.customize_product_link %}
+      {% assign productdaata = product.metafields.custom.customize_product_link.value %}
+      <div class="pro_con_customize-btn">
+        <a href="{{ productdaata.url }}">
+          {% render 'thermos-icon-customize' %}
+          CUSTOMIZE MY BOTTLE
+          <span>FROM $6</span>
+        </a>
+      </div>
+    {% endif %}
+
+    {%- if enable_dynamic_buttons -%}
+      <div class="payment-buttons">
+    {%- endif -%}
+
+    {%- liquid
+      assign default_text = 'products.product.add_to_cart' | t
+      assign button_text = 'products.product.add_to_cart' | t
+      if template == 'product.preorder'
+        assign default_text = 'products.product.preorder' | t
+        assign button_text = 'products.product.preorder' | t
+      endif
+      unless current_variant.available
+        assign button_text = 'products.product.sold_out' | t
+      endunless
+    -%}
+
+    <div class="d-flex flex-wrap align-items-md-start align-items-center">
+      <div class="d-flex flex-wrap align-items-start">
+        <div class="prod-price">
+          {% if current_variant.compare_at_price > current_variant.price %}
+            <div class="two-price">
+              <span class="sale_price"
+                ><span
+                  id="ProductPrice-{{ section_id }}"
+                  class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}"
+                >
+                  <span class="sr-only">Current price: </span>{{ current_variant.price | money }}
+                </span>
+              </span>
+              <span class="compare_price"
+                ><span class="sr-only">Original Price:</span>
+                {{- current_variant.compare_at_price | money -}}
+              </span>
+            </div>
+          {% else %}
+            <span
+              id="ProductPrice-{{ section_id }}"
+              class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}"
+            >
+              {{ current_variant.price | money }}
+            </span>
+          {% endif %}
+
+          {% comment %}
+            {%- if settings.product_save_amount -%}
+            {%- if settings.product_save_type == 'dollar' -%}
+            {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | money }}{%- endcapture -%}
+            {%- else -%}
+            {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round }}%{%- endcapture -%}
+            {%- endif -%}
+            <span id="SavePrice-{{ section_id }}" class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
+              {%- unless hide_sale_price -%}
+              {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+              {%- endunless -%}
+            </span>
+            {%- endif -%}
+          {% endcomment %}
+
+          <div class="product__unit-price product__unit-price--spacing product__unit-price-wrapper--{{ section_id }}{% unless current_variant.unit_price_measurement %} hide{% endunless %}">
+            {%- capture unit_price_base_unit -%}
+                <span class="product__unit-base--{{ section_id }}">
+                  {%- if current_variant.unit_price_measurement -%}
+                  {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+                  {{ current_variant.unit_price_measurement.reference_value }}
+                  {%- endif -%}
+                  {{ current_variant.unit_price_measurement.reference_unit }}
+                  {%- endif -%}
+                </span>
+                {%- endcapture -%}
+
+            <span class="product__unit-price--{{ section_id }}">
+              {{- current_variant.unit_price | money -}}</span
+            >/{{ unit_price_base_unit }}
+          </div>
+
+          {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+            <div class="product__policies rte small--text-center">
+              <small>
+                {%- if shop.taxes_included -%}
+                  {{ 'products.product.include_taxes' | t }}
+                {%- endif -%}
+                {%- if shop.shipping_policy.body != blank -%}
+                  {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                {%- endif -%}
+              </small>
+            </div>
+          {%- endif -%}
+        </div>
+        {%- if settings.quantity_enable -%}
+          <div class="d-none d-md-block product__quantity product__quantity--{{ settings.variant_type }}">
+            <!--
+              <label for="Quantity-{{ section_id }}">{{ 'products.product.quantity' | t }}</label>
+            -->
+            {%- render 'quantity-input', id: section_id, qty: 1, min: 1 -%}
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="add-to-cart-btn flex-fill">
+        <button
+          {% if product.empty? %}
+            type="button"
+          {% else %}
+            type="submit"
+          {% endif %}
+          name="add"
+          id="AddToCart-{{ section_id }}"
+          class="btn btn--full p-0 add-to-cart{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
+          {% unless current_variant.available %}
+            disabled="disabled"
+          {% endunless %}
+        >
+          <div class="container-fluid">
+            <span id="AddToCartText-{{ section_id }}" data-default-text="{{ default_text }}">
+              {{ button_text }}
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div class="checkout-section d-none d-md-block">
+      <p class="mb-2">Checkout made easy with many options</p>
+      <ul class="checkout-options-image">
+        <li>
+          <img
+            width="auto"
+            height="auto"
+            src="{{ 'pay.png' | asset_url }}"
+            alt="shop pay"
+          >
+        </li>
+        <li>
+          <img
+            width="auto"
+            height="auto"
+            src="{{ 'Apple_Pay.svg' | asset_url }}"
+            alt="apple pay"
+          >
+        </li>
+        <li>
+          <img
+            width="auto"
+            height="auto"
+            src="{{ 'GPay.png' | asset_url }}"
+            alt="google pay"
+          >
+        </li>
+      </ul>
+    </div>
+
+    {%- if enable_dynamic_buttons -%}
+      {{ form | payment_button }}
+    {%- endif -%}
+
+    {%- if enable_dynamic_buttons -%}
+      </div>
+    {%- endif -%}
+
+    <textarea
+      id="VariantsJson-{{ section_id }}"
+      class="hide"
+      aria-hidden="true"
+      aria-label="Product JSON"
+    >
+      {{ product.variants | json }}
+    </textarea>
+    {%- if product.options.size > 1 -%}
+      <textarea
+        id="CurrentVariantJson-{{ section_id }}"
+        class="hide"
+        aria-hidden="true"
+        aria-label="Variant JSON"
+      >
+        {{ current_variant | json }}
+      </textarea>
+    {%- endif -%}
+  </div>
+  <div class="payment-buttons d-md-none">
+    <div class="checkout-section">
+      <p>Checkout made easy with many options</p>
+      <ul class="checkout-options-image">
+        <li>
+          <img
+            width="auto"
+            height="auto"
+            src="{{ 'pay.png' | asset_url }}"
+            alt="shop pay"
+          >
+        </li>
+        <li>
+          <img
+            width="auto"
+            height="auto"
+            src="{{ 'Apple_Pay.svg' | asset_url }}"
+            alt="apple pay"
+          >
+        </li>
+        <li>
+          <img
+            width="auto"
+            height="auto"
+            src="{{ 'GPay.png' | asset_url }}"
+            alt="google pay"
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+{%- endform -%}

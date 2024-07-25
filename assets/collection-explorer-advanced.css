@@ -1,0 +1,83 @@
+.pagsecondary * {
+  font-family: var(--thermos-dinot-cond-bold);
+}
+.row-separator.m-0 {
+  margin: 0 !important;
+}
+.pagsecondary .btn-secondary {
+  color: var(--thermos-onyx) !important;
+  border-radius: 40px;
+  background: var(--thermos-white) !important;
+  font-family: var(--thermos-dinot-cond-bold) !important;
+  font-size: var(--thermos-font-size-20) !important;
+  height: 42px;
+  font-style: normal;
+  letter-spacing: 0.3px !important;
+  line-height: var(--thermos-line-height-20-4);
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.2s ease;
+  padding: 9.7px 36px !important;
+  width: max-content;
+}
+.collection-explorer-overlay .container-fluid {
+  display: flex;
+}
+.collection-explorer-overlay .container-fluid .col-12.col-md-7 {
+  padding: 0 15px;
+}
+.collection-explorer-column-1,
+.collection-explorer-column-2 {
+  width: 717px;
+  height: 933px;
+}
+.column-separator {
+  padding-left: 0.5rem !important;
+}
+.row-separator {
+  margin-bottom: 0.5rem !important;
+}
+.custom-explorer-heading {
+  font-size: var(--thermos-font-size-40);
+  height: auto;
+}
+#custom-explorer-description > p {
+  font-size: var(--thermos-font-size-19);
+  color: var(--thermos-white);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-20-4);
+  font-family: var(--thermos-dinot);
+  font-weight: var(--thermos-font-Weight-bold);
+}
+@media only screen and (min-width: 1440px) {
+  .collection-explorer-column-1,
+  .collection-explorer-column-2 {
+    width: 50% !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .collection-explorer-overlay .container-fluid {
+    flex-direction: column;
+  }
+  .pagsecondary .btn-secondary {
+    padding: 10px !important;
+  }
+  .collection-explorer-column-1 {
+    height: 500px;
+  }
+  .column-separator {
+    padding-left: 0px !important;
+  }
+  .row-separator {
+    margin-bottom: 0.3rem !important;
+  }
+  .custom-explorer-heading {
+    font-size: var(--thermos-font-size-40);
+  }
+  .collection-explorer-overlay {
+    padding-left: 4% !important;
+    bottom: 6% !important;
+  }
+}

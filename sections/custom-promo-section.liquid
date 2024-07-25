@@ -1,0 +1,71 @@
+{{ 'custom-promo-section.css' | asset_url | stylesheet_tag }}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="promo-image-container">
+      <img
+        width="auto"
+        height="auto"
+        src="{{ section.settings.custom_promo_section_img_picker | image_url: width: 700, height: 700 }}"
+        alt="{{ section.settings.custom_promo_section_img_picker.alt }}"
+        class="custom-promo-section-img"
+      >
+    </div>
+    <div class="col-12 col-md-3">
+      <h1 class="custom-promo-section-title">{{ section.settings.title }}</h1>
+      <div class="custom-promo-section-description">
+        {{ section.settings['custom-promo-section-description'] }}
+      </div>
+      {% if section.settings['btn-text'] != blank %}
+        <a
+          href="{{ section.settings.btn-url }}"
+          class="btn btn-primary mt-3"
+          style="background: var(--thermos-cornflower-blue) "
+        >
+          {{- section.settings['btn-text'] -}}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Promo Banner",
+  "class": "shopify shopify-custom-promo-section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "custom-promo-section-description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "btn-url",
+      "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "btn-text",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_promo_section_img_picker",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Promo Banner",
+      "category": "Promotional"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

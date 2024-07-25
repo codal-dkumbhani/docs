@@ -1,0 +1,67 @@
+{% comment %}
+  This Section consists of Family section on About US page
+{% endcomment %}
+
+{{ 'about-us-family.css' | asset_url | stylesheet_tag }}
+
+<div class="container-fluid family-container-about">
+  <div class="row">
+    <div class="col-12 col-md-8 text-center mx-auto me-auto mt-5 mb-5">
+      {% if section.settings.title != blank %}
+        <h1 class="about-us-promo-1-heading">
+          {{ section.settings.title }}
+        </h1>
+      {% endif %}
+      {% if section.settings.description %}
+        <p class="mt-3 px-2 family_description">
+          {{ section.settings.description }}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 p-0">
+      {% if section.settings.image1_url != blank %}
+        {% render 'image-element',
+          img: section.settings.image1_url,
+          alt: section.settings.image1_url.alt,
+          img_width: 1024,
+          classes: 'img-fluid w-100',
+          loading: 'lazy'
+        %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Family section",
+  "class": "family_section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1_url",
+      "label": "Upload Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Family Section"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

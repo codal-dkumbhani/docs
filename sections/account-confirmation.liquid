@@ -1,0 +1,59 @@
+{{ 'account-confirmation.css' | asset_url | stylesheet_tag }}
+
+<div class="account-confirmation-section">
+  <div class="container">
+    <h1>{{ section.settings.confirmation_message }}</h1>
+    <p>{{ section.settings.redirect_message }}</p>
+    <div class="buttons">
+      <a class="btn-full" href="{{ section.settings.homepage_url }}">
+        {{- section.settings.homepage_text -}}
+      </a>
+      <a class="btn-full" href="{{ section.settings.account_page_url }}">
+        {{- section.settings.account_page_text -}}
+      </a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Account Confirmation",
+  "settings": [
+    {
+      "type": "text",
+      "id": "confirmation_message",
+      "label": "Confirmation Message",
+      "default": "Your account is created successfully"
+    },
+    {
+      "type": "text",
+      "id": "redirect_message",
+      "label": "Redirect Message",
+      "default": "Where would you like to go next?"
+    },
+    {
+      "type": "url",
+      "id": "homepage_url",
+      "label": "Homepage URL",
+      "default": "/"
+    },
+    {
+      "type": "text",
+      "id": "homepage_text",
+      "label": "Homepage Button Text",
+      "default": "Homepage"
+    },
+    {
+      "type": "url",
+      "id": "account_page_url",
+      "label": "Account Page URL"
+    },
+    {
+      "type": "text",
+      "id": "account_page_text",
+      "label": "Account Page Button Text",
+      "default": "My Account"
+    }
+  ]
+}
+{% endschema %}

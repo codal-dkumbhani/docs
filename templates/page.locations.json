@@ -1,0 +1,245 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "worldwide-locations": {
+      "type": "worldwide-locations",
+      "blocks": {
+        "text_L9V3hj": {
+          "type": "text",
+          "settings": {
+            "subheading": "North America",
+            "country-name": "United States",
+            "address": "475 N. Martingale Road, Suite 1100\n<br> Schaumburg, IL <br> USA 60173",
+            "phone-text": "Phone",
+            "phone-no": "(847) 439-7821",
+            "fax-text": "Fax",
+            "fax-no": "(847) 593-5570",
+            "email-text": "",
+            "email-no": ""
+          }
+        },
+        "text_UfrtTq": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "country-name": "CANADA",
+            "address": "475 N. Martingale Road, Suite 1100<br>\nSchaumburg, IL<br>\nUSA 60173",
+            "phone-text": "Phone",
+            "phone-no": "(847) 439-7821",
+            "fax-text": "Fax",
+            "fax-no": "(847) 593-5570",
+            "email-text": "Email",
+            "email-no": "customerservice.canada@thermos.com"
+          }
+        },
+        "text_qyhiKT": {
+          "type": "text",
+          "settings": {
+            "subheading": "South America",
+            "country-name": "TDP CORPS S.A. (PERU, ECUADOR, BOLIVIA)",
+            "address": "Administrative Office<br>\nAvenida Antonio Miro Quesada N°425<br> Interior 811, Magdalena del Mar<br>\nLima, Peru",
+            "phone-text": "Phone",
+            "phone-no": "+511 659 5959",
+            "fax-text": "",
+            "fax-no": "",
+            "email-text": "Email",
+            "email-no": "servicioalcliente@tdpcorp.com.pe"
+          }
+        },
+        "text_cdfa76": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "country-name": "IMPORTADORA Y DISTRIBUIDORA KW SPA (CHILE)",
+            "address": "El Rosal 4560, Huechuraba <br>\nSantiago, Chile<br>",
+            "phone-text": "Phone",
+            "phone-no": "+56 2 4147300",
+            "fax-text": "Fax",
+            "fax-no": "+56 2 7400059",
+            "email-text": "Email",
+            "email-no": "csilva@pelp.cl"
+          }
+        },
+        "text_Acyaqq": {
+          "type": "text",
+          "settings": {
+            "subheading": "AUSTRALIA",
+            "country-name": "THERMOS PTY LTD.",
+            "address": "Unit 318/14-16 Lexington Drive<br>\nNorwest Business Park<br>\nBella Vista, NSW 2153<br>\nAustralia",
+            "phone-text": "Phone",
+            "phone-no": "+61 2 88535400",
+            "fax-text": "Fax",
+            "fax-no": "+61 2 88535499",
+            "email-text": "Email",
+            "email-no": "thermos@thermos.com.au"
+          }
+        },
+        "text_yQDbm7": {
+          "type": "text",
+          "settings": {
+            "subheading": "Europe",
+            "country-name": "ALFI GMBH -  GERMANY. AUSTRIA. SWITZERLAND",
+            "address": "Ernst-Abbe-Str. 12<br>\n97877 Wertheim<br>\nGermany",
+            "phone-text": "Phone",
+            "phone-no": "+49 9342 8770",
+            "fax-text": "Fax",
+            "fax-no": "+49 9342 877 160",
+            "email-text": "Email",
+            "email-no": "Contact@alfi.de"
+          }
+        },
+        "text_b6tQWD": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "country-name": "UK THERMOS LTD.",
+            "address": "Albany House<br>\n214a Leeds Road<br>\nRothwell<br>\nLeeds<br>\nLS26 0JF<br>\nUnited Kingdom",
+            "phone-text": "Phone",
+            "phone-no": "0113 201 6738",
+            "fax-text": "Fax",
+            "fax-no": "0113 276 3457",
+            "email-text": "Email",
+            "email-no": "customer.service@thermos.co.uk"
+          }
+        },
+        "text_pCmJiL": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "country-name": "N.V. BILLIETY TRADING COMPANY -BTC _ BENELUX, FRANCE AND IBERICA",
+            "address": "Industriepark Noord<br>\nBevrijdinslaan 13-15, B-8700<br>\nTielt, Belgium",
+            "phone-text": "Phone",
+            "phone-no": "+32 51 40 27 94",
+            "fax-text": "",
+            "fax-no": "",
+            "email-text": "",
+            "email-no": ""
+          }
+        },
+        "text_Upi8Ub": {
+          "type": "text",
+          "settings": {
+            "subheading": "ASIA",
+            "country-name": "THERMOS K.K. [JAPAN]",
+            "address": "Mita NN Bldg 21F.<br>\n4-1-23 Shiba<br>\nMinato-ku, Tokyo 108-8405<br>\nJapan",
+            "phone-text": "Phone",
+            "phone-no": "+81 3 5730 0132",
+            "fax-text": "Fax",
+            "fax-no": "+81 3 57300131",
+            "email-text": "",
+            "email-no": ""
+          }
+        },
+        "text_QPnMtJ": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "country-name": "CROWN MANUFACTURING CORPORATION [THERMOS TAIWAN]",
+            "address": "8F-1, NO. 2, Section 1, FU-<br>Shing\nSouth Road<br>\nTaipei 104<br>\nTaiwan<br>",
+            "phone-text": "Phone",
+            "phone-no": "+886 287718696",
+            "fax-text": "Fax",
+            "fax-no": "+886 287716196",
+            "email-text": "",
+            "email-no": ""
+          }
+        },
+        "text_tmJdeC": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "country-name": "THERMOS [CHINA] HOUSEWARES CO.LTD.",
+            "address": "No. 55, Jin Yang Road\nKunshan Development Zone<br>\nHe Feng Complete Industrial Area<br>\nKunshan, Jiangsu<br>\nChina",
+            "phone-text": "Phone",
+            "phone-no": "+86 512 57679888",
+            "fax-text": "Fax",
+            "fax-no": "+86 512 57676768",
+            "email-text": "",
+            "email-no": ""
+          }
+        },
+        "text_xhdHt8": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "country-name": "THERMOS [HONG KONG]LTD.",
+            "address": "Unit 705, 7/F, Grandtech Centre\nNo.8 On Ping Street\nShek Mun, N.T.\nHong Kong",
+            "phone-text": "Phone",
+            "phone-no": "+852 26080880",
+            "fax-text": "Fax",
+            "fax-no": "+852 26080886",
+            "email-text": "",
+            "email-no": ""
+          }
+        },
+        "text_ehXJCG": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "country-name": "THERMOS [SINGAPORE] PTE LTD.",
+            "address": "16 Arumugam Road<br>\n#05-02 Lion Building D<br>\nSingapore 409961",
+            "phone-text": "Phone",
+            "phone-no": "+65 67494100",
+            "fax-text": "Fax",
+            "fax-no": "+65 67492969",
+            "email-text": "Email",
+            "email-no": "customerservice@thermos.com.sg"
+          }
+        },
+        "text_EzNiEW": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "country-name": "TOP THERMOS MFG. [MALAYSIA] SDN. BHD.",
+            "address": "Lot 64565, 4 1/2 Miles<br>\nJalan Kebun, Section 36<br>\n40470 Shah Alam<br>\nSekangor Darul Ehsan<br>\nMalaysia",
+            "phone-text": "Phone",
+            "phone-no": "+60 3 51613196",
+            "fax-text": "Fax",
+            "fax-no": "+60 3 51611692",
+            "email-text": "",
+            "email-no": ""
+          }
+        },
+        "text_XN7C3N": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "country-name": "NS THERMOS [MALAYSIA] SDN. BHD.",
+            "address": "NO. 1&2, Jalan TP3,\nTaman Perindustrian Sine UEP, \n47620 Subang Jaya, \nSelangor, Malaysia.",
+            "phone-text": "Phone",
+            "phone-no": "+60 3 80216626",
+            "fax-text": "Fax",
+            "fax-no": "+60 3 80216636",
+            "email-text": "Email",
+            "email-no": "customerservice@thermos.com.sg"
+          }
+        }
+      },
+      "block_order": [
+        "text_L9V3hj",
+        "text_UfrtTq",
+        "text_qyhiKT",
+        "text_cdfa76",
+        "text_Acyaqq",
+        "text_yQDbm7",
+        "text_b6tQWD",
+        "text_pCmJiL",
+        "text_Upi8Ub",
+        "text_QPnMtJ",
+        "text_tmJdeC",
+        "text_xhdHt8",
+        "text_ehXJCG",
+        "text_EzNiEW",
+        "text_XN7C3N"
+      ],
+      "settings": {
+        "main-title": "Global Offices"
+      }
+    }
+  },
+  "order": ["main", "worldwide-locations"]
+}

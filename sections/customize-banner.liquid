@@ -1,0 +1,53 @@
+{{ 'customize-banner.css' | asset_url | stylesheet_tag }}
+<div class="customize-engraving-PLP">
+  {% if section.settings.title %}
+    <h1>{{ section.settings.title }}</h1>
+  {% endif %}
+</div>
+
+<style>
+  .customize-engraving-PLP {
+    background: url({%if section.settings.webimage!=blank%}{{section.settings.webimage| image_url }}{%endif%});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  @media only screen and (max-width: 600px) {
+    .customize-engraving-PLP {
+      background: url({%if section.settings.mobileimage!=blank%}{{section.settings.mobileimage| image_url }}{%endif%});
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Banner",
+  "class": "slideshow customize-banner-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "webimage",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobileimage",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

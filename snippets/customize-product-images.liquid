@@ -1,0 +1,24 @@
+{%- liquid
+  assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+  assign first_3d_model = product.media | where: 'media_type', 'model' | first
+-%}
+
+<div class="variant-image-logic" style="display:none;">
+  {% for variant in product.variants %}
+    <select>
+      <option
+        data-title="{{ variant.title }}"
+        data-image="{{ variant.featured_media | image_url }}"
+        value="{{ variant.id }}"
+      >
+        {{ variant.title }}
+      </option>
+    </select>
+  {% endfor %}
+</div>
+
+<div
+  class="front-back-images doogmaplugin"
+  id="doogmaplugin"
+  data-uid="n21.thermos-staging-side-by-side"
+></div>

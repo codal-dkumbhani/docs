@@ -1,0 +1,72 @@
+{{ 'customize-banner.css' | asset_url | stylesheet_tag }}
+<div class="customize-banner-PLP">
+  <div class="customize-banner-PLP-contain">
+    {% if section.settings.title %}
+      <h1>{{ section.settings.title }}</h1>
+    {% endif %}
+
+    {% if section.settings.desc %}
+      <p>{{ section.settings.desc }}</p>
+    {% endif %}
+    {% if section.settings.extratext %}
+      <span>{{ section.settings.extratext }}</span>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .customize-banner-PLP {
+    background: url({%if section.settings.webimage!=blank%}{{section.settings.webimage| image_url }}{%endif%});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  @media only screen and (max-width: 600px) {
+    .customize-banner-PLP {
+      background: url({%if section.settings.mobileimage!=blank%}{{section.settings.mobileimage| image_url }}{%endif%});
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Banner with content",
+  "class": "slideshow customize-banner-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "webimage",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobileimage",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Banner Title"
+    },
+    {
+      "type": "text",
+      "id": "desc",
+      "label": "Banner Desc"
+    },
+    {
+      "type": "text",
+      "id": "extratext",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner with content",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

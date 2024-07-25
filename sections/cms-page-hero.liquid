@@ -1,0 +1,42 @@
+{{ 'cms-page-hero.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-page cms-page-hero">
+  <div class="inner-banner" style="background-image:url({{ section.settings.image | image_url }})">
+    {%- render 'breadcrumbs' -%}
+    <div class="inner-banner-cap">
+      <h2>
+        {{ section.settings.title | escape }}
+      </h2>
+      {{ section.settings.subtitle }}
+      {% if section.settings.button_lable != blank %}
+        <a class="btn-gray" href="{{ section.settings.button_link }}">
+          {{- section.settings.button_label -}}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact us hero",
+  "class": "contact_us_hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}

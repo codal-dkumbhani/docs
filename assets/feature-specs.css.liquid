@@ -1,0 +1,56 @@
+.pdp-features-specs .page-width {
+  display: flex;
+  max-width: 1050px;
+  column-gap: 150px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.pdp-features-specs .page-width .pdp-features,
+.pdp-features-specs .page-width .pdp-specs {
+  width: 50%;
+}
+.pdp-features-specs h2 {
+  text-align: left;
+  color: var(--thermos-venetian-red);
+  font-family: inherit;
+  font-size: var(--thermos-font-size-24);
+  line-height: normal;
+  padding-top: 20px;
+}
+.pdp-features-specs ul li::marker {
+  font-size: var(--thermos-font-size-20);
+  color: var(--thermos-light-silver);
+}
+.pdp-features-specs ul {
+  margin-left: 20px;
+}
+.pdp-features-specs ul li {
+  color: var(--thermos-gunmetal);
+  font-size: var(--thermos-font-size-18);
+  line-height: var(--thermos-line-height-24-5);
+  font-weight: var(--thermos-font-Weight-300);
+  font-family: var(--thermos-dinot);
+}
+.pdp-features-specs {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.pdp-image-banner {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  .pdp-features-specs .page-width {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .pdp-features-specs .page-width .pdp-features,
+  .pdp-features-specs .page-width .pdp-specs {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .pdp-features-specs .page-width {
+    column-gap: 50px;
+  }
+}

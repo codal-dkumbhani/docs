@@ -1,0 +1,9 @@
+#livechat-thermos-order {
+  margin-top: 15px;
+}
+#livechat-thermos-order a {
+  color: var(--thermos-onyx);
+  text-decoration: underline;
+  opacity: 0.8;
+  cursor: pointer;
+}

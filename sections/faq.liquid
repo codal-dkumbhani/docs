@@ -1,0 +1,209 @@
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'faq.js' | asset_url }}" defer></script>
+<div class="faq-custom-page">
+  <div
+    class="faq-page-inner-banner"
+    style="background-image:url({{ section.settings.image | image_url }})"
+  >
+    <div class="faq-page-inner-banner-cap">
+      {% if section.settings.title != blank %}
+        <h1>{{ section.settings.title | escape }}</h1>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        {{ section.settings.subtitle }}
+      {% endif %}
+      {% if section.settings.button_label != blank %}
+        <a class="btn-gray" href="{{ section.settings.button_link }}">
+          {{- section.settings.button_label -}}
+        </a>
+      {% endif %}
+    </div>
+    {%- if section.settings.page_content_enable -%}
+      <div class="rte text-spacing">
+        {{ page.content }}
+      </div>
+    {%- endif -%}
+  </div>
+  {%- if section.blocks.size > 0 -%}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'question' %}
+                {
+                  "@type": "Question",
+                  "name": {{ block.settings.title | json }},
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": {{ block.settings.text | json }}
+                  }
+                }{% unless forloop.last %},{% endunless %}
+            {% endcase %}
+          {% endfor %}
+        ]
+      }
+    </script>
+    <div class="container faq-blocks-container">
+      <div itemscope itemtype="https://schema.org/FAQPage">
+        {%- for block in section.blocks -%}
+          <div {{ block.shopify_attributes }}>
+            {%- case block.type -%}
+              {%- when 'rich-text' -%}
+                {%- render 'page-block-rich-text', section_class: 'sub-title', block: block -%}
+              {%- when 'question' -%}
+                {%- render 'page-block-faq', block: block -%}
+            {%- endcase -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+  <div class="faq-footer-wrap">
+    <div class="container">
+      <div class="faq-footer">
+        {% if section.settings.footerlink1 != blank %}
+          <a class="btn-txt" href="{{ section.settings.footerlink1 }}">
+            {{- section.settings.footerlink1text -}}
+          </a>
+        {% endif %}
+        {% if section.settings.footerlink2text != blank %}
+          <a class="btn-txt" id="back-to-top-txt" href="#faqtop">
+            {{- section.settings.footerlink2text -}}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.faq.name",
+  "class": "index-section faq-section-class",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.faq.settings.title.label",
+      "default": "FAQs"
+    },
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Banner"
+    },
+    {
+      "type": "url",
+      "id": "footerlink1",
+      "label": "Contact Page Link"
+    },
+    {
+      "type": "text",
+      "id": "footerlink1text",
+      "label": "Contact Link text"
+    },
+    {
+      "type": "text",
+      "id": "footerlink2text",
+      "label": "Back to top text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "rich-text",
+      "name": "t:sections.faq.blocks.rich_text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.faq.blocks.rich_text.settings.title.label",
+          "default": "Rich text"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.faq.blocks.rich_text.settings.text.label",
+          "default": "<p>Use this section for any descriptive text you need to fill out your pages or to add introductory headings between other blocks.</p>"
+        },
+        {
+          "type": "select",
+          "id": "align_text",
+          "label": "t:sections.faq.blocks.rich_text.settings.align_text.label",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.faq.blocks.rich_text.settings.align_text.options.left.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.faq.blocks.rich_text.settings.align_text.options.center.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.faq.blocks.rich_text.settings.align_text.options.right.label"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "name": "t:sections.faq.blocks.question.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.faq.blocks.question.settings.title.label",
+          "default": "Frequently asked question"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.faq.blocks.question.settings.text.label",
+          "default": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+        },
+        {
+          "type": "html",
+          "id": "dev_use_only",
+          "label": "t:sections.faq.blocks.question.settings.dev_use_only.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.faq.presets.faq.name",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header"]
+  }
+}
+{% endschema %}

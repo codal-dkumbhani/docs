@@ -1,0 +1,78 @@
+{{ 'feature-specs.css' | asset_url | stylesheet_tag }}
+<div class="pdp-features-specs">
+  <div class="page-width">
+    <div class="pdp-features">
+      {% if product.metafields.details != blank %}
+        <h2>{{ section.settings.feature_text }}</h2>
+        <ul>
+          {% for i in (1..10) %}
+            {% assign feature_key = 'feature' | append: i %}
+            {% if product.metafields.details[feature_key] %}
+              <li>
+                {{ product.metafields.details[feature_key] }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    {% if product.metafields.spech != blank %}
+      <div class="pdp-specs-mobile mobifetureimg">
+        <img
+          src="{{ product.metafields.spech.mobileimages | image_url }}"
+          width="auto"
+          height="auto"
+          class=""
+          loading="lazy"
+          alt="{{ product.metafields.spech.mobileimages.alt }}"
+        >
+      </div>
+    {% endif %}
+
+    <div class="pdp-specs">
+      {% if product.metafields.specs != blank %}
+        <h2>{{ section.settings.specs_text }}</h2>
+        <ul>
+          {% for i in (1..10) %}
+            {% assign specs_key = 'spec' | append: i %}
+            {% if product.metafields.specs[specs_key] %}
+              <li>
+                {{ product.metafields.specs[specs_key] }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Features and Specs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "feature_text",
+      "label": "Feature Section Text",
+      "default": "Features"
+    },
+    {
+      "type": "text",
+      "id": "specs_text",
+      "label": "Specs Section Text",
+      "default": "Specs"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features and Specs",
+      "category": "ADVANCED LAYOUT"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product"]
+  }
+}
+{% endschema %}

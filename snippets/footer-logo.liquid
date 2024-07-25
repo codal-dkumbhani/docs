@@ -1,0 +1,64 @@
+{%- if block.settings.logo -%}
+  {%- style -%}
+    .footer__logo a {
+      height: {{ block.settings.desktop_logo_height }}px;
+    }
+  {%- endstyle -%}
+  <div class="footer__logo">
+    <a href="{{ routes.root_url }}">
+      {%- assign width = block.settings.desktop_logo_height
+        | times: block.settings.logo.aspect_ratio
+        | times: 2
+      -%}
+      {%- assign height = block.settings.desktop_logo_height -%}
+      {%- capture sizes -%}{{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio }}px{%- endcapture -%}
+      {%- capture widths -%}{{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio }}, {{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio | times: 2 }}{%- endcapture -%}
+      {%- capture style -%}max-width: {{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio }}px;max-height: {{ block.settings.desktop_logo_height }}px;{%- endcapture -%}
+
+      {%-
+        render 'image-element',
+        img: block.settings.logo,
+        img_width: width,
+        img_height: height,
+        sizes: sizes,
+        widths: widths,
+        style: style,
+        alt: block.settings.logo.alt | default: shop.name,
+      -%}
+    </a>
+    <div class="container-fluid mt-4">
+      <div class="row mt-2 mb-2 footer-text text-white">
+        <div class="col-6 text-left">
+          {% if block.settings.customer_service_text != blank %}
+            <h3 class="text-gold">{{ block.settings.customer_service_text }}</h3>
+          {% endif %}
+          {% if block.settings.customer_service_contact_no != blank %}
+            <h3 class="text-white">
+              <a href="tel:+{{ block.settings.customer_service_contact_no }}">
+                {{- block.settings.customer_service_contact_no -}}
+              </a>
+            </h3>
+          {% endif %}
+        </div>
+        <div class="col-6 text-right">
+          <div id="livechat-thermos-order"></div>
+        </div>
+      </div>
+      <div class="row mt-3 mb-2 footer-text">
+        <div class="col-6 text-white">
+          {% if block.settings.send_msg_text != blank %}
+            <a href="{{ block.settings.send_msg_url }}">{{ block.settings.send_msg_text }}</a>
+          {% endif %}
+        </div>
+
+        <div class="col-6 worldwide-locations text-white">
+          {% if block.settings.worldwide_office_text != blank %}
+            <a href="{{ block.settings.worldwide_office_url }}">
+              {{- block.settings.worldwide_office_text -}}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}

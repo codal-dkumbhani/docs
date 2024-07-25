@@ -1,0 +1,11 @@
+.quick-hover-shopping {
+  display: none;
+}
+
+.grid-product + div.quick-hover-shopping {
+  display: block !important;
+}
+
+.grid-product__image-mask:hover > .image-wrap {
+  background: var(--thermos-white);
+}

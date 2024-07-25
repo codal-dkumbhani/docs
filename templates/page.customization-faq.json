@@ -1,0 +1,179 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "faq-hero": {
+      "type": "cms-page-hero",
+      "settings": {
+        "title": "{{ page.title }}",
+        "subtitle": "",
+        "image": "shopify://shop_images/EarthDay_IS2202GC_ProductFeature_3000x1130_5444cd34-0ea7-4f51-a044-9770f2ecc487.jpg"
+      }
+    },
+    "questions": {
+      "type": "customize-faq",
+      "blocks": {
+        "first_title": {
+          "type": "rich-text",
+          "settings": {
+            "title": "General Questions",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "faq-1": {
+          "type": "question",
+          "settings": {
+            "title": "How do you personalize products?",
+            "text": "<p>All customized products are engraved using laser etching which provides a permanent finish on your Thermos Brand product. </p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-2": {
+          "type": "question",
+          "settings": {
+            "title": "What color is the customization?",
+            "text": "<p>We use a laser etching to customize all products which removes the finish on the etched area only. The customization will be in stainless steel.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-3": {
+          "type": "question",
+          "settings": {
+            "title": "Are custom water bottles dishwasher safe?",
+            "text": "<p>Yes. All customized products are dishwasher safe.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-4": {
+          "type": "question",
+          "settings": {
+            "title": "Does customizing change the warranty?",
+            "text": "<p>If a product that qualifies for replacement under <a href='https://thermos.com/pages/warranty'>limited warranty</a> was customized<br>via a Thermos.com order, Thermos L.L.C. will provide a customized replacement<br>(or a comparable replacement), if reasonably available and if Thermos.com is<br>still offering customization services. Any replacement customization is subject<br>to these <a href='/pages/customization-terms-conditions' target='_blank' title='Customization Terms &amp; Conditions'>Terms &amp; Conditions</a>.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-5": {
+          "type": "question",
+          "settings": {
+            "title": "What products can be customized?",
+            "text": "<p>Currently our our Icon™ Series 24 oz Water Bottle with Spout, Icon™ Series 24 oz Water Bottle with Screw Top, and Icon™ Series 32 oz Water Bottle with Screw Top , and FUNtainer® 12oz and 16oz solid color water bottles are available for customization. Keep an eye out as we add additional products!</p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-6": {
+          "type": "question",
+          "settings": {
+            "title": "When will I receive my customized Thermos Brand product?",
+            "text": "<p>We work hard to get your items to you as quickly as possible. Expect to have your products within 2-3 weeks after your order is placed.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-7": {
+          "type": "question",
+          "settings": {
+            "title": "Can I edit my custom order?",
+            "text": "<p>Custom orders cannot be edited, cancelled, or modified after submission. Please review your order proof carefully before checking out to ensure everything is correct.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-8": {
+          "type": "question",
+          "settings": {
+            "title": "Can I return my customized product?",
+            "text": "<p>We cannot accept returns or exchanges on customized products. See more information on returns <a href='https://thermos.com/pages/returns'>here</a>. Please contact 1-800-831-9242 if the engraving does not match the proof.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-9": {
+          "type": "question",
+          "settings": {
+            "title": "Why was my custom order cancelled?",
+            "text": "<p>Thermos reserves the right to cancel any orders that violate our terms. Custom text cannot include any indecent, political, or unlawful content and must not infringe any persona, copyright, or trademark rights (e.g., <em>cannot </em>include third-party brands, celebrities, sports teams, colleges, or company names). See [insert full text of Customization Terms] for details.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-10": {
+          "type": "question",
+          "settings": {
+            "title": "How can I order customized Thermos products for my company?",
+            "text": "<p>For businesses wishing to add their company name/logo to select Thermos® Brand products, please visit <a href='https://snugzusa.com/thermos'>Corporate Gifts</a>.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-11": {
+          "type": "question",
+          "settings": {
+            "title": "Can discounts be used on custom bottles?",
+            "text": "<p>Please see the Terms for each sale or discount code for whether customized products and/or customization fees are included.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "second_title": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Upload Design Questions",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "faq-12": {
+          "type": "question",
+          "settings": {
+            "title": "Can I upload my own design?",
+            "text": "<p>Yes! Your design needs to be at least 300px (W or H) and must be black on a white background. Designs cannot contain photographs, trademarks, or infringing content. See Customization Terms for details.</p>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-13": {
+          "type": "question",
+          "settings": {
+            "title": "How do I upload my own design?",
+            "text": "<p>In the Customize menu, click ”Upload Own Image”. </p><p>Then, on the image of the bottle, select “Click to Upload Your Image”, and navigate to select the file. </p><p>A preview of the design will appear on the bottle. Use the menu to adjust the design:</p><ul><li>Move up, down, left, or right with arrows</li><li>Rotate with circle-arrow</li><li>Replace the design file by clicking \"Select\"</li><li>Slide bar towards + symbol to enlarge or toward - symbol to shrink</li></ul>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-14": {
+          "type": "question",
+          "settings": {
+            "title": "What is the largest size design that can be uploaded?",
+            "text": "<p>The maximum size of your design varies by product:</p><p><strong>12 oz FUNtainer® Water Bottle </strong></p><ul><li>Front: 2”w x 2”h</li><li>Back: 2”w x 3”h</li></ul><p><strong>16 oz FUNtainer® Water Bottle</strong></p><ul><li>Front: 2”w x 2”h</li><li>Back: 2”w x 4”h </li></ul><p><strong>24 oz IconTM Spout Bottle</strong></p><ul><li>Front: 2.5”w x 3.5”h</li><li>Back: 2.5”w x 5”h</li></ul><p><strong>24 oz IconTM Screw Top Bottle</strong></p><ul><li>Front: 2.5”w x 3.5”h</li><li>Back: 2.5”w x 3.5”h</li></ul><p><strong>32 oz IconTM Screw Top Bottle</strong></p><ul><li>Front: 3”w x 4”h</li><li>Back: 3”w x 4”h</li></ul>",
+            "dev_use_only": ""
+          }
+        },
+        "faq-15": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship to my country?",
+            "text": "<p>We only ship to the United States at this time.</p>",
+            "dev_use_only": ""
+          }
+        }
+      },
+      "block_order": [
+        "first_title",
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6",
+        "faq-7",
+        "faq-8",
+        "faq-9",
+        "faq-10",
+        "faq-11",
+        "second_title",
+        "faq-12",
+        "faq-13",
+        "faq-14",
+        "faq-15"
+      ],
+      "settings": {}
+    }
+  },
+  "order": ["main", "faq-hero", "questions"]
+}

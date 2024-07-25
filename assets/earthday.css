@@ -1,0 +1,452 @@
+.grid-product__content.grid-product__content--template--15767036952732__holiday-gifting-featured-image {
+  box-shadow: none;
+  border-radius: 10px;
+  border: 1px solid white;
+  max-width: 358px;
+  width: 100%;
+}
+.grid-product__content.grid-product__content--template--15767036952732__holiday-gifting-featured-image:hover {
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+}
+.holiday-gifting-banner .holiday-gifting-contain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.holiday-gifting-banner .holiday-gifting-contain .container {
+  text-align: center;
+}
+.holiday-gifting-banner .holiday-gifting-contain .container h1 {
+  color: var(--thermos-white);
+  font-size: var(--thermos-font-size-70);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-70);
+  padding-bottom: 4px;
+}
+.trapeze-banner {
+  display: flex;
+  overflow: hidden;
+}
+.kids-banner .kids-banner-title {
+  width: 51%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--thermos-cornflower-blue) !important;
+  padding: 5% 96px;
+  position: relative;
+}
+.kids-banner .kids-banner-title:before {
+  background: none !important;
+}
+.kids-banner .kids-banner-title:after {
+  position: absolute;
+  top: 0;
+  right: -66px;
+  content: '';
+  width: 128px;
+  background-color: var(--thermos-cornflower-blue);
+  height: 100%;
+  transform: skew(-10deg, 0deg);
+}
+.hero__text-shadow {
+  position: absolute;
+  margin-right: 0%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.hero__text-content {
+  vertical-align: middle !important;
+}
+.hero-btn {
+  padding: 11px 25px !important;
+}
+.section-header__title {
+  font-size: var(--thermos-font-size-40) !important;
+}
+.trapeze-promo-description > p {
+  font-weight: normal !important;
+}
+.map-section--custom-explore-collection {
+  height: 556px !important;
+}
+.kids-banner .kids-banner-title p {
+  font-weight: var(--thermos-font-Weight-bold) !important;
+}
+.btn-secondary {
+  width: auto;
+}
+.icp-banner-title {
+  background-color: var(--thermos-silver-gray) !important;
+}
+.icp-banner-title:after {
+  background-color: var(--thermos-silver-gray) !important;
+}
+.grid-product__content--section-marketing {
+  box-shadow: none;
+  max-width: 358px;
+  width: 100%;
+}
+.pagsecondary {
+  margin-top: 60px;
+}
+.pagsecondary *,
+.holiday-gifting-banner * {
+  font-family: var(--thermos-dinot-cond-bold);
+}
+.holiday-gifting-banner .container-fluid {
+  padding: 0;
+}
+.btn-secondary {
+  color: var(--thermos-onyx) !important;
+  border-radius: 40px;
+  background: var(--thermos-white) !important;
+  font-family: var(--thermos-dinot-cond-bold) !important;
+  font-size: var(--thermos-font-size-20) !important;
+  height: 42px;
+  font-style: normal;
+  letter-spacing: 0.3px !important;
+  line-height: var(--thermos-line-height-20-4);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 9.7px 25px !important;
+  border: none;
+  transition: all 0.2s ease;
+}
+.holiday-gifting-banner {
+  position: relative;
+}
+.holiday-gifting-banner .holiday-gifting-contain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.holiday-gifting-banner .holiday-gifting-contain .container {
+  text-align: center;
+}
+.holiday-gifting-banner .holiday-gifting-contain .container h1 {
+  color: var(--thermos-white);
+  font-size: var(--thermos-font-size-70);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-70);
+  padding-bottom: 4px;
+}
+.holiday-gifting-banner .holiday-gifting-contain .container p {
+  color: var(--thermos-white);
+  font-family: var(--thermos-dinot);
+  font-size: var(--thermos-font-size-22);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-25-5);
+}
+#box-grid-first {
+  margin-left: auto !important;
+}
+#box-grid-last {
+  margin-right: auto !important;
+}
+.mobile-explore-collection-content {
+  display: none;
+}
+.moblie-icp-view-all {
+  text-align: center;
+  display: none;
+}
+.moblie-icp-view-all a {
+  color: var(--thermos-red);
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-19);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-25);
+  padding-right: 24px;
+  position: relative;
+}
+.moblie-icp-view-all a:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 7px;
+  right: 0px;
+  background: url(https://cdn.shopify.com/s/files/1/0552/9731/0876/files/4-layers_1.svg?v=1627545573);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.explore-collection {
+  display: none;
+}
+.explore-collection.btnEnableInDesktop {
+  display: block !important;
+}
+.explore-collection.btnEnableInMobile {
+  display: none;
+}
+.title-with-viewall {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0px 20px 22px;
+}
+.title-with-viewall h1 {
+  color: var(--thermos-onyx);
+  margin: 0;
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-40);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-45);
+}
+.title-with-viewall a {
+  color: var(--thermos-red);
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-19);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-25);
+  padding-right: 24px;
+  position: relative;
+}
+.title-with-viewall a:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  background: url(/cdn/shop/files/4-layers_1.svg?v=1627545573);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.product-grid-4 .grid-product__content {
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+  background: white;
+  border-radius: 10px;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  width: auto !important;
+}
+.quick-hover-shopping {
+  display: block !important;
+}
+.grid-product__meta {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.grid-product__image-mask .new-badge {
+  content: '';
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  height: 67px;
+  z-index: 1;
+  width: 67px;
+  border-radius: 100%;
+  background-color: var(--thermos-peru);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--thermos-white);
+  line-height: var(--thermos-line-height-20);
+  font-size: var(--thermos-font-size-20);
+  font-family: var(--thermos-dinot-cond-bold);
+}
+.template-page.holiday-gifting .grid {
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.map-section-space {
+  padding: 65px 0;
+}
+.map-section .map-section-space .container-fluid > .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.map-section #product-grid-3 a {
+  max-height: 240px !important;
+}
+.collection-explorer-overlay .col-5.text-center {
+  width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+  .map-section {
+    height: 516px;
+  }
+  .container-fluid .column-separator.row-separator {
+    padding-left: 8px;
+  }
+}
+
+/* IPAD PRO */
+@media only screen and (max-width: 1024px) {
+  .hero__text-shadow {
+    margin-left: 6%;
+    margin-top: 10%;
+  }
+}
+/* IPAD  */
+@media only screen and (max-width: 768px) {
+  .grid-product__image-mask .new-badge {
+    height: 40px;
+    width: 40px;
+    margin-top: 3%;
+    margin-right: 2%;
+    top: 5px;
+    right: 5px;
+  }
+  .hero__text-shadow {
+    margin-left: 10%;
+    margin-top: 11%;
+  }
+  .holiday-gifting .pagsecondary .collection-explorer-column-1 {
+    height: 500px;
+  }
+  .holiday-gifting .collection-explorer-column-2 .pl-2 {
+    padding-left: 0 !important;
+  }
+  .holiday-gifting .collection-explorer-column-2 .column-2-bg {
+    margin-top: 5px;
+  }
+  .holiday-gifting .pagsecondary {
+    margin-top: 20px;
+  }
+  .title-with-viewall {
+    flex-wrap: wrap;
+    padding: 12px 2px 0px 0px;
+  }
+  .title-with-viewall h1 {
+    font-size: var(--thermos-font-size-26);
+    line-height: normal;
+    width: 100%;
+    text-align: center;
+  }
+  .holiday-gifting .title-with-viewall p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .holiday-gifting .collection-explorer-column-2 .column-2-bg .collection-explorer-overlay .col-5 {
+    text-align: left !important;
+  }
+  .template-page.holiday-gifting .grid {
+    margin-bottom: 0;
+  }
+  .template-page.holiday-gifting .grid-product__meta > .container > .row > .col-9 {
+    height: auto;
+  }
+  .page-width .grid.pb-1 {
+    margin: auto;
+  }
+  .page-width .grid.pb-1 .product-grid-4 {
+    width: 50% !important;
+  }
+  .product-grid-4 .grid-product__content {
+    box-shadow: none;
+  }
+  .holiday-gifting .map-section .map-section-space {
+    padding-top: 20%;
+    position: relative;
+  }
+  .holiday-gifting .map-section .map-section-space .grid-product__meta {
+    padding: 0 10px;
+  }
+  .template-page.holiday-gifting
+    .map-section-space
+    .grid-product__meta
+    > .container
+    > .row
+    > .col-9 {
+    height: 80px;
+  }
+  .template-page.holiday-gifting
+    .map-section-space
+    .grid-product__meta
+    > .container
+    > .row
+    .grid-cart-img {
+    margin-left: -15px;
+  }
+  .template-page.holiday-gifting
+    .map-section-space
+    .image-wrap--template--15767036952732__holiday-gifting-featured-image
+    > img {
+    width: 213px !important;
+    height: 200px !important;
+  }
+  .mobile-explore-collection-content {
+    display: block;
+  }
+  .desktop-explore-collection-content {
+    display: none;
+  }
+  .moblie-icp-view-all {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .explore-collection-content.explore-collection-content--template--15767036952732__holiday-gifting-featured-image {
+    position: absolute;
+    top: 126px !important;
+    text-align: left;
+    left: 2%;
+  }
+  .explore-collection.btnEnableInMobile {
+    display: block !important;
+  }
+  .explore-collection.btnEnableInDesktop {
+    display: none;
+  }
+  #box-grid-last {
+    margin-right: 0 !important;
+  }
+  #box-grid-first {
+    margin-left: 4.5px !important;
+    margin-right: 0 !important;
+  }
+  .box-image-contain .box-grid figure {
+    width: auto !important;
+    height: auto !important;
+  }
+  .explore-collection-content.mobile-explore-collection-content.explore-collection-content--template--15767036952732__holiday-gifting-featured-image {
+    top: initial !important;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .explore-collection-content.mobile-explore-collection-content.explore-collection-content--template--15767036952732__holiday-gifting-featured-image
+    .btn-secondary {
+    font-size: var(--thermos-font-size-18) !important;
+  }
+  .section-header__title {
+    font-size: var(--thermos-font-size-20) !important;
+    font-weight: var(--thermos-font-Weight-700);
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: var(--thermos-line-height-45);
+    text-align: center;
+  }
+  .header-custom-explore-collection {
+    margin-top: 55% !important;
+  }
+  .header-custom-explore-collection > p {
+    text-align: left !important;
+  }
+  .map-section--custom-explore-collection {
+    height: 548px !important;
+  }
+  .btn-secondary--custom-explore-collection {
+    margin-right: 30% !important;
+  }
+  .column-2-bg {
+    height: 240px;
+  }
+}

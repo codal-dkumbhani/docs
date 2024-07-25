@@ -1,0 +1,9 @@
+.doogma-back-footer .doogma-saveand-preview.disabledbtn {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.doogma-front-footer .doogma-saveand-preview.disabledbtn {
+  pointer-events: none;
+  opacity: 0.5;
+}

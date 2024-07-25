@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "cms-hero": {
+      "type": "cms-page-hero",
+      "settings": {
+        "title": "{{ page.title }}",
+        "subtitle": "",
+        "image": "shopify://shop_images/IS2302MS_IS2202MS_ICON_OctMed_23_CAL_Lake_15B_0061_ContactUs_3000x928_12f937e0-7af7-436b-b96a-df34edcb73d5.jpg"
+      }
+    },
+    "content": {
+      "type": "cms-page-content",
+      "settings": {
+        "text": ""
+      }
+    }
+  },
+  "order": ["main", "cms-hero", "content"]
+}

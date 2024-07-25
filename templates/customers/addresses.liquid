@@ -1,0 +1,163 @@
+{{ 'account-page.css' | asset_url | stylesheet_tag }}
+
+{%- paginate customer.addresses by 5 -%}
+  <div class="page-width page-width--narrow page-content">
+    {%- if settings.show_breadcrumbs -%}
+      <nav
+        class="breadcrumb{% if settings.type_headers_align_text %} text-center{% endif %}"
+        role="navigation"
+        aria-label="breadcrumbs"
+      >
+        <a href="{{ routes.account_url }}">{{ 'customer.account.title' | t }}</a>
+        <span class="divider" aria-hidden="true">/</span>
+        {{ 'customer.addresses.title' | t }}
+      </nav>
+    {%- endif -%}
+
+    <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+      <h1 class="section-header__title"></h1>
+    </header>
+
+    <div class="view-address-wrap">
+      <div class="view-address">
+        <p class="h4">View Addresses ({{ customer.addresses | size }})</p>
+        <div class="address-box-wrap">
+          {%- for address in customer.addresses -%}
+            <div class="address-box">
+              {{ address | format_address }}
+              <p>
+                <button
+                  type="button"
+                  class="btn btn--secondary btn--small address-delete"
+                  data-form-id="{{ address.id }}"
+                  data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+                >
+                  Remove
+                </button>
+              </p>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="add-new-address">
+        <div id="AddressNewForm" class="form-vertical js-address-form text-left">
+          {%- form 'customer_address', customer.new_address -%}
+            <h2>{{ 'customer.addresses.add_new' | t }}</h2>
+
+            <input
+              type="text"
+              placeholder="First Name"
+              id="AddressFirstNameNew"
+              class="input-full"
+              name="address[first_name]"
+              value="{{form.first_name}}"
+              autocapitalize="words"
+            >
+
+            <input
+              type="text"
+              placeholder="Last Name"
+              id="AddressLastNameNew"
+              class="input-full"
+              name="address[last_name]"
+              value="{{form.last_name}}"
+              autocapitalize="words"
+            >
+
+            <input
+              type="text"
+              placeholder="Address Line 1"
+              id="AddressAddress1New"
+              class="input-full"
+              name="address[address1]"
+              value="{{form.address1}}"
+              autocapitalize="words"
+            >
+
+            <input
+              type="text"
+              placeholder="Address Line 2"
+              id="AddressAddress2New"
+              class="input-full"
+              name="address[address2]"
+              value="{{form.address2}}"
+              autocapitalize="words"
+            >
+
+            <div class="grid grid--small">
+              <div class="grid__item medium-up--one-half">
+                <input
+                  type="text"
+                  placeholder="City"
+                  id="AddressCityNew"
+                  class="input-full"
+                  name="address[city]"
+                  value="{{form.city}}"
+                  autocapitalize="words"
+                >
+              </div>
+
+              <div
+                class="grid__item medium-up--one-half js-address-country"
+                data-country-id="AddressCountryNew"
+                data-province-container-id="AddressProvinceContainerNew"
+                data-province-id="AddressProvinceNew"
+              >
+                <select
+                  id="AddressCountryNew"
+                  placeholder="Country"
+                  class="input-full"
+                  name="address[country]"
+                  data-default="{{form.country}}"
+                >
+                  {{ country_option_tags }}
+                </select>
+              </div>
+
+              <div class="grid__item" id="AddressProvinceContainerNew" style="display: none;">
+                <select
+                  id="AddressProvinceNew"
+                  class="input-full"
+                  name="address[province]"
+                  data-default="{{form.province}}"
+                ></select>
+              </div>
+
+              <div class="grid__item ">
+                <input
+                  type="text"
+                  placeholder="Zipcode"
+                  id="AddressZipNew"
+                  class="input-full"
+                  name="address[zip]"
+                  value="{{form.zip}}"
+                  autocapitalize="characters"
+                >
+              </div>
+            </div>
+
+            <p>
+              {{ form.set_as_default_checkbox }}
+              <label for="address_default_address_new" class="inline">
+                {{- 'customer.addresses.set_default' | t -}}
+              </label>
+            </p>
+
+            <p>
+              <button type="submit" class="btn">Add New Address</button>
+            </p>
+            <p style="display:none">
+              <button type="button" class="text-link address-new-toggle">
+                {{ 'customer.addresses.cancel' | t }}
+              </button>
+            </p>
+          {%- endform -%}
+        </div>
+      </div>
+    </div>
+
+    {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
+  </div>
+{%- endpaginate -%}

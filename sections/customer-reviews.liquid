@@ -1,0 +1,50 @@
+{%- if settings.enable_product_reviews and section.settings.reviews_layout == 'full' -%}
+  <hr id="Reviews-{{ product.id }}" class="hr--clear">
+  <div class=" product-reviews product-reviews--full">
+    <div class="page-width">
+      <div
+        class="yotpo-widget-instance"
+        data-yotpo-instance-id="575464"
+        data-yotpo-product-id="{{product.id}}"
+        data-yotpo-name="{{ product.title | escape }}"
+        data-yotpo-url="{{ shop.url }}{{ product.url }}"
+        data-yotpo-image-url="{{ product.featured_image | product_img_url: "large" | prepend: "https:" | replace: '?', '%3F' | replace: '&','%26'}}"
+        data-yotpo-price="{{ product.price | divided_by: 100.00 }}"
+        data-yotpo-currency="{{ shop.currency }}"
+        data-yotpo-description="{{ product.description | escape }}"
+      ></div>
+    </div>
+  </div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Customer Reviews",
+  "settings": [
+    {
+      "type": "select",
+      "id": "reviews_layout",
+      "label": "Review layout",
+      "default": "partial",
+      "options": [
+        {
+          "value": "partial",
+          "label": "75% width"
+        },
+        {
+          "value": "full",
+          "label": "Full width"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customer Reviews",
+      "category": "ADVANCED LAYOUT"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product"]
+  }
+}
+{% endschema %}

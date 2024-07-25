@@ -1,0 +1,586 @@
+{{ 'earthday.css' | asset_url | stylesheet_tag }}
+
+{% for block in section.blocks %}
+  {% if block.type == 'featured-image' %}
+    {% if block.settings.featuredimage1 != blank %}
+      <div class="holiday-gifting-banner">
+        {% if block.settings.featuredimage1_mob != blank %}
+          <div class="container-fluid">
+            <div class="row">
+              <div class="desktop-view" style="width:100%;">
+                <img
+                  width="auto"
+                  height="auto"
+                  src="{{ block.settings.featuredimage1 | image_url }}"
+                  style="width:100%;"
+                  alt="{{ block.settings.featuredimage1.alt }}"
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mobile-view">
+            <div class="full-bg-image">
+              <img
+                width="auto"
+                height="auto"
+                src="{{ block.settings.featuredimage1_mob | image_url }}"
+                class=""
+                alt="{{ block.settings.featuredimage1_mob.alt }}"
+              >
+            </div>
+          </div>
+        {% else %}
+          <div class="container-fluid">
+            <div class="row">
+              <div
+                class="col-12"
+                style="background-image: url('{{ block.settings.featuredimage1 | image_url }}');background-size: cover; background-position: center; height: 500px"
+              ></div>
+            </div>
+          </div>
+        {% endif %}
+        <div class="holiday-gifting-contain">
+          <div class="container">
+            {% if block.settings.featuredimage1_heading != blank %}
+              <h1>{{ block.settings.featuredimage1_heading }}</h1>
+            {% endif %}
+            {% if block.settings.featuredimage1_subheading != blank %}
+              <p>{{ block.settings.featuredimage1_subheading }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.featuredimage2 != blank %}
+      {% if block.settings.featuredimage2_mob != blank %}
+        <div class="container-fluid">
+          <div class="row">
+            <div class="desktop-view" style="width:100%;">
+              <img
+                width="auto"
+                height="auto"
+                src="{{ block.settings.featuredimage2 | image_url   }}"
+                style="width:100%;"
+                alt="{{ block.settings.featuredimage2.alt }}"
+              >
+            </div>
+          </div>
+        </div>
+        <div class="mobile-view">
+          <div class="full-bg-image">
+            <img
+              width="auto"
+              height="auto"
+              src="{{ block.settings.featuredimage2_mob | image_url   }}"
+              class=""
+              alt="{{ block.settings.featuredimage2_mob.alt }}"
+            >
+          </div>
+        </div>
+      {% else %}
+        <div class="container-fluid">
+          <div class="row">
+            <div
+              class="col-12"
+              style="background-image: url('{{ block.settings.featuredimage2 | image_url: width: 800, height: 800 }}');background-size: cover; background-position: center; height: 500px"
+            ></div>
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if block.settings.featuredimage3 != blank %}
+      {% if block.settings.featuredimage3_mob != blank %}
+        <div class="container-fluid">
+          <div class="row">
+            <div class="desktop-view" style="width:100%;">
+              <img
+                width="auto"
+                height="auto"
+                src="{{ block.settings.featuredimage3 | image_url   }}"
+                style="width:100%;"
+                alt="{{ block.settings.featuredimage3.alt }}"
+              >
+            </div>
+          </div>
+        </div>
+        <div class="mobile-view">
+          <div class="full-bg-image">
+            <img
+              width="auto"
+              height="auto"
+              src="{{ block.settings.featuredimage3_mob | image_url   }}"
+              class=""
+              alt="{{ block.settings.featuredimage3_mob.alt }}"
+            >
+          </div>
+        </div>
+      {% else %}
+        <div class="container-fluid">
+          <div class="row">
+            <div
+              class="col-12"
+              style="background-image: url('{{ block.settings.featuredimage3 | image_url: width: 800, height: 800 }}');background-size: cover; background-position: center; height: 500px"
+            ></div>
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+
+  {% elsif block.type == 'featured-collections' %}
+    {% if block.settings.featuredcollection1 != blank %}
+      <div class="page-width page-width--flush-small">
+        <div class="title-with-viewall ">
+          <h1>{{ collections[block.settings.featuredcollection1].title }}</h1>
+          {% if block.settings.featuredcollection1_link != blank %}
+            <p class="icp-view-all">
+              <a href="{{ block.settings.featuredcollection1_link }}" class="small--hide">
+                {{- block.settings.featuredcollection1_label -}}
+              </a>
+            </p>
+          {% elsif block.settings.featuredcollection1 != blank %}
+            <p class="icp-view-all">
+              <a
+                href="{{ collections[block.settings.featuredcollection1].url }}"
+                class="small--hide"
+                >View all {{ collections[block.settings.featuredcollection1].title -}}
+              </a>
+            </p>
+          {% endif %}
+        </div>
+
+        <div class="grid pb-1">
+          {%- for product in collections[block.settings.featuredcollection1].products limit: 4 -%}
+            {%- render 'product-grid-item-4',
+              product: product,
+              grid_item_width: 'small--one-half medium-up--one-quarter',
+              per_row: 4
+            -%}
+          {%- endfor -%}
+        </div>
+        <div class="moblie-icp-view-all">
+          {% if block.settings.featuredcollection1_link != blank %}
+            <p class="icp-view-all">
+              <a href="{{ block.settings.featuredcollection1_link }}" class="">
+                {{- block.settings.featuredcollection1_label -}}
+              </a>
+            </p>
+          {% elsif block.settings.featuredcollection1 != blank %}
+            <p class="icp-view-all">
+              <a href="{{ collections[block.settings.featuredcollection1].url }}" class=""
+                >View all {{ collections[block.settings.featuredcollection1].title -}}
+              </a>
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  {% elsif block.type == 'featured-product' %}
+    <div class="map-section">
+      {%- if block.settings.section_title != blank
+        or block.settings.designated_collection != blank
+      -%}
+        <div
+          style="background: url({{ block.settings.background_image | image_url: width: 1800 }}); background-repeat: no-repeat; background-position: center; background-size: cover;"
+          class="h-100 w-100 map-section-space"
+          style="background-repeat: no-repeat; background-position: center; background-size: cover;"
+        >
+          <div class="page-width">
+            <div class="container-fluid">
+              <div class="row">
+                <div
+                  class="col-12 col-lg-4 mr-auto d-flex align-items-end align-items-md-center justify-content-left height-300 p-0 pl-5"
+                  style="position: relative"
+                >
+                  <div class="explore-collection-content desktop-explore-collection-content explore-collection-content--{{ section.id }}">
+                    <h1 class=" text-white mb-5 header-{{ section.id }}"></h1>
+                    <a
+                      href="{{ block.settings.section_url  }}"
+                      class="mt-4 btn-secondary explore-collection {% if block.settings.buttonInDesktop %}btnEnableInDesktop{% endif %} {% if block.settings.buttonInMobile %}btnEnableInMobile{% endif %}"
+                    >
+                      Explore Collection
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-auto ml-auto d-lg-block">
+                  <!-- <br class="small--hide"> -->
+                  {%- assign product = all_products[block.settings.designated_product] -%}
+
+                  {%- render 'product-grid-item-3',
+                    product: product,
+                    grid_item_width: grid_item_width,
+                    per_row: per_row
+                  -%}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="explore-collection-content mobile-explore-collection-content explore-collection-content--{{ section.id }}">
+            <h1 class=" text-white mb-5 header-{{ section.id }}"></h1>
+            <a
+              href="{{ block.settings.section_url  }}"
+              class="mt-4 btn-secondary explore-collection {% if block.settings.buttonInDesktop %}btnEnableInDesktop{% endif %} {% if block.settings.buttonInMobile %}btnEnableInMobile{% endif %}"
+            >
+              Explore Collection
+            </a>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+
+  {% elsif block.type == '3collections' %}
+    {%- liquid
+      assign column_1_image_picker = block.settings.column_1_image_picker
+    -%}
+
+    {% if column_1_image_picker != blank %}
+      {%- style -%}
+        .collection-explorer-column-1 {
+          background-size: cover;
+          background-position: center;
+          background-image: url('{{ column_1_image_picker | image_url: width: 750, height: 750 }}');
+        }
+      {%- endstyle -%}
+    {% endif %}
+
+    {% if block.settings.column_1_collection_handle != blank
+      and block.settings.column_2_image_picker_row != blank
+    %}
+      <div class="pagsecondary">
+        <div class="container-fluid">
+          <div class="row ">
+            <div class="col-12 col-md-6 collection-explorer-column-1 p-0 row-separator">
+              <div style="height: 100%; position: relative;  background-color: rgb(23 23 23 / 0.27 );">
+                <div
+                  class="collection-explorer-overlay"
+                  style="position: absolute; bottom: 6%; padding: 4%"
+                >
+                  <h1 class="text-white custom-explorer-heading">
+                    {{ block.settingscolumn_1_.heading }}
+                  </h1>
+                  <div id="custom-explorer-description">
+                    <span class="text-white " style="font-size: var(--thermos-font-size-19)">
+                      {{- block.settings['column_1_sub-heading'] -}}
+                    </span>
+                  </div>
+                  <a
+                    href="{{ block.settings.column_1_collection_handle }}"
+                    class="btn btn-secondary "
+                  >
+                    {{ block.settings.column_1_btn_text }}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 collection-explorer-column-2 h-100">
+              <div class="container-fluid p-0">
+                <div class="row pl-2 column-separator row-separator">
+                  <div
+                    class="col-12 column-2-bg p-0 row-separator"
+                    style="background-image: url({{ block.settings.column_2_image_picker_row | image_url: width: 583, height: 358 }});"
+                  >
+                    <div style="height: 100%; background-color: var(--thermos-dark-gray-27); position: relative">
+                      <div
+                        class="collection-explorer-overlay w-100"
+                        style="position: absolute; padding: 4%; padding-top: 24%;  bottom: 0"
+                      >
+                        <div class="container-fluid p-0">
+                          <div class="row">
+                            <div class="col-12 col-md-7">
+                              <h3 class="text-white custom-explorer-heading">
+                                {{ block.settings.column_2_heading }}
+                              </h3>
+                              <div class="mb-3" id="custom-explorer-description">
+                                {{ block.settings['column_2_sub-heading'] }}
+                              </div>
+                            </div>
+                            <div class="col-5 text-center">
+                              {% if block.settings.column_2_collection_handle != blank %}
+                                <a
+                                  href="{{ block.settings.column_2_collection_handle }}"
+                                  class="btn btn-secondary m-0 "
+                                >
+                                  {{ block.settings.column_2_btn_text }}
+                                </a>
+                              {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col-12 column-2-bg p-0 row-separator"
+                    style="background-image: url({{ block.settings.column_3_image_picker_row | image_url: width: 583, height: 358  }});"
+                  >
+                    <div style="height: 100%; background-color: var(--thermos-dark-gray-27); position: relative">
+                      <div
+                        class="collection-explorer-overlay w-100"
+                        style="position: absolute; padding: 4%; padding-top: 24%;  bottom: 0"
+                      >
+                        <div class="container-fluid p-0">
+                          <div class="row">
+                            <div class="col-12 col-md-7">
+                              <h3 class="text-white custom-explorer-heading">
+                                {{ block.settings.column_3_heading }}
+                              </h3>
+                              <div class="mb-3" id="custom-explorer-description">
+                                {{ block.settings['column_3_sub-heading'] }}
+                              </div>
+                            </div>
+                            <div class="col-5 text-center">
+                              {% if block.settings.column_3_collection_handle != blank %}
+                                <a
+                                  href="{{ block.settings.column_3_collection_handle }}"
+                                  class="btn btn-secondary m-0 "
+                                >
+                                  {{ block.settings.column_3_btn_text }}
+                                </a>
+                              {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {%- style -%}
+                    .column-2-bg {
+                      height: 463.2px;
+                      background-size: cover;
+                      background-position: center;
+                    }
+                  {%- endstyle -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Earthday",
+  "max_blocks": 15,
+  "blocks": [
+    {
+      "type": "featured-image",
+      "name": "Featured-banner",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Featured Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "featuredimage1",
+          "label": "Featured Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "featuredimage1_mob",
+          "label": "Mobile Featured Image 1"
+        },
+        {
+          "type": "text",
+          "id": "featuredimage1_heading",
+          "label": "Featured Image 1 Heading"
+        },
+        {
+          "type": "text",
+          "id": "featuredimage1_subheading",
+          "label": "Featured Image 1 Sub Heading"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "featuredimage2",
+          "label": "Featured Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "featuredimage2_mob",
+          "label": "Mobile Featured Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "featuredimage3",
+          "label": "Featured Image 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "featuredimage3_mob",
+          "label": "Mobile Featured Image 3"
+        }
+      ]
+    },
+    {
+      "type": "featured-collections",
+      "name": "Custom Collections",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Featured Collection"
+        },
+        {
+          "type": "collection",
+          "id": "featuredcollection1",
+          "label": "Featured Collection 1"
+        },
+        {
+          "type": "text",
+          "id": "featuredcollection1_label",
+          "label": "Collection 1 View All Label",
+          "default": "View all"
+        },
+        {
+          "type": "url",
+          "id": "featuredcollection1_link",
+          "label": "Collection 1 View All Link"
+        }
+      ]
+    },
+    {
+      "type": "featured-product",
+      "name": "Custom Product",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Custom Explore"
+        },
+        {
+          "type": "product",
+          "id": "designated_product",
+          "label": "Special Product",
+          "info": "Collection that holds this  product"
+        },
+        {
+          "id": "section_title",
+          "type": "richtext",
+          "label": "Title Text",
+          "default": "<p>DESIGNED FOR KIDS AND THEIR PARENTS </p>"
+        },
+        {
+          "type": "url",
+          "id": "section_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "buttonInDesktop",
+          "label": "Button Enable In Desktop"
+        },
+        {
+          "type": "checkbox",
+          "id": "buttonInMobile",
+          "label": "Button Enable In Mobile"
+        },
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "3collections",
+      "name": "3 Image with collections",
+      "settings": [
+        {
+          "type": "header",
+          "content": "3 Collections"
+        },
+        {
+          "id": "column_1_heading",
+          "type": "text",
+          "label": "Heading 1",
+          "default": "FOR MORNINGS ON-THE-GO"
+        },
+        {
+          "id": "column_1_sub-heading",
+          "type": "richtext",
+          "label": "Sub Heading 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "column_1_image_picker",
+          "label": "Background 1"
+        },
+        {
+          "type": "url",
+          "id": "column_1_collection_handle",
+          "label": "Select Collection 1"
+        },
+        {
+          "type": "text",
+          "id": "column_1_btn_text",
+          "default": "Explore Collection",
+          "label": "Button Text",
+          "info": "Text inside button 1"
+        },
+        {
+          "id": "column_2_heading",
+          "type": "text",
+          "label": "Heading 2",
+          "default": "FOR MORNINGS ON-THE-GO"
+        },
+        {
+          "id": "column_2_sub-heading",
+          "type": "richtext",
+          "label": "Sub Heading 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "column_2_image_picker_row",
+          "label": "Background 2"
+        },
+        {
+          "type": "url",
+          "id": "column_2_collection_handle",
+          "label": "Select Collection 2"
+        },
+        {
+          "type": "text",
+          "id": "column_2_btn_text",
+          "default": "Shop",
+          "label": "Button Text",
+          "info": "Text inside button 2"
+        },
+        {
+          "id": "column_3_heading",
+          "type": "text",
+          "label": "Heading 3 ",
+          "default": "FOR MORNINGS ON-THE-GO"
+        },
+        {
+          "id": "column_3_sub-heading",
+          "type": "richtext",
+          "label": "Sub Heading 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "column_3_image_picker_row",
+          "label": "Background 3"
+        },
+        {
+          "type": "url",
+          "id": "column_3_collection_handle",
+          "label": "Select Collection 3"
+        },
+        {
+          "type": "text",
+          "id": "column_3_btn_text",
+          "default": "Shop",
+          "label": "Button Text",
+          "info": "Text inside button 3"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,186 @@
+{{ 'single-product-banner.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_image = section.settings.background_image | img_url: '1800x'
+  assign section_title = section.settings.section_title
+-%}
+
+{% if bg_image != blank %}
+  {%- style -%}
+    .map-section--{{ section.id }} {
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-image: url("{{ bg_image  }}");
+      background-position: {{ section.settings.background_image_position | default: 'initial' }};
+      transition: all 500ms ease;
+    }
+    @media only screen and (max-width: 600px) {
+      .map-section--{{ section.id }} {
+        background-size: cover;
+      }
+      .map-section--{{ section.id }} {
+        height: 548px;
+      }
+
+      .explore-collection-content--{{ section.id }}{
+        position: absolute;
+        top: 126px;
+        text-align: left;
+        left:  2%;
+      }
+    }
+  {%- endstyle -%}
+{% endif %}
+
+<div
+  class="map-section single-product-banner map-section--{{ section.id }}"
+  data-section-id="{{ section.id }}"
+>
+  <div class="h-100 w-100 map-section-space single-product-banner-div">
+    <div class="page-width">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="left-section position-relative col-12 col-lg-4 mr-auto d-flex align-items-end align-items-md-center justify-content-left height-300 pl-5">
+            <div class="explore-collection-content explore-collection-content--{{ section.id }}">
+              {%- if section.settings.section_title != blank -%}
+                <h1 class=" text-white fst-normal mb-5 header-{{ section.id }}">
+                  {{ section_title }}
+                </h1>
+              {%- endif -%}
+              {%- if section.settings.button_text != blank -%}
+                <a
+                  href="{{ section.settings.section_url  }}"
+                  class="mt-4 btn-secondary btn-secondary--{{ section.id }}"
+                >
+                  {{ section.settings.button_text }}
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
+          <div class="right-section col-12 col-lg-auto ms-auto d-lg-block">
+            {%- assign product = all_products[section.settings.designated_product] -%}
+            {%- render 'product-grid-item-3', product: product -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if template == 'index' %}
+  <style>
+    @media (max-width: 767px) {
+      .right-section.col-12.col-lg-auto.ms-auto.d-lg-block {
+        display: none;
+      }
+    }
+  </style>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Single Product Banner",
+  "class": "index-section--flush",
+  "settings": [
+    {
+      "type": "product",
+      "id": "designated_product",
+      "label": "Special Product",
+      "info": "Collection that holds this  product"
+    },
+    {
+      "id": "section_title",
+      "type": "richtext",
+      "label": "Title Text",
+      "default": "<p>DESIGNED FOR KIDS AND THEIR PARENTS </p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "section_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image",
+      "info": "Use instead of an API key"
+    },
+    {
+      "type": "select",
+      "id": "background_image_position",
+      "label": "Image focal point",
+      "default": "center center",
+      "options": [
+        {
+          "label": "Top left",
+          "value": "top left"
+        },
+        {
+          "label": "Top center",
+          "value": "top center"
+        },
+        {
+          "label": "Top right",
+          "value": "top right"
+        },
+        {
+          "label": "Middle left",
+          "value": "center left"
+        },
+        {
+          "label": "Middle center",
+          "value": "center center"
+        },
+        {
+          "label": "Middle right",
+          "value": "center right"
+        },
+        {
+          "label": "Bottom left",
+          "value": "bottom left"
+        },
+        {
+          "label": "Bottom center",
+          "value": "bottom center"
+        },
+        {
+          "label": "Bottom right",
+          "value": "bottom right"
+        }
+      ],
+      "info": "Used to keep the subject of your photo in view."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Single Product Banner",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
+{%- style -%}
+  @media only screen and (max-width: 767px){
+    {%- if section.settings.section_title == blank -%}
+      .map-section--{{ section.id }}.single-product-banner .map-section-space{
+        padding: 48px 0;
+      }
+    {%- endif -%}
+    .map-section--{{ section.id }} .grid-product__colors{
+      margin-bottom: 0;
+    }
+    .map-section--{{ section.id }}.grid-product__meta .grid-product__title{
+      height: unset;
+    }
+  }
+{%- endstyle -%}
+
+<script
+  src="{{ 'single-product-banner.js' | asset_url }}"
+  defer="defer"
+></script>

@@ -1,0 +1,99 @@
+.shopify_trapeze-section .container-fluid {
+  padding: 0 12px;
+}
+.shopify_trapeze-section .kids-banner-picture {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  width: 100%;
+}
+.shopify_trapeze-section .kids-banner {
+  display: flex;
+  overflow: hidden;
+  height: 692px;
+  min-height: 300px;
+}
+.kids-banner .kids-banner-title:before {
+  position: absolute;
+  top: 0;
+  background: url('https://cdn.shopify.com/s/files/1/0552/9731/0876/files/hatching_1.png?v=1624281530');
+  left: 0;
+  content: '';
+  width: 30px;
+  height: 100%;
+}
+.kids-banner .kids-banner-title {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--thermos-trapeze-banner);
+  padding: 5% 96px;
+  position: relative;
+}
+.kids-banner .kids-banner-title:after {
+  position: absolute;
+  top: 0;
+  right: -66px;
+  content: '';
+  width: 128px;
+  background-color: var(--thermos-trapeze-banner);
+  height: 100%;
+  transform: skew(-10deg, 0deg);
+}
+.kids-banner .kids-banner-title .kids-banner-title-wrap {
+  max-width: 611px;
+  width: 100%;
+  z-index: 1;
+}
+.shopify_trapeze-section .trapeze-promo-title {
+  margin-top: 0%;
+  margin-bottom: 8%;
+}
+.trapeze-promo-title > p {
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-70);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-73);
+  text-transform: uppercase;
+}
+.trapeze-promo-description > p {
+  color: var(--thermos-white);
+  font-family: var(--thermos-dinot);
+  font-size: var(--thermos-font-size-22);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-36);
+  font-weight: normal;
+}
+@media only screen and (max-width: 1199px) {
+  .trapeze-promo-title > p {
+    font-size: var(--thermos-font-size-50);
+  }
+  .kids-banner .kids-banner-title {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .trapeze-promo-title > p {
+    font-size: var(--thermos-font-size-34);
+    font-weight: var(--thermos-font-Weight-700);
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: var(--thermos-line-height-40);
+    text-align: center;
+  }
+  .trapeze-promo-description > p {
+    color: var(--thermos-white);
+    font-family: var(--thermos-dinot);
+    font-size: var(--thermos-font-size-14);
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: var(--thermos-line-height-20);
+    text-align: center;
+    padding: 0% 7%;
+  }
+  .shopify_trapeze-section .trapeze-promo-title {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}

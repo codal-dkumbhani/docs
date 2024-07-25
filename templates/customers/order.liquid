@@ -1,0 +1,225 @@
+{{ 'account-page.css' | asset_url | stylesheet_tag: preload: true }}
+
+<div class="page-width page-content">
+  {% if settings.show_breadcrumbs %}
+    <nav
+      class="breadcrumb{% if settings.type_headers_align_text %} text-center{% endif %}"
+      role="navigation"
+      aria-label="breadcrumbs"
+    >
+      <a href="{{ routes.account_url }}">{{ 'customer.account.title' | t }}</a>
+      <span class="divider" aria-hidden="true">/</span>
+      {{ 'customer.orders.title' | t }}
+    </nav>
+  {% endif %}
+
+  <div class="grid">
+    <div class="grid__item medium-up--two-thirds">
+      <div class="order-details">
+        <h3>{{ 'customer.order.title' | t: name: order.name }}</h3>
+        {% if order.cancelled %}
+          <div class="errors">
+            {%- assign cancelled_at = order.cancelled_at | time_tag: format: 'date_at_time' -%}
+            <p class="h5">{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
+            <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason }}</p>
+          </div>
+        {% endif %}
+        <table>
+          {% for line_item in order.line_items %}
+            {% assign popupImage = '' %}
+            {% for property in line_item.properties %}
+              {% if property.first == '_Doogmaviewyourproof' %}
+                {% assign popupImage = property.last %}
+              {% endif %}
+
+              {% if property.first == '_cart_front_doogmaImage' %}
+                {% assign cartfrontImage = property.last %}
+                {% assign popupImage = property.last %}
+              {% endif %}
+
+              {% if property.first == '_cart_back_doogmaImage' %}
+                {% assign cartbackImage = property.last %}
+              {% endif %}
+
+              {% if property.first == '_front_doogmaImage' %}
+                {% assign popFrontImage = property.last %}
+              {% endif %}
+
+              {% if property.first == '_back_doogmaImage' %}
+                {% assign popBackImage = property.last %}
+              {% endif %}
+            {% endfor %}
+
+            <tr>
+              <td>
+                {% if popupImage != blank %}
+                  <figure
+                    class="{% if popupImage != blank  %}cart-main-image-popup {% endif %}  cart__image"
+                    data-image="{{ popupImage }}"
+                    data-imagefront="{{ popFrontImage }}"
+                    data-imageback="{{ popBackImage }}"
+                  >
+                    <img
+                      width="auto"
+                      height="auto"
+                      alt="cart front image"
+                      src="{{ cartfrontImage }}"
+                    >
+                    <img width="auto" height="auto" at="cart back image" src="{{ cartbackImage }}">
+                  </figure>
+                {% else %}
+                  <figure>
+                    <img
+                      width="auto"
+                      height="auto"
+                      src="{{ line_item.product.featured_image | image_url }}"
+                      alt="{{ line_item.product.featured_image.alt }}"
+                    >
+                  </figure>
+                {% endif %}
+              </td>
+              <td>
+                <div class="ord-pro-name">
+                  <p>
+                    {{ line_item.product.title }}
+                    <span>{{ line_item.variant.title | capitalize }}</span>
+                    {%- assign property_size = line_item.properties | size -%}
+                    {% unless line_item.selling_plan_allocation == null and property_size == 0 %}
+                      <p>
+                        {% unless line_item.selling_plan_allocation == null %}
+                          {{ line_item.selling_plan_allocation.selling_plan.name }}
+                        {% endunless %}
+                        {% if property_size != 0 %}
+                          {% for property in line_item.properties %}
+                            {% assign property_first_char = property.first | slice: 0 %}
+                            {% if property.last != blank and property_first_char != '_' %}
+                              <span>
+                                {{- property.first }}:
+                                {% if property.last contains '/uploads/' %}
+                                  <a href="{{ property.last }}">
+                                    {{- property.last | split: '/' | last -}}
+                                  </a>
+                                {% else %}
+                                  {{ property.last }}
+                                {% endif %}
+                              </span>
+                            {% endif %}
+                          {% endfor %}
+                        {% endif %}
+                      </p>
+                    {% endunless %}
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="ord-pro-price">{{ line_item.final_line_price | money }}</div>
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+
+        <div class="order-total-box">
+          <table>
+            {% for shipping_method in order.shipping_methods %}
+              <tr>
+                <td>Shipping & Handling</td>
+                <td>{{ shipping_method.price | money }}</td>
+              </tr>
+            {% endfor %}
+
+            {% for tax_line in order.tax_lines %}
+              <tr>
+                <td>Taxes</td>
+                <td>{{ tax_line.price | money }}</td>
+              </tr>
+            {% endfor %}
+
+            <tr>
+              <td><b>Order Total:</b></td>
+              <td>
+                <b>
+                  {{- order.total_price | money }}
+                  {{ order.currency -}}
+                </b>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid__item medium-up--one-third order-details-billing">
+      <h3>{{ 'customer.order.billing_address' | t }}</h3>
+
+      <p>
+        <strong>{{ 'customer.order.payment_status' | t }}:</strong>
+        {{ order.financial_status_label }}
+      </p>
+
+      <p class="h5">{{ order.billing_address.name }}</p>
+      <p>
+        {% if order.billing_address.company != blank %}
+          {{ order.billing_address.company -}}
+          <br>
+        {% endif %}
+        {{ order.billing_address.street -}}
+        <br>
+        {{ order.billing_address.city -}}
+        <br>
+        {% if order.billing_address.province != blank %}
+          {{ order.billing_address.province -}}
+          <br>
+        {% endif %}
+        {{ order.billing_address.zip | upcase -}}
+        <br>
+        {{ order.billing_address.country -}}
+        <br>
+        {{ order.billing_address.phone }}
+      </p>
+
+      <br>
+
+      <h3>{{ 'customer.order.shipping_address' | t }}</h3>
+
+      <p>
+        <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
+        {{ order.fulfillment_status_label }}
+      </p>
+
+      <p class="h5">{{ order.shipping_address.name }}</p>
+      <p>
+        {% if order.shipping_address.company != blank %}
+          {{ order.shipping_address.company -}}
+          <br>
+        {% endif %}
+        {{ order.shipping_address.street -}}
+        <br>
+        {{ order.shipping_address.city -}}
+        <br>
+        {% if order.shipping_address.province != blank %}
+          {{ order.shipping_address.province -}}
+          <br>
+        {% endif %}
+        {{ order.shipping_address.zip | upcase -}}
+        <br>
+        {{ order.shipping_address.country -}}
+        <br>
+        {{ order.shipping_address.phone }}
+      </p>
+
+      <br>
+
+      <h3>Tracking ID</h3>
+      {% for line_item in order.line_items %}
+        <p>
+          <a
+            style="color: var(--thermos-tuna); text-decoration:underline;"
+            href="{{ line_item.fulfillment.tracking_url }}"
+          >
+            {{- line_item.fulfillment.tracking_number -}}
+          </a>
+        </p>
+      {% endfor %}
+    </div>
+  </div>
+</div>

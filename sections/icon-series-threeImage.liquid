@@ -1,0 +1,95 @@
+{% comment %}
+  This section consists of the three-image section on the isocn series page
+{% endcomment %}
+{{ 'icon-series-threeImage.css' | asset_url | stylesheet_tag }}
+<div class="three-image">
+  <ul>
+    {% for block in section.blocks %}
+      <li class="{{block.id}}">
+        <figure>
+          {%-
+            render 'image-element',
+            img: block.settings.image.,
+            alt: block.settings.image.alt,
+            img_width: 700,
+            loading: "lazy"
+          -%}
+        </figure>
+        <div class="image-detail">
+          {% if block.settings.title != blank %}
+            <h3 class="three-image-title">{{ block.settings.title }}</h3>
+          {% endif %}
+          {% if block.settings.subtitle != blank %}
+            <a href="{{ block.settings.url }}" class="image-detail-link">
+              {{- block.settings.subtitle -}}
+            </a>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Three Image Section",
+  "class": "iconseries-three-image-section",
+  "max_blocks": 5,
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Sub title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        },
+        {
+          "type": "color",
+          "id": "colorfortitle",
+          "label": "Title Text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "colorforsubtitle",
+          "label": "Sub Title Text color",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon-Series-ThreeImage"
+    }
+  ]
+}
+{% endschema %}
+{% style %}
+  {% for block in section.blocks %}
+    .iconseries-three-image-section .{{ block.id }} .three-image-title{
+      color: {{ block.settings.colorfortitle }};
+    }
+    .iconseries-three-image-section .{{ block.id }} .image-detail-link{
+      color: {{ block.settings.colorforsubtitle }}
+    }
+  {% endfor %}
+{% endstyle %}

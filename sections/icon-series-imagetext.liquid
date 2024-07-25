@@ -1,0 +1,158 @@
+{%- comment -%}
+  This section consists of the image and its text on the icon-series page
+{%- endcomment -%}
+{{ 'icon-series-imagetext.css' | asset_url | stylesheet_tag }}
+
+<div class="icon-{{ section.id }} imageText">
+  <div class="icon-image-textleft">
+    {%- if section.settings.title != blank -%}
+      <h3>{{ section.settings.title }}</h3>
+    {%- endif -%}
+    {%- if section.settings.description != blank -%}
+      <p>{{ section.settings.description }}</p>
+    {%- endif -%}
+    {%- if section.settings.btnText != blank -%}
+      <a class="image-text-btn" href="{{ section.settings.btnurl }}">
+        {{- section.settings.btnText -}}
+      </a>
+    {%- endif -%}
+  </div>
+  <div class="icon-image-container">
+    <div class="icon-background-img"></div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Icon-series-ImageText",
+  "class": "icon-series-imgText",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Upload Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobileimage",
+      "label": "Upload Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "background_text_color",
+      "label": "Choose Text Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "btnText",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btnurl",
+      "label": "Button Url"
+    },
+    {
+      "type": "color",
+      "id": "btnbgcolor",
+      "label": "Button Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "btntextcolor",
+      "label": "Button Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "btnbghover",
+      "label": "Button Background when Hover",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "btntexthover",
+      "label": "ButtonT Text when Hover",
+      "default": "#ffffff"
+    },
+    {
+      "type": "radio",
+      "id": "position",
+      "label": "Position of image and text",
+      "options": [
+        {
+          "value": "left_image",
+          "label": "Left Image Right Text"
+        },
+        {
+          "value": "right_image",
+          "label": "Right Image Left Text"
+        }
+      ],
+      "default": "right_image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "icon-series-imgText",
+      "settings": {}
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.popups"]
+  }
+}
+{% endschema %}
+{%- style -%}
+  .icon-{{ section.id }} .icon-background-img {
+    background: url({{ section.settings.image | image_url: width: 1248 }});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .icon-{{ section.id }} .icon-image-textleft {
+    background-color:{{section.settings.background_text_color}};
+  }
+  .icon-{{ section.id }} .icon-image-textleft .image-text-btn {
+    color:{{section.settings.btntextcolor}};
+    background-color:{{section.settings.btnbgcolor}}
+  }
+  .icon-{{ section.id }} .icon-image-textleft .image-text-btn:hover {
+    color:{{section.settings.btntexthover}};
+    background-color:{{section.settings.btnbghover}}
+  }
+  {%- if section.settings.position == 'right_image' -%}
+    .icon-{{ section.id }} .icon-image-textleft{
+      order: 1
+    }
+    .icon-{{ section.id }} .icon-image-container {
+      order: 2
+    }
+    {%- else -%}
+    .icon-{{ section.id }} .icon-image-textleft{
+      order: 2
+    }
+    .icon-{{ section.id }} .icon-image-container {
+      order: 1
+    }
+    {%- endif -%}
+  @media only screen and (max-width: 767px) {
+    .icon-{{ section.id }} .icon-background-img {
+      background: url({{ section.settings.mobileimage | image_url: width: 375 }});
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+{%- endstyle -%}

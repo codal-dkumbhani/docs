@@ -1,0 +1,172 @@
+{
+  "type": "header",
+  "name": "t:sections.header-group.name",
+  "sections": {
+    "header": {
+      "type": "header",
+      "blocks": {
+        "header-0": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo_2x_25955799-cffe-4c70-98d1-3362d077a1ee.png",
+            "desktop_logo_width": 140,
+            "mobile_logo_width": 110
+          }
+        },
+        "megamenu_pbfiDV": {
+          "type": "megamenu",
+          "settings": {
+            "text": "Drinkware",
+            "image1": "shopify://shop_images/IS1002GT_IS1012MS_ICON_Granite_MatteSS_OctMed_23_CAL_Ski_570x332_15372164-9850-4226-be29-c683600df3e9.jpg",
+            "image1url": "shopify://collections/mugs-tumblers",
+            "image2": "shopify://shop_images/IS2102MS_ICON_OctMed_23_CAL_Lake_13A_5547_BeverageBottles_DropDownImage_570x332_6696305a-5ba5-4a03-a754-15d872627e8f.jpg",
+            "image2url": "shopify://collections/beverage-bottles",
+            "image3": "shopify://shop_images/IS2202GT_ICON_OctMed_23_CAL_Lake_08C_5275_WaterBottles_DropDownImage_570x332_ca7cdd93-91fe-4fe0-99fc-0f91eaabba9d.jpg",
+            "image3url": "shopify://collections/water-bottles",
+            "image4": "shopify://shop_images/IS2302GT4_IS2202MS4_IS2332GC4_ICON_OctMed_23_CAL_Campus_01F_0003_PromotionalBox_688x662_097b2837-9c78-47dc-8f36-4b789410407f.jpg",
+            "image4Text": "FREE SHIPPING",
+            "image4SubText": "ON ORDERS OVER $50",
+            "image4TextURL": "shopify://collections/drinkware"
+          }
+        },
+        "megamenu_tYMeyx": {
+          "type": "megamenu",
+          "settings": {
+            "text": "Food Storage",
+            "image1": "shopify://shop_images/IS3002SN4_ICON_OctMed_23_CAL_Campus_07C_0009_FoodJars_DropDownImage_570x332_576c1508-31c5-4006-bda1-40238fcc29bd.jpg",
+            "image1url": "shopify://collections/food-jars",
+            "image2": "shopify://shop_images/C521011T_9can_Duffle_Terrazzo_SS_1741406807_R1_570x332_a005369c-bee9-4aef-a8a4-1c75a6f0d0b5.jpg",
+            "image2url": "shopify://collections/adult-lunch-boxes",
+            "image3": "shopify://shop_images/IS1102SN4_IS1112MS4_ICON_OctMed_23_CAL_Home_15D_10905_Drinkware_CategoryPageBanner_1630x800_5c695dca-0c7f-444a-b24f-f488ecabe8a7.jpg",
+            "image3url": "shopify://collections/drinkware",
+            "image4": "shopify://shop_images/IS3012GT4_IS1012MS4_ICON_OctMed_23_CAL_Home_04B_9046_PromotionalBox_688x662_185c88d6-2778-4324-bb46-5fa5309911d7.jpg",
+            "image4Text": "FREE SHIPPING",
+            "image4SubText": "ON ORDERS OVER $50",
+            "image4TextURL": "shopify://collections/food-storage"
+          }
+        },
+        "megamenu_7MRQiD": {
+          "type": "megamenu",
+          "settings": {
+            "text": "Kids",
+            "image1": "shopify://shop_images/Navigation__KidBottles_570x332_1257aa1d-bda0-4734-a82f-51bfcde3b870.jpg",
+            "image1url": "shopify://collections/water-bottles",
+            "image2": "shopify://shop_images/Navigation_KidFoodStorage_570x332_298b2330-f944-4d33-b41d-37b1ee48919d.jpg",
+            "image2url": "shopify://collections/food-jars",
+            "image3": "shopify://shop_images/Navigation_Kids_570x332_b74b8b5e-ed9d-4549-9bd6-a4221595fc61.jpg",
+            "image3url": "shopify://collections/lunchboxes",
+            "image4": "shopify://shop_images/F5009NY_F5009PK_F4019TL_F3009PK_Shot4_SQ_2bfa8ce4-d68b-46a8-b8ce-f1e4ae28efbe.jpg",
+            "image4Text": "FREE SHIPPING",
+            "image4SubText": "ON ORDERS OVER $50",
+            "image4TextURL": "shopify://pages/back-to-school"
+          }
+        },
+        "megamenu_hKemN9": {
+          "type": "megamenu",
+          "settings": {
+            "text": "Featured",
+            "image1": "shopify://shop_images/IS2202GT_ICON_OctMed_23_Gym_5a_004_BestSellers_DropDownImage_570x332_a56817fd-ce7d-40e2-ad14-16b595cfd1b5.jpg",
+            "image1url": "shopify://collections/best-sellers",
+            "image2": "shopify://shop_images/IS2512GC_Glacier_18ozStraw_Loop_Icon_OctMed_23_Home_07C_0024_NewArrivals_DropDownImage_570x332_94366e14-7cc1-4699-aa17-735cd23dfb63.jpg",
+            "image2url": "shopify://collections/new-arrivals",
+            "image3": "shopify://shop_images/Navigation_TopRated_2570x332_877b166c-fafe-47e5-bf9a-ef086219e70f.jpg",
+            "image3url": "shopify://collections/top-rated",
+            "image4Text": "",
+            "image4SubText": "",
+            "image4TextURL": ""
+          }
+        },
+        "megamenu_collection_f4Gecc": {
+          "type": "megamenu_collection",
+          "settings": {
+            "text": "Collections",
+            "nav-collection-img1": "shopify://shop_images/icon.png",
+            "nav-collection-text1": "ICON SERIES",
+            "nav-collection-url1": "shopify://collections/icon-series",
+            "nav-collection-img2": "shopify://shop_images/baby.jpg",
+            "nav-collection-text2": "FUNTAINER COLLECTION",
+            "nav-collection-url2": "shopify://collections/funtainer",
+            "nav-collection-img3": "shopify://shop_images/staineless.jpg",
+            "nav-collection-text3": "STAINLESS KING COLLECTION",
+            "nav-collection-url3": "shopify://collections/stainless-king-collection-1",
+            "nav-collection-img4": "shopify://shop_images/alta.jpg",
+            "nav-collection-text4": "ALTA SERIES",
+            "nav-collection-url4": "shopify://collections/alta"
+          }
+        },
+        "megamenu_8HcAhM": {
+          "type": "megamenu",
+          "settings": {
+            "text": "Bundles",
+            "image1": "shopify://shop_images/IS1112GC4_IS1512MS4_IS1512GC4_IS1102GC4_ICON_OctMed_23_CAL_Campus_11A_4100-Nav-571x333.jpg",
+            "image1url": "shopify://collections/icon-bundles",
+            "image2": "shopify://shop_images/F4100PK_F3100PK_Navigation_Collection_570x332_783ceafa-d05e-4fc5-b4fd-77d6f5392c0f.jpg",
+            "image2url": "shopify://collections/kids-bundles",
+            "image3": "shopify://shop_images/IS1102SN4_IS1112MS4_ICON_OctMed_23_CAL_Home_15D_10905_Drinkware_CategoryPageBanner_1630x800_5c695dca-0c7f-444a-b24f-f488ecabe8a7.jpg",
+            "image3url": "shopify://collections/bundle-shop-all",
+            "image4": "shopify://shop_images/IS1502MS_IS1512MS_23_Thermos_Home_Shot_17E_11177_SQ-Nav-Promo-688x662.jpg",
+            "image4Text": "FREE SHIPPING",
+            "image4SubText": "ON ORDERS OVER $50",
+            "image4TextURL": ""
+          }
+        }
+      },
+      "block_order": [
+        "header-0",
+        "megamenu_pbfiDV",
+        "megamenu_tYMeyx",
+        "megamenu_7MRQiD",
+        "megamenu_hKemN9",
+        "megamenu_collection_f4Gecc",
+        "megamenu_8HcAhM"
+      ],
+      "settings": {
+        "header_main_text": "<p><a href=\"https://thermos.com/collections/bundle-shop-all\" title=\"https://thermos.com/collections/bundle-shop-all\">20% OFF Bundles | Free Shipping on Orders Over $50*</a></p>",
+        "header_main_bg-color": "#c79140",
+        "header_text_color": "#ffffff",
+        "header_bg_color": "#414042",
+        "header_text_size": 18,
+        "header_text_size_mobile": 16,
+        "main_menu_link_list": "main-menu",
+        "hover_menu": true,
+        "mega_menu_images": true,
+        "main_menu_alignment": "left",
+        "header_style": "sticky",
+        "sticky_index": false,
+        "sticky_collection": false,
+        "toolbar_menu": "",
+        "toolbar_social": false,
+        "show_locale_selector": true,
+        "show_currency_selector": true,
+        "show_currency_flags": true
+      }
+    },
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "announcement-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free",
+            "link_text": "On all orders over $100",
+            "link": ""
+          }
+        },
+        "announcement-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Hassle-free returns",
+            "link_text": "30-day postage paid returns",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["announcement-0", "announcement-1"],
+      "disabled": true,
+      "settings": {
+        "announcement_compact": true
+      }
+    }
+  },
+  "order": ["header", "announcement"]
+}

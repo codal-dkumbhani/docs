@@ -1,0 +1,85 @@
+{{ 'icon-collections.css' | asset_url | stylesheet_tag: preload: true }}
+
+{% if section.settings.featuredcollection1 != blank %}
+  <div class="back-to-school">
+    <div class="page-width page-width--flush-small">
+      <div class="title-with-viewall ">
+        {% if section.settings.text != blank %}
+          <h1>{{ section.settings.text }}</h1>
+        {% else %}
+          <h1>{{ collections[section.settings.featuredcollection1].title }}</h1>
+        {% endif %}
+        {% if section.settings.featuredcollection1_link != blank %}
+          <p class="icp-view-all">
+            <a href="{{ section.settings.featuredcollection1_link }}" class="small--hide">
+              {{- section.settings.featuredcollection1_label -}}
+            </a>
+          </p>
+        {% elsif section.settings.featuredcollection1 != blank %}
+          <p class="icp-view-all">
+            <a
+              href="{{ collections[section.settings.featuredcollection1].url }}"
+              class="small--hide"
+              >View all {{ collections[section.settings.featuredcollection1].title -}}
+            </a>
+          </p>
+        {% endif %}
+      </div>
+
+      <div class="grid pb-1 ">
+        {%- for product in collections[section.settings.featuredcollection1].products limit: 4 -%}
+          {%- render 'product-grid-item-4',
+            product: product,
+            grid_item_width: 'small--one-half medium-up--one-quarter',
+            per_row: 4
+          -%}
+        {%- endfor -%}
+      </div>
+      <div class="moblie-icp-view-all">
+        {% if section.settings.featuredcollection1_link != blank %}
+          <p class="icp-view-all">
+            <a href="{{ section.settings.featuredcollection1_link }}" class="">
+              {{- section.settings.featuredcollection1_label -}}
+            </a>
+          </p>
+        {% elsif section.settings.featuredcollection1 != blank %}
+          <p class="icp-view-all">
+            <a href="{{ collections[section.settings.featuredcollection1].url }}" class=""
+              >View all {{ collections[section.settings.featuredcollection1].title -}}
+            </a>
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Title",
+      "default": "View all"
+    },
+    {
+      "type": "collection",
+      "id": "featuredcollection1",
+      "label": "Featured Collection 1"
+    },
+    {
+      "type": "text",
+      "id": "featuredcollection1_label",
+      "label": "Collection 1 View All Label",
+      "default": "View all"
+    },
+    {
+      "type": "url",
+      "id": "featuredcollection1_link",
+      "label": "Collection 1 View All Link"
+    }
+  ]
+}
+{% endschema %}

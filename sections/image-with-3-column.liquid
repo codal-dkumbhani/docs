@@ -1,0 +1,143 @@
+{{ 'image-with-3-column.css' | asset_url | stylesheet_tag }}
+{% for block in section.blocks %}
+  <style>
+    .image-with-3-column-div {
+      background-color: {{ section.settings.background_color }};
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .image-with-3-column-div .title.title-{{ section.id }} {
+      font-size: {{ block.settings.title_size }}px;
+      color: {{ block.settings.title_color }};
+    }
+    .image-with-3-column-div .button {
+      background-color: {{ block.settings.button_background_color }};
+      color: {{ block.settings.button_text_outline_color }};
+      border: 1px solid {{ block.settings.button_text_outline_color }};
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+{% endfor %}
+<div class="image-with-3-column-div">
+  <div class="container">
+    {% for block in section.blocks %}
+      <div class="image-data-section">
+        {% if block.settings.image %}
+          <div class="image-section">
+            <img
+              src="{{ block.settings.image | img_url: 'large' }}"
+              alt="{{ block.settings.title }}"
+              width="auto"
+              height="auto"
+            >
+          </div>
+        {% endif %}
+        <div class="content">
+          {% if block.settings.title %}
+            <h2 class="title title-{{ section.id }}">{{ block.settings.title }}</h2>
+          {% endif %}
+          {% if block.settings.description %}
+            <p class="description">{{ block.settings.description }}</p>
+          {% endif %}
+          {% if block.settings.button_text and block.settings.button_url %}
+            <a href="{{ block.settings.button_url }}" class="button">
+              {{- block.settings.button_text -}}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with 3 column",
+  "class": "image-with-3-column",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#29deff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Image-section",
+      "name": "Image with content",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "number",
+          "id": "title_size",
+          "label": "Title Font Size"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#6e5ee4"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "text",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+        {
+          "type": "color",
+          "id": "button_background_color",
+          "label": "Button Background Color",
+          "default": "#29deff"
+        },
+        {
+          "type": "color",
+          "id": "button_text_outline_color",
+          "label": "Button Text and Outline Color",
+          "default": "#6E5EE4"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with 3 column"
+    }
+  ]
+}
+{% endschema %}
+<script>
+  $(document).ready(function () {
+    if ($(window).width() < 768) {
+      $('.image-with-3-column-div .container').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+    }
+  });
+</script>

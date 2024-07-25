@@ -1,0 +1,57 @@
+{
+  "wrapper": "div.customizer_plp",
+  "sections": {
+    "customize-banner-with-content": {
+      "type": "customize-banner-with-content",
+      "settings": {
+        "webimage": "shopify://shop_images/Customizer_Banners_3000x1160_Desktop_Main.png",
+        "mobileimage": "shopify://shop_images/Customizer_Banners_640x1000_Mobile_Main.png",
+        "title": "Personalize Your Drinkware",
+        "desc": "Elevate your drinkware game with our new customization feature!",
+        "extratext": ""
+      }
+    },
+    "featured_collection_BLdVQV": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Customizable Collection",
+        "home_featured_products": "customizer",
+        "collection_view_all_label": "View collection",
+        "collection_view_all_link": "shopify://collections/customizer",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "customize_banner_6xpWp7": {
+      "type": "customize-banner",
+      "settings": {
+        "webimage": "shopify://shop_images/IS2002SP_ICON_SunsetPink_OctMed_23_CAL_Ski_10_0215_Customizer_3000x1160_22e30495-e1b3-4925-92a6-1fd4316ce4a0.jpg",
+        "mobileimage": "shopify://shop_images/IS2002SP_ICON_SunsetPink_OctMed_23_CAL_Ski_10_0215_Customizer_Mobile_640x1100_d583d657-9607-467c-ada1-be794423eaa1.jpg",
+        "title": ""
+      }
+    },
+    "featured_collection_mMkrH8": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Customizable Best Sellers",
+        "home_featured_products": "customizer-best-sellers",
+        "collection_view_all_label": "View all",
+        "collection_view_all_link": "shopify://collections/customizer-best-sellers",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "customize-banner-with-content",
+    "featured_collection_BLdVQV",
+    "customize_banner_6xpWp7",
+    "featured_collection_mMkrH8"
+  ]
+}

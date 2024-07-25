@@ -1,0 +1,82 @@
+.footer-promotions-section {
+  background-color: var(--thermos-red);
+  color: var(--thermos-white);
+  padding: 25px 0px 25px 0px;
+}
+.footer-promotions-section .index-section {
+  margin: 0;
+  overflow: hidden;
+}
+.footer-promotions-section .section--divider {
+  padding: 0px;
+  border: none;
+}
+.footer-promotions-section .grid--flush-bottom {
+  margin: 0;
+  overflow: hidden;
+}
+.footer-promotions-section .h3 {
+  color: var(--thermos-white);
+  font-size: var(--thermos-font-size-30);
+  font-weight: var(--thermos-font-Weight-bold);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-36);
+  text-align: center;
+  font-family: var(--thermos-din-condensed);
+  height: 29px;
+  margin: 0;
+}
+.footer-promotions-section .text-spacing {
+  color: var(--thermos-white);
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-20);
+  font-weight: var(--thermos-font-Weight-bold);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-24);
+  text-align: center;
+  margin: 0;
+}
+.grid--flush-bottom > .grid__item {
+  margin-bottom: 0;
+}
+/* responsive design */
+@media (max-width: 767px) {
+  .footer-promotions.small-hide {
+    display: none;
+  }
+  .footer-promotions-section .h3 {
+    font-size: var(--thermos-font-size-30);
+    line-height: var(--thermos-line-height-36);
+  }
+  .footer-promotions-section .text-spacing {
+    font-size: var(--thermos-font-size-20);
+    line-height: var(--thermos-line-height-24);
+  }
+  .footer-promotions-section .carousel-item {
+    width: 80%;
+    margin: 0 auto;
+    float: unset;
+  }
+  .index-section--footer .carousel-control-next,
+  .carousel-control-prev {
+    opacity: 1;
+  }
+  .footer-promotions-section .section--divider {
+    position: relative;
+  }
+  .carousel-control-next svg,
+  .carousel-control-prev svg {
+    position: absolute;
+    top: 50%;
+  }
+  .carousel-control-next svg {
+    right: 10%;
+  }
+  .carousel-control-prev svg {
+    left: 10%;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    display: contents;
+  }
+}

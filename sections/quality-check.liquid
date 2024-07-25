@@ -1,0 +1,44 @@
+{{ 'quality-check.css' | asset_url | stylesheet_tag }}
+{% if product.metafields.features != blank %}
+  <div class="quality-proof-section">
+    <div class="page-width">
+      <ul>
+        {% for feature_str in product.metafields.features %}
+          {% assign features = feature_str | last | split: '|' %}
+          <li>
+            <figure>
+              <img
+                src="{{ features[0] }}"
+                width="auto"
+                height="auto"
+                class=""
+                loading="lazy"
+                alt="{{ banner[1] }}"
+              >
+            </figure>
+            <figcaption>
+              {% if features[1] != blank %}
+                <h5 class="feature-icon-text-heading">{{ features[1] }}</h5>
+              {% endif %}
+              {% if features[2] != blank %}
+                <p>{{ features[2] }}</p>
+              {% endif %}
+            </figcaption>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Quality Check",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Quality check",
+      "category": "ADVANCED LAYOUT"
+    }
+  ]
+}
+{% endschema %}

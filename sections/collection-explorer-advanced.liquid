@@ -1,0 +1,271 @@
+{{ 'collection-explorer-advanced.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign collumn_1_image_picker = section.settings.collumn_1_image_picker
+-%}
+
+{% if collumn_1_image_picker != blank %}
+  {%- style -%}
+    .collection-explorer-column-1{
+
+        background-size: cover;
+        background-position: center;
+        background-image: url("{{ collumn_1_image_picker | image_url: width: 750, height: 750 }}");
+        background-position: {{ section.settings.background_image_position_column_1 | default: 'center center' }};
+    }
+  {%- endstyle -%}
+{% endif %}
+
+<div class="pagsecondary">
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-12 col-md-6 collection-explorer-column-1 p-0 row-separator">
+        <div style="height: 100%; position: relative;  background-color: rgb(23 23 23 / 0.27 );">
+          <div
+            class="collection-explorer-overlay"
+            style="position: absolute; bottom: 6%; padding: 4%"
+          >
+            <h1 class="text-white custom-explorer-heading">{{ section.settings.heading }}</h1>
+            <div id="custom-explorer-description">
+              <p class="text-white " style="font-size: var(--thermos-font-size-19)">
+                {{ section.settings['sub-heading'] }}
+              </p>
+            </div>
+            <a
+              href="{{ section.settings.column_1_collection_handle }}"
+              class="btn btn-secondary btn-secondary--{{ section.id }}"
+            >
+              {{ section.settings.btn_text }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 collection-explorer-column-2 h-100">
+        <div class="container-fluid p-0">
+          <div class="row pl-2 column-separator row-separator">
+            {% for block in section.blocks %}
+              <div
+                class="col-12 column-2-bg p-0 row-separator {% if forloop.last %} m-0{% endif %} "
+                style="background-image: url({{ block.settings.collumn_2_image_picker_row | image_url: width: 583, height: 358 }});"
+              >
+                <div style="height: 100%; background-color: var(--thermos-dark-gray-27); position: relative">
+                  <div
+                    class="collection-explorer-overlay w-100"
+                    style="position: absolute; padding: 4%; padding-top: 24%;  bottom: 0"
+                  >
+                    <div class="container-fluid p-0">
+                      <div class="col-12 col-md-7">
+                        <h3 class="text-white custom-explorer-heading">
+                          {{ block.settings.heading }}
+                        </h3>
+                        <div class="mb-3" id="custom-explorer-description">
+                          {{ block.settings['sub-heading'] }}
+                        </div>
+                      </div>
+                      <div class="col-5 text-center">
+                        {% if block.settings.column_2_collection_handle != blank %}
+                          <a
+                            href="{{ block.settings.column_2_collection_handle }}"
+                            class="btn btn-secondary m-0 btn-secondary--{{ section.id }}"
+                          >
+                            {{ block.settings.btn_text }}
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {%- style -%}
+                .column-2-bg{
+                    height: 463.2px;
+                    background-size: cover;
+                    background-position: center;
+                    background-position: {{ section.settings.background_image_position_column_1 | default: 'center center' }};
+                }
+              {%- endstyle -%}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+{%- style -%}
+  .btn-secondary--{{ section.id }}{
+    padding: 9.7px 36px !important;
+    margin-top: 5px;
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Collection Explorer",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "FOR MORNINGS ON-THE-GO"
+    },
+    {
+      "id": "sub-heading",
+      "type": "richtext",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "collumn_1_image_picker",
+      "label": "Column 1 - Background"
+    },
+    {
+      "type": "url",
+      "id": "column_1_collection_handle",
+      "label": "Select Collection"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "default": "Explore Collection",
+      "label": "Button Text",
+      "info": "Text inside button"
+    },
+    {
+      "type": "select",
+      "id": "background_image_position_column_1",
+      "label": "Image focal point",
+      "default": "center center",
+      "options": [
+        {
+          "label": "Top left",
+          "value": "top left"
+        },
+        {
+          "label": "Top center",
+          "value": "top center"
+        },
+        {
+          "label": "Top right",
+          "value": "top right"
+        },
+        {
+          "label": "Middle left",
+          "value": "center left"
+        },
+        {
+          "label": "Middle center",
+          "value": "center center"
+        },
+        {
+          "label": "Middle right",
+          "value": "center right"
+        },
+        {
+          "label": "Bottom left",
+          "value": "bottom left"
+        },
+        {
+          "label": "Bottom center",
+          "value": "bottom center"
+        },
+        {
+          "label": "Bottom right",
+          "value": "bottom right"
+        }
+      ],
+      "info": "Used to keep the subject of your photo in view."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Column 2 Rows",
+      "settings": [
+        {
+          "id": "heading",
+          "type": "text",
+          "label": "Heading",
+          "default": "FOR MORNINGS ON-THE-GO"
+        },
+        {
+          "id": "sub-heading",
+          "type": "richtext",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "collumn_2_image_picker_row",
+          "label": "Column 1 - Background"
+        },
+        {
+          "type": "url",
+          "id": "column_2_collection_handle",
+          "label": "Select Collection"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "default": "Shop",
+          "label": "Button Text",
+          "info": "Text inside button"
+        },
+        {
+          "type": "select",
+          "id": "background_image_position_column_1",
+          "label": "Image focal point",
+          "default": "center center",
+          "options": [
+            {
+              "label": "Top left",
+              "value": "top left"
+            },
+            {
+              "label": "Top center",
+              "value": "top center"
+            },
+            {
+              "label": "Top right",
+              "value": "top right"
+            },
+            {
+              "label": "Middle left",
+              "value": "center left"
+            },
+            {
+              "label": "Middle center",
+              "value": "center center"
+            },
+            {
+              "label": "Middle right",
+              "value": "center right"
+            },
+            {
+              "label": "Bottom left",
+              "value": "bottom left"
+            },
+            {
+              "label": "Bottom center",
+              "value": "bottom center"
+            },
+            {
+              "label": "Bottom right",
+              "value": "bottom right"
+            }
+          ],
+          "info": "Used to keep the subject of your photo in view."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Explorer - 3 Column",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

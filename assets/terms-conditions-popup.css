@@ -1,0 +1,176 @@
+.terms-conditions-popup .wrap {
+  font-family: var(--thermos-din-condensed);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  max-height: 500px;
+  height: 100vh;
+}
+.terms-conditions-popup a {
+  color: var(--thermos-red);
+}
+.terms-conditions-popup .container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: var(--thermos-white);
+  color: var(--thermos-black);
+  width: 768px;
+  height: 100%;
+  border-radius: 0.25rem;
+  box-shadow: 0rem 1rem 2rem -0.25rem var(--thermos-transparent-black-25);
+}
+
+.terms-conditions-popup .container__heading {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--thermos-chinese-silver);
+  text-align: center;
+}
+
+.terms-conditions-popup .container__heading > h2 {
+  font-size: var(--thermos-font-size-28);
+  line-height: var(--thermos-line-height-28);
+  margin: 0;
+  font-family: inherit;
+}
+
+.terms-conditions-popup .container__content {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+.terms-conditions-popup .container__nav {
+  border-top: 1px solid var(--thermos-white);
+  padding: 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.terms-conditions-popup .container__nav > .button {
+  background-color: var(--thermos-slate-blue);
+  box-shadow: 0rem 0.5rem 1rem -0.125rem var(--thermos-transparent-black-25);
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  color: var(--thermos-white);
+  text-decoration: none;
+  font-size: var(--thermos-font-size-14);
+  transition: transform 0.25s, box-shadow 0.25s;
+  margin-left: auto;
+}
+
+.terms-conditions-popup .container__nav > .button:hover {
+  box-shadow: 0rem 0rem 1rem -0.125rem var(--thermos-transparent-black-25);
+  transform: translateY(-0.5rem);
+}
+
+.terms-conditions-popup .container__nav label {
+  letter-spacing: inherit;
+  margin-bottom: 0;
+}
+.terms-conditions-popup .container__nav input {
+  text-align: left;
+}
+.terms-conditions-popup .modal_highlight {
+  margin: 10px 15px;
+  padding: 10px 20px;
+  line-height: normal;
+}
+
+.terms-conditions-popup .modal_button {
+  padding: 10px 20px;
+  background-color: var(--thermos-islamic-green);
+  color: var(--thermos-white) !important;
+  text-decoration: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  display: inline-block;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.terms-conditions-popup .modal_button.enabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.terms-conditions-popup .modal_checkbox {
+  margin: 10px 0 10px 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.terms-conditions-popup .modal_checkbox input,
+.terms-conditions-popup .modal_checkbox label {
+  margin: 0;
+}
+
+.terms-conditions-popup .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--thermos-semi-transparent);
+}
+.terms-conditions-popup .modal_text {
+  margin: 0 15px;
+}
+.terms-conditions-popup .modal__inner {
+  background-color: unset;
+  justify-content: center;
+  transform-style: unset;
+}
+.terms-conditions-popup .modal_button {
+  text-align: center;
+}
+.terms-conditions-popup .modal_button:hover {
+  transform: unset;
+}
+@media (max-width: 1024px) {
+  .terms-conditions-popup .wrap {
+    max-height: unset;
+    width: 100%;
+    height: 100%;
+  }
+  .terms-conditions-popup .container {
+    width: 100%;
+  }
+  .terms-conditions-popup .modal__inner {
+    width: fit-content;
+  }
+  .terms-conditions-popup .container__nav {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 769px) {
+  .terms-conditions-popup .wrap {
+    max-height: unset;
+    width: calc(100% - 40px);
+    height: 100vh;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .terms-conditions-popup .container__nav > .button {
+    width: 100%;
+  }
+  .terms-conditions-popup .container__nav label {
+    font-size: var(--thermos-font-size-14);
+  }
+  .terms-conditions-popup .modal__inner {
+    margin: 20px;
+    border: 0;
+    transform-style: unset;
+  }
+  .terms-conditions-popup .container__nav {
+    text-align: left;
+    display: block;
+  }
+}

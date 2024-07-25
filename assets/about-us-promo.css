@@ -1,0 +1,51 @@
+.about-us-promo-1 .about-us-promo-1-heading {
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-70);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-73);
+  margin-top: 15%;
+}
+.about-us-promo-1 .about-us-promo-1-description {
+  font-family: var(--thermos-dinot);
+  font-size: var(--thermos-font-size-22);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-36);
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 15%;
+}
+.about-us-promo-1 .about-us-promo-1-heading .row {
+  justify-content: center;
+}
+.about-us-promo-1-heading .about-promo-icon {
+  max-width: 140px;
+  margin-inline: auto;
+  width: 100%;
+}
+.about-us-promo-1-heading .about-promo-icon-heading {
+  font-size: var(--thermos-font-size-40);
+  font-family: var(--thermos-dinot-cond-bold);
+}
+@media only screen and (max-width: 600px) {
+  .about-us-promo-1 .about-us-promo-1-heading {
+    font-size: var(--thermos-font-size-34);
+    font-weight: var(--thermos-font-Weight-700);
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: var(--thermos-line-height-40);
+    margin-top: 0%;
+  }
+  .about-us-promo-1 .about-us-promo-1-description {
+    font-size: var(--thermos-font-size-14);
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: var(--thermos-line-height-20);
+    color: var(--thermos-gunmetal);
+    margin-bottom: 0%;
+  }
+  .about-us-promo-1-heading .about-promo-icon {
+    width: 77px;
+    height: 77px;
+    margin-top: 20px;
+  }
+}

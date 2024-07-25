@@ -1,0 +1,253 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "top_subheading_space": 0,
+            "title": "30% Off Star Wars Collections",
+            "title_space": 0,
+            "title_size": 70,
+            "mobile_title_size": 30,
+            "subheading": "",
+            "text_color": "#ffffff",
+            "subheading_space": 0,
+            "link": "shopify://collections/star-wars",
+            "link_width": 135,
+            "link_text": "Shop Now",
+            "first_button_text": "#000000",
+            "first_button_back": "#ffffff",
+            "button_gap": 0,
+            "link_2": "",
+            "link_2_width": 135,
+            "link_text_2": "",
+            "second_button_text": "#000000",
+            "second_button_back": "#ffffff",
+            "text_align": "vertical-bottom horizontal-center",
+            "mobile_text_align": "mobile-center",
+            "image": "shopify://shop_images/StarWars_MT4_Homepage_Banners_1630x800_d4339ea3-b7ef-413f-b46f-0c121ca250f5.jpg",
+            "image_mobile": "shopify://shop_images/StarWars_MT4_Homepage_Banner_Mobile_640x1000_0de88bb6-417e-431a-820f-058dd60f19d4.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 10
+          }
+        },
+        "image_8pkmen": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "Happy National Hydration Day!",
+            "top_subheading_space": 0,
+            "title": "25% Off Water Bottles",
+            "title_space": 0,
+            "title_size": 61,
+            "mobile_title_size": 30,
+            "subheading": "",
+            "text_color": "#ffffff",
+            "subheading_space": 0,
+            "link": "shopify://collections/water-bottles",
+            "link_width": 135,
+            "link_text": "Shop Now",
+            "first_button_text": "#000000",
+            "first_button_back": "#ffffff",
+            "button_gap": 0,
+            "link_2": "",
+            "link_2_width": 135,
+            "link_text_2": "",
+            "second_button_text": "#000000",
+            "second_button_back": "#ffffff",
+            "text_align": "vertical-center horizontal-right",
+            "mobile_text_align": "mobile-center",
+            "image": "shopify://shop_images/NtlHydrationDay_CI2430002GC_IS1112SP_IS1102MS_OctMed_CAL_Home_11A_10225_Desktop_3000x1330_25c0ccfa-21b7-49cf-a105-d79b58397b24.jpg",
+            "image_mobile": "shopify://shop_images/NtlHydrationDay_CI2430002GC_IS1112SP_IS1102MS_OctMed_CAL_Home_11A_10225_Mobile_640x1000_9ffd773e-330d-42aa-98a1-12b4f097e28a.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 10
+          }
+        },
+        "image_9BkLGp": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Hygenic Covered lids",
+            "top_subheading_space": 0,
+            "title": "Care. It's what we do.",
+            "title_space": 0,
+            "title_size": 61,
+            "mobile_title_size": 30,
+            "subheading": "",
+            "text_color": "#ffffff",
+            "subheading_space": 0,
+            "link": "shopify://collections/leak-proof-products",
+            "link_width": 135,
+            "link_text": "Shop Now",
+            "first_button_text": "#000000",
+            "first_button_back": "#ffffff",
+            "button_gap": 0,
+            "link_2": "",
+            "link_2_width": 135,
+            "link_text_2": "",
+            "second_button_text": "#000000",
+            "second_button_back": "#ffffff",
+            "text_align": "vertical-center horizontal-right",
+            "mobile_text_align": "mobile-center",
+            "image": "shopify://shop_images/HomePage_Collection_Image_Templates_LandingPageBanner_Desktop_3000x1330_b26a364c-fa16-4d62-9496-d33c99281952.jpg",
+            "image_mobile": "shopify://shop_images/HomePage_Collection_Image_Templates_LandingPageBanner_Mobile_640x1000_3dfb4048-f481-4c90-aca0-c33b8a9ea917.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 10
+          }
+        }
+      },
+      "block_order": ["slideshow-1", "image_8pkmen", "image_9BkLGp"],
+      "settings": {
+        "section_height": "600px",
+        "mobile_height": "500px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "lazyload_images": true
+      }
+    },
+    "collection_explorer_CkDyry": {
+      "type": "collection-explorer",
+      "blocks": {
+        "select_PepCaU": {
+          "type": "select",
+          "settings": {
+            "heading": "New Colors Dropped!",
+            "sub-heading": "<p>Pick a Color to Match Your Mood</p>",
+            "collumn_2_image_picker_row": "shopify://shop_images/ColorDrop_CollectionBanner_IS3014PL_IS1154CR_IS2204MN_IS3004SG_IS1164RR_IS1124ML_2254908311_1436x728_6de7fed6-66a3-4473-80a7-1aaf2c62a1ec.jpg",
+            "column_2_collection_handle": "shopify://collections/icon-series",
+            "btn_text": "Explore",
+            "background_image_position_column_1": "center center"
+          }
+        },
+        "select_jThM7r": {
+          "type": "select",
+          "settings": {
+            "heading": "Designed to Endure",
+            "sub-heading": "<p>Icon Cooler Series</p>",
+            "collumn_2_image_picker_row": "shopify://shop_images/Collection_Main.jpg",
+            "column_2_collection_handle": "shopify://pages/icon-series-coolers",
+            "btn_text": "Explore",
+            "background_image_position_column_1": "center center"
+          }
+        }
+      },
+      "block_order": ["select_PepCaU", "select_jThM7r"],
+      "settings": {
+        "heading": "Care. It's What We Do.",
+        "sub-heading": "<p>Totally Leak-Proof Lids. (leak-proof when closed)</p>",
+        "collumn_1_image_picker": "shopify://shop_images/HomePage_Collection_Image_Templates_HomePage_1436x1436_b215164b-5a22-4171-9c2b-b601ec94e98f.jpg",
+        "column_1_collection_handle": "shopify://collections/leak-proof-products",
+        "btn_text": "Shop ALL",
+        "background_image_position_column_1": "center center"
+      }
+    },
+    "featured_collections_iErcAA": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_3CWLp9": {
+          "type": "collection",
+          "settings": {
+            "collection": "icon-series",
+            "collection_image": "shopify://shop_images/Category_Images_710x710-01.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_hVeKRH": {
+          "type": "collection",
+          "settings": {
+            "collection": "funtainer",
+            "collection_image": "shopify://shop_images/Category_Images_710x710-03.jpg",
+            "title": "Funtainer Collection",
+            "focal_point": "center center"
+          }
+        },
+        "collection_ymiQNq": {
+          "type": "collection",
+          "settings": {
+            "collection": "stainless-king-collection-1",
+            "collection_image": "shopify://shop_images/Desktop_5.png",
+            "title": "Stainless King Collection",
+            "focal_point": "center center"
+          }
+        },
+        "collection_3x4tCT": {
+          "type": "collection",
+          "settings": {
+            "collection": "alta",
+            "collection_image": "shopify://shop_images/Category_Images_710x710-02.jpg",
+            "title": "Alta Series",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_3CWLp9",
+        "collection_hVeKRH",
+        "collection_ymiQNq",
+        "collection_3x4tCT"
+      ],
+      "settings": {
+        "title": "",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    },
+    "single_product_banner_QP8TVT": {
+      "type": "single-product-banner",
+      "settings": {
+        "designated_product": "thermos-r-kids-freestyle-kit",
+        "section_title": "<p>DESIGNED </p><p>FOR KIDS AND </p><p>THEIR PARENTS </p>",
+        "button_text": "Explore collection",
+        "section_url": "shopify://pages/kids",
+        "background_image": "shopify://shop_images/Homepage_Kid_Updated.jpg",
+        "background_image_position": "center center"
+      }
+    },
+    "single_product_banner_eayQq3": {
+      "type": "single-product-banner",
+      "settings": {
+        "designated_product": "icon-tumbler-16oz",
+        "section_title": "<p>Don't lose</p><p>Steam</p>",
+        "button_text": "Explore collection",
+        "section_url": "shopify://collections/icon-series",
+        "background_image": "shopify://shop_images/IS1012MS_ICON_OctMed_23_ICON_OctMed_23_CAL_Commuter_01A_0017_DontLoseSteam_Homepage_3000x1130_6e338e20-3ff8-4ca1-b8c5-0785437e291d.jpg",
+        "background_image_position": "center center"
+      }
+    },
+    "featured_collection_UjVaab": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Your Favorites",
+        "text-center": true,
+        "home_featured_products": "homepage-section-1-collection",
+        "collection_view_all_label": "",
+        "collection_view_all_link": "",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "instagram_section_jW9mEt": {
+      "type": "instagram-section",
+      "settings": {}
+    }
+  },
+  "order": [
+    "slideshow",
+    "collection_explorer_CkDyry",
+    "featured_collections_iErcAA",
+    "single_product_banner_QP8TVT",
+    "single_product_banner_eayQq3",
+    "featured_collection_UjVaab",
+    "instagram_section_jW9mEt"
+  ]
+}

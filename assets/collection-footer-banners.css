@@ -1,0 +1,79 @@
+.colloection-promotionals {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.colloection-promotionals .promotional-inner {
+  width: 49%;
+}
+.colloection-promotionals .promotional-inner img {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.colloection-promotionals .promotional-inner h1 {
+  color: var(--thermos-onyx);
+  font-size: var(--thermos-font-size-40);
+  display: inline-block;
+  font-family: inherit;
+  padding-right: 60px;
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-45);
+  position: relative;
+}
+.colloection-promotionals .promotional-inner h1:after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 0;
+  background: url('https://cdn.shopify.com/s/files/1/0552/9731/0876/files/4-layers_2.png?v=1620643416');
+  width: 31px;
+  height: 32px;
+}
+.colloection-promotionals .promotional-inner p {
+  color: rgb(52 55 65 / 80%);
+  font-family: var(--thermos-dinot);
+  font-size: var(--thermos-font-size-19);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-20-4);
+}
+@media (max-width: 767px) {
+  .colloection-promotionals {
+    flex-wrap: wrap;
+  }
+  .colloection-promotionals .promotional-inner {
+    width: 100%;
+  }
+  .colloection-promotionals .promotional-inner h1 {
+    font-size: var(--thermos-font-size-30);
+    line-height: normal;
+  }
+  .colloection-promotionals {
+    margin: 0;
+    padding: 0;
+  }
+  .colloection-promotionals .promotional-inner img {
+    margin-bottom: 10px;
+  }
+  .colloection-promotionals .promotional-inner h1 {
+    padding: 11px 32px 0 10px;
+    font-family: inherit;
+    font-size: var(--thermos-font-size-20);
+    line-height: var(--thermos-line-height-25);
+    margin-bottom: 0%;
+  }
+  .colloection-promotionals .promotional-inner h1:after {
+    right: 10px;
+    top: 16px;
+    height: 14px;
+    width: 14px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+  .colloection-promotionals .promotional-inner p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: var(--thermos-font-size-14);
+    line-height: var(--thermos-line-height-20);
+    margin: 0% 0% 7% 0%;
+  }
+}

@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": true
+      }
+    },
+    "collection_filter_Fm6xMk": {
+      "type": "collection-filter",
+      "blocks": {
+        "tags_group_eLMBN9": {
+          "type": "tags_group",
+          "settings": {
+            "title": "Size",
+            "tag_list": "size_10oz\nsize_12oz\nsize_16oz\nsize_18oz\nsize_20oz\nsize_24oz\nsize_32oz\nsize_40oz\nsize_64oz\nsize_2l\nsize_6 Can\nsize_9 Can\nsize_12 Can",
+            "collapsed": false
+          }
+        },
+        "color_group_66htYM": {
+          "type": "color_group",
+          "settings": {
+            "title": "Color",
+            "tag_list": "PURPLE\nLIME\nNAVY\nPINK\nMATTE BLACK\nGLACIER\nSUNSET PINK\nGRANITE\nCRIMSON\nSPRUCE\nSNOW\nSADDLE\nSANDSTONE",
+            "collapsed": false
+          }
+        },
+        "tags_group_iKjAH4": {
+          "type": "tags_group",
+          "settings": {
+            "title": "Character",
+            "tag_list": "character_Avengers\ncharacter_Batman\ncharacter_Spiderman\ncharacter_Barbie\ncharacter_Disney Princess\ncharacter_Hellokitty\ncharacter_JoJo Siwa\ncharacter_Frozen 2\ncharacter_Mickyandfriends\ncharacter_Minecraft\ncharacter_Pokemon\ncharacter_Paw Patrol\ncharacter_Shimmerandshine\ncharacter_all",
+            "collapsed": false
+          }
+        },
+        "tags_group_tTHN7Y": {
+          "type": "tags_group",
+          "settings": {
+            "title": "Insulation Type",
+            "tag_list": "InsulationType_Vacuum Insulated\nInsulationType_Double Wall Vacuum",
+            "collapsed": false
+          }
+        },
+        "tags_group_rweweY": {
+          "type": "tags_group",
+          "settings": {
+            "title": "Material",
+            "tag_list": "material_Stainless Steel\nmaterial_Polyester LDPE\nmaterial_Polyester\nmaterial_Plastic\nmaterial_HPDE\nmaterial_BPA-Free Performance\nmaterial_Silicone",
+            "collapsed": false
+          }
+        },
+        "tags_group_TQGBkM": {
+          "type": "tags_group",
+          "settings": {
+            "title": "Handle",
+            "tag_list": "Handle_yes\nHandle_no",
+            "collapsed": false
+          }
+        },
+        "tags_group_PJdQFq": {
+          "type": "tags_group",
+          "settings": {
+            "title": "Lid Type",
+            "tag_list": "lidtype_Push Button With Spout\nLidType_Drink Lock Lid",
+            "collapsed": false
+          }
+        }
+      },
+      "block_order": [
+        "tags_group_eLMBN9",
+        "color_group_66htYM",
+        "tags_group_iKjAH4",
+        "tags_group_tTHN7Y",
+        "tags_group_rweweY",
+        "tags_group_TQGBkM",
+        "tags_group_PJdQFq"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "filter_style": "drawer",
+        "tags_combine": true,
+        "enable_sort": true
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "subcollections": {
+          "type": "subcollections",
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": ["subcollections", "product_grid"],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "drawer",
+        "enable_color_swatches": false,
+        "enable_swatch_labels": true,
+        "enable_sort": true
+      }
+    },
+    "colleciton_footer_banners_frhdep": {
+      "type": "colleciton-footer-banners",
+      "blocks": {
+        "image_7dEr8D": {
+          "type": "image",
+          "settings": {
+            "maincollection": "coolers",
+            "promoblock_image": "shopify://shop_images/F41101AP_F31101AP_SCH_030521_1436x990_69f4960d-59ba-424f-b3c1-b4f5ac295337.jpg",
+            "promoblock_heading": "WHAT MAKES THERMOS® BRAND UNIQUE?",
+            "promoblock_content": "<p>Take a peek into the mechanics and design features of our products.</p>",
+            "promoblock_url": "shopify://pages/kids",
+            "promoblock_image2": "shopify://shop_images/F500NY_Thermos_006_Turkey_Yogurt_Berries_Extended_3_F4109BL_1436x990_908d77fc-0cd6-4b34-8fa6-0c71c494b62f.jpg",
+            "promoblock_heading2": "BEST OF LUNCHROOM GEAR",
+            "promoblock_content2": "<p>Watch your kiddos beam with pride as they strut their stuff into school. Nothing says love like a lunch packed by Mom, with Thermos® brand products.</p>",
+            "promoblock_url2": "shopify://collections/lunchroom-gear"
+          }
+        },
+        "image_dTfyzf": {
+          "type": "image",
+          "settings": {
+            "maincollection": "mugs-tumblers",
+            "promoblock_image": "shopify://shop_images/TS1319WH_TS1319GR_TS1319DB_TS1319BK_CHI_DB_IMG_2298_640x480_7d3a611e-ac02-49bf-9a61-6c76bf88719d.jpg",
+            "promoblock_heading": "Meet the Alta Series by Thermos",
+            "promoblock_content": "<p>When you choose gear to fit your daily routine, the options are endless. But it's easy to see what rises to the top. It's modern style that’s ready to go, wherever you go.</p>",
+            "promoblock_url": "shopify://collections/alta",
+            "promoblock_image2": "shopify://shop_images/SK3000MDB_SK4000MDB_Tailgate_CA_SG_3023_640x480_b289cc02-885e-4bd8-b718-f4159500b7e1.jpg",
+            "promoblock_heading2": "Shop the Stainless King Collection",
+            "promoblock_content2": "<p>Get the job done with the gear that doesn’t take a day off. Hots stay Hot. Colds stay Cold. You stay focused on everything else.</p>",
+            "promoblock_url2": "shopify://collections/stainless-king-collection-1"
+          }
+        },
+        "image_eJdeXV": {
+          "type": "image",
+          "settings": {
+            "maincollection": "kids-water-bottles",
+            "promoblock_image": "shopify://shop_images/F4100NY_F4100PK_F3100NY_F3100PK_Kids_Kitchen_MV_4_640x480_df6217cc-f608-49de-b582-2dae43bba27e.jpg",
+            "promoblock_heading": "Shop Best Sellers",
+            "promoblock_content": "<p>Sometimes it's fun to see what everyone else likes, but stay true and do you</p>",
+            "promoblock_url": "shopify://collections/best-sellers",
+            "promoblock_image2": "shopify://shop_images/F500PU_Lunch_Girl_Smiling_640x480_2d1ba110-5e08-4ead-8e92-e1feb2a00a04.jpg",
+            "promoblock_heading2": "Best of Lunchroom Gear",
+            "promoblock_content2": "<p>Watch your kiddos beam with pride as they strut their stuff into school. Nothing says love like a lunch packed by Mom or Dad.</p>",
+            "promoblock_url2": "shopify://collections/lunchroom-gear"
+          }
+        }
+      },
+      "block_order": ["image_7dEr8D", "image_dTfyzf", "image_eJdeXV"],
+      "settings": {}
+    }
+  },
+  "order": [
+    "collection-header",
+    "collection_filter_Fm6xMk",
+    "main-collection",
+    "colleciton_footer_banners_frhdep"
+  ]
+}

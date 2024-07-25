@@ -1,0 +1,324 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "yotpo_product_reviews_ugc_star_rating_bzhNTN": {
+          "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "hot_and_cold_tNx6da": {
+          "type": "hot_and_cold",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "sku_G4m46d": {
+          "type": "sku",
+          "settings": {
+            "sku_text": "Item Number:"
+          }
+        },
+        "instruction_e3bY9i": {
+          "type": "instruction",
+          "settings": {
+            "instruction_img": "shopify://shop_images/BadgeOutline_CG11_copy_3.jpg",
+            "care_and_use_text": "Care & Use",
+            "instruct_text": "Instructions",
+            "customize_button_text": "CUSTOMIZE MY BOTTLE<span>FROM $6</span>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": false,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": true
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "globe",
+            "text": "Free worldwide shipping"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "disabled": true,
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        },
+        "payment_mq7qNJ": {
+          "type": "payment",
+          "settings": {
+            "payment_option_text": "Checkout made easy with many options"
+          }
+        },
+        "mobile_add_to_cart_fTHU7j": {
+          "type": "mobile-add-to-cart",
+          "settings": {
+            "variant_labels": false,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": true,
+            "customize_button_text": "CUSTOMIZE MY BOTTLE<span>FROM $6</span>"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_ugc_star_rating_bzhNTN",
+        "hot_and_cold_tNx6da",
+        "description",
+        "sku_G4m46d",
+        "instruction_e3bY9i",
+        "variant_picker",
+        "sales_point",
+        "inventory_status",
+        "price",
+        "buy_buttons",
+        "tab",
+        "contact",
+        "share",
+        "payment_mq7qNJ",
+        "mobile_add_to_cart_fTHU7j"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "features_specs_kXPX7k": {
+      "type": "features-specs",
+      "settings": {
+        "feature_text": "Features",
+        "specs_text": "Specs"
+      }
+    },
+    "quality_check_kUqfMp": {
+      "type": "quality-check",
+      "settings": {}
+    },
+    "product_banner_9XDXDM": {
+      "type": "product-banner",
+      "settings": {}
+    },
+    "product_features_TWAxCk": {
+      "type": "product-features",
+      "settings": {
+        "section_title": "FEATURES"
+      }
+    },
+    "background-image-text": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify://shop_images/Icon_IS1012_Tumbler_16oz_PDP_Banner_3000x1000_R2.jpg",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false,
+        "parallax_direction": "top",
+        "lazyload_images": true
+      }
+    },
+    "text-and-image": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "About your brand",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "text-and-image2": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "About your brand",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonials-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonials-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        }
+      },
+      "block_order": ["testimonials-0", "testimonials-1", "testimonials-2"],
+      "disabled": true,
+      "settings": {
+        "title": "Testimonials",
+        "align_text": "center",
+        "round_images": true,
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {}
+    },
+    "customer_reviews_qC7Yt3": {
+      "type": "customer-reviews",
+      "disabled": true,
+      "settings": {
+        "reviews_layout": "partial"
+      }
+    },
+    "customer_reviews_gMhtpY": {
+      "type": "customer-reviews",
+      "settings": {
+        "reviews_layout": "full"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 4,
+        "products_per_row": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "features_specs_kXPX7k",
+    "quality_check_kUqfMp",
+    "product_banner_9XDXDM",
+    "product_features_TWAxCk",
+    "background-image-text",
+    "text-and-image",
+    "text-and-image2",
+    "testimonials",
+    "recently-viewed",
+    "collection-return",
+    "customer_reviews_qC7Yt3",
+    "customer_reviews_gMhtpY",
+    "product-recommendations"
+  ]
+}

@@ -1,0 +1,23 @@
+.thermos-bg-gold {
+  background-color: var(--thermos-gold);
+}
+
+.thermos-bg-arsenic {
+  background-color: var(--thermos-gunmetal);
+}
+.btn-gray {
+  border-radius: 21px;
+  background-color: var(--thermos-onyx);
+  padding: 10px 30px;
+  color: var(--thermos-white);
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-20);
+  text-align: center;
+  display: inline-block;
+  line-height: var(--thermos-line-height-22);
+}
+.btn-gray:hover {
+  opacity: 0.7;
+  color: var(--thermos-white);
+  transition: 0.5s;
+}

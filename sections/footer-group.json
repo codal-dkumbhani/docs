@@ -1,0 +1,134 @@
+{
+  "type": "footer",
+  "name": "t:sections.footer-group.name",
+  "sections": {
+    "footer-promotions": {
+      "type": "footer-promotions",
+      "blocks": {
+        "footer-promotions-0": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "title": "Warranty",
+            "text": "<p>Living up to the test</p>",
+            "promolink": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "footer-promotions-1": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "title": "*Free Shipping",
+            "text": "<p>On orders $50-$500</p>",
+            "promolink": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "footer-promotions-2": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "title": "Hassle-Free",
+            "text": "<p>Product Returns</p>",
+            "promolink": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": ["footer-promotions-0", "footer-promotions-1", "footer-promotions-2"],
+      "settings": {
+        "hide_homepage": false,
+        "image_size": "wide"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "logo_social",
+          "settings": {
+            "logo": "shopify://shop_images/logo_2x_25955799-cffe-4c70-98d1-3362d077a1ee.png",
+            "desktop_logo_height": 60,
+            "container_width": 30,
+            "customer_service_text": "CUSTOMER SERVICE",
+            "customer_service_contact_no": "1-800-831-9242",
+            "send_msg_text": "SEND US A MESSAGE",
+            "send_msg_url": "shopify://pages/contact-us",
+            "worldwide_office_text": "WORLDWIDE OFFICES",
+            "worldwide_office_url": "shopify://pages/worldwide-locations"
+          }
+        },
+        "footer-1": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "support",
+            "container_width": 20
+          }
+        },
+        "menu_UdeqXq": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "company",
+            "container_width": 20
+          }
+        },
+        "menu_4jiJgj": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "about-menu",
+            "container_width": 25
+          }
+        },
+        "footer2": {
+          "type": "newsletter",
+          "settings": {
+            "show_footer_title": true,
+            "title": "NEVER MISS OUT",
+            "text": "<p>Be a part of the Thermos Story with us and sign up for updates on the newest products, colors, and offers. By submitting your email address, you agree to our <a href=\"/pages/privacy-policy\" title=\"Privacy Policy\">Privacy Policy</a> and <a href=\"https://thermos.com/pages/website-terms-of-use\">Terms</a>. Residents of select U.S. states may opt out of certain information processing at <a href=\"https://thermos.com/pages/your-privacy-choices\">Your Privacy Choices</a>. </p>",
+            "container_width": 30
+          }
+        },
+        "custom_aphf6X": {
+          "type": "custom",
+          "settings": {
+            "show_footer_title": false,
+            "title": "",
+            "text": "<p>*Free Shipping on Orders $50-$500</p>",
+            "container_width": 25
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "footer-1",
+        "menu_UdeqXq",
+        "menu_4jiJgj",
+        "footer2",
+        "custom_aphf6X"
+      ],
+      "settings": {
+        "show_locale_selector": true,
+        "show_currency_selector": true,
+        "show_currency_flags": true,
+        "show_payment_icons": true,
+        "show_copyright": true,
+        "copyright_text": "©2018-2024 Thermos L.L.C. All Right Reserved. THERMOS is a registered trademark in over 115 countries.",
+        "privacy_policy_text": "PRIVACY POLICY",
+        "privacy_policy_url": "shopify://pages/privacy-policy",
+        "terms_of_use_text": "TERMS OF USE",
+        "terms_of_use_url": "shopify://pages/website-terms-of-use"
+      }
+    }
+  },
+  "order": ["footer-promotions", "footer"]
+}

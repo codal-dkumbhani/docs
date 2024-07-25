@@ -1,0 +1,303 @@
+{
+  "wrapper": "div.icon-serires",
+  "sections": {
+    "main": {
+      "type": "icon-banner",
+      "settings": {
+        "image": "shopify://shop_images/Thermos_BackToSchool_Assets_R4_Image_1_3000x1600_Desktop.jpg",
+        "mimage": "shopify://shop_images/Thermos_BackToSchool_Assets_R4_Image_1_640x1000_Mobile.jpg",
+        "title1": "<br>",
+        "title2": "<br>\n<br>\n<br>",
+        "title3": "<br>",
+        "titlecolor1": "#ffffff",
+        "titlecolor2": "#ffffff",
+        "titlecolor3": "#faca54"
+      }
+    },
+    "threeimage": {
+      "type": "icon-threeImage",
+      "blocks": {
+        "c9260e72-a763-47b2-8927-3615b70c9b1e": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Thermos_BackToSchool_Assets_R4_Image_8_636x781_33535495-2eab-4af1-b045-854dab658c67.jpg",
+            "title": "FUNtainer Water Bottles",
+            "subtitle": "To Stay Hydrated >",
+            "url": "shopify://collections/kids-water-bottles",
+            "colorfortitle": "#fafafa",
+            "colorforsubtitle": "#ffffff"
+          }
+        },
+        "3c5dc2f8-4edd-4df1-9fcb-d23591b52bdd": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Thermos_BackToSchool_Assets_R4_Image_3_636x781_161fe953-5390-4e49-aaa1-92dfef4eb0d1.jpg",
+            "title": "FUNtainer Food Jars",
+            "subtitle": "For Healthy Lunches >",
+            "url": "shopify://collections/kids-food-jars-1",
+            "colorfortitle": "#fafafa",
+            "colorforsubtitle": "#fafafa"
+          }
+        },
+        "7c5ece64-c890-4265-8837-55391518e231": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Thermos_BackToSchool_Assets_R4_Image_9_636x781_17747d86-9f05-4ab0-9b73-ebeb904f44c6.jpg",
+            "title": "Lunch Boxes",
+            "subtitle": "For Perfectly Packed Lunches >",
+            "url": "shopify://collections/lunchboxes",
+            "colorfortitle": "#fafafa",
+            "colorforsubtitle": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "c9260e72-a763-47b2-8927-3615b70c9b1e",
+        "3c5dc2f8-4edd-4df1-9fcb-d23591b52bdd",
+        "7c5ece64-c890-4265-8837-55391518e231"
+      ],
+      "settings": {}
+    },
+    "collections": {
+      "type": "icon-collections",
+      "settings": {
+        "text": "Shop Kids New Arrivals",
+        "featuredcollection1": "kids-new-arrivals-1",
+        "featuredcollection1_label": "View All New Arrivals",
+        "featuredcollection1_link": "shopify://collections/kids-new-arrivals-1"
+      }
+    },
+    "imageWithText": {
+      "type": "icon-imageWithText",
+      "custom_css": [
+        ".icon-imagewithtext-detail {background: #39b0cb;}",
+        ".icon-imagewithtext-detail p {color: #ffffff;}"
+      ],
+      "settings": {
+        "video": "",
+        "image": "shopify://shop_images/Thermos_BackToSchool_Assets_R4_Image_5_1248x546_Desktop.jpg",
+        "mobileImage": "shopify://shop_images/Thermos_BackToSchool_Assets_R4_Image_5_375x500_Mobile.jpg",
+        "title": "Make it Your Own",
+        "desc": "<p>Make your mark.  Add a personal touch to your Thermos Brand FUNtainer 12oz or 16oz Water Bottle with custom engravings that create lasting memories. </p><p>*Customized items excluded from promotions</p>",
+        "btntext": "Customize Your Bottle",
+        "btnurl": "https://thermos.com/collections/customize",
+        "btnbgcolor": "#ffffff",
+        "btntextcolor": "#343741",
+        "btnbgcolorwhenhover": "#343741",
+        "btntextcolorwhenhover": "#ffffff",
+        "position": "rightImageLeftText"
+      }
+    },
+    "categorycolors": {
+      "type": "icon-categorycolors",
+      "blocks": {
+        "3b666f7d-9e02-4df4-9cab-6a286cf26a89": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_315x229_Glacier_9264a2dd-1aab-4e9b-8de2-813e85b25a36.jpg",
+            "title": "GLACIER",
+            "url": "shopify://collections/glacier"
+          }
+        },
+        "103e0a24-ac2e-48c8-a4e1-4d01ee2075a3": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_315x229_Sunset_Pink_0c3516fc-d6dc-417f-acfa-7677d2092ff1.jpg",
+            "title": "SUNSET PINK",
+            "url": "shopify://collections/sunset-pink"
+          }
+        },
+        "8472b720-6ee2-43f7-aa08-5e1c9a2643c0": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_315x229_Sandstone.jpg",
+            "title": "SANDSTONE",
+            "url": "shopify://collections/sandstone"
+          }
+        },
+        "cfcee49e-29c1-4a29-a45e-5f03fe74a7c2": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_315x229_Granite.jpg",
+            "title": "GRANITE",
+            "url": "shopify://collections/granite"
+          }
+        },
+        "0658f140-7da5-4624-b64b-669e3aa56247": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_215x229_Saddle_a680d0a0-d1bb-4491-922b-abdc0480a380.jpg",
+            "title": "SADDLE",
+            "url": "shopify://collections/saddle"
+          }
+        },
+        "7311f770-0ad1-425a-8d94-ce82176b9b7a": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Icon_Color_Swatch_Desktop_315x229_SS_1d6c5f1e-6f52-44c8-bfb6-6c12a9a69a32.jpg",
+            "title": "MATTE STAINLESS STEEL",
+            "url": "shopify://collections/icon-matte-stainless-steel"
+          }
+        }
+      },
+      "block_order": [
+        "3b666f7d-9e02-4df4-9cab-6a286cf26a89",
+        "103e0a24-ac2e-48c8-a4e1-4d01ee2075a3",
+        "8472b720-6ee2-43f7-aa08-5e1c9a2643c0",
+        "cfcee49e-29c1-4a29-a45e-5f03fe74a7c2",
+        "0658f140-7da5-4624-b64b-669e3aa56247",
+        "7311f770-0ad1-425a-8d94-ce82176b9b7a"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "collections2": {
+      "type": "icon-collections",
+      "settings": {
+        "text": "Shop Kids Water Bottles",
+        "featuredcollection1": "kids-water-bottles",
+        "featuredcollection1_label": "View All Kids Water Bottles",
+        "featuredcollection1_link": "shopify://collections/kids-water-bottles"
+      }
+    },
+    "featuredproduct": {
+      "type": "icon-featuredproduct",
+      "settings": {
+        "designated_product": "funtainer-r-glitter-stainless-steel-water-bottle-with-straw",
+        "section_title": "<p>DESIGNED FOR KIDS AND THEIR PARENTS </p>",
+        "section_url": "",
+        "buttonInDesktop": false,
+        "buttonInMobile": false,
+        "background_image": "shopify://shop_images/Thermos_BackToSchool_Assets_R4_Image_6_3000x1130_341d92cb-74b8-408b-8788-d3398320256f.jpg"
+      }
+    },
+    "collections1": {
+      "type": "icon-collections",
+      "settings": {
+        "text": "Shop Lunchroom Gear",
+        "featuredcollection1": "lunch-gear",
+        "featuredcollection1_label": "View All Lunch Gear",
+        "featuredcollection1_link": "shopify://collections/lunch-gear"
+      }
+    },
+    "imageWithText1": {
+      "type": "icon-imageWithText",
+      "custom_css": [
+        ".icon-imagewithtext-detail {background: #39b0cb;}",
+        ".icon-imagewithtext-detail p {color: #ffffff;}"
+      ],
+      "settings": {
+        "video": "",
+        "image": "shopify://shop_images/Thermos_BackToSchool_Assets_R4_Image_7_1248x546_Desktop.jpg",
+        "mobileImage": "shopify://shop_images/Thermos_BackToSchool_Assets_R4_Image_7_375x500_Mobile.jpg",
+        "title": "Lunchtime Made Easy",
+        "desc": "<p>Streamline your Back-to-School checklist with Thermos Brand lunchtime solutions. Our leak-proof and portable hydration and food storage containers simplify lunch packing for kids.</p>",
+        "btntext": "shop FUNtainer Collection",
+        "btnurl": "https://thermos.com/collections/funtainer",
+        "btnbgcolor": "#ffffff",
+        "btntextcolor": "#343741",
+        "btnbgcolorwhenhover": "#343741",
+        "btntextcolorwhenhover": "#ffffff",
+        "position": "leftImageRightText"
+      }
+    },
+    "12d72dd9-1e74-449d-afad-7e60e5023242": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-6": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-7": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-0",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-1",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-2",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-3",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-4",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-5",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-6",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-7"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Collection list",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "threeimage",
+    "collections",
+    "imageWithText",
+    "categorycolors",
+    "collections2",
+    "featuredproduct",
+    "collections1",
+    "imageWithText1",
+    "12d72dd9-1e74-449d-afad-7e60e5023242"
+  ]
+}

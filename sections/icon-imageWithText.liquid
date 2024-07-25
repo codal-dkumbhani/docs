@@ -1,0 +1,236 @@
+<div class="icon-imagewithtext {{ section.id }}  {% if section.settings.video != blank %} video-section-icon {% endif %}">
+  <div class="icon-imagewithtext-detail">
+    <h3>{{ section.settings.title }}</h3>
+    <p>{{ section.settings.desc }}</p>
+    <a class="btn-secondary" href="{{ section.settings.btnurl }}">{{ section.settings.btntext }}</a>
+  </div>
+
+  <div class="icon-imagewithtext-img-video">
+    {% if section.settings.image != blank %}
+      <div class="icon-imagewithtext-img"></div>
+    {% else %}
+      <video controls>
+        <source src="{{ section.settings.video }}" type="video/ogg">
+        <source src="{{ section.settings.video }}" type="video/mp4">
+      </video>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .{{section.id}} .icon-imagewithtext-img{
+    background:url({{ section.settings.image | image_url }}) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100%;
+  }
+
+  {% if section.settings.mobileImage != blank %}
+  @media (max-width: 767.98px) {
+    .{{section.id}} .icon-imagewithtext-img{
+        background:url({{ section.settings.mobileImage | image_url }}) !important;
+      }
+  }
+  {% endif %}
+
+  .{{section.id}} .icon-imagewithtext-detail .btn-secondary{
+    color:{{section.settings.btntextcolor}} !important;
+    background-color:{{section.settings.btnbgcolor}} !important;
+  }
+  .{{section.id}} .icon-imagewithtext-detail .btn-secondary:hover{
+    color:{{section.settings.btntextcolorwhenhover}} !important;
+    background-color:{{section.settings.btnbgcolorwhenhover}} !important;
+  }
+
+  {% if section.settings.position == 'leftImageRightText' %}
+    .{{section.id}}.icon-imagewithtext .icon-imagewithtext-detail{
+      order: 2;
+    }
+      .{{section.id}}.icon-imagewithtext .icon-imagewithtext-img-video{
+          order: 1;
+    }
+  {% else %}
+      .{{section.id}}.icon-imagewithtext .icon-imagewithtext-detail{
+      order: 1;
+    }
+      .{{section.id}}.icon-imagewithtext .icon-imagewithtext-img-video{
+          order: 2;
+    }
+  {% endif %}
+
+  .icon-serires .icon-imagewithtext {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+  .icon-imagewithtext .icon-imagewithtext-detail {
+    order: 1;
+    width: 35%;
+    color: var(--thermos-white);
+    background: var(--thermos-black);
+    padding: 120px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+  }
+  .icon-imagewithtext .icon-imagewithtext-img-video {
+    width: 65%;
+    display: flex;
+  }
+
+  .icon-serires .icon-imagewithtext .icon-imagewithtext-detail h3 {
+    font-size: var(--thermos-font-size-52);
+    margin-bottom: 20px;
+  }
+  .icon-serires .icon-imagewithtext .icon-imagewithtext-detail p {
+    font-size: var(--thermos-font-size-24);
+    color: var(--thermos-light-silver-text);
+    line-height: normal;
+    font-family: var(--thermos-dinot);
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .btn-secondary {
+    color: var(--thermos-onyx) !important;
+    border-radius: 40px;
+    background: var(--thermos-white) !important;
+    font-family: var(--thermos-dinot-cond-bold); !important;
+    font-size: var(--thermos-font-size-20) !important;
+    height: 42px;
+    font-style: normal;
+    letter-spacing: .3px !important;
+    line-height: var(--thermos-line-height-20-4);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 9.7px 25px !important;
+    border: none;
+    transition: all .2s ease;
+  }
+  @media (max-width: 767px) {
+    .icon-serires .icon-imagewithtext .icon-imagewithtext-detail a, .icon-serires .icon-imagewithtext .icon-imagewithtext-detail h3 {
+      margin: 0 auto;
+    }
+    .icon-serires .icon-imagewithtext .icon-imagewithtext-detail p {
+      text-align: center !important;
+    }
+    .icon-serires .three-image-section ul, .icon-serires .icon-imagewithtext, .icon-serires .icon-categorycolors {
+      flex-wrap: wrap;
+    }
+    .icon-serires .icon-imagewithtext-img-video {
+      width: 100%;
+      margin-bottom: -1px;
+    }
+    .icon-serires .icon-imagewithtext .icon-imagewithtext-img {
+      min-height: 500px;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+    }
+    .grid-product__content .grid-product__meta .quick-hover-shopping .cust-btns {
+      margin-top: 5px !important;
+      margin-bottom: 0 !important;
+    }
+    .title-with-viewall {
+      flex-wrap: wrap;
+      padding: 12px 2px 0px 0px;
+    }
+  }
+  @media (max-width: 1199px) {
+    .icon-serires .icon-imagewithtext .icon-imagewithtext-detail p {
+      font-size: var(--thermos-font-size-18) !important;
+    }
+    .icon-serires .icon-imagewithtext .icon-imagewithtext-detail h3 {
+      font-size: var(--thermos-font-size-32) !important;
+      margin-bottom: 0 !important;
+    }
+    .icon-serires .icon-imagewithtext .icon-imagewithtext-detail {
+      padding: 50px 30px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .grid-product__content .grid-product__meta .quick-hover-shopping .cust-btns {
+      gap: initial;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Image with Text",
+  "settings": [
+    {
+      "type": "url",
+      "id": "video",
+      "label": "video"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Web Layout Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobileImage",
+      "label": "Mobile Layout Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "btntext",
+      "label": "Button text"
+    },
+    {
+      "type": "text",
+      "id": "btnurl",
+      "label": "Button URL"
+    },
+    {
+      "type": "color",
+      "id": "btnbgcolor",
+      "label": "Button Background color"
+    },
+    {
+      "type": "color",
+      "id": "btntextcolor",
+      "label": "Button Text color"
+    },
+    {
+      "type": "color",
+      "id": "btnbgcolorwhenhover",
+      "label": "Button Background color when Hover"
+    },
+    {
+      "type": "color",
+      "id": "btntextcolorwhenhover",
+      "label": "ButtonT Text color when Hover"
+    },
+    {
+      "type": "radio",
+      "id": "position",
+      "label": "Position of image and text",
+      "options": [
+        {
+          "value": "leftImageRightText",
+          "label": "Left Image Right Text"
+        },
+        {
+          "value": "rightImageLeftText",
+          "label": "Right Image Left Text"
+        }
+      ],
+      "default": "leftImageRightText"
+    }
+  ]
+}
+{% endschema %}

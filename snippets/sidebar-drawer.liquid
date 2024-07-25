@@ -1,0 +1,37 @@
+{%- assign animation_row = 1 -%}
+
+<div
+  id="FilterDrawer"
+  class="drawer drawer--left"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Filter Drawer"
+>
+  <div class="drawer__contents">
+    <div class="drawer__fixed-header">
+      <div class="drawer__header appear-animation appear-delay-{{ animation_row }}">
+        <div class="h2 drawer__title">
+          {{ 'collections.filters.title_tags' | t }}
+        </div>
+        <div class="drawer__close">
+          <button type="button" class="drawer__close-button js-drawer-close">
+            {% render 'thermos-icon-menu-close' %}
+            <span class="icon__fallback-text">{{ 'general.drawers.close_menu' | t }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <span class="sr-only"
+      >Making a selection with these checkboxes will cause content on this page to change. Product
+      listings will update as each option is selected.</span
+    >
+    {%- assign animation_row = animation_row | plus: 1 -%}
+    <div class="drawer__scrollable appear-animation appear-delay-{{ animation_row }}">
+      {%- render 'collection-sidebar-filters', location: 'SidebarDrawer', section: section -%}
+    </div>
+    <div class="filter-footer d-flex align-items-center justify-content-between">
+      <a href="{{ collection.url }}" class="clear-filter">Clear all</a>
+      <a href="#" class="filter-btn flex-fill d-none"> Filter </a>
+    </div>
+  </div>
+</div>

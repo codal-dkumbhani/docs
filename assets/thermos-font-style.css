@@ -1,0 +1,127 @@
+:root {
+  /* Font Family */
+  --thermos-din-condensed: 'DIN Condensed';
+  --thermos-minion-pro: 'Minion Pro';
+  --thermos-dinot-bold: 'DINOT-Bold';
+  --thermos-dinot: 'DINOT';
+  --thermos-dinot-cond-bold: 'DINOT - Cond Bold';
+  --thermos-aktiv-grotesk: 'Aktiv Grotesk', sans-serif;
+  --thermos-dinot-regular: 'DINOT-Regular';
+  --thermos-MinionPro: 'MinionPro';
+
+  /* Font Size */
+  --thermos-font-size-10: 10px;
+  --thermos-font-size-11: 11px;
+  --thermos-font-size-12: 12px;
+  --thermos-font-size-13: 13px;
+  --thermos-font-size-14: 14px;
+  --thermos-font-size-15: 15px;
+  --thermos-font-size-16: 16px;
+  --thermos-font-size-17: 17px;
+  --thermos-font-size-18: 18px;
+  --thermos-font-size-19: 19px;
+  --thermos-font-size-19-8: 19.8px;
+  --thermos-font-size-19: 19px;
+  --thermos-font-size-20: 20px;
+  --thermos-font-size-22: 22px;
+  --thermos-font-size-23: 23px;
+  --thermos-font-size-24: 24px;
+  --thermos-font-size-25: 25px;
+  --thermos-font-size-26: 26px;
+  --thermos-font-size-27: 27px;
+  --thermos-font-size-28: 28px;
+  --thermos-font-size-29: 29px;
+  --thermos-font-size-30: 30px;
+  --thermos-font-size-32: 32px;
+  --thermos-font-size-33: 33px;
+  --thermos-font-size-34: 34px;
+  --thermos-font-size-35: 35px;
+  --thermos-font-size-36: 36px;
+  --thermos-font-size-38: 38px;
+  --thermos-font-size-40: 40px;
+  --thermos-font-size-44: 44px;
+  --thermos-font-size-45: 45px;
+  --thermos-font-size-46: 46px;
+  --thermos-font-size-47: 47px;
+  --thermos-font-size-48: 48px;
+  --thermos-font-size-50: 50px;
+  --thermos-font-size-52: 52px;
+  --thermos-font-size-54: 54px;
+  --thermos-font-size-56: 56px;
+  --thermos-font-size-58: 58px;
+  --thermos-font-size-60: 60px;
+  --thermos-font-size-70: 70px;
+  --thermos-font-size-75: 75px;
+  --thermos-font-size-80: 80px;
+  --thermos-font-size-85: 85px;
+  --thermos-font-size-94: 94px;
+  --thermos-font-size-100: 100px;
+  --thermos-font-size-120: 120px;
+
+  /* Font Letter spacing */
+  --thermos-letter-spacing: normal;
+
+  /* Font Line Height */
+  --thermos-line-height-10: 10px;
+  --thermos-line-height-14: 14px;
+  --thermos-line-height-15: 15px;
+  --thermos-line-height-16: 16px;
+  --thermos-line-height-17: 17px;
+  --thermos-line-height-18: 18px;
+  --thermos-line-height-19: 19px;
+  --thermos-line-height-20: 20px;
+  --thermos-line-height-20-4: 20.4px;
+  --thermos-line-height-21: 21px;
+  --thermos-line-height-22: 22px;
+  --thermos-line-height-23: 23px;
+  --thermos-line-height-24: 24px;
+  --thermos-line-height-24-5: 24.5px;
+  --thermos-line-height-25-5: 25.5px;
+  --thermos-line-height-25: 25px;
+  --thermos-line-height-26: 26px;
+  --thermos-line-height-27: 27px;
+  --thermos-line-height-28: 28px;
+  --thermos-line-height-29: 29px;
+  --thermos-line-height-30: 30px;
+  --thermos-line-height-31: 31px;
+  --thermos-line-height-33: 33px;
+  --thermos-line-height-34: 34px;
+  --thermos-line-height-35: 35px;
+  --thermos-line-height-36: 36px;
+  --thermos-line-height-37: 37px;
+  --thermos-line-height-38: 38px;
+  --thermos-line-height-40: 40px;
+  --thermos-line-height-41: 41px;
+  --thermos-line-height-42: 42px;
+  --thermos-line-height-43: 43px;
+  --thermos-line-height-44: 44px;
+  --thermos-line-height-45: 45px;
+  --thermos-line-height-47: 47px;
+  --thermos-line-height-48: 48px;
+  --thermos-line-height-50: 50px;
+  --thermos-line-height-52: 52px;
+  --thermos-line-height-54: 54px;
+  --thermos-line-height-55: 55px;
+  --thermos-line-height-55: 56px;
+  --thermos-line-height-58: 58px;
+  --thermos-line-height-60: 60px;
+  --thermos-line-height-70: 70px;
+  --thermos-line-height-73: 73px;
+  --thermos-line-height-75: 75px;
+  --thermos-line-height-85: 85px;
+  --thermos-line-height-90: 90px;
+  --thermos-line-height-96: 96px;
+  --thermos-line-height-100: 100px;
+
+  /* Font Weight */
+  --thermos-font-Weight-bold: bold;
+  --thermos-font-Weight-100: 100;
+  --thermos-font-Weight-200: 200;
+  --thermos-font-Weight-300: 300;
+  --thermos-font-Weight-400: 400;
+  --thermos-font-Weight-500: 500;
+  --thermos-font-Weight-600: 600;
+  --thermos-font-Weight-700: 700;
+  --thermos-font-Weight-800: 800;
+  --thermos-font-Weight-900: 900;
+}

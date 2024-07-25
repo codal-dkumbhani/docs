@@ -1,0 +1,27 @@
+<div class="pagination">
+  {%- if section.settings.enable_collection_count -%}
+    <p class="medium-down--hide text-center" data-scroll-to>
+      {{ 'collections.general.showing' | t }}
+      <strong>
+        {{- current_displayed }}
+        {{ 'collections.general.of' | t }}
+        {{ collection.all_products_count }}
+        {{ 'collections.general.results' | t -}}
+      </strong>
+    </p>
+  {%- endif -%}
+
+  {% for part in paginate.parts %}
+    {% if part.is_link %}
+      <span class="page">
+        <a href="{{ part.url | replace: 'view=ajax', '' }}{{ hash }}">{{ part.title }}</a>
+      </span>
+    {% else %}
+      {% if part.title == paginate.current_page %}
+        <span class="page current">{{ part.title }}</span>
+      {% else %}
+        <span class="page">{{ part.title }}</span>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>

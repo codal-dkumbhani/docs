@@ -1,0 +1,81 @@
+{% comment %}
+  This Section Contains the promotions on the about us page
+{% endcomment %}
+
+{{ 'about-us-promotions.css' | asset_url | stylesheet_tag }}
+
+<div class="container-fluid pt-1 pb-1 promotions">
+  <div class="row">
+    {% for block in section.blocks %}
+      <div class="col-12 col-md-3 text-center about-bg-promo-1 container-{{ block.id }}">
+        {% if block.settings.image_url != blank %}
+          {% render 'image-element',
+            img: block.settings.image_url,
+            alt: block.settings.image_url.alt,
+            img_width: 200,
+            classes: 'img-fluid about-promo-icon mt-5 mb-4',
+            loading: 'lazy'
+          %}
+        {% endif %}
+        {% if block.settings.title != blank %}
+          <h1 class="promo-card-header">{{ block.settings.title }}</h1>
+        {% endif %}
+        {% if block.settings.descripton != blank %}
+          <p class="promo-card-description">
+            {{ block.settings.descripton }}
+          </p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Promotions section",
+  "class": "promotions_section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Promotions Section"
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Individual Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_url",
+          "label": "upload Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "descripton",
+          "label": "Description"
+        },
+        {
+          "type": "color",
+          "id": "back_color",
+          "label": "Select Background Color"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+  {% for block in section.blocks %}
+    .promotions .container-{{ block.id }}{
+      background-color : {{ block.settings.back_color }}
+    }
+  {% endfor %}
+{% endstyle %}

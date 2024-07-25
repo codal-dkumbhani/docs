@@ -1,0 +1,334 @@
+<div class="cart__item" data-key="{{ product.key }}">
+  {% assign popupImage = '' %}
+  {% assign savecustomizationurl = '' %}
+  {% assign frontdoogmaImage = '' %}
+  {% assign backdoogmaImage = '' %}
+  {% assign cartfrontdoogmaImage = '' %}
+  {% assign cartbackdoogmaImage = '' %}
+  {% assign customfront = false %}
+  {% assign customback = false %}
+  {% for p in product.properties %}
+    {% if p.first == '_Doogmaviewyourproof' %}
+      {% assign popupImage = p.last %}
+    {% endif %}
+    {% if p.first == '_Doogma_save_customization' %}
+      {% assign savecustomizationurl = p.last %}
+    {% endif %}
+    {% if p.first == '_front_doogmaImage' %}
+      {% assign frontdoogmaImage = p.last %}
+    {% endif %}
+    {% if p.first == '_back_doogmaImage' %}
+      {% assign backdoogmaImage = p.last %}
+    {% endif %}
+
+    {% if p.first == '_cart_front_doogmaImage' %}
+      {% assign cartfrontdoogmaImage = p.last %}
+    {% endif %}
+    {% if p.first == '_cart_back_doogmaImage' %}
+      {% assign cartbackdoogmaImage = p.last %}
+    {% endif %}
+
+    {% if p.first == 'Custom Front' %}
+      {% assign customfront = true %}
+    {% endif %}
+
+    {% if p.first == 'Custom Back' %}
+      {% assign customback = true %}
+    {% endif %}
+  {% endfor %}
+  {% assign purl = product.url | split: '?' %}
+  <div
+    class="{% if frontdoogmaImage != blank or backdoogmaImage != blank  %}cart-main-image-popup {% endif %} cart__image{% if small %} cart__image--small{% endif %}"
+    data-image="{{ popupImage }}"
+    data-url="{{ savecustomizationurl }}&productData={{ product.key }}"
+    data-imagefront="{{ frontdoogmaImage }}"
+    data-imageback="{{ backdoogmaImage }}"
+  >
+    {% if cartfrontdoogmaImage != '' and cartbackdoogmaImage != '' %}
+      <a href="{{ product.url }}">
+        <img
+          width="auto"
+          height="auto"
+          src="{{ cartfrontdoogmaImage }}"
+          data-widths="[180, 360, 540]"
+          data-aspectratio="{{ product.aspect_ratio }}"
+          data-sizes="auto"
+          alt="{{ product.product.title | escape }}"
+        >
+
+        <img
+          width="auto"
+          height="auto"
+          src="{{ cartbackdoogmaImage }}"
+          data-widths="[180, 360, 540]"
+          data-aspectratio="{{ product.aspect_ratio }}"
+          data-sizes="auto"
+          alt="{{ product.product.title | escape }}"
+        >
+      </a>
+    {% else %}
+      <a
+        href="{{ product.url }}"
+        style="height: 0; padding-bottom: {{ 100 | divided_by: product.image.aspect_ratio }}%;"
+      >
+        {%- render 'image-element',
+          img: product,
+          alt: product.product.title,
+          widths: '180, 360, 540',
+          sizes: sizes,
+          sizeVariable: sizeVariable,
+          fallback: fallback
+        -%}
+      </a>
+    {% endif %}
+    <div class="cart__image-view-popup" style="display:none;">
+      <button type="button">
+        <img
+          width="auto"
+          height="auto"
+          src="{{ 'image-with-eye.png' | asset_url }}"
+          alt="cart__image-view-popup"
+        >
+      </button>
+    </div>
+  </div>
+  <div class="cart__item-details">
+    <div class="cart__item-sub">
+      <div class="cart__item-title flex-fill">
+        <a href="{{ product.url }}" class="cart__item-name">
+          {{ product.product.title }}
+        </a>
+        {%- unless product.product.has_only_default_variant -%}
+          <div class="cart__item--variants">
+            {%- for option in product.options_with_values -%}
+              <div>
+                <span>{{ option.name }}:</span>{{ option.value }}
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endunless -%}
+        {%- if product.selling_plan_allocation != empty -%}
+          <div class="cart__item--variants">
+            {{ product.selling_plan_allocation.selling_plan.name }}
+          </div>
+        {%- endif -%}
+        {%- assign property_size = product.properties | size -%}
+        <div class="cart__item--variants-options">
+          {% if property_size > 0 %}
+            {% for p in product.properties %}
+              {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
+              {% unless p.last == blank or first_character_in_key == '_' %}
+                <div>
+                  <span>{{ p.first }}:</span>
+                  {% if p.last contains '/uploads/' %}
+                    <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                  {% else %}
+                    {{ p.last }}
+                  {% endif %}
+                </div>
+              {% endunless %}
+            {% endfor %}
+            {%- if product.line_level_discount_allocations != blank -%}
+              {%- for discount_allocation in product.line_level_discount_allocations -%}
+                <div class="cart__discount free-customization" style="color:red;">
+                  <span style="color:red;">
+                    {{- discount_allocation.discount_application.title -}}
+                  </span>
+                  (-{{ discount_allocation.amount | money }})
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="d-none d-md-block cart-spinner-block">
+        <div class="js-qty__wrapper cart-spinner">
+          <label for="cart_updates_{{ product.key }}-{{ location }}" class="hidden-label">
+            {{- 'cart.label.quantity' | t -}}
+          </label>
+          <input
+            type="text"
+            id="cart_updates_{{ product.key }}-{{ location }}"
+            name="updates[]"
+            class="js-qty__num"
+            value="{{ product.quantity }}"
+            min="0"
+            pattern="[0-9]*"
+            data-id="{{ product.key }}"
+            readonly
+            max="{% if product.variant.inventory_quantity > 25 %}25{% else %}{{ product.variant.inventory_quantity }}{% endif %}"
+          >
+          <button
+            type="button"
+            class="js-qty__adjust js-qty__adjust--minus"
+            aria-label="{{ 'cart.general.reduce_quantity' | t }}"
+          >
+            {% render 'thermos-icon-minus' %}
+            <span class="icon__fallback-text" aria-hidden="true">
+              {% render 'thermos-icon-fallback-text-plus' %}
+            </span>
+          </button>
+          <button
+            type="button"
+            class="js-qty__adjust js-qty__adjust--plus"
+            aria-label="{{ 'cart.general.increase_quantity' | t }}"
+          >
+            {% render 'thermos-icon-puls' %}
+
+            <span class="icon__fallback-text" aria-hidden="true">
+              {% render 'thermos-icon-fallback-text' %}
+            </span>
+          </button>
+        </div>
+
+        {%- if removeBtn -%}
+          {% if popupImage != blank %}
+            <a
+              href="{{ savecustomizationurl }}&productData={{ product.key }}"
+              class="doogma-edit-preview-btn text-link"
+              style="color: red;font-size: var(--thermos-font-size-16);text-decoration:underline;"
+            >
+              Edit
+            </a>
+
+          {% else %}
+
+          {% endif %}
+        {%- endif -%}
+      </div>
+      <div class="d-none d-md-block cart-price-qty">
+        <div class="cart__item-price-col">
+          {% if product.variant.compare_at_price > product.final_price %}
+            <span class="sale_price">{{ product.final_price | money }} </span>
+            <span class="compare_price">{{ product.variant.compare_at_price | money }}</span>
+          {% else %}
+            {{ product.original_price | money }}
+          {% endif %}
+
+          {%- if product.unit_price_measurement -%}
+            {%- capture unit_price_base_unit -%}
+            <span class="unit-price-base">
+              {%- if product.unit_price_measurement -%}
+                {%- if product.unit_price_measurement.reference_value != 1 -%}
+                  {{ product.unit_price_measurement.reference_value }}
+                {%- endif -%}
+                {{ product.unit_price_measurement.reference_unit }}
+              {%- endif -%}
+            </span>
+          {%- endcapture -%}
+
+            <div class="product__unit-price">
+              {{ product.unit_price | money }}/{{ unit_price_base_unit }}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+      {% if frontdoogmaImage != blank or backdoogmaImage != blank %}
+        <div class="d-md-none ">
+          <a
+            href="{{ savecustomizationurl }}&productData={{ product.key }}"
+            class="doogma-edit-preview-btn text-link"
+            style="color: red;font-size: var(--thermos-font-size-16);text-decoration:underline;"
+          >
+            Edit
+          </a>
+        </div>
+      {% endif %}
+      <div class="d-flex d-md-none align-items-center justify-content-between">
+        <div class="cart-price-qty">
+          <div class="cart__item-price-col">
+            {% if product.variant.compare_at_price > product.final_price %}
+              <span class="sale_price">{{ product.final_price | money }} </span>
+              <span class="compare_price">{{ product.variant.compare_at_price | money }}</span>
+            {% else %}
+              {{ product.original_price | money }}
+            {% endif %}
+
+            {%- if product.line_level_discount_allocations != blank -%}
+              {%- for discount_allocation in product.line_level_discount_allocations -%}
+                <small class="cart__discount">
+                  {{- discount_allocation.discount_application.title }} (-
+                  {{- discount_allocation.amount | money -}}
+                  )</small
+                >
+              {%- endfor -%}
+            {%- endif -%}
+
+            {%- if product.unit_price_measurement -%}
+              {%- capture unit_price_base_unit -%}
+            <span class="unit-price-base">
+              {%- if product.unit_price_measurement -%}
+                {%- if product.unit_price_measurement.reference_value != 1 -%}
+                  {{ product.unit_price_measurement.reference_value }}
+                {%- endif -%}
+                {{ product.unit_price_measurement.reference_unit }}
+              {%- endif -%}
+            </span>
+          {%- endcapture -%}
+
+              <div class="product__unit-price">
+                {{ product.unit_price | money }}/{{ unit_price_base_unit }}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="cart-spinner-block">
+          <div class="js-qty__wrapper cart-spinner">
+            <label for="cart_updates_{{ product.key }}-{{ location }}" class="hidden-label">
+              {{- 'cart.label.quantity' | t -}}
+            </label>
+            <input
+              type="text"
+              id="cart_updates_{{ product.key }}-{{ location }}"
+              name="updates[]"
+              class="js-qty__num"
+              value="{{ product.quantity }}"
+              min="0"
+              pattern="[0-9]*"
+              data-id="{{ product.key }}"
+              readonly
+              max="{% if product.variant.inventory_quantity > 25 %}25{% else %}{{ product.variant.inventory_quantity }}{% endif %}"
+            >
+            <button
+              type="button"
+              class="js-qty__adjust js-qty__adjust--minus"
+              aria-label="{{ 'cart.general.reduce_quantity' | t }}"
+            >
+              {% render 'thermos-icon-minus' %}
+              <span class="icon__fallback-text" aria-hidden="true">
+                {% render 'thermos-icon-fallback-text-plus' %}
+              </span>
+            </button>
+            <button
+              type="button"
+              class="js-qty__adjust js-qty__adjust--plus"
+              aria-label="{{ 'cart.general.increase_quantity' | t }}"
+            >
+              {% render 'thermos-icon-puls' %}
+              <span class="icon__fallback-text" aria-hidden="true">
+                {% render 'thermos-icon-fallback-text' %}
+              </span>
+            </button>
+          </div>
+
+          {%- if removeBtn -%}
+            <a
+              href="{{ routes.cart_change_url }}?id={{ product.key }}&amp;quantity=0"
+              class="cart__remove text-link"
+            >
+              {{ 'cart.general.remove' | t }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if product.product.title contains 'Custom' or product.product.title contains 'custom' %}
+    <div class="cart-doogma-notice">
+      <strong>ESTIMATED DELIVERY:</strong> Please allow an estimated 2-3 weeks for processing and
+      shipping. All orders are subject to Thermos review and compliance with terms. Custom orders
+      cannot be modified or returned.
+    </div>
+  {% endif %}
+</div>

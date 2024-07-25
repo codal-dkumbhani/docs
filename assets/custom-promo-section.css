@@ -1,0 +1,63 @@
+@media (min-width: 768px) {
+  .shopify-custom-promo-section .promo-image-container {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+    padding-left: 60px;
+  }
+}
+.shopify-custom-promo-section .btn-primary {
+  color: var(--thermos-white);
+  border-radius: 40px;
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-20) !important;
+  font-style: normal;
+  letter-spacing: 0.3px !important;
+  line-height: var(--thermos-line-height-20-4);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10.7px 13%;
+}
+.shopify-custom-promo-section .container-fluid {
+  margin-top: 48px;
+  margin-bottom: 60px;
+}
+.shopify-custom-promo-section .container-fluid * {
+  font-family: var(--thermos-dinot-cond-bold);
+}
+.shopify-custom-promo-section .custom-promo-section-title,
+.shopify-custom-promo-section .custom-promo-section-title > p {
+  font-size: var(--thermos-font-size-40);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-45);
+}
+.shopify-custom-promo-section .custom-promo-section-description > p {
+  font-size: var(--thermos-font-size-22);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-33);
+  color: var(--thermos-gunmetal);
+  font-family: var(--thermos-dinot);
+  font-weight: lighter;
+}
+
+@media only screen and (max-width: 600px) {
+  .shopify-custom-promo-section .custom-promo-section-img {
+    height: 176px;
+    width: 401.61px;
+    margin-bottom: 5%;
+  }
+
+  .shopify-custom-promo-section .custom-promo-section-title > p {
+    font-size: var(--thermos-font-size-30);
+    font-weight: var(--thermos-font-Weight-bold);
+    letter-spacing: 0;
+    line-height: var(--thermos-line-height-40);
+    margin: 0;
+  }
+
+  .shopify-custom-promo-section .custom-promo-section-description > p {
+    font-size: var(--thermos-font-size-14);
+    letter-spacing: 0;
+    line-height: var(--thermos-line-height-20);
+  }
+}

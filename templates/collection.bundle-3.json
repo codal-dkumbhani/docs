@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "blocks": {
+        "image_KpDn8M": {
+          "type": "image",
+          "settings": {
+            "maincollection": "sunset-pink",
+            "header_alignment": "full_width_image_with_text",
+            "backgroundcolor": ""
+          }
+        },
+        "image_FpQqLY": {
+          "type": "image",
+          "settings": {
+            "maincollection": "kids-bundles",
+            "header_alignment": "image_with_solid_block_of_text",
+            "backgroundcolor": "#39b0cb"
+          }
+        }
+      },
+      "block_order": ["image_KpDn8M", "image_FpQqLY"],
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": true
+      }
+    },
+    "bundle_rhFHEm": {
+      "type": "bundle",
+      "blocks": {
+        "bundle_GqniiL": {
+          "type": "bundle",
+          "disabled": true,
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wo0\"></div>"
+          }
+        }
+      },
+      "block_order": ["bundle_GqniiL"],
+      "settings": {}
+    }
+  },
+  "order": ["collection-header", "bundle_rhFHEm"]
+}

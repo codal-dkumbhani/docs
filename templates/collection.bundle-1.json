@@ -1,0 +1,146 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "blocks": {
+        "image_KpDn8M": {
+          "type": "image",
+          "settings": {
+            "maincollection": "sunset-pink",
+            "header_alignment": "full_width_image_with_text",
+            "backgroundcolor": ""
+          }
+        },
+        "image_FpQqLY": {
+          "type": "image",
+          "settings": {
+            "maincollection": "kids-bundles",
+            "header_alignment": "image_with_solid_block_of_text",
+            "backgroundcolor": "#39b0cb"
+          }
+        },
+        "image_kP9DHQ": {
+          "type": "image",
+          "settings": {
+            "maincollection": "icon-bundles",
+            "header_alignment": "image_with_solid_block_of_text",
+            "backgroundcolor": ""
+          }
+        }
+      },
+      "block_order": ["image_KpDn8M", "image_FpQqLY", "image_kP9DHQ"],
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": true
+      }
+    },
+    "bundle_rhFHEm": {
+      "type": "bundle",
+      "blocks": {
+        "bundle_maXyxx": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x58\"></div>"
+          }
+        },
+        "bundle_eB4wEr": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x54\"></div>"
+          }
+        },
+        "bundle_aCK689": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x57\"></div>"
+          }
+        },
+        "bundle_QjbTJd": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x5d\"></div>"
+          }
+        },
+        "bundle_gBCAKm": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x5e\"></div>"
+          }
+        },
+        "bundle_hPQVbm": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7caz\"></div>"
+          }
+        },
+        "bundle_CiNaRE": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cb1\"></div>"
+          }
+        },
+        "bundle_XwYmdz": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cb4\"></div>"
+          }
+        },
+        "bundle_CkKq7e": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cb5\"></div>"
+          }
+        },
+        "bundle_RaKnXH": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cb8\"></div>"
+          }
+        },
+        "bundle_wkbtwq": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cba\"></div>"
+          }
+        },
+        "bundle_XTG6yY": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cbb\"></div>"
+          }
+        },
+        "bundle_Htpn9n": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cbe\"></div>"
+          }
+        },
+        "bundle_zPBPcj": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cbi\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "bundle_maXyxx",
+        "bundle_eB4wEr",
+        "bundle_aCK689",
+        "bundle_QjbTJd",
+        "bundle_gBCAKm",
+        "bundle_hPQVbm",
+        "bundle_CiNaRE",
+        "bundle_XwYmdz",
+        "bundle_CkKq7e",
+        "bundle_RaKnXH",
+        "bundle_wkbtwq",
+        "bundle_XTG6yY",
+        "bundle_Htpn9n",
+        "bundle_zPBPcj"
+      ],
+      "settings": {}
+    }
+  },
+  "order": ["collection-header", "bundle_rhFHEm"]
+}

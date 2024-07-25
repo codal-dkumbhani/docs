@@ -1,0 +1,238 @@
+{
+  "wrapper": "div.icon-serires",
+  "sections": {
+    "main": {
+      "type": "icon-banner",
+      "settings": {
+        "image": "shopify://shop_images/Icon_Cooler_LandingPage_HomePageBanner_1920x530_Desktop.jpg",
+        "mimage": "shopify://shop_images/Icon_Cooler_LandingPage_Icon_Banner_Mobile_375x430_20ec46e4-bd06-4ad7-ab33-6bdde4c67702.jpg",
+        "title1": "",
+        "title2": "",
+        "title3": "",
+        "titlecolor1": "#ffffff",
+        "titlecolor2": "#ffffff",
+        "titlecolor3": "#faca54"
+      }
+    },
+    "threeimage": {
+      "type": "icon-threeImage",
+      "blocks": {
+        "c9260e72-a763-47b2-8927-3615b70c9b1e": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Cooler_LandingPage_FeatureOne_Mobile_375x460_734a3f35-ae4c-4ed4-b835-40f856bf1c77.jpg",
+            "title": "Designed to endure",
+            "subtitle": "Tote Coolers >",
+            "url": "shopify://products/30-can-icon-cooler-tote",
+            "colorfortitle": "#fafafa",
+            "colorforsubtitle": "#ffffff"
+          }
+        },
+        "3c5dc2f8-4edd-4df1-9fcb-d23591b52bdd": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Cooler_LandingPage_FeatureTwo_Mobile_375x460_c9ffff87-fc95-4470-b979-7b828e34edeb.jpg",
+            "title": "Starts cold. Stays cold.",
+            "subtitle": "Backpack Coolers >",
+            "url": "shopify://products/18-can-icon-backpack-cooler",
+            "colorfortitle": "#fafafa",
+            "colorforsubtitle": "#fafafa"
+          }
+        },
+        "7c5ece64-c890-4265-8837-55391518e231": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Cooler_LandingPage_FeatureThree_Mobile_375x460_ccb426b4-9e7a-4d9c-9a68-b77778f8ffa3.jpg",
+            "title": "Iconic insulation",
+            "subtitle": "All Coolers >",
+            "url": "shopify://collections/coolers",
+            "colorfortitle": "#fafafa",
+            "colorforsubtitle": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "c9260e72-a763-47b2-8927-3615b70c9b1e",
+        "3c5dc2f8-4edd-4df1-9fcb-d23591b52bdd",
+        "7c5ece64-c890-4265-8837-55391518e231"
+      ],
+      "settings": {}
+    },
+    "collections1": {
+      "type": "icon-collections",
+      "settings": {
+        "text": "SHOP Coolers",
+        "featuredcollection1": "coolers",
+        "featuredcollection1_label": "View all Coolers",
+        "featuredcollection1_link": "shopify://collections/coolers"
+      }
+    },
+    "imageWithText": {
+      "type": "icon-imageWithText",
+      "settings": {
+        "video": "",
+        "image": "shopify://shop_images/Icon_Cooler_LandingPage_Tech_Banner_Desktop_1248x546_1.jpg",
+        "mobileImage": "shopify://shop_images/Icon_Cooler_LandingPage_Feature_Inset_Mobile_375x500_1.jpg",
+        "title": "Designed to endure",
+        "desc": "<p>When you need your food fresh, or your water ice cold, \"good enough\" doesn't cut it. Introducing the Thermos® Icon™ Cooler Series.  Simple, timeless coolers that keep up with you.</p>",
+        "btntext": "Shop Icon Coolers",
+        "btnurl": "https://thermos.com/collections/coolers",
+        "btnbgcolor": "#ffffff",
+        "btntextcolor": "#343741",
+        "btnbgcolorwhenhover": "#343741",
+        "btntextcolorwhenhover": "#ffffff",
+        "position": "rightImageLeftText"
+      }
+    },
+    "featuredproduct": {
+      "type": "icon-featuredproduct",
+      "settings": {
+        "designated_product": "24-can-icon-cooler",
+        "section_title": "<p>;</p>",
+        "section_url": "shopify://products/24-can-icon-cooler",
+        "buttonInDesktop": false,
+        "buttonInMobile": false,
+        "background_image": "shopify://shop_images/Icon_Cooler_LandingPage_Lifestyle_Popup_Desktop_3000x1130_3c9f55b6-3aa8-47dd-bd10-474cf35e4438.jpg"
+      }
+    },
+    "collections": {
+      "type": "icon-collections",
+      "disabled": true,
+      "settings": {
+        "text": "Shop Water Bottles",
+        "featuredcollection1": "icon-water-bottles",
+        "featuredcollection1_label": "View all Water Bottles",
+        "featuredcollection1_link": "shopify://collections/icon-water-bottles"
+      }
+    },
+    "collections2": {
+      "type": "icon-collections",
+      "settings": {
+        "text": "Shop Icon Series",
+        "featuredcollection1": "icon-series",
+        "featuredcollection1_label": "Explore Icon Series",
+        "featuredcollection1_link": "shopify://collections/icon-series"
+      }
+    },
+    "categorycolors": {
+      "type": "icon-categorycolors",
+      "disabled": true,
+      "settings": {}
+    },
+    "imageWithText1": {
+      "type": "icon-imageWithText",
+      "settings": {
+        "video": "",
+        "image": "shopify://shop_images/Icon_Cooler_LandingPage_Tech_Banner_Desktop_1248x546_2.jpg",
+        "mobileImage": "shopify://shop_images/Icon_Cooler_LandingPage_Feature_Inset_Mobile_375x500_2.jpg",
+        "title": "THE PERFECT MATCH",
+        "desc": "<p>The Thermos® Icon Series is a culmination of what we do best. Timeless premium designs, superior performance, and the type of hassle-free maintenance you can count on.</p>",
+        "btntext": "Shop Icon Series",
+        "btnurl": "https://thermos.com/collections/icon-series",
+        "btnbgcolor": "#ffffff",
+        "btntextcolor": "#343741",
+        "btnbgcolorwhenhover": "#343741",
+        "btntextcolorwhenhover": "#ffffff",
+        "position": "leftImageRightText"
+      }
+    },
+    "12d72dd9-1e74-449d-afad-7e60e5023242": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-6": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-7": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-0",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-1",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-2",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-3",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-4",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-5",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-6",
+        "template--15691545378972__12d72dd9-1e74-449d-afad-7e60e5023242-167422823632907d84-7"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Collection list",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "threeimage",
+    "collections1",
+    "imageWithText",
+    "featuredproduct",
+    "collections",
+    "collections2",
+    "categorycolors",
+    "imageWithText1",
+    "12d72dd9-1e74-449d-afad-7e60e5023242"
+  ]
+}

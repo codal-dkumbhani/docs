@@ -1,0 +1,41 @@
+.promotions .about-bg-promo-1 {
+  border: solid var(--thermos-white) 3.6px;
+}
+.promotions .about-promo-icon {
+  max-width: 140px;
+  width: 100%;
+  margin-inline: auto;
+}
+.promotions .promo-card-header {
+  font-family: var(--thermos-dinot-cond-bold);
+  color: var(--thermos-white);
+  font-size: var(--thermos-font-size-33);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-35);
+}
+.promotions .promo-card-description {
+  color: var(--thermos-white);
+  font-family: var(--thermos-dinot);
+  font-size: var(--thermos-font-size-19);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-30);
+  padding: 2% 6% 13%;
+  padding-bottom: 11%;
+}
+@media only screen and (max-width: 600px) {
+  .promotions .about-bg-promo-1 {
+    border: solid var(--thermos-white) 10px;
+    border-bottom: none;
+  }
+  .promotions .about-promo-icon {
+    width: 77px;
+    height: 77px;
+  }
+  .promotions .promo-card-description {
+    font-size: var(--thermos-font-size-16);
+    letter-spacing: normal;
+    line-height: var(--thermos-line-height-22);
+    padding: 3% 10%;
+    margin-bottom: 48px;
+  }
+}

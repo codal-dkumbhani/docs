@@ -1,0 +1,94 @@
+{{ 'image-clickable.css' | asset_url | stylesheet_tag }}
+<div class="image-clickable">
+  {% if section.settings.image_clickable_url != empty %}
+    <a href="{{ section.settings.image_clickable_url }}">
+  {% endif %}
+  <div class="image-clickable-background">
+    <div class="overlay"></div>
+    {% if section.settings.title_text != empty %}
+      <p class="image-text h2">
+        <span>{{ section.settings.title_spacial_text }}</span>&nbsp;
+        {{- section.settings.title_text }}
+      </p>
+    {% endif %}
+  </div>
+  {% if section.settings.image_clickable_url != empty %}
+    </a>
+  {% endif %}
+</div>
+{% schema %}
+{
+  "name": "Image Clickable",
+  "class": "image-clickable-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Upload Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Upload Background Image (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "image_clickable_url",
+      "label": "Clickable URL"
+    },
+    {
+      "type": "text",
+      "id": "title_spacial_text",
+      "label": "Title Spacial Text"
+    },
+    {
+      "type": "color",
+      "id": "title_spacial_text_color",
+      "label": "Title Spacial Text Color",
+      "default": "#ffe761"
+    },
+    {
+      "type": "text",
+      "id": "title_text",
+      "label": "Title Text"
+    },
+    {
+      "type": "color",
+      "id": "title_text_color",
+      "label": "Title Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay Color",
+      "default": "rgba(0, 0, 0, 0.5)"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Image Clickable"
+    }
+  ]
+}
+{% endschema %}
+{% style %}
+  .image-clickable .image-clickable-background {
+    background-image: url('{{ section.settings.background_image | image_url }}');
+  }
+  .image-clickable .overlay {
+    background-color: {{ section.settings.overlay_color }};
+  }
+  .image-clickable .image-text {
+    color: {{ section.settings.title_text_color }};
+  }
+  .image-clickable .image-text span {
+    color: {{ section.settings.title_spacial_text_color }};
+  }
+  @media (max-width: 767px) {
+    .image-clickable .image-clickable-background {
+    background-image: url('{{ section.settings.background_image_mobile | image_url }}');
+  }
+  }
+{% endstyle %}

@@ -1,0 +1,114 @@
+{{ 'collection-footer-banners.css' | asset_url | stylesheet_tag }}
+
+{% for block in section.blocks %}
+  {% if collection.handle == collections[block.settings.maincollection].handle %}
+    <div class="colloection-promotionals page-width">
+      {% if block.settings.promoblock_url != blank %}
+        <div class="promotional-inner">
+          <a href="{{ block.settings.promoblock_url }}">
+            <img
+              width="auto"
+              height="auto"
+              alt="{{ block.settings.promoblock_image.alt }}"
+              src="{{ block.settings.promoblock_image | image_url }}"
+            >
+
+            {% if block.settings.promoblock_heading != blank %}
+              <h1>{{ block.settings.promoblock_heading }}</h1>
+            {% endif %}
+
+            {% if block.settings.promoblock_content != blank %}
+              {{ block.settings.promoblock_content }}
+            {% endif %}
+          </a>
+        </div>
+      {% endif %}
+
+      {% if block.settings.promoblock_url2 != blank %}
+        <div class="promotional-inner">
+          <a href="{{ block.settings.promoblock_url2 }}">
+            <img
+              width="auto"
+              height="auto"
+              src="{{ block.settings.promoblock_image2 | image_url }}"
+              alt="{{ block.settings.promoblock_image2.alt }}"
+            >
+
+            {% if block.settings.promoblock_heading2 != blank %}
+              <h1>{{ block.settings.promoblock_heading2 }}</h1>
+            {% endif %}
+
+            {% if block.settings.promoblock_content2 != blank %}
+              {{ block.settings.promoblock_content2 }}
+            {% endif %}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Collection Footer Banners",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Promotional Block Content",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "maincollection",
+          "label": "Select Collection For Blocks"
+        },
+        {
+          "type": "image_picker",
+          "id": "promoblock_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "promoblock_heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "promoblock_content",
+          "label": "Content"
+        },
+        {
+          "type": "url",
+          "id": "promoblock_url",
+          "label": "Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "promoblock_image2",
+          "label": "Image 2"
+        },
+        {
+          "type": "text",
+          "id": "promoblock_heading2",
+          "label": "Heading 2"
+        },
+        {
+          "type": "richtext",
+          "id": "promoblock_content2",
+          "label": "Content 2"
+        },
+        {
+          "type": "url",
+          "id": "promoblock_url2",
+          "label": "Link 2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Footer Banners"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,28 @@
+.care-hero-section .container .row {
+  padding: 80px 0;
+}
+.care-hero-section .container .row .col-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.care-hero-section .care-description {
+  font-family: var(--thermos-aktiv-grotesk);
+  padding-top: 10px;
+  font-size: var(--thermos-font-size-20);
+  letter-spacing: normal;
+  line-height: var(--thermos-line-height-24);
+  color: var(--thermos-black);
+}
+.care-hero-section .care-hero-button {
+  padding-top: 30px;
+}
+@media (max-width: 767px) {
+  .care-hero-section .container .row .left-section {
+    display: none;
+  }
+  .care-hero-section .care-description {
+    font-size: calc(var(--thermos-font-size-20) / 1.5);
+  }
+}

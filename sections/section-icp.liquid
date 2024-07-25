@@ -1,0 +1,544 @@
+{{ 'icp-pages.css' | asset_url | stylesheet_tag: preload: true }}
+
+{% comment %}
+  {% for sub_sub_link in linklists[section.settings.maincollection].links %}
+    <a href="{{ sub_sub_link.url }}" >
+
+          {{ sub_sub_link.title | escape }}
+    </a>
+  {% endfor %}
+{% endcomment %}
+
+{% for block in section.blocks %}
+  {% if page.handle == collections[block.settings.maincollection].handle %}
+    <div class="kids-banner mb-5 {% if page.handle == 'kids' %} kids-page-icp {% endif %}">
+      <div class="kids-banner-title  ">
+        <div class="kids-banner-title-wrap">
+          {% if page.handle == 'kids' %}
+            <img
+              width="auto"
+              height="auto"
+              src="{{ '14-layers.svg' | asset_url }}"
+              class="icp-logo small--hide"
+              alt="icp-logo"
+            >
+          {% endif %}
+          <h1 class="mb-3 {% if page.handle == 'kids' %} icp-heading {% endif %}">
+            {{ block.settings.kids_banner_title }}
+          </h1>
+
+          <p class="">{{ collections[block.settings.maincollection].description }}</p>
+          {% if page.handle == 'kids' %}
+            <div class="kids-logo mb-3">
+              <img
+                width="auto"
+                height="auto"
+                src="{{ '14-layers.svg' | asset_url }}"
+                class="icp-logo medium-up--hide"
+                style="width: 119px;height: 30px;"
+                alt="icp-logo"
+              >
+            </div>
+          {% endif %}
+          <br class="hide--small">
+          <a class="button" href="{{ collections[block.settings.maincollection].url }}">
+            {{- block.settings.link_title -}}
+          </a>
+        </div>
+      </div>
+      <div
+        class="kids-banner-picture"
+        style="max-width: 100%; width: 100%;  background: url({{ collections[block.settings.maincollection].image | image_url }}); background-repeat: no-repeat; background-size: cover; background-position: top center;"
+      ></div>
+    </div>
+
+    {% if block.settings.collectiongrid1 != blank
+      and block.settings.collectiongrid2 != blank
+      and block.settings.collectiongrid3 != blank
+      and block.settings.collectiongrid4 != blank
+    %}
+      <div class="page-width box-image-contain">
+        <div class="box-grid" id="box-grid-first">
+          <figure>
+            {% if block.settings.imagegrid1 != blank %}
+              <img
+                width="auto"
+                height="auto"
+                alt="{{ block.settings.imagegrid1.alt}}"
+                src="{{ block.settings.imagegrid1 | image_url   }}"
+              >
+            {% else %}
+              <img
+                width="auto"
+                height="auto"
+                src="{{ collections[block.settings.collectiongrid1].image | image_url   }}"
+                alt="{{ collections[block.settings.collectiongrid1].image.alt}}"
+              >
+            {% endif %}
+            <figcaption>
+              {% if block.settings.linkgrid1 != blank %}
+                <a href="{{ block.settings.linkgrid1 }}">
+                  {{- collections[block.settings.collectiongrid1].title -}}
+                </a>
+              {% else %}
+                <a href="{{ collections[block.settings.collectiongrid1].url }}">
+                  {{- collections[block.settings.collectiongrid1].title -}}
+                </a>
+              {% endif %}
+            </figcaption>
+          </figure>
+        </div>
+        <div class="box-grid">
+          <figure>
+            {% if block.settings.imagegrid2 != blank %}
+              <img
+                width="auto"
+                height="auto"
+                alt="{{ block.settings.imagegrid2.alt}}"
+                src="{{ block.settings.imagegrid2 | image_url   }}"
+              >
+            {% else %}
+              <img
+                width="auto"
+                height="auto"
+                alt="{{ collections[block.settings.collectiongrid2].image.alt}}"
+                src="{{ collections[block.settings.collectiongrid2].image | image_url   }}"
+              >
+            {% endif %}
+            <figcaption>
+              {% if block.settings.linkgrid2 != blank %}
+                <a href="{{ block.settings.linkgrid2 }}">
+                  {{- collections[block.settings.collectiongrid2].title -}}
+                </a>
+              {% else %}
+                <a href="{{ collections[block.settings.collectiongrid2].url }}">
+                  {{- collections[block.settings.collectiongrid2].title -}}
+                </a>
+              {% endif %}
+            </figcaption>
+          </figure>
+        </div>
+        <div class="box-grid">
+          <figure>
+            {% if block.settings.imagegrid3 != blank %}
+              <img
+                width="auto"
+                height="auto"
+                alt="{{ block.settings.imagegrid3.alt}}"
+                src="{{ block.settings.imagegrid3 | image_url   }}"
+              >
+            {% else %}
+              <img
+                width="auto"
+                height="auto"
+                src="{{ collections[block.settings.collectiongrid3].image | image_url   }}"
+                alt="{{ collections[block.settings.collectiongrid3].image.alt}}"
+              >
+            {% endif %}
+            <figcaption>
+              {% if block.settings.linkgrid3 != blank %}
+                <a href="{{ block.settings.linkgrid3 }}">
+                  {{- collections[block.settings.collectiongrid3].title -}}
+                </a>
+              {% else %}
+                <a href="{{ collections[block.settings.collectiongrid3].url }}">
+                  {{- collections[block.settings.collectiongrid3].title -}}
+                </a>
+              {% endif %}
+            </figcaption>
+          </figure>
+        </div>
+        <div class="box-grid" id="box-grid-last">
+          <figure>
+            {% if block.settings.imagegrid4 != blank %}
+              <img
+                width="auto"
+                height="auto"
+                alt="{{ block.settings.imagegrid4.alt}}"
+                src="{{ block.settings.imagegrid4 | image_url   }}"
+              >
+            {% else %}
+              <img
+                width="auto"
+                height="auto"
+                alt="{{ collections[block.settings.collectiongrid4].image.alt}}"
+                src="{{ collections[block.settings.collectiongrid4].image | image_url   }}"
+              >
+            {% endif %}
+            <figcaption>
+              {% if block.settings.linkgrid4 != blank %}
+                <a href="{{ block.settings.linkgrid4 }}">
+                  {{- collections[block.settings.collectiongrid4].title -}}
+                </a>
+              {% else %}
+                <a href="{{ collections[block.settings.collectiongrid4].url }}">
+                  {{- collections[block.settings.collectiongrid4].title -}}
+                </a>
+              {% endif %}
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.featuredcollection1 != blank %}
+      <div class="page-width page-width--flush-small">
+        <div class="title-with-viewall ">
+          <h1>{{ collections[block.settings.featuredcollection1].title }}</h1>
+          {% if block.settings.featuredcollection1_link != blank %}
+            <p class="icp-view-all">
+              <a href="{{ block.settings.featuredcollection1_link }}" class="small--hide">
+                {{- block.settings.featuredcollection1_label -}}
+              </a>
+            </p>
+          {% elsif block.settings.featuredcollection1 != blank %}
+            <p class="icp-view-all">
+              <a
+                href="{{ collections[block.settings.featuredcollection1].url }}"
+                class="small--hide"
+                >View all {{ collections[block.settings.featuredcollection1].title -}}
+              </a>
+            </p>
+          {% endif %}
+        </div>
+
+        <div class="product-grid-items grid">
+          {%- for product in collections[block.settings.featuredcollection1].products limit: 4 -%}
+            {%- render 'product-grid-item-4',
+              product: product,
+              grid_item_width: 'small--one-half medium-up--one-quarter',
+              per_row: 4
+            -%}
+          {%- endfor -%}
+        </div>
+        <div class="title-with-viewall p-0 ">
+          <h1 class=""></h1>
+          <p class="icp-view-all w-100 text-right ">
+            <a
+              href="{{ collections[block.settings.featuredcollection1].url }}"
+              class="medium-up--hide text-uppercase"
+              style="font-size: var(--thermos-font-size-14)"
+              >View all {{ collections[block.settings.featuredcollection1].title -}}
+            </a>
+          </p>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.featuredimage1_mob != blank %}
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-12 desktop-view"
+            style="background-image: url('{{ block.settings.featuredimage1 | image_url }}');background-size: cover; background-position: center; height: 500px"
+          ></div>
+        </div>
+      </div>
+      <div class="mobile-view">
+        <div class="full-bg-image">
+          <img
+            width="auto"
+            height="auto"
+            src="{{ block.settings.featuredimage1_mob | image_url }}"
+            class=""
+            alt="{{ block.settings.featuredimage1_mob.alt}}"
+          >
+        </div>
+      </div>
+    {% else %}
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-12"
+            style="background-image: url('{{ block.settings.featuredimage1 | image_url }}');background-size: cover; background-position: center; height: 500px"
+          ></div>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="page-width collection-grid-col-data">
+      {% if block.settings.featuredcollection2 != blank %}
+        <div class="title-with-viewall mt-3">
+          <h1>{{ collections[block.settings.featuredcollection2].title }}</h1>
+          {% if block.settings.featuredcollection2_link != blank %}
+            <p class="icp-view-all">
+              <a href="{{ block.settings.featuredcollection2_link }}" class="small--hide">
+                {{- block.settings.featuredcollection2_label -}}
+              </a>
+            </p>
+          {% elsif block.settings.featuredcollection2 != blank %}
+            <p class="icp-view-all">
+              <a
+                href="{{ collections[block.settings.featuredcollection2].url }}"
+                class="small--hide"
+                >View all {{ collections[block.settings.featuredcollection2].title -}}
+              </a>
+            </p>
+          {% endif %}
+        </div>
+        {%- for product in collections[block.settings.featuredcollection2].products limit: 4 -%}
+          {%- render 'product-grid-item-4',
+            product: product,
+            grid_item_width: 'small--one-half medium-up--one-quarter',
+            per_row: 4
+          -%}
+        {%- endfor -%}
+        <div class="title-with-viewall p-0 ">
+          <h1 class=""></h1>
+          <p class="icp-view-all w-100 text-right ">
+            <a
+              href="{{ collections[block.settings.featuredcollection2].url }}"
+              class="medium-up--hide text-uppercase"
+              style="font-size: var(--thermos-font-size-14)"
+              >View all {{ collections[block.settings.featuredcollection2].title -}}
+            </a>
+          </p>
+        </div>
+      {% endif %}
+
+      {% if block.settings.featuredcollection3 != blank %}
+        <div class="title-with-viewall mt-3 ">
+          <h1>{{ collections[block.settings.featuredcollection3].title }}</h1>
+          {% if block.settings.featuredcollection3_link != blank %}
+            <p class="icp-view-all">
+              <a href="{{ block.settings.featuredcollection3_link }}" class="small--hide">
+                {{- block.settings.featuredcollection3_label -}}
+              </a>
+            </p>
+          {% elsif block.settings.featuredcollection3 != blank %}
+            <p class="icp-view-all">
+              <a
+                href="{{ collections[block.settings.featuredcollection3].url }}"
+                class="small--hide"
+                >View all {{ collections[block.settings.featuredcollection3].title -}}
+              </a>
+            </p>
+          {% endif %}
+        </div>
+        {%- for product in collections[block.settings.featuredcollection3].products limit: 4 -%}
+          {%- render 'product-grid-item-4',
+            product: product,
+            grid_item_width: 'small--one-half medium-up--one-quarter',
+            per_row: 4
+          -%}
+        {%- endfor -%}
+        <div class="title-with-viewall p-0 ">
+          <h1 class=""></h1>
+          <p class="icp-view-all w-100 text-right">
+            <a
+              href="{{ collections[block.settings.featuredcollection3].url }}"
+              class="medium-up--hide text-uppercase"
+              style="font-size: var(--thermos-font-size-14)"
+              >View all {{ collections[block.settings.featuredcollection3].title -}}
+            </a>
+          </p>
+        </div>
+      {% endif %}
+      <br>
+    </div>
+
+    {% if block.settings.featuredimage2_mob != blank %}
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-12 desktop-view"
+            style="background-image: url('{{ block.settings.featuredimage2 | image_url }}');background-size: cover; background-position: center; height: 500px"
+          ></div>
+        </div>
+      </div>
+      <div class="mobile-view">
+        <div class="full-bg-image">
+          <img
+            width="auto"
+            height="auto"
+            src="{{ block.settings.featuredimage2_mob | image_url   }}"
+            class=""
+            alt="{{ block.settings.featuredimage2_mob.alt}}"
+          >
+        </div>
+      </div>
+    {% else %}
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-12"
+            style="background-image: url('{{ block.settings.featuredimage2 | image_url }}');background-size: cover; background-position: center; height: 500px"
+          ></div>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Main Category Page Data",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Page Content",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "maincollection",
+          "label": "Hero Collection"
+        },
+        {
+          "type": "text",
+          "id": "kids_banner_title",
+          "label": "Banner title"
+        },
+        {
+          "type": "image_picker",
+          "id": "logoimage",
+          "label": "Banner Logo Image"
+        },
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "Link label",
+          "default": "View all"
+        },
+        {
+          "type": "collection",
+          "id": "collectiongrid1",
+          "label": "Grid Collection 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "imagegrid1",
+          "label": "Grid Image 1"
+        },
+        {
+          "type": "url",
+          "id": "linkgrid1",
+          "label": "Grid Page Link 1"
+        },
+        {
+          "type": "collection",
+          "id": "collectiongrid2",
+          "label": "Grid Collection 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "imagegrid2",
+          "label": "Grid Image 2"
+        },
+        {
+          "type": "url",
+          "id": "linkgrid2",
+          "label": "Grid Page Link 2"
+        },
+        {
+          "type": "collection",
+          "id": "collectiongrid3",
+          "label": "Grid Collection 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "imagegrid3",
+          "label": "Grid Image 3"
+        },
+        {
+          "type": "url",
+          "id": "linkgrid3",
+          "label": "Grid Page Link 3"
+        },
+        {
+          "type": "collection",
+          "id": "collectiongrid4",
+          "label": "Grid Collection 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "imagegrid4",
+          "label": "Grid Image 4"
+        },
+        {
+          "type": "url",
+          "id": "linkgrid4",
+          "label": "Grid Page Link 4"
+        },
+        {
+          "type": "collection",
+          "id": "featuredcollection1",
+          "label": "Featured Collection 1"
+        },
+        {
+          "type": "text",
+          "id": "featuredcollection1_label",
+          "label": "Collection 1 View All Label",
+          "default": "View all"
+        },
+        {
+          "type": "url",
+          "id": "featuredcollection1_link",
+          "label": "Collection 1 View All Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "featuredimage1",
+          "label": "Featured Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "featuredimage1_mob",
+          "label": "Mobile Featured Image 1"
+        },
+        {
+          "type": "collection",
+          "id": "featuredcollection2",
+          "label": "Featured Collection 2"
+        },
+        {
+          "type": "text",
+          "id": "featuredcollection2_label",
+          "label": "Collection 2 View All Label",
+          "default": "View all"
+        },
+        {
+          "type": "url",
+          "id": "featuredcollection2_link",
+          "label": "Collection 2 View All Link"
+        },
+        {
+          "type": "collection",
+          "id": "featuredcollection3",
+          "label": "Featured Collection 3"
+        },
+        {
+          "type": "text",
+          "id": "featuredcollection3_label",
+          "label": "Collection 3 View All Label",
+          "default": "View all"
+        },
+        {
+          "type": "url",
+          "id": "featuredcollection3_link",
+          "label": "Collection 3 View All Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "featuredimage2",
+          "label": "Featured Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "featuredimage2_mob",
+          "label": "Mobile Featured Image 2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ICP Sections",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+{% endjavascript %}

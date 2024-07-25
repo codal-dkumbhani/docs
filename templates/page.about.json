@@ -1,0 +1,197 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "hero_video_3N7UwA": {
+      "type": "hero-video",
+      "settings": {
+        "title": "Over 115 years of heritage",
+        "title_size": 100,
+        "subheading": "For over a century people have loved Thermos products  because they make everyday life better every time.  The little things go a long way. So do we.",
+        "link_text": "",
+        "link": "",
+        "color_accent": "rgba(0,0,0,0)",
+        "text_align": "vertical-center horizontal-center",
+        "video_url": "https://youtu.be/y6FFy08B5mE",
+        "overlay_opacity": 36,
+        "section_height": "650px",
+        "mobile_height": "auto"
+      }
+    },
+    "about_us_thermos_WtaDza": {
+      "type": "about-us-thermos",
+      "settings": {
+        "about-section-banner-text": "Trusted since 1904",
+        "back_image": "shopify://shop_images/image_1_c291bbea-f4cc-4f61-9cb2-aa3d80cb0701.png",
+        "about-section-title": "THE ORIGINAL INNOVATION",
+        "about-section-description": "Before the brand Thermos became famous, it was an idea. An ambition. A feat of science that turned into a breakthrough household innovation. In 1904, Thermos was the first company to develop consumer products using vacuum insulation.",
+        "about-us-image": "shopify://shop_images/IS3014PL_IS1154CR_IS2204MN_IS3004SG_IS1164RR_IS1124ML_2254908311_Mobile_640x1000_87f4334c-5c93-4bf1-a356-4c681d142334.jpg",
+        "about-section-icon-text": "Trusted since 1904"
+      }
+    },
+    "trapeze_section_F4dBzF": {
+      "type": "trapeze-section",
+      "settings": {
+        "title": "<p>HOT STAYS HOT.<br/>COLD STAYS COLD.</p><p>Test details </p>",
+        "trapeze-section-description": "<p>Description Update <br/>Our durable double wall stainless steel vacuum insulated technology, you are certain to find a product that fits your lifestyle while delivering superior performance with exceptional durability</p>",
+        "btn-url": "",
+        "btn-text": "",
+        "trapeze_image_picker": "shopify://shop_images/IS2102GT4_ICON_OctMed_23_CAL_Lake_16A_0006_Steam_Pour_HotStaysHot_3000x1700_1024x1024_8d8f649b-433a-4501-b13a-c8e459abad22.webp"
+      }
+    },
+    "about_us_promo_HxU4wX": {
+      "type": "about-us-promo",
+      "settings": {
+        "title": "SUPERIOR TEMPERATURE RETENTION",
+        "description": "Keep your coffee hot. Keep your water cold. <br>\nKeep your food fresh and your day under control.",
+        "image1_url": "shopify://shop_images/2-layers_1.5x.png",
+        "first_image_text1": "Keeps",
+        "first_image_text2": "cold",
+        "text12_color": "#2c20b7",
+        "image2_url": "shopify://shop_images/2-layers_1.5x_1.png",
+        "second_image_text1": "Keeps",
+        "second_image_text2": "Hot",
+        "text22_color": "#f00d19"
+      }
+    },
+    "collection_explorer_yVdzVJ": {
+      "type": "collection-explorer",
+      "blocks": {
+        "select_QkjWBR": {
+          "type": "select",
+          "settings": {
+            "heading": "FUNTAINER COLLECTION",
+            "sub-heading": "<p><strong>Protect what you love™.<br/>The lunchtime puzzle is officially solved.</strong></p>",
+            "collumn_2_image_picker_row": "shopify://shop_images/F4100TL_F3100TL_Kids_060222_BWM_0533_AboutUs_1436x728_ce9d741e-0e68-4916-9e9d-27cb6fdfacf4.jpg",
+            "column_2_collection_handle": "shopify://collections/funtainer-1",
+            "btn_text": "Explore",
+            "background_image_position_column_1": "center center"
+          }
+        },
+        "select_G4i3Qr": {
+          "type": "select",
+          "settings": {
+            "heading": "MAKE IT UNIQUELY YOURS",
+            "sub-heading": "<p>Design Your Perfect Thermos Brand Product.</p>",
+            "collumn_2_image_picker_row": "shopify://shop_images/IS2202SN_F41101RV_IS2302GT_Group_PRES_Etched_wBCKGRD_v4_AboutUs_1436x728_b9ca6a04-5dbe-4fdb-b4ed-96fb34ed049d.jpg",
+            "column_2_collection_handle": "shopify://collections/customizer",
+            "btn_text": "Customize now",
+            "background_image_position_column_1": "center center"
+          }
+        }
+      },
+      "block_order": ["select_QkjWBR", "select_G4i3Qr"],
+      "settings": {
+        "heading": "ICON SERIES",
+        "sub-heading": "<p>Masters of our Craft</p>",
+        "collumn_1_image_picker": "shopify://shop_images/IS1112MS_ICON_OctMed_23_CAL_Commuter_04A_0026_AboutUs_1434x1454_0a333d50-e3b8-418c-ada2-51a98b288698.jpg",
+        "column_1_collection_handle": "shopify://pages/icon-series",
+        "btn_text": "Explore Collection",
+        "background_image_position_column_1": "center center"
+      }
+    },
+    "about_us_family_GnbNya": {
+      "type": "about-us-family",
+      "settings": {
+        "title": "SOMETHING FOR THE WHOLE FAMILY",
+        "description": "When you choose gear to fit your daily routine, the options are endless.But it's easy to see what rises to the top.",
+        "image1_url": "shopify://shop_images/AboutUs_ThreeImages_1920x900_f3f572b5-ae86-4d24-aba9-1c4b5734ceab.jpg"
+      }
+    },
+    "about_us_promotions_APByqC": {
+      "type": "about-us-promotions",
+      "blocks": {
+        "block_kxNhGJ": {
+          "type": "block",
+          "settings": {
+            "image_url": "shopify://shop_images/4-layers_1.5x.png",
+            "title": "DISHWASHER SAFE",
+            "descripton": "Most of our products are dishwasher-safe. Easy to clean and stand the test of time.",
+            "back_color": "#9c9ea2"
+          }
+        },
+        "block_94rM8L": {
+          "type": "block",
+          "settings": {
+            "image_url": "shopify://shop_images/2-layers_1.5x_2_3c050c98-8bdd-41bf-9eb7-687deb053b78.png",
+            "title": "REUSABLE",
+            "descripton": "Durable and reusable. Say goodbye to single use.",
+            "back_color": "#4a4c51"
+          }
+        },
+        "block_E36t9t": {
+          "type": "block",
+          "settings": {
+            "image_url": "shopify://shop_images/5-layers_1.5x_2c7ca3be-9cdf-48ed-89c1-a4f66f29191a.png",
+            "title": "VACUUM INSULATED",
+            "descripton": "Hots stay Hot. Colds stay Cold. You stay focused on everything else.",
+            "back_color": "#4a4c51"
+          }
+        },
+        "block_MjPtr3": {
+          "type": "block",
+          "settings": {
+            "image_url": "shopify://shop_images/7-layers_1.5x.png",
+            "title": "KID-FRIENDLY",
+            "descripton": "Kids can open and closeit all by themselves.",
+            "back_color": "#3da3d3"
+          }
+        }
+      },
+      "block_order": ["block_kxNhGJ", "block_94rM8L", "block_E36t9t", "block_MjPtr3"],
+      "settings": {}
+    },
+    "slideshow_JkEtxe": {
+      "type": "slideshow",
+      "blocks": {
+        "image_y4rqjm": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "THERMOS. TRUSTED SINCE 1904.",
+            "title": "LEGACIES ARE MADE\nONE STEP AT A TIME.",
+            "title_size": 80,
+            "subheading": "Improve your legacy and eliminate “single-use” from your gear checklist.",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/AboutUs_Legacies_Desktop_2250x1039_fa8714ab-4450-42be-9075-89ac8f6d4892.jpg",
+            "image_mobile": "shopify://shop_images/AboutUs_Legacies_Mobile_320x500_8cc1fdc2-8717-42be-9ba6-c1db817b7ee7.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 38
+          }
+        }
+      },
+      "block_order": ["image_y4rqjm"],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "500px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "lazyload_images": true
+      }
+    },
+    "instagram_section_KTfzKH": {
+      "type": "instagram-section",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "hero_video_3N7UwA",
+    "about_us_thermos_WtaDza",
+    "trapeze_section_F4dBzF",
+    "about_us_promo_HxU4wX",
+    "collection_explorer_yVdzVJ",
+    "about_us_family_GnbNya",
+    "about_us_promotions_APByqC",
+    "slideshow_JkEtxe",
+    "instagram_section_KTfzKH"
+  ]
+}

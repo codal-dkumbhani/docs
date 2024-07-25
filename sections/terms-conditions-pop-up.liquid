@@ -1,0 +1,205 @@
+{% if section.settings.mode != 'disabled' %}
+  {{ 'terms-conditions-popup.css' | asset_url | stylesheet_tag }}
+  <div
+    id="Terms-Conditions-Popup-{{ section.id }}"
+    class="modal modal--square modal--mobile-friendly terms-conditions-popup"
+    data-section-id="{{ section.id }}"
+    data-section-type="terms-conditions-popup"
+    data-delay-days="{{ section.settings.terms_conditions_popup_days }}"
+    data-delay-seconds="{{ section.settings.terms_conditions_popup_seconds }}"
+  >
+    <div class="modal__inner">
+      <main class="wrap">
+        <section class="container">
+          <div class="container__heading">
+            <h2>{{ section.settings.terms_conditions_popup_title }}</h2>
+          </div>
+          <div class="container__content">
+            {% if section.settings.terms_conditions_popup_highlighted_text != '' %}
+              <div
+                class="modal_highlight"
+                style="
+                  background-color: {{ section.settings.tc_popup_highlighted_text_bg_color }};
+                  color: {{ section.settings.tc_popup_highlighted_text_color }}
+                "
+              >
+                {{ section.settings.terms_conditions_popup_highlighted_text }}
+              </div>
+            {% endif %}
+
+            <div class="modal_text">
+              {{ section.settings.tc_popup_text }}
+            </div>
+          </div>
+          <div class="container__nav">
+            <input type="checkbox" id="accept_terms" required>
+            <label for="accept_terms">{{ section.settings.tc_popup_checkbox_accept_text }}</label>
+            <a
+              class="button modal_button"
+              href="{{ section.settings.tc_popup_button_url }}"
+              id="tc_button"
+              disabled
+            >
+              {{ section.settings.tc_popup_button_text }}
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+{% endif %}
+
+<script>
+  $(document).ready(function() {
+    var $modal = $("#Terms-Conditions-Popup-{{ section.id }}");
+    var delaySeconds = {{ section.settings.terms_conditions_popup_seconds }};
+    var delayDays = {{ section.settings.terms_conditions_popup_days }};
+    var $checkbox = $modal.find("#accept_terms");
+    var $button = $modal.find(".modal_button");
+    setTimeout(function() {
+      if (!getCookie('thermos-termsAccepted')) {
+        $modal.show();
+      }
+    }, delaySeconds * 1000);
+    $checkbox.on('change', function() {
+      if ($checkbox.is(':checked')) {
+        $button.addClass('enabled');
+        $button.removeAttr('disabled');
+        $button.css('pointer-events', 'auto');
+      } else {
+        $button.removeClass('enabled');
+        $button.attr('disabled', 'disabled');
+        $button.css('pointer-events', 'none');
+      }
+    });
+    $button.on('click', function(event) {
+      if (!$checkbox.is(':checked')) {
+        event.preventDefault();
+        return;
+      }
+      $modal.hide();
+      setCookie('thermos-termsAccepted', 'true', delayDays);
+    });
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+      }
+      return null;
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Terms & Conditions Popup",
+  "class": "terms-conditions-popup pop-up",
+  "settings": [
+    {
+      "type": "select",
+      "id": "mode",
+      "label": "Display mode",
+      "default": "disabled",
+      "options": [
+        {
+          "value": "enabled",
+          "label": "Enabled"
+        },
+        {
+          "value": "disabled",
+          "label": "Disabled"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "terms_conditions_popup_seconds",
+      "label": "Delay",
+      "info": "Delay is disabled in theme editor for visibility",
+      "default": 5,
+      "min": 2,
+      "max": 60,
+      "step": 1,
+      "unit": "sec"
+    },
+    {
+      "type": "range",
+      "id": "terms_conditions_popup_days",
+      "label": "Frequency",
+      "default": 30,
+      "info": "Number of days before a dismissed popup reappears",
+      "min": 2,
+      "max": 100,
+      "step": 1,
+      "unit": "day"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "terms_conditions_popup_title",
+      "label": "Heading",
+      "default": "Terms & conditions"
+    },
+    {
+      "type": "richtext",
+      "id": "terms_conditions_popup_highlighted_text",
+      "label": "Highlight Text",
+      "default": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.</p>"
+    },
+    {
+      "type": "color",
+      "id": "tc_popup_highlighted_text_bg_color",
+      "label": "Highlight Text Background",
+      "default": "#FFFF00"
+    },
+    {
+      "type": "color",
+      "id": "tc_popup_highlighted_text_color",
+      "label": "Highlight Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "richtext",
+      "id": "tc_popup_text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "tc_popup_checkbox_accept_text",
+      "label": "Checkbox Text"
+    },
+    {
+      "type": "text",
+      "id": "tc_popup_button_text",
+      "label": "Button Text",
+      "default": "Accept"
+    },
+    {
+      "type": "text",
+      "id": "tc_popup_button_url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Terms & Conditions Popup",
+      "category": "popup"
+    }
+  ]
+}
+{% endschema %}

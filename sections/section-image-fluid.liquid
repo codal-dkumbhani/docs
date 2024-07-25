@@ -1,0 +1,54 @@
+{% if section.settings.featuredimage1_mob != blank %}
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        class="col-12 desktop-view"
+        style="background-image: url('{{ section.settings.featuredimage1 | image_url }}');background-size: cover; background-position: center; height: 500px"
+      ></div>
+    </div>
+  </div>
+  <div class="mobile-view">
+    <div class="full-bg-image">
+      <img
+        width="auto"
+        height="auto"
+        src="{{ section.settings.featuredimage1_mob | image_url }}"
+        class=""
+        alt="{{ section.settings.featuredimage1_mob.alt }}"
+      >
+    </div>
+  </div>
+{% else %}
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        class="col-12"
+        style="background-image: url('{{ section.settings.featuredimage1 | image_url: width: 800, height: 800 }}');background-size: cover; background-position: center; height: 500px"
+      ></div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Futureed image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "featuredimage1",
+      "label": "Featured Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "featuredimage1_mob",
+      "label": "Mobile Featured Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Futureed image",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

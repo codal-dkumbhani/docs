@@ -1,0 +1,239 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div.care-landing.landing-page",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "care_hero_section_qJnkYF": {
+      "type": "care-hero-section",
+      "settings": {
+        "background_image": "shopify://shop_images/BTS_CareCampaign_3000x1330_dfd8b00c-a9bb-43a5-8acb-2be2cd50f0c9.jpg",
+        "background_image_mobile": "shopify://shop_images/BTS_CareCampaign_3000x1330_dfd8b00c-a9bb-43a5-8acb-2be2cd50f0c9.jpg",
+        "headline": "Care.<br>It's what<br>we do.",
+        "headline_text_color": "#6e5ee4",
+        "headline_text_size": 100,
+        "headline_text_size_mobile": 70,
+        "heading": "Since 1904",
+        "heading_text_color": "#6e5ee4",
+        "heading_text_size": 67,
+        "heading_text_size_mobile": 50,
+        "description": "We've put care into everything we do. With superior insulation technology and long term durability, our products go a long, long way to care for you and your family.",
+        "button_text": "Thermos® Brand History",
+        "button_background_color": "#6e5ee4",
+        "button_text_color": "#ffffff",
+        "button_url": "/pages/about"
+      }
+    },
+    "image_clickable_bKeMQV": {
+      "type": "image-clickable",
+      "settings": {
+        "background_image": "shopify://shop_images/FathersDay_IS1112MS_IS1502MS_OctMed_CAL_Home_15C_10862_Desktop_3000x1330_f9cf97de-0c81-4eb3-9df9-027275a44b59.jpg",
+        "background_image_mobile": "shopify://shop_images/FathersDay_IS1112MS_IS1502MS_OctMed_CAL_Home_15C_10862_Mobile_640x1000_135ab3f3-8189-419f-a8d8-4ef00cb147d5.jpg",
+        "image_clickable_url": "#",
+        "title_spacial_text": "Shop",
+        "title_spacial_text_color": "#ffe761",
+        "title_text": "Icon Collection >",
+        "title_text_color": "#ffffff",
+        "overlay_color": "#000000"
+      }
+    },
+    "image_with_content_tkAaUH": {
+      "type": "image-with-content",
+      "settings": {
+        "Image_alignment": "right",
+        "section-margin": 0,
+        "selected_image": "shopify://shop_images/f42104si_stitch_16oz_lifestyle_pdp.jpg",
+        "section_background_color": "#efe4df",
+        "title": "Inside every Thermos Product",
+        "title_color": "#6e5ee4",
+        "title_font_size": 16,
+        "description": "is 120+ years of care, innovation, and quality. Our containers provide longer lasting, (really) reliable insulation because we care about everything that goes into our products- your food and drinks included.",
+        "text_color": "#000000",
+        "button_text": "Shop Icon™ Series",
+        "button_background_color": "#6e5ee4",
+        "button_text_color": "#ffffff",
+        "button_url": "#"
+      }
+    },
+    "image_with_content_gTCdXb": {
+      "type": "image-with-content",
+      "settings": {
+        "Image_alignment": "left",
+        "section-margin": 0,
+        "selected_image": "shopify://shop_images/f31104or_apricot_16ozfj_lifestyle_pdp_8a679827-d114-4d33-a46b-62b32585d703.jpg",
+        "section_background_color": "#efe4df",
+        "title": "Our FUNtainer® Collection is designed to",
+        "title_color": "#6e5ee4",
+        "title_font_size": 16,
+        "description": "keep up- and really hold up- with play-filled days. Durability designed with innovative, kid-proof features, like hygienically covered straws, fold-away spoons, and easy-to-carry handles, so kids can be kids.",
+        "text_color": "#000000",
+        "button_text": "Shop FUNtainer® Collection",
+        "button_background_color": "#6e5ee4",
+        "button_text_color": "#ffffff",
+        "button_url": "#"
+      }
+    },
+    "featured_collection_2_ArF9gk": {
+      "type": "featured-collection-2",
+      "settings": {
+        "title": "Featured collection",
+        "home_featured_products": "adult-best-sellers",
+        "featuredcollection1_label": "",
+        "featuredcollection1_link": "",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "custom_explore_collection_fPRkTe": {
+      "type": "custom-explore-collection",
+      "settings": {
+        "designated_product": "funtainer-r-stainless-steel-food-jar-10oz",
+        "section_title": "<p>DESIGNED FOR KIDS AND THEIR PARENTS </p>",
+        "section_url": "",
+        "background_image": "shopify://shop_images/f3104so_sketchbook_10ozfj_lifestyleprekgirls_pdp_dd74fbb4-9774-47d7-bc13-988ba0ca856e.jpg",
+        "background_image_position": "center center"
+      }
+    },
+    "image_with_content_NzgBAL": {
+      "type": "image-with-content",
+      "settings": {
+        "Image_alignment": "left",
+        "section-margin": 0,
+        "selected_image": "shopify://shop_images/f31104lv_neonpurple_16ozfj_lifestyle_pdp_45910f5c-5fec-422d-b5b3-f56c3446239a.jpg",
+        "section_background_color": "#efe4df",
+        "title": "Sip, chug, gulp, slurp, or waterfall.",
+        "title_color": "#6e5ee4",
+        "title_font_size": 16,
+        "description": "We've thought of every type of lid to match every type of thirst. However you drink your favorite beverages, our variety of versatile, leak-proof lids know what to do.",
+        "text_color": "#000000",
+        "button_text": "Shop Now",
+        "button_background_color": "#6e5ee4",
+        "button_text_color": "#ffffff",
+        "button_url": "#"
+      }
+    },
+    "featured_content_cdNEqq": {
+      "type": "featured-content",
+      "settings": {
+        "title": "our Culture of care",
+        "text": "",
+        "link": "",
+        "link_text": "",
+        "align_text": "center",
+        "narrow_column": false,
+        "enlarge_text": true,
+        "divider": false
+      }
+    },
+    "image_with_content_CV3nQQ": {
+      "type": "image-with-content",
+      "settings": {
+        "Image_alignment": "left",
+        "section-margin": 100,
+        "selected_image": "shopify://shop_images/f42104si_stitch_16oz_lifestyle_pdp.jpg",
+        "section_background_color": "#efe4df",
+        "title": "Care Influencer Program",
+        "title_color": "#6e5ee4",
+        "title_font_size": 40,
+        "description": "In today's busy world, positive actions often go unnoticed. That’s why Thermos Brand is shining a spotlight on those who make a real difference in their communities. Through the Care Influencer Program, we are sharing the stories of individuals who embody care and community service, inspiring all of us to take action and contribute in meaningful ways. Stay tuned for more updates on our selected influencers!",
+        "text_color": "#000000",
+        "button_text": "",
+        "button_background_color": "#6e5ee4",
+        "button_text_color": "#ffffff",
+        "button_url": ""
+      }
+    },
+    "featured_content_CYEFnq": {
+      "type": "featured-content",
+      "settings": {
+        "title": "Our partners in care.",
+        "text": "",
+        "link": "",
+        "link_text": "",
+        "align_text": "center",
+        "narrow_column": false,
+        "enlarge_text": true,
+        "divider": false
+      }
+    },
+    "image_with_3_column_8HV8hL": {
+      "type": "image-with-3-column",
+      "blocks": {
+        "image_section_VLyUHA": {
+          "type": "Image-section",
+          "settings": {
+            "image": "shopify://shop_images/f31104or_apricot_16ozfj_widemouth_soup_pdp_d3a2b951-b50a-4012-9730-316610ae1e7f.jpg",
+            "title": "@Adams Ansel",
+            "title_size": 25,
+            "title_color": "#6e5ee4",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,",
+            "button_text": "Contact us.",
+            "button_url": "#",
+            "button_background_color": "#29deff",
+            "button_text_outline_color": "#6e5ee4"
+          }
+        },
+        "image_section_XmWdGj": {
+          "type": "Image-section",
+          "settings": {
+            "image": "shopify://shop_images/RWB_HomepageBanners_R2_Mobile_640x1000_9dd89ca5-794f-4ecc-b869-4e0a39224b9a.jpg",
+            "title": "@Dulles, John Foster",
+            "title_size": 25,
+            "title_color": "#6e5ee4",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+            "button_text": "Contact us.",
+            "button_url": "#",
+            "button_background_color": "#29deff",
+            "button_text_outline_color": "#6e5ee4"
+          }
+        },
+        "image_section_JCPX6h": {
+          "type": "Image-section",
+          "settings": {
+            "image": "shopify://shop_images/f4104by_bluey_12ozbottle_lifestyle_pdp_8115e5b7-a7fc-431c-bb4e-4f1df233cda4.jpg",
+            "title": "@Kennedy, John F",
+            "title_size": 25,
+            "title_color": "#6e5ee4",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which",
+            "button_text": "Contact us.",
+            "button_url": "#",
+            "button_background_color": "#29deff",
+            "button_text_outline_color": "#6e5ee4"
+          }
+        }
+      },
+      "block_order": ["image_section_VLyUHA", "image_section_XmWdGj", "image_section_JCPX6h"],
+      "settings": {
+        "background_color": "#29deff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "care_hero_section_qJnkYF",
+    "image_clickable_bKeMQV",
+    "image_with_content_tkAaUH",
+    "image_with_content_gTCdXb",
+    "featured_collection_2_ArF9gk",
+    "custom_explore_collection_fPRkTe",
+    "image_with_content_NzgBAL",
+    "featured_content_cdNEqq",
+    "image_with_content_CV3nQQ",
+    "featured_content_CYEFnq",
+    "image_with_3_column_8HV8hL"
+  ]
+}

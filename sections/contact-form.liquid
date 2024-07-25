@@ -1,0 +1,181 @@
+{%- liquid
+  assign blockId = block.id
+  if product
+    assign blockId = block.id | append: product.id
+  endif
+-%}
+{{ 'contact-form.css' | asset_url | stylesheet_tag }}
+
+<div class="index-section contact-page">
+  <div>
+    {%- if section.settings.title != blank -%}
+      <div class="section-header">
+        <h2 class="section-header__title">
+          {{ section.settings.title }}
+        </h2>
+        {%- if section.settings.text != blank -%}
+          <div class="rte section-header__rte">{{ section.settings.text }}</div>
+        {%- endif -%}
+      </div>
+    {% endif %}
+
+    <div class="form-vertical">
+      {%- assign form_id = 'contact-' | append: section.id -%}
+      {%- form 'contact', id: form_id -%}
+        {%- if form.posted_successfully? -%}
+          <p class="note note--success">
+            {{ 'contact.form.post_success' | t }}
+          </p>
+        {%- endif -%}
+
+        {{ form.errors | default_errors }}
+
+        <input type="hidden" name="contact[email]" value="orders@thermos.com">
+
+        <div class="grid grid--small">
+          <div class="grid__item medium-up--one-half">
+            <label for="ContactFormName-{{ blockId }}">First Name*</label>
+            <input
+              type="text"
+              required
+              id="ContactFormFirstName-{{ blockId }}"
+              class="input-full"
+              name="contact[fname]"
+              autocapitalize="words"
+              value="{% if form.fname %}{{ form.fname }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            >
+          </div>
+
+          <div class="grid__item medium-up--one-half">
+            <label for="ContactFormName-{{ blockId }}">Last Name*</label>
+            <input
+              type="text"
+              required
+              id="ContactFormLastName-{{ blockId }}"
+              class="input-full"
+              name="contact[lname]"
+              autocapitalize="words"
+              value="{% if form.lname %}{{ form.lname }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            >
+          </div>
+        </div>
+
+        <div class="grid grid--small">
+          <div class="grid__item medium-up--one-half">
+            <label for="ContactFormEmail-{{ blockId }}">Email Address*</label>
+            <input
+              type="email"
+              required
+              id="ContactFormEmail-{{ blockId }}"
+              class="input-full"
+              name="contact[email]"
+              autocorrect="off"
+              autocapitalize="off"
+              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            >
+          </div>
+
+          <div class="grid__item medium-up--one-half">
+            <label for="ContactFormPhone-{{ blockId }}">Phone</label>
+            <input
+              type="tel"
+              id="ContactFormPhone-{{ blockId }}"
+              class="input-full"
+              name="contact[phone]"
+              pattern="[0-9\-]*"
+              value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+            >
+          </div>
+        </div>
+
+        <label for="ContactFormDept-{{ blockId }}">Department*</label>
+
+        <select
+          name="contact[department]"
+          required
+          id="ContactFormDept-{{ blockId }}"
+          class="input-full"
+          title="Department"
+        >
+          <option value="">Please Select</option>
+          <option value="4ab049fc2e5a99609c8b629b8e483026">
+            Orders and Returns (www.thermos.com)
+          </option>
+          <option value="61a076979265e305645fd9fadb6d848d">
+            Orders and Returns (www.amazon.com)
+          </option>
+          <option value="47b5839522a8f8829d724b9f09508cdf">Parts or Warranty</option>
+          <option value="3b2599a10f20527f4d695d1c605c84e9">Media and Sponsorship</option>
+          <option value="b7788a158b91b5d6a8a13edddb333fe9">Dealers</option>
+          <option value="631394992ebc665d6fa077ad2620dccb">International Inquiries</option>
+          <option value="631394992ebc665d6fa077ad2620dccb">
+            Your Privacy Choices - Limit or do not sell/share information
+          </option>
+          <option value="631394992ebc665d6fa077ad2620dccb">Report Accessibility Issues</option>
+        </select>
+
+        <label for="ContactFormMessage-{{ blockId }}">Inquiry*</label>
+        <textarea
+          rows="5"
+          required
+          id="ContactFormMessage-{{ blockId }}"
+          class="input-full"
+          name="contact[body]"
+        >{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+        <div class="btn-group align-right">
+          <button type="submit" id="contact-form" class="btn-gray">Submit</button>
+        </div>
+      {%- endform -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.contact-form.name",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.contact-form.settings.content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.contact-form.settings.title.label",
+      "default": "Send us a message"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "t:sections.contact-form.settings.text.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_phone",
+      "label": "t:sections.contact-form.settings.show_phone.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow_column",
+      "label": "t:sections.contact-form.settings.narrow_column.label",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.contact-form.presets.contact_form.name"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.popups"]
+  }
+}
+{% endschema %}
+
+<script
+  src="{{ 'contact-form.js' | asset_url }}"
+  defer="defer"
+></script>

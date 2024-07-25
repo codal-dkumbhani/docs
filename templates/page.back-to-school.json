@@ -1,0 +1,205 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "image_kPrr4q": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/BTS_Kids_HomepageBanner_1330x3000_2_R2.jpg",
+            "image_mobile": "shopify://shop_images/BTS_Kids_HomepageBanner_640x1000_2_R1_e799c0a6-a28a-41d5-923d-f223ca6edae6.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": ["image_kPrr4q"],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "500px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 7,
+        "lazyload_images": true
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Explore products",
+        "home_featured_products": "back-to-school",
+        "collection_view_all_label": "Shop All",
+        "collection_view_all_link": "shopify://collections/back-to-school",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "trapeze-section": {
+      "type": "trapeze-section",
+      "settings": {
+        "title": "<p>Uniquely Yours</p>",
+        "trapeze-section-description": "<p>Make your mark. Add a personal touch to your Thermos Brand<br/>FUNtainer® 12oz or 16oz Water Bottle with custom engravings that create lasting memories.</p>",
+        "btn-url": "https://thermos.com/collections/customize",
+        "btn-text": "Customize Now",
+        "trapeze_image_picker": "shopify://shop_images/Customizer_HomePage_1436x1436_f9650935-fc83-4353-a86d-bfbf9e320b86.png"
+      }
+    },
+    "custom-promo-section": {
+      "type": "custom-promo-section",
+      "settings": {
+        "title": "<p>THERMOS® KIDS.</p><p>PROTECT WHAT YOU LOVE.™<br/></p>",
+        "custom-promo-section-description": "<p>Designed for kids…and their parents. Durable, easy-to-clean materials meant to keep lunch and drinks how they like them. The lunchtime puzzle is officially solved.</p><p>   </p><p>    </p>",
+        "btn-url": "shopify://collections/kids",
+        "btn-text": "Shop all thermos kids",
+        "custom_promo_section_img_picker": "shopify://shop_images/F4100TL_F3100TL_Kids_060222_BWM_2834_700x375_b14121f7-eacc-4133-aeb7-ab9386ee8a92.jpg"
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_8eNUKi": {
+          "type": "collection",
+          "settings": {
+            "collection": "funtainer",
+            "collection_image": "shopify://shop_images/Funtainer_tile_F41020BL_F41020PK_F41020TL_F41020PU_F41020LM_FUNtainer_93020_MV_3_SQ_1.jpg",
+            "title": "FUNTAINER BOTTLES",
+            "focal_point": "center center"
+          }
+        },
+        "collection_CnjnWQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "kids-food-jars-1",
+            "collection_image": "shopify://shop_images/F3100TL_Kids_060122_BWM_0997_712x712_e2b0b5df-c9cf-4850-857f-7637334ff07d.jpg",
+            "title": "FOOD JARS",
+            "focal_point": "center center"
+          }
+        },
+        "collection_gXC9t6": {
+          "type": "collection",
+          "settings": {
+            "collection": "tween-gear",
+            "collection_image": "shopify://shop_images/Tween_Gear_tile_TP4339GR_Kid-sitting_Thermos_031_SQ.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_hhfpLY": {
+          "type": "collection",
+          "settings": {
+            "collection": "lunchboxes",
+            "collection_image": "shopify://shop_images/F4100TL_F5001BL_Kids_060222_BWM_2660_712_712.jpg",
+            "title": "LUNCH BOXES",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_8eNUKi",
+        "collection_CnjnWQ",
+        "collection_gXC9t6",
+        "collection_hhfpLY"
+      ],
+      "settings": {
+        "title": "",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    },
+    "custom-explore-collection": {
+      "type": "custom-explore-collection",
+      "settings": {
+        "designated_product": "funtainer-r-water-bottle-16oz",
+        "section_title": "<p>HAPPY KIDS</p><p>HAPPY PARENTS</p>",
+        "section_url": "shopify://collections/back-to-school",
+        "background_image": "shopify://shop_images/F5009NY_F4019BL_F3009BL_Turkey_Granola_Shot1_Alt1_1800x1202_f2793657-2330-4ba7-a84d-047b7c8f5f95.jpg",
+        "background_image_position": "center center"
+      }
+    },
+    "featured-collection-2": {
+      "type": "featured-collection-2",
+      "custom_css": [
+        ".grid-product__content {box-shadow: none; border: none;}",
+        ".grid-product__content:hover {box-shadow: 0 4px 10px #00000040 !important; border-radius: 6px !important; border: none;}",
+        ".grid-product__meta {padding-left: 15px; padding-right: 15px;}"
+      ],
+      "settings": {
+        "title": "Food Storage",
+        "home_featured_products": "food-storage-featured-products",
+        "featuredcollection1_label": "Shop All",
+        "featuredcollection1_link": "shopify://collections/food-storage",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "collection-explorer-2": {
+      "type": "collection-explorer-2",
+      "blocks": {
+        "select_fnrEPf": {
+          "type": "select",
+          "settings": {
+            "heading": "Cool Hydration",
+            "sub-heading": "<p>Our water bottles are built so drinks are as cool on the inside as they look on the outside. </p>",
+            "collumn_2_image_picker_row": "shopify://shop_images/F4019PK_F4019TL_Kids_Bridge_Thermos_029.jpg_1434x824_copy.jpg",
+            "column_2_collection_handle": "shopify://collections/kids-water-bottles",
+            "btn_text": "Shop kids water bottles",
+            "background_image_position_column_1": "center center"
+          }
+        },
+        "select_whNTdU": {
+          "type": "select",
+          "settings": {
+            "heading": "Perfectly Prepped Meals",
+            "sub-heading": "<p>We've got you covered with dependable kids' lunch boxes and lunch kits. Fresh and easy to clean.<br/></p>",
+            "collumn_2_image_picker_row": "shopify://shop_images/F4100TL_F5001BL_Kids_060222_BWM_2650_1434x824_copy.jpg",
+            "column_2_collection_handle": "shopify://collections/lunchboxes",
+            "btn_text": "Shop Kids Lunch Boxes",
+            "background_image_position_column_1": "center center"
+          }
+        }
+      },
+      "block_order": ["select_fnrEPf", "select_whNTdU"],
+      "settings": {
+        "heading": "No More mix-ups",
+        "sub-heading": "<p>Two peel and stick labels are included inside these FUNtainer® products. Just write, peel and stick!</p>",
+        "collumn_1_image_picker": "shopify://shop_images/F3100TL_F3100PU_F4100NY_F4100PK_F500BL_NameTags_DB_2558_SQ_1.jpg",
+        "column_1_collection_handle": "shopify://collections/funtainer",
+        "btn_text": "Explore",
+        "background_image_position_column_1": "center center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow",
+    "featured-collection",
+    "trapeze-section",
+    "custom-promo-section",
+    "featured-collections",
+    "custom-explore-collection",
+    "featured-collection-2",
+    "collection-explorer-2"
+  ]
+}

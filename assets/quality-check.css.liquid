@@ -1,0 +1,112 @@
+.quality-proof-section {
+  background-color: var(--thermos-cultured);
+  width: 100%;
+  border-top: 1px solid var(--thermos-cloud);
+  padding: 23px 0;
+}
+.quality-proof-section ul {
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.quality-proof-section ul li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+  border-right: 1px solid var(--thermos-cloud);
+  justify-content: center;
+}
+.quality-proof-section ul li:last-child {
+  padding: 0;
+  border: none;
+}
+.quality-proof-section ul li figure {
+  margin: 0 20px 0 0;
+}
+.quality-proof-section ul li h5 {
+  text-transform: uppercase;
+  color: var(--thermos-onyx);
+  margin: 0;
+  font-size: var(--thermos-font-size-20);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-35);
+  text-align: left;
+  height: auto;
+}
+.quality-proof-section ul li p {
+  color: var(--thermos-gunmetal);
+  font-family: var(--thermos-minion-pro);
+  font-style: italic;
+  margin: 0;
+  font-size: var(--thermos-font-size-15);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-25-5);
+  text-align: left;
+}
+.quality-proof-section ul img {
+  width: 62px;
+  height: 62px;
+}
+.quality-proof-section.customize-page {
+  border: none;
+}
+.quality-proof-section.customize-page ul li {
+  border: none;
+}
+@media only screen and (max-width: 990px) {
+  .quality-proof-section.customize-page ul li {
+    border-bottom: 1px solid var(--thermos-cloud);
+  }
+}
+@media (max-width: 767px) {
+  .quality-proof-section ul li h5 {
+    line-height: var(--thermos-line-height-28);
+  }
+  .quality-proof-section ul li p {
+    line-height: var(--thermos-line-height-20);
+    font-style: italic;
+  }
+  .quality-proof-section ul li {
+    justify-content: left;
+    padding-left: 12% !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .quality-proof-section ul li h5 {
+    line-height: var(--thermos-line-height-24);
+  }
+  .quality-proof-section ul li p {
+    line-height: var(--thermos-line-height-20);
+  }
+  .quality-proof-section ul li {
+    padding-left: 20px;
+  }
+  .quality-proof-section ul li:first-child {
+    padding-left: 0;
+  }
+}
+@media (max-width: 990px) {
+  .quality-proof-section {
+    border: none;
+    padding: 0;
+  }
+  .quality-proof-section ul {
+    flex-wrap: wrap;
+  }
+  .quality-proof-section ul li {
+    width: 100%;
+    padding-right: 0px;
+    border-bottom: 1px solid var(--thermos-cloud);
+    border-right: none;
+    padding: 15px 0;
+  }
+  .quality-proof-section ul li h5 {
+    text-align: left;
+  }
+  .quality-proof-section ul li:last-child {
+    padding: 15px 0;
+  }
+}

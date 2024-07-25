@@ -1,0 +1,39 @@
+{%- if section.settings.show_product_recommendations -%}
+  <div class="collection-grid__wrapper">
+    <header class="section-header mb-0">
+      <h3 class="section-header__title mb-0">
+        {{ section.settings.product_recommendations_heading }}
+      </h3>
+    </header>
+
+    <div class="grid grid--uniform">
+      <div class="grid-product__content  grid-product__content--collection-template">
+        {%- liquid
+          assign number_of_products = section.settings.related_count
+          assign per_row = number_of_products
+
+          case per_row
+            when 1
+              assign grid_item_width = ''
+            when 2
+              assign grid_item_width = 'medium-up--one-half'
+            when 3
+              assign grid_item_width = 'small--one-half medium-up--one-third'
+            when 4
+              assign grid_item_width = 'small--one-half medium-up--one-quarter'
+            when 5
+              assign grid_item_width = 'small--one-half medium-up--one-fifth'
+          endcase
+        -%}
+
+        {% for product in collections['best-sellers'].products %}
+          {%- render 'product-grid-item-4',
+            product: product,
+            grid_item_width: grid_item_width,
+            per_row: per_row
+          -%}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{%- endif -%}

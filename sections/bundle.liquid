@@ -1,0 +1,76 @@
+{{ 'bundle.css' | asset_url | stylesheet_tag }}
+<div class="bundle-section">
+  <div class="page-width">
+    <ul>
+      {% for block in section.blocks %}
+        {% if block.type == 'image' %}
+          {% if block.settings.image != blank %}
+            <li>
+              <a href="{{ block.settings.url }}" target="_blank">
+                <img
+                  src="{{ block.settings.image | image_url }}"
+                  class="bundle-section-detail"
+                  height="auto"
+                  width="auto"
+                  alt="{{ block.settings.image.alt }}"
+                >
+              </a>
+            </li>
+          {% endif %}
+        {% else %}
+          {% if block.settings.html != blank %}
+            <li>
+              <div class="bundle-section-detail">
+                {{ block.settings.html }}
+              </div>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bundle",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Product Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Product Url"
+        }
+      ]
+    },
+
+    {
+      "type": "bundle",
+      "name": "Product Html",
+      "settings": [
+        {
+          "type": "html",
+          "id": "html",
+          "label": "Bundle Html Code"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
+<script src="{{ 'bundle.js' | asset_url }}" defer="defer"></script>

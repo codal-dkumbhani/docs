@@ -1,0 +1,26 @@
+{{ 'product-banner.css' | asset_url | stylesheet_tag }}
+{% if product.metafields.productmain.banner != blank %}
+  <div class="full-bg-image product-detail-img">
+    {% assign banner = product.metafields.productmain.banner | split: '|' %}
+    <img
+      src="{{ banner[0] }}"
+      width="auto"
+      height="auto"
+      class=""
+      loading="lazy"
+      alt="{{ banner[1] }}"
+    >
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Product Banner",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Product Banner",
+      "category": "ADVANCED LAYOUT"
+    }
+  ]
+}
+{% endschema %}

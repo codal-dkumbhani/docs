@@ -1,0 +1,56 @@
+.account-confirmation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
+  background-color: var(--thermos-flash-white);
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.account-confirmation-section .container {
+  background-color: var(--thermos-white);
+  padding: 20px;
+  box-shadow: 0 2px 10px var(--thermos-light-black);
+  text-align: center;
+  border-radius: 8px;
+  max-width: 90%;
+  width: 400px;
+}
+.account-confirmation-section h1 {
+  color: var(--thermos-green);
+  font-size: var(--thermos-font-size-24);
+  font-family: inherit;
+  margin-bottom: 10px;
+}
+.account-confirmation-section p {
+  font-size: var(--thermos-font-size-16);
+  margin-bottom: 20px;
+}
+.account-confirmation-section .buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.account-confirmation-section .buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: var(--thermos-black);
+  color: var(--thermos-white);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  flex: 1 1 calc(50% - 20px);
+  text-align: center;
+  box-sizing: border-box;
+}
+.account-confirmation-section .buttons a:hover {
+  background-color: var(--thermos-green);
+}
+@media (max-width: 767px) {
+  .account-confirmation-section .buttons a {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+}

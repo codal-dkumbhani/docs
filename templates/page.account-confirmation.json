@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "account-confirmation": {
+      "type": "account-confirmation",
+      "settings": {
+        "confirmation_message": "Your account is created successfully",
+        "redirect_message": "Where would you like to go next?",
+        "homepage_url": "/",
+        "homepage_text": "Homepage",
+        "account_page_url": "/account",
+        "account_page_text": "My Account"
+      }
+    }
+  },
+  "order": ["account-confirmation"]
+}

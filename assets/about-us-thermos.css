@@ -1,0 +1,59 @@
+.about-trusted-banner {
+  background: var(--thermos-red);
+}
+.about-trusted-banner > p {
+  color: var(--thermos-white);
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-24);
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: var(--thermos-line-height-35);
+  text-transform: uppercase;
+}
+.shopify_about_thermos .container-fluid {
+  padding: 0 12px;
+}
+.shopify_about_thermos .about-thermos-back {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.shopify_about_thermos .about-us-title {
+  font-family: var(--thermos-din-condensed);
+  font-size: var(--thermos-font-size-70);
+  font-weight: var(--thermos-font-Weight-700);
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: var(--thermos-line-height-70);
+  text-align: left;
+  margin-top: 12%;
+  margin-bottom: 24px;
+}
+.shopify_about_thermos .about-us-description {
+  font-size: var(--thermos-font-size-22);
+  font-family: var(--thermos-dinot);
+  line-height: var(--thermos-line-height-33);
+  padding-right: 24%;
+}
+@media only screen and (max-width: 600px) {
+  .shopify_about_thermos .about-us-title {
+    font-family: var(--thermos-din-condensed);
+    font-size: var(--thermos-font-size-30);
+    font-weight: var(--thermos-font-Weight-700);
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: var(--thermos-line-height-70);
+    margin-top: 6%;
+    margin-bottom: 0%;
+    text-align: center;
+  }
+  .shopify_about_thermos .about-us-description {
+    font-size: var(--thermos-font-size-14);
+    font-family: var(--thermos-dinot);
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: var(--thermos-line-height-20);
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}

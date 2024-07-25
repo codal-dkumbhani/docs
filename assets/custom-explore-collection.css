@@ -1,0 +1,98 @@
+.map-section .grid-product .grid-product__content {
+  max-height: 420px;
+}
+.map-section .grid-product .grid-product__content > a {
+  max-height: 240px;
+}
+.map-section .grid-product .grid-product__content .grid-product__meta {
+  padding: 0;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+.explore-title-wrapper {
+  margin-right: auto;
+  padding-left: 3rem;
+  align-items: flex-end;
+  display: flex;
+}
+.map-section {
+  display: flex;
+  height: 556px !important;
+}
+.map-section-space {
+  padding: 65px 0;
+  display: flex;
+}
+.map-section-space > .page-width {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0px 40px;
+}
+.map-section .page-width .container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+.card-title {
+  color: var(--thermos-midnight-blue);
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-19);
+  font-weight: var(--thermos-font-Weight-700);
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: var(--thermos-line-height-25);
+  text-align: left;
+  text-transform: uppercase;
+}
+.card-img-top {
+  width: auto;
+}
+@media (min-width: 768px) {
+  .explore-title-wrapper {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+  }
+}
+@media (max-width: 767px) {
+  .explore-collection-content h1 > p {
+    font-size: var(--thermos-font-size-58) !important;
+    line-height: var(--thermos-line-height-58) !important;
+  }
+  .explore-collection-content a {
+    margin-left: 5px;
+  }
+  .page-width > .container-fluid {
+    padding: 0;
+  }
+  .explore-title-wrapper {
+    width: 100% !important;
+    padding: 0;
+  }
+  .care-landing .explore-title-wrapper {
+    display: none !important;
+  }
+  .care-landing .container-fluid .product-block {
+    display: block !important;
+  }
+  .map-section-space .container-fluid {
+    position: static;
+    width: 100%;
+  }
+  .page-width .container-fluid {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .map-section .map-section-space {
+    padding: 30px 0 !important;
+    padding-top: 141px !important;
+  }
+  .page-width {
+    line-height: var(--thermos-line-height-20);
+  }
+  .map-section-space .explore-collection-content--custom-explore-collection {
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
+}

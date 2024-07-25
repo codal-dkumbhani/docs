@@ -1,0 +1,479 @@
+{
+  "sections": {
+    "customizer": {
+      "type": "customize-product",
+      "blocks": {
+        "slide_mhypPi": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Class_of_2024_FA_Classof2024_Block_4x4_100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Class_of_2024_FA_Classof2024_Block_4x4_1100dpi.png",
+            "text": "Class of 2024"
+          }
+        },
+        "slide_qRpeE4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Class_of_2024_FA_Congrats_Script_4x4_100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Class_of_2024_FA_Congrats_Script_4x4_1100dpi.png",
+            "text": "Congrats!"
+          }
+        },
+        "slide_6aqhfp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Class_of_2024_FA_2024_4x4_100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Class_of_2024_FA_2024_4x4_1100dpi.png",
+            "text": "2024"
+          }
+        },
+        "slide_pBCCHB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Best_Dad_Ever_4x4_Charcoal_1100dpi_e6b8c2d0-5138-4b3a-a4a1-ffdfa847e40d.png",
+            "Doogmaimage": "shopify://shop_images/Best_Dad_Ever_4x4_WHITE_1100dpi.png",
+            "text": "Best Dad Ever script"
+          }
+        },
+        "slide_QwUwCf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Dad_Heart_Mustache_4x4_Charcoal_1100dpi_0f269fed-02d6-4cf3-8863-82e19d06f55a.png",
+            "Doogmaimage": "shopify://shop_images/Dad_Heart_Mustache_4x4_WHITE_1100dpi.png",
+            "text": "Dad Heart with Mustache"
+          }
+        },
+        "slide_WVPLU7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Papa_Bear_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Papa_Bear_4x4_WHITE_1100dpi_3e378062-2ab8-4bcc-9339-56efbddd3a45.png",
+            "text": "Papa Bear"
+          }
+        },
+        "slide_HNxA4y": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Cursive_Love_Heart_4x4_Charcoal_1100dpi_29241e78-52fd-4f1e-8ffb-b88a45c4cf3d.png",
+            "Doogmaimage": "shopify://shop_images/Cursive_Love_Heart_4x4_WHITE_1100dpi.png",
+            "text": "Heart with Love Script"
+          }
+        },
+        "slide_XtALni": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Heart_Kids_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Heart_Kids_4x4_WHITE_1100dpi.png",
+            "text": "Bursting Heart"
+          }
+        },
+        "slide_VdKWmg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Endless_Love_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Endless_Love_4x4_WHITE_1100dpi.png",
+            "text": "Heart with Infinity Sign"
+          }
+        },
+        "slide_zABy7T": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Script_Love_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Love_4x4_WHITE_1100dpi.png",
+            "text": "Love Script"
+          }
+        },
+        "slide_BxgHNw": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Peace_Love_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Peace_Love_4x4_Print.png",
+            "text": "Peace Love"
+          }
+        },
+        "slide_KTUNqY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Love_Text_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Love_Text_4x4_WHITE_1100dpi.png",
+            "text": "Love Block Font"
+          }
+        },
+        "slide_QjMA9P": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/PuppyLove_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/PuppyLove_4x4_WHITE_1100dpi.png",
+            "text": "Love with Paw Print"
+          }
+        },
+        "slide_yPQxK9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Mr_MRS_Mrs_Script_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Mr_MRS_Mrs_Script_4x4_Charcoal_1100dpi.png",
+            "text": "Mrs."
+          }
+        },
+        "slide_7RNg96": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Mr_MRS_Mr_Script_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Mr_MRS_Mr_Script_4x4_Charcoal_1100dpi.png",
+            "text": "Mr."
+          }
+        },
+        "slide_qizt98": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Mr_MRS_Mrs_Block_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Mr_MRS_Mrs_Block_4x4_Charcoal_1100dpi.png",
+            "text": "MRS."
+          }
+        },
+        "slide_3gjDfF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Mr_MRS_MR_Block_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Mr_MRS_MR_Block_4x4_Charcoal_1100dpi.png",
+            "text": "MR."
+          }
+        },
+        "slide_mBYxL8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Bride_4x4_Charcoal_1100dpi_108c48e8-7ca8-4f9c-92de-10fa27c2a805.png",
+            "Doogmaimage": "shopify://shop_images/Bride_4x4_WHITE_1100dpi.png",
+            "text": "Bride Script"
+          }
+        },
+        "slide_3iqRML": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Groom_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Groom_4x4_WHITE_1100dpi.png",
+            "text": "Groom Script"
+          }
+        },
+        "slide_zpCUEN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_FlowerGilr_RingSecurity_FlowerGirl_Script_4x4_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_FlowerGilr_RingSecurity_FlowerGirl_Script_4x4_1100dpi.png",
+            "text": "Flower girl"
+          }
+        },
+        "slide_7eGAQd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_FlowerGilr_RingSecurity_Ring_Security_4x4_1100dpi_1.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_FlowerGilr_RingSecurity_Ring_Security_4x4_1100dpi.png",
+            "text": "Ring Security"
+          }
+        },
+        "slide_cgpxBa": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Heart_Love_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Heart_Love_4x4_WHITE_1100dpi.png",
+            "text": "Groovy Love"
+          }
+        },
+        "slide_qC9hgE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/CatHug_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/CatHug_4x4_WHITE_1100dpi_48a1f1af-4b07-4102-9557-044e0141131a.png",
+            "text": "Hugging Cats"
+          }
+        },
+        "slide_8kWjeM": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Mom_Heart_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Mom_Heart_4x4_WHITE_1100dpi.png",
+            "text": "Mom Tattoo Heart"
+          }
+        },
+        "slide_TPcyzT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Floral_Bird_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Floral_Bird_4x4_WHITE_1100dpi.png",
+            "text": "Tattoo Bird and Flowers"
+          }
+        },
+        "slide_xCTVxh": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Winter_FA_ChairLift_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Charcoal_Customizer_Artwork_Winter_FA_ChairLift_4x4_White_1100dpi.png",
+            "text": "Chairlift"
+          }
+        },
+        "slide_wCGGKB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Winter_FA_Ski_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Charcoal_Customizer_Artwork_Winter_FA_Ski_White_1100dpi.png",
+            "text": "Ski"
+          }
+        },
+        "slide_PDfEUV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Winter_FA_Hockey_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Charcoal_Customizer_Artwork_Winter_FA_Hockey_4x4_White_1100dpi.png",
+            "text": "Hockey"
+          }
+        },
+        "slide_7yj9YV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Basketball_4x4_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Basketball_4x4_1100dpi.png",
+            "text": "Basketball"
+          }
+        },
+        "slide_cNnyzG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Football_4x4_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Football_4x4_1100dpi.png",
+            "text": "Football"
+          }
+        },
+        "slide_4zpxh8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Soccer_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Soccer_4x4_Print.png",
+            "text": "Soccer"
+          }
+        },
+        "slide_CbgABr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Golf_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Golf_4x4_Print.png",
+            "text": "Golf"
+          }
+        },
+        "slide_GPfaXa": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Baseball_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Baseball_4x4_Print.png",
+            "text": "Baseball"
+          }
+        },
+        "slide_i7VMPD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Antler_Hooks_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Antler_Hooks_4x4_Print.png",
+            "text": "Antler Hooks"
+          }
+        },
+        "slide_7bBtiF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_DayofDead_4x4_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_DayofDead_4x4_1100dpi.png",
+            "text": "Day of the Dead Skull"
+          }
+        },
+        "slide_pMKh6r": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Winter_FA_Cat_Sledding_4x4_Charcoal_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/Charcoal_Customizer_Artwork_Winter_FA_Cat_Sledding_4x4_White_1100dpi.png",
+            "text": "Cat Sledding"
+          }
+        },
+        "slide_UHMp38": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Cat_4x4_1100dpi.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Cat_4x4_1100dpi.png",
+            "text": "Cat Face"
+          }
+        },
+        "slide_iz9nGe": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Pirate_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Pirate_4x4_Print.png",
+            "text": "Pirate"
+          }
+        },
+        "slide_EjD7rG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Alien_Spaceship_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Alien_Spaceship_4x4_Print.png",
+            "text": "Alien Spaceship"
+          }
+        },
+        "slide_kJaVeT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Dinosaur_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/Charcoal_Customizer_Artwork_Dinosaur_4x4_Print.png",
+            "text": "Dinosaur"
+          }
+        },
+        "slide_iaH9Fq": {
+          "type": "slide",
+          "settings": {
+            "text": ""
+          }
+        },
+        "slide_gWygX6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Robot_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Robot_4x4_Print.png",
+            "text": "Robot"
+          }
+        },
+        "slide_WFVfnk": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Rocket_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Rocket_4x4_Print.png",
+            "text": "Rocket"
+          }
+        },
+        "slide_pAW3Rz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Butterfly_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Butterfly_4x4_Print.png",
+            "text": "Butterfly"
+          }
+        },
+        "slide_c7Eazg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Unicorn_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Unicorn_4x4_Print.png",
+            "text": "Unicorn"
+          }
+        },
+        "slide_fx3ynA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Mountain_Adventure_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Mountain_Adventure_4x4_Print.png",
+            "text": "Mountain Adventure"
+          }
+        },
+        "slide_NXrwKf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_Paddles_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_Paddles_4x4_Print.png",
+            "text": "Paddles"
+          }
+        },
+        "slide_KkjrWf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_PalmBeach_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_PalmBeach_4x4_Print.png",
+            "text": "PalmBeach"
+          }
+        },
+        "slide_iwjUiH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_RainbowWhale_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_RainbowWhale_4x4_Print.png",
+            "text": "RainbowWhale"
+          }
+        },
+        "slide_3ppHeq": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Charcoal_Customizer_Artwork_FlipFlops_4x4_Print.png",
+            "Doogmaimage": "shopify://shop_images/White_Customizer_Artwork_FlipFlops_4x4_Print.png",
+            "text": "FlipFlops"
+          }
+        }
+      },
+      "block_order": [
+        "slide_mhypPi",
+        "slide_qRpeE4",
+        "slide_6aqhfp",
+        "slide_pBCCHB",
+        "slide_QwUwCf",
+        "slide_WVPLU7",
+        "slide_HNxA4y",
+        "slide_XtALni",
+        "slide_VdKWmg",
+        "slide_zABy7T",
+        "slide_BxgHNw",
+        "slide_KTUNqY",
+        "slide_QjMA9P",
+        "slide_yPQxK9",
+        "slide_7RNg96",
+        "slide_qizt98",
+        "slide_3gjDfF",
+        "slide_mBYxL8",
+        "slide_3iqRML",
+        "slide_zpCUEN",
+        "slide_7eGAQd",
+        "slide_cgpxBa",
+        "slide_qC9hgE",
+        "slide_8kWjeM",
+        "slide_TPcyzT",
+        "slide_xCTVxh",
+        "slide_wCGGKB",
+        "slide_PDfEUV",
+        "slide_7yj9YV",
+        "slide_cNnyzG",
+        "slide_4zpxh8",
+        "slide_CbgABr",
+        "slide_GPfaXa",
+        "slide_i7VMPD",
+        "slide_7bBtiF",
+        "slide_pMKh6r",
+        "slide_UHMp38",
+        "slide_iz9nGe",
+        "slide_EjD7rG",
+        "slide_kJaVeT",
+        "slide_iaH9Fq",
+        "slide_gWygX6",
+        "slide_WFVfnk",
+        "slide_pAW3Rz",
+        "slide_c7Eazg",
+        "slide_fx3ynA",
+        "slide_NXrwKf",
+        "slide_KkjrWf",
+        "slide_iwjUiH",
+        "slide_3ppHeq"
+      ],
+      "settings": {
+        "freecustomization": false,
+        "maxlength1": 15,
+        "quicknote": "Custom orders cannot be edited or returned. Custom text cannot include any indecent, political, or unlawful content and must not infringe any persona, copyright, or trademark rights (e.g., cannot include third-party brands, celebrities, sports teams, colleges, or company names). Custom orders subject to additional terms.",
+        "notice": "Are you sure you want to start over and erase all edits made to the front and back so far? Choose yes to proceed, or cancel to go back to your design.",
+        "legalnotice": "<p><strong>By clicking “Accept” below, you agree to the following terms and conditions:</strong></p>\n<p>You hereby grant Thermos L.L.C. (and our agents/licensees, if applicable) a worldwide, transferrable, sublicensable, perpetual license to use, copy, publish, distribute, transmit, and modify the content you submit to create a custom product. If the content includes the name or other persona rights of a person, you waive all privacy and publicity rights on behalf of yourself and the person whose name/initials/other persona rights are practiced in your submitted content and release any related legal claims you or that person may have related to the submitted content. You confirm that the submitted content is not unlawful, harmful, threatening, tortious, defamatory, vulgar, obscene, libelous, confidential information, sensitive personal information, invasive of another’s privacy or persona rights, hateful, or racially, ethnically or otherwise objectionable, is not connected to any political affiliations, associations or candidates, does not infringe on any patent, trademark, copyright, trade secret, or other proprietary rights of any third party (this includes, but is not limited to, third party brands, characters, celebrities, colleges, sports teams, or company names) and does not otherwise violate anyone’s rights. You agree to defend, indemnify, and hold harmless Thermos L.L.C., its affiliates, licensors, contractors, and service providers, and its and their respective officers, directors, members, employees, contractors, agents, licensors, suppliers, successors and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these terms or related to your content, with any such matter resolved only with the consent of Thermos L.L.C. (which shall not be unreasonably withheld). If any of the terms are violated or Thermos L.L.C. chooses not to accept your order for any reason in its sole discretion, your custom order may be cancelled. Our use of the content submitted is also subject to the Privacy Policy and Terms of Use.  We may store and save your content/custom design for a short period of time (e.g., 1 year), but in any case, it may not be available for re-order.  \n\nCustomized products cannot be returned. If the engraving does not match your order, please contact us at <a href=\"tel:+18008319242\">1-800-831-9242</a> for evaluation of your order. Custom orders cannot be cancelled or modified after submission. Our team will review custom orders, but if we accept, all sales of customized products are final. Despite our diligent efforts to review custom orders, if an order is still produced that violates these terms or some other law, regulation, or obligation, you shall provide reasonable assistance to us in any response or defense regarding any allegations concerning such content.</p>\n<p>Our website will show a preview of the product with custom content. This preview is an approximation. Due to differences in computer screen settings and variations in the engraving process, the actual product may not be identical to the preview. </p>\n<p>You may only submit custom orders for products on Thermos.com that include a “Customize” button. If your custom order exceeds our production capacity or we otherwise cannot fulfill your order, we may not accept your order. In some cases, we may provide you with alternatives terms through which we can fulfill the order. </p>\n<p>You can expect to receive your custom products 2-3 weeks after ordering. </p>\n<p>For businesses wishing to add their company name/logo to select other Thermos® Brand products, please visit <a href=\"https://snugzusa.com/thermos\" target=\"_blank\">Corporate Gifts.</a></p>\n<p>If a product that qualifies for replacement under limited warranty was customized via a Thermos.com order, Thermos L.L.C. will provide a customized replacement (or a comparable replacement), if reasonably available and if Thermos.com is still offering customization services. Any replacement customization is subject to these Terms & Conditions.</p>\n<p>Additional details available in our <a href=\"https://thermos.com/pages/customization-faq\" target=\"_blank\">Customization FAQ</a></p>",
+        "pricenotice": "There is a $6 fee for each customized side of the bottle. For customizing both front and back the fee will be $12. You can expect to receive your custom products 2-3 weeks after ordering.",
+        "uploadImagelogo": "shopify://shop_images/Vector_4.svg",
+        "uploadImageText": "CLICK BOTTLE TO UPLOAD IMAGE",
+        "uploadImageDesc": "<p>For best results, upload a high-resolution version of your image with a white background and a dark-colored foreground. Images that do not have enough contrast may not convert properly. </p><p>Double check your proof at the next step. Especially for stray marks and dots if your image has a transparent background.</p><p>For more details, see our <a href=\"/pages/customization-faq\" target=\"_blank\" title=\"Customization FAQ\">Customization FAQ.</a><br/><br/>For corporate logos check our <a>Corporate Sales Page.</a></p>",
+        "image1": "shopify://shop_images/Vector_4.svg",
+        "text1": "Image must be at least 300px (W or H)",
+        "image2": "shopify://shop_images/Vector_6.svg",
+        "text2": "No photographs",
+        "image3": "shopify://shop_images/Vector_7.svg",
+        "text3": "No copyright infringement",
+        "image4": "shopify://shop_images/Vector_8.svg",
+        "text4": "No trademark materials"
+      }
+    }
+  },
+  "order": ["customizer"]
+}

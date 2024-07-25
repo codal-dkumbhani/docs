@@ -1,0 +1,257 @@
+{{ 'collection-explorer.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign collumn_1_image_picker = section.settings.collumn_1_image_picker
+-%}
+
+{% if collumn_1_image_picker != blank %}
+  {%- style -%}
+    .collection-explorer-column-1 {
+      background-image: url("{{ collumn_1_image_picker | image_url: width: 750, height: 750 }}");
+    }
+  {%- endstyle -%}
+{% endif %}
+
+<div class="pagsecondary collection-explorer page-width">
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        class="col-12 col-md-6 collection-explorer-column-1 p-0 row-separator"
+        id="collection-explorer-column-1"
+      >
+        <div class="collection-explorer-column-1-div position-relative">
+          <div class="collection-explorer-overlay position-absolute">
+            {% if section.settings.heading != blank %}
+              <h1 class="text-white custom-explorer-heading m-0">{{ section.settings.heading }}</h1>
+            {% endif %}
+            {% if section.settings['sub-heading'] != blank %}
+              <div class="mb-3 fw-bold" id="custom-explorer-description">
+                {{ section.settings['sub-heading'] }}
+              </div>
+            {% endif %}
+            {% if section.settings.btn_text != blank %}
+              <a
+                href="{{ section.settings.column_1_collection_handle }}"
+                class="btn-secondary btn-secondary--{{ section.id }}"
+              >
+                {{ section.settings.btn_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 collection-explorer-column-2 h-100">
+        <div class="container-fluid p-0">
+          <div class="row pl-2 column-separator position-relative row-separator">
+            {% for block in section.blocks %}
+              <div
+                class="col-12 column-2-bg row-{{ forloop.index}}-bg p-0 row-separator"
+                style="background-image: url({{ block.settings.collumn_2_image_picker_row | image_url: width: 583, height: 358 }});"
+              >
+                <div class="position-relative">
+                  <div class="collection-explorer-overlay position-absolute w-100">
+                    <div class="container-fluid p-0">
+                      <div class="row">
+                        <div class="col-12 col-lg-8">
+                          {% if block.settings.heading != blank %}
+                            <h3 class="text-white custom-explorer-heading">
+                              {{ block.settings.heading }}
+                            </h3>
+                          {% endif %}
+                          {% if block.settings['sub-heading'] != blank %}
+                            <div class="mb-3 fw-bold" id="custom-explorer-description">
+                              {{ block.settings['sub-heading'] }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        <div class="col-12 col-lg-4 collection-explorer-home-button text-start text-lg-end">
+                          {% if block.settings.column_2_collection_handle != blank %}
+                            <a
+                              href="{{ block.settings.column_2_collection_handle }}"
+                              class="btn-secondary m-0 btn-secondary--{{ section.id }}"
+                            >
+                              {{ block.settings.btn_text }}
+                            </a>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+{% schema %}
+{
+  "name": "Collection Explorer",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "FOR MORNINGS ON-THE-GO"
+    },
+    {
+      "id": "sub-heading",
+      "type": "richtext",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "collumn_1_image_picker",
+      "label": "Column 1 - Background"
+    },
+    {
+      "type": "url",
+      "id": "column_1_collection_handle",
+      "label": "Select Collection"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "default": "Explore Collection",
+      "label": "Button Text",
+      "info": "Text inside button"
+    },
+    {
+      "type": "select",
+      "id": "background_image_position_column_1",
+      "label": "Image focal point",
+      "default": "center center",
+      "options": [
+        {
+          "label": "Top left",
+          "value": "top left"
+        },
+        {
+          "label": "Top center",
+          "value": "top center"
+        },
+        {
+          "label": "Top right",
+          "value": "top right"
+        },
+        {
+          "label": "Middle left",
+          "value": "center left"
+        },
+        {
+          "label": "Middle center",
+          "value": "center center"
+        },
+        {
+          "label": "Middle right",
+          "value": "center right"
+        },
+        {
+          "label": "Bottom left",
+          "value": "bottom left"
+        },
+        {
+          "label": "Bottom center",
+          "value": "bottom center"
+        },
+        {
+          "label": "Bottom right",
+          "value": "bottom right"
+        }
+      ],
+      "info": "Used to keep the subject of your photo in view."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Collection Explorer Block",
+      "settings": [
+        {
+          "id": "heading",
+          "type": "text",
+          "label": "Heading",
+          "default": "FOR MORNINGS ON-THE-GO"
+        },
+        {
+          "id": "sub-heading",
+          "type": "richtext",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "collumn_2_image_picker_row",
+          "label": "Column 1 - Background"
+        },
+        {
+          "type": "url",
+          "id": "column_2_collection_handle",
+          "label": "Select Collection"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "default": "Shop",
+          "label": "Button Text",
+          "info": "Text inside button"
+        },
+        {
+          "type": "select",
+          "id": "background_image_position_column_1",
+          "label": "Image focal point",
+          "default": "center center",
+          "options": [
+            {
+              "label": "Top left",
+              "value": "top left"
+            },
+            {
+              "label": "Top center",
+              "value": "top center"
+            },
+            {
+              "label": "Top right",
+              "value": "top right"
+            },
+            {
+              "label": "Middle left",
+              "value": "center left"
+            },
+            {
+              "label": "Middle center",
+              "value": "center center"
+            },
+            {
+              "label": "Middle right",
+              "value": "center right"
+            },
+            {
+              "label": "Bottom left",
+              "value": "bottom left"
+            },
+            {
+              "label": "Bottom center",
+              "value": "bottom center"
+            },
+            {
+              "label": "Bottom right",
+              "value": "bottom right"
+            }
+          ],
+          "info": "Used to keep the subject of your photo in view."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Explorer",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

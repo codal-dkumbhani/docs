@@ -1,0 +1,94 @@
+{% comment %} This section is about Theroms {% endcomment %}
+{{ 'about-us-thermos.css' | asset_url | stylesheet_tag }}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12  pt-3 pb-3  about-trusted-banner">
+      {% if section.settings['about-section-banner-text'] != blank %}
+        <p class="text-center mb-0">
+          {{ section.settings['about-section-banner-text'] }}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid about-thermos-back">
+  <div class="row">
+    <div class="col-12 col-md-4 ms-auto">
+      {% if section.settings['about-us-image'] != blank %}
+        {% render 'image-element',
+          img: section.settings['about-us-image'],
+          alt: section.settings['about-us-image'].alt,
+          img_width: 1024
+        %}
+      {% endif %}
+    </div>
+    <div class="col-12 col-md-6 ms-auto me-auto">
+      {% if section.settings['about-section-title'] != blank %}
+        <h1 class="about-us-title">
+          {{ section.settings['about-section-title'] }}
+        </h1>
+      {% endif %}
+      {% if section.settings['about-section-description'] != blank %}
+        <p class="about-us-description pr-5">
+          {{ section.settings['about-section-description'] }}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About Thermos",
+  "class": "shopify_about_thermos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "about-section-banner-text",
+      "label": "About Thermos - Banner - Text ",
+      "default": "Trusted since 1904"
+    },
+    {
+      "type": "image_picker",
+      "id": "back_image",
+      "label": "Upload Backgorund Image"
+    },
+    {
+      "type": "text",
+      "id": "about-section-title",
+      "label": "About Thermos - Heading",
+      "default": "THE ORIGINAL INNOVATION"
+    },
+    {
+      "type": "textarea",
+      "id": "about-section-description",
+      "label": "About Thermos - Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "about-us-image",
+      "label": "Thermos Image"
+    },
+    {
+      "type": "text",
+      "id": "about-section-icon-text",
+      "label": "About Thermos - Text Near Icon ",
+      "default": "Trusted since 1904"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Us - Section",
+      "category": "Promotional"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}
+
+{% style %}
+  .shopify_about_thermos .about-thermos-back {
+    background-image: url('{{ section.settings.back_image |  image_url: width:1024 }}');
+  }
+{% endstyle %}

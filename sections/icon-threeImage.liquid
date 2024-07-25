@@ -1,0 +1,74 @@
+{{ 'three-image-section.css' | asset_url | stylesheet_tag: preload: true }}
+
+<div class="three-image-section">
+  <ul>
+    {% for block in section.blocks %}
+      <li>
+        <figure>
+          <img
+            src="{{ block.settings.image | image_url }}"
+            alt="{{ block.settings.image.alt }}"
+            width="auto"
+            height="auto"
+          >
+        </figure>
+        <div class="three-image-detail">
+          {% if block.settings.colorfortitle != blank %}
+            <h3 style="color:{{ block.settings.colorfortitle }};">{{ block.settings.title }}</h3>
+          {% endif %}
+          {% if block.settings.subtitle != blank %}
+            <a href="{{ block.settings.url }}" style="color:{{ block.settings.colorforsubtitle }};">
+              {{- block.settings.subtitle -}}
+            </a>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Three Image Section",
+  "max_blocks": 5,
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Sub title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        },
+        {
+          "type": "color",
+          "id": "colorfortitle",
+          "label": "Title Text color"
+        },
+        {
+          "type": "color",
+          "id": "colorforsubtitle",
+          "label": "Sub Title Text color"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

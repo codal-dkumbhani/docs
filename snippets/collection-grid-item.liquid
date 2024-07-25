@@ -1,0 +1,59 @@
+{%- liquid
+  unless background_position
+    assign background_position = 'center center'
+  endunless
+
+  if settings.collection_grid_image == 'collection' and collection.image
+    assign collection_image = collection.image
+  else
+    assign collection_image = collection.products.first.featured_media.preview_image
+  endif
+
+  if block.settings.title != blank
+    assign title_output = block.settings.title
+  else
+    if collection == blank
+      assign title_output = 'home_page.onboarding.collection_title' | t
+    elsif collection_title
+      assign title_output = collection_title
+    else
+      assign title_output = collection.title | escape
+    endif
+  endif
+-%}
+{% if block.settings.collection_image != blank %}
+  <div class="grid__item {{ gridView }}" {{ block.shopify_attributes }}>
+    <a
+      href="{{ collection.url }}"
+      class="collection-item collection-item--{{ settings.collection_grid_style }}"
+      data-aos="row-of-{{ per_row }}"
+    >
+      {%- liquid
+        if block.settings.collection_image != blank
+          assign collection_image = block.settings.collection_image
+        else
+          assign collection_image = collection.image
+        endif
+      -%}
+      <div class="collection-image collection-image--{{ settings.collection_grid_shape }} image-wrap">
+        <img
+          class="collection-selected-image"
+          src="{{ block.settings.collection_image.src | image_url }}"
+          data-aspectratio="{{ collection_image.aspect_ratio }}"
+          alt="{{ collection_image.alt | escape }}"
+          loading="lazy"
+          width="100%"
+          height="100%"
+        >
+      </div>
+
+      <span
+        class="collection-item__title collection-item__title--{{ settings.collection_grid_style }} collection-item__title--{{ settings.type_collection_font }} collection-item__title--{{ settings.collection_grid_text_align }} text-white"
+      >
+        <span>
+          {{ title_output }}
+        </span>
+      </span>
+    </a>
+  </div>
+{% endif %}

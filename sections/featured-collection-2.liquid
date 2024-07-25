@@ -1,0 +1,310 @@
+{{ 'featured-collection-2.css' | asset_url | stylesheet_tag }}
+
+{%- assign per_row = section.settings.per_row -%}
+{%- assign product_limit = per_row | times: section.settings.rows -%}
+{%- assign collection = collections[section.settings.home_featured_products] -%}
+<!-- Mobile  View -->
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+{%- if section.settings.title != blank -%}
+  <div class="page-width  medium-up--hide">
+    <div class="container-fluid">
+      <div class="row  section-header{% if section.settings.view_all %}{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}{% endif %}">
+        <div class="col-6 text-left">
+          <h2 class="section-header__title" style="font-size: var(--thermos-font-size-20)">
+            {{ section.settings.title }}
+          </h2>
+        </div>
+        <div class="col-6 text-right  icp-view-all">
+          {%- if section.settings.view_all and section.settings.rows == 1 -%}
+            {% if section.settings.featuredcollection1_link != blank %}
+              <a href="{{ section.settings.featuredcollection1_link }}" class="">
+                {{- section.settings.featuredcollection1_label -}}
+              </a>
+            {% else %}
+              <a href="{{ collections[section.settings.home_featured_products].url }}" class="">
+                View All {{ section.settings.title }}
+              </a>
+            {% endif %}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+<div
+  id="carouselExampleIndicators"
+  class="carousel slide container-fluid pl-1 pr-1 medium-up--hide shopify-featured-collection-2 featured-collection-section"
+  data-ride="carousel"
+  data-interval="3000"
+>
+  <div
+    id="featured-collection-slick-carousel"
+    class="featured-collection-slick-carousel slick-carousel carousel-inner"
+  >
+    {% if section.settings.home_featured_products != blank %}
+      {% for product in collections[section.settings.home_featured_products].products
+        limit: product_limit
+      %}
+        <div class="carousel-items carousel-item {% if forloop.first %}active{% endif %}">
+          {%- render 'product-grid-item-3', product: product, per_row: per_row -%}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="prev"
+  >
+    {% render 'thermos-icon-collection-prev' %}
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="next"
+  >
+    {% render 'thermos-icon-collection-next' %}
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- Mobile View End -->
+
+<!-- Desktop View -->
+<div
+  id="CollectionSection-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-template"
+  class="small--hide"
+>
+  {%- if section.settings.title != blank -%}
+    <div class="page-width ">
+      <div class="container-fluid">
+        <div class="row  section-header{% if section.settings.view_all %}{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}{% endif %}">
+          <div class="text-left">
+            <h1
+              class="section-header__title m-0 mb-1 mt-3"
+              style="font-size: var(--thermos-font-size-40)"
+            >
+              {{ section.settings.title }}
+            </h1>
+          </div>
+          <div class="col-6 text-right  icp-view-all">
+            {%- if section.settings.view_all and section.settings.rows == 1 -%}
+              {% if section.settings.featuredcollection1_link != blank %}
+                <a href="{{ section.settings.featuredcollection1_link }}" class="">
+                  {{- section.settings.featuredcollection1_label -}}
+                </a>
+              {% else %}
+                <a href="{{ collections[section.settings.home_featured_products].url }}" class="">
+                  View All {{ section.settings.title }}
+                </a>
+              {% endif %}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="page-width{% if section.settings.mobile_scrollable %} page-width--flush-small{% endif %}">
+    <div
+      {% if section.settings.mobile_scrollable %}
+        class="grid-overflow-wrapper"
+      {% endif %}
+    >
+      <div
+        class="grid grid--uniform"
+        {% if section.settings.mobile_scrollable %}
+          data-aos="overflow__animation"
+        {% endif %}
+      >
+        {%- liquid
+          assign grid_item_width = 'small--one-half medium-up--one-third'
+
+          case per_row
+            when 1
+              assign grid_item_width = ''
+            when 2
+              assign grid_item_width = 'medium-up--one-half'
+            when 3
+              assign grid_item_width = 'small--one-half medium-up--one-third'
+            when 4
+              assign grid_item_width = 'small--one-half medium-up--one-quarter'
+            when 5
+              assign grid_item_width = 'small--one-half medium-up--one-fifth'
+          endcase
+        -%}
+
+        {%- if section.settings.home_featured_products == blank
+          or collections[section.settings.home_featured_products].empty?
+          or collections[section.settings.home_featured_products].products_count == 0
+        -%}
+          <div class="grid__item">
+            <div class="grid grid--uniform">
+              {%- for i in (1..product_limit) -%}
+                <div
+                  class="grid__item grid-product {{ grid_item_width }}"
+                  data-aos="row-of-{{ per_row }}"
+                >
+                  <div class="grid-product__content">
+                    <a href="{{ product.url | within: collection }}" class="grid-product__link">
+                      <div class="grid-product__image-mask">
+                        {%- capture current -%}{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
+                        <div class="image-wrap">
+                          {{
+                            'product-'
+                            | append: current
+                            | placeholder_svg_tag: 'placeholder-svg'
+                          }}
+                        </div>
+                      </div>
+                      <div class="grid-product__meta">
+                        <div class="grid-product__title">
+                          {{ 'home_page.onboarding.product_title' | t }}
+                        </div>
+                        <div class="grid-product__price">$29</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+
+        {%- else -%}
+          {%- for product in collections[section.settings.home_featured_products].products
+            limit: product_limit
+          -%}
+            {%- render 'product-grid-item-4',
+              product: product,
+              grid_item_width: grid_item_width,
+              per_row: per_row
+            -%}
+          {%- endfor -%}
+
+          {%- if section.settings.view_all -%}
+            {%- if section.settings.rows > 1 -%}
+              <div class="grid__item text-center{% if section.settings.mobile_scrollable %} small--hide{% endif %}">
+                <a
+                  href="{{ collections[section.settings.home_featured_products].url }}"
+                  class="btn"
+                >
+                  {{- 'collections.general.all_of_collection' | t -}}
+                </a>
+              </div>
+            {%- endif -%}
+
+            {%- if section.settings.mobile_scrollable -%}
+              <div class="grid__item grid__item--view-all text-center {{ grid_item_width }} medium-up--hide">
+                <a
+                  href="{{ collections[section.settings.home_featured_products].url }}"
+                  class="grid-product__see-all"
+                >
+                  {{
+                    'collections.general.view_all_products_html'
+                    | t: count: collection.products_count
+                  }}
+                </a>
+              </div>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Desktop View -->
+
+{%- if settings.quick_shop_enable -%}
+  {%- for product in collections[section.settings.home_featured_products].products
+    limit: product_limit
+  -%}
+    {%- render 'quick-shop-modal', product: product -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+{
+  "name": "Featured collection",
+  "class": "shopify shopify-featured-collection-2",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured collection"
+    },
+    {
+      "type": "collection",
+      "id": "home_featured_products",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "featuredcollection1_label",
+      "label": "Collection View All Label",
+      "default": "View all"
+    },
+    {
+      "type": "url",
+      "id": "featuredcollection1_link",
+      "label": "Collection View All Link"
+    },
+    {
+      "type": "range",
+      "id": "per_row",
+      "label": "Products per row",
+      "default": 4,
+      "min": 1,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "label": "Rows of products",
+      "default": 1,
+      "min": 1,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_scrollable",
+      "label": "Enable swipe on mobile",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "view_all",
+      "label": "Show 'View all' link",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "Show section divider",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collection",
+      "category": "Collection"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}
+
+<script
+  src="{{ 'featured-collection-2.js' | asset_url }}"
+  defer="defer"
+></script>

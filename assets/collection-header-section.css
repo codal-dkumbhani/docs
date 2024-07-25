@@ -1,0 +1,127 @@
+.collection-header-section .kids-banner {
+  display: flex;
+  overflow: hidden;
+  min-height: 300px;
+}
+.kids-banner.banner-with-transaparent-text-head {
+  position: relative;
+}
+.collection-header-section .kids-banner .kids-banner-title {
+  padding: 53px 20px 53px 55px;
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--thermos-silver-gray);
+  align-items: center;
+  position: relative;
+}
+.kids-banner .kids-banner-title.banner-with-transaparent-text {
+  background: transparent;
+  position: absolute;
+}
+.collection-header-section
+  .collection-header
+  .kids-banner
+  .kids-banner-picture.banner-with-transaparent-text {
+  width: 100% !important;
+}
+.kids-banner .kids-banner-title.banner-with-transaparent-text:after {
+  content: unset;
+}
+.kids-banner.banner-with-transaparent-text-head:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  background: url(/cdn/shop/files/hatching.png?v=1620373439);
+  width: 30px;
+  height: 100%;
+}
+.kids-banner:not(.banner-with-transaparent-text-head) .kids-banner-title:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  background: url(/cdn/shop/files/hatching.png?v=1620373439);
+  width: 30px;
+  height: 100%;
+}
+.kids-banner .kids-banner-title:after {
+  position: absolute;
+  top: 0;
+  right: -39px;
+  content: '';
+  width: 80px;
+  background-color: var(--thermos-silver-gray);
+  height: 100%;
+  transform: skew(-10deg, 0deg);
+}
+.kids-banner .kids-banner-title .kids-banner-title-wrap {
+  max-width: 611px;
+  width: 100%;
+  z-index: 1;
+}
+.kids-banner .kids-banner-title h1 {
+  color: var(--thermos-white);
+  font-size: var(--thermos-font-size-70);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-70);
+  padding-bottom: 4px;
+  font-family: var(--thermos-dinot-cond-bold);
+}
+.kids-banner .kids-banner-title p {
+  color: var(--thermos-white);
+  font-family: var(--thermos-dinot);
+  font-size: var(--thermos-font-size-19);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-26);
+}
+.collection-header-section .collection-header .kids-banner .kids-banner-picture {
+  width: 55%;
+  max-width: 100%;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+@media (max-width: 1024px) {
+  .kids-banner.banner-with-transaparent-text-head .kids-banner-title {
+    width: 55%;
+  }
+}
+@media (max-width: 767px) {
+  .collection-header .kids-banner {
+    min-height: auto;
+    flex-wrap: wrap;
+  }
+  .collection-header .kids-banner .kids-banner-title {
+    padding: 20px 20px 15px 20px;
+    width: 100%;
+    order: 2;
+    text-align: center;
+  }
+  .kids-banner .kids-banner-title h1 {
+    font-size: var(--thermos-font-size-34);
+    line-height: var(--thermos-line-height-30);
+  }
+  .kids-banner .kids-banner-title p {
+    font-size: var(--thermos-font-size-14);
+    letter-spacing: 0;
+    line-height: var(--thermos-line-height-21);
+    text-align: center;
+  }
+  .kids-banner:not(.banner-with-transaparent-text-head) .kids-banner-title:before {
+    content: none;
+  }
+  .kids-banner .kids-banner-title:after {
+    content: none;
+  }
+  .collection-header-section .collection-header .kids-banner .kids-banner-picture {
+    height: 149px;
+    width: 100%;
+    order: 1;
+  }
+  .grid__item--content .grid.grid--uniform {
+    margin-left: 0;
+    gap: 0 10px;
+  }
+}

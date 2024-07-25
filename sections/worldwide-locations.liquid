@@ -1,0 +1,113 @@
+{{ 'worldwide-locations.css' | asset_url | stylesheet_tag }}
+
+{%- render 'breadcrumbs' -%}
+<div class="worldwide-locations">
+  <div class="locations-heading">
+    <h1>{{ section.settings['main-title'] }}</h1>
+  </div>
+
+  <div class="locations-container">
+    {% assign count = 0 %}
+
+    {% for block in section.blocks %}
+      {% assign count = count | plus: 1 %}
+
+      <div class="locations-container-one {% if count > 4 %} location-two{% endif %}{% if count > 8 %} location-three{% endif %}{% if count > 12 %} location-four{% endif %}{% if count > 16 %} location-four{% endif %}{% if count > 20 %} location-five{% endif %}{% if count > 24 %} location-six{% endif %}">
+        {% if block.settings.subheading == '' %}
+          <div class="locations-subheading">
+            <h2><br></h2>
+          </div>
+        {% else %}
+          <div class="locations-subheading">
+            <h2>{{ block.settings.subheading }}</h2>
+          </div>
+        {% endif %}
+
+        <div class="locations-container-subone">
+          <ul class="location-address">
+            <li class="country-names">{{ block.settings['country-name'] }}</li>
+            <li class="addresss">{{ block.settings.address }}</li>
+            <li class="phone-text">{{ block.settings['phone-text'] }}</li>
+            <li class="phone-no">
+              <b>{{ block.settings['phone-no'] }}</b>
+            </li>
+            <li class="fax-text">{{ block.settings['fax-text'] }}</li>
+            <li class="fax-no">
+              <b>{{ block.settings['fax-no'] }}</b>
+            </li>
+            <li class="email-text">{{ block.settings['email-text'] }}</li>
+            <li class="email-no">
+              <b>{{ block.settings['email-no'] }}</b>
+            </li>
+          </ul>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Worldwide Locations",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main-title",
+      "label": "Main Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Location information",
+      "settings": [
+        {
+          "id": "subheading",
+          "type": "text",
+          "label": "Location Subheading"
+        },
+        {
+          "id": "country-name",
+          "type": "text",
+          "label": "Country Name"
+        },
+        {
+          "id": "address",
+          "type": "textarea",
+          "label": "Address"
+        },
+        {
+          "id": "phone-text",
+          "type": "text",
+          "label": "Phone-Text"
+        },
+        {
+          "id": "phone-no",
+          "type": "text",
+          "label": "Phone-Number"
+        },
+        {
+          "id": "fax-text",
+          "type": "text",
+          "label": "Fax-Text"
+        },
+        {
+          "id": "fax-no",
+          "type": "text",
+          "label": "Fax-Number"
+        },
+        {
+          "id": "email-text",
+          "type": "text",
+          "label": "Email-Text"
+        },
+        {
+          "id": "email-no",
+          "type": "text",
+          "label": "Email-Number"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

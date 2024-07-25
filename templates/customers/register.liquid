@@ -1,0 +1,103 @@
+<div
+  class="custom-page login-page"
+  style="background-size: cover; background-image: url(https://cdn.shopify.com/s/files/1/0552/9731/0876/files/image_2.png?v=1621604578); background-repeat: no-repeat; background-position: center center;"
+>
+  <div class="login-box-block">
+    <h1>CREATE AN ACCOUNT</h1>
+
+    <div class="form-vertical">
+      {%- form 'create_customer',
+        id: 'createCustomerForm',
+        return_to: '/pages/account-confirmation'
+      -%}
+        {% comment %}
+          {{ form.errors | default_errors }}
+        {% endcomment %}
+
+        <div class="errors errors-container" style="display: none;">
+          <ul id="password-requirements">
+            <li id="char-length"><span class="x-icon"></span> Must be at least 8 characters</li>
+            <li id="number"><span class="x-icon"></span> Must contain 1 number</li>
+            <li id="capital-letter"><span class="x-icon"></span> Must contain 1 capital letter</li>
+          </ul>
+        </div>
+
+        <input
+          type="text"
+          placeholder="Full Name"
+          name="customer[name]"
+          id="FirstName"
+          class="input-full"
+          {% if form.first_name %}
+            value="{{ form.name }}"
+          {% endif %}
+          autocapitalize="words"
+          autofocus
+        >
+
+        <input
+          type="email"
+          placeholder="Email Address"
+          name="customer[email]"
+          id="Email"
+          class="input-full{% if form.errors contains 'email' %} error{% endif %}"
+          {% if form.email %}
+            value="{{ form.email }}"
+          {% endif %}
+          autocorrect="off"
+          autocapitalize="off"
+        >
+
+        <input
+          type="text"
+          placeholder="Phone Number"
+          name="customer[phone]"
+          id="Phone"
+          class="input-full"
+          {% if form.last_name %}
+            value="{{ form.phone }}"
+          {% endif %}
+        >
+
+        <input
+          type="password"
+          placeholder="Create Password"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+]{8,}$"
+          name="customer[password]"
+          id="CreatePassword"
+          class="input-full{% if form.errors contains 'password' %} error{% endif %}"
+          oninput="checkPassword(this.value)"
+        >
+
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+]{8,}$"
+          name="customer[password_confirmation]"
+          id="ConfirmPassword"
+          class="input-full"
+        >
+
+        <div class="checkbox-type text-left">
+          <input id="agree" type="checkbox" required>
+          <label for="agree">
+            I agree to
+            <a href=" {{ shop.url }}/pages/privacy-policy" target="_blank">Privacy Policy</a> and
+            <a href="{{ shop.url }}/pages/website-terms-of-use" target="_blank">Terms</a>.
+          </label>
+        </div>
+
+        <div class="btn-group btn-wrap">
+          <button type="submit" class="btn-gray btn-full">CREATE AN ACCOUNT</button>
+        </div>
+      {%- endform -%}
+
+      Already have an account? <a href="/account/login">Sign In</a>
+    </div>
+  </div>
+</div>
+
+<script
+  src="{{ 'register.js' | asset_url }}"
+  defer="defer"
+></script>

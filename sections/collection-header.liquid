@@ -1,0 +1,162 @@
+{{ 'collection-header-section.css' | asset_url | stylesheet_tag }}
+{%- assign disable_sticky_header = false -%}
+
+{%- if section.settings.enable -%}
+  {%- if section.settings.collection_image_enable and collection.image -%}
+    <div
+      class="collection-header"
+      id="CollectionHeaderSection"
+      data-section-id="{{ section.id }}"
+      data-section-type="collection-header"
+      {% if section.settings.parallax %}
+        data-parallax="true"
+      {% endif %}
+    >
+      <div class="kids-banner{% if template == 'collection.kids'%} kids-page-icp {% endif %} {% for block in section.blocks %}{% if collection.handle == collections[block.settings.maincollection].handle %}{% if block.settings.header_alignment == 'image_with_solid_block_of_text' %}banner-block-with-solid-color{% endif %}{% if block.settings.header_alignment == 'full_width_image_with_text' %}banner-with-transaparent-text-head{% endif %} {% if block.settings.header_alignment == 'full_width_image' %}banner-only{% endif %}{% endif %}{% endfor %}">
+        {% assign collectionFound = false %}
+        {% for block in section.blocks %}
+          {% if collection.handle == collections[block.settings.maincollection].handle %}
+            {% if block.settings.header_alignment == 'image_with_solid_block_of_text' %}
+              <div class="kids-banner-title">
+                <div class="kids-banner-title-wrap">
+                  <h1>{{ collection.title }}</h1>
+                  <p>{{ collection.description }}</p>
+                </div>
+              </div>
+              <div
+                class="kids-banner-picture"
+                style="background: url({{ collection.image | image_url }});"
+              ></div>
+              <style>
+                .kids-banner .kids-banner-title{
+                  background-color:{{block.settings.backgroundcolor}} !important;
+                }
+                .kids-banner .kids-banner-title:after{
+                   background-color:{{block.settings.backgroundcolor}} !important;
+                }
+              </style>
+            {% elsif block.settings.header_alignment == 'full_width_image' %}
+              <div
+                class="kids-banner-picture"
+                style="background: url({{ collection.image | image_url }});"
+              ></div>
+            {% elsif block.settings.header_alignment == 'full_width_image_with_text' %}
+              <div class="kids-banner-title banner-with-transaparent-text">
+                <div class="kids-banner-title-wrap">
+                  <h1>{{ collection.title }}</h1>
+                  <p>{{ collection.description }}</p>
+                </div>
+              </div>
+              <div
+                class="kids-banner-picture banner-with-transaparent-text"
+                style="background: url({{ collection.image | image_url }});"
+              ></div>
+            {% endif %}
+            {% assign collectionFound = true %}
+          {% else %}
+
+          {% endif %}
+        {% endfor %}
+
+        {% if collectionFound == false %}
+          <div class="kids-banner-title ">
+            <div class="kids-banner-title-wrap">
+              <h1>{{ collection.title }}</h1>
+              <p>{{ collection.description }}</p>
+            </div>
+          </div>
+          <div
+            class="kids-banner-picture"
+            style="background: url({{ collection.image | image_url }});"
+          ></div>
+        {% endif %}
+      </div>
+    </div>
+  {%- else -%}
+    {%- assign disable_sticky_header = true -%}
+    <div class="page-width page-content page-content--top">
+      <header class="section-header section-header--flush">
+        {%- render 'breadcrumbs' -%}
+        <h1 class="section-header__title">
+          {{ collection.title }}
+        </h1>
+      </header>
+    </div>
+  {%- endif -%}
+{% else %}
+  {%- assign disable_sticky_header = true -%}
+{%- endif -%}
+
+{%- if disable_sticky_header -%}
+  <div
+    class="collection-header"
+    id="CollectionHeaderSection"
+    data-section-id="{{ section.id }}"
+    data-section-type="collection-header"
+  ></div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection header",
+  "class": "collection-header-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Enable header",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_image_enable",
+      "label": "Show collection image",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "parallax",
+      "label": "Parallax image",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Collection Image",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "maincollection",
+          "label": "Collection for Mobile Image"
+        },
+        {
+          "type": "radio",
+          "id": "header_alignment",
+          "label": "Header alignment",
+          "options": [
+            {
+              "value": "image_with_solid_block_of_text",
+              "label": "Image on the right, the solid block left with text"
+            },
+            {
+              "value": "full_width_image",
+              "label": "Full-width image"
+            },
+            {
+              "value": "full_width_image_with_text",
+              "label": "Full width image with text"
+            }
+          ],
+          "default": "image_with_solid_block_of_text"
+        },
+        {
+          "type": "color",
+          "id": "backgroundcolor",
+          "label": "Solid color"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

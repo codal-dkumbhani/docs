@@ -1,0 +1,46 @@
+<ul class="icon-categorycolors">
+  {% for block in section.blocks %}
+    <li>
+      <a href="{{ block.settings.url }}">
+        <figure>
+          <img
+            width="auto"
+            height="auto"
+            alt="{{ block.settings.image.alt }}"
+            src="{{ block.settings.image | image_url }}"
+          >
+        </figure>
+        <h4>{{ block.settings.title }}</h4>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+{% schema %}
+{
+  "name": "Color Category",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

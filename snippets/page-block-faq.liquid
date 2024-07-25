@@ -1,0 +1,27 @@
+{% if block.settings.title != '' %}
+  <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <button
+      type="button"
+      class="faq-question collapsible-trigger collapsible-trigger--inline collapsible--auto-height text-left"
+      aria-controls="FAQ-content-{{ block.id }}"
+    >
+      {%- render 'faq-plus-icon', no_circle: true -%}
+      {%- render 'faq-minus-icon', no_circle: true -%}
+      <span itemprop="name">{{ block.settings.title }}</span>
+    </button>
+    <div
+      id="FAQ-content-{{ block.id }}"
+      class="collapsible-content collapsible-content--all"
+      itemscope
+      itemprop="acceptedAnswer"
+      itemtype="https://schema.org/Answer"
+    >
+      <div class="collapsible-content__inner collapsible-content__inner--faq rte" itemprop="text">
+        {{ block.settings.text }}
+        {% if block.settings.dev_use_only != blank %}
+          {{ block.settings.dev_use_only }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

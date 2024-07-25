@@ -1,0 +1,95 @@
+.cms-content * {
+  font-family: var(--thermos-dinot);
+}
+.cms-content {
+  font-size: var(--thermos-font-size-14);
+  max-width: 1066px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 50px auto 60px;
+}
+.cms-content a {
+  color: inherit;
+  text-decoration: underline;
+}
+.cms-content strong {
+  font-weight: var(--thermos-font-Weight-400);
+}
+.cms-content ul {
+  list-style: none;
+  font-family: var(--thermos-dinot);
+  font-size: var(--thermos-font-size-14);
+  margin-left: 0;
+}
+.cms-content table tr td {
+  font-size: var(--thermos-font-size-18);
+  padding: 12px 25px;
+  border-bottom: 2px solid var(--thermos-transparent-dark-gray);
+  text-transform: uppercase;
+}
+.cms-content table {
+  margin-top: 50px;
+}
+.cms-content p + br {
+  display: none;
+}
+.cms-content a {
+  color: inherit;
+  text-decoration: underline !important;
+}
+.legal-content p {
+  font-weight: var(--thermos-font-Weight-400);
+  font-family: var(--thermos-dinot);
+  font-size: var(--thermos-font-size-14);
+  color: var(--thermos-gunmetal);
+}
+.cms-content h3 {
+  font-size: var(--thermos-font-size-33);
+  font-weight: var(--thermos-font-Weight-700);
+  margin-top: 60px;
+  margin-bottom: 15px;
+  font-family: var(--thermos-dinot-bold);
+}
+@media (max-width: 576px) {
+  .LPMcontainer.LPMoverlay {
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+}
+.cms-content .warrenty-content h3:nth-of-type(1) {
+  font-size: var(--thermos-font-size-25);
+  font-family: var(--thermos-dinot-bold);
+  margin-top: 40px;
+}
+.cms-content .warrenty-content table {
+  margin-top: 25px;
+  margin-bottom: -20px;
+}
+.legal-content table thead th {
+  color: var(--thermos-white);
+  background: var(--thermos-onyx);
+  font-size: var(--thermos-font-size-18);
+  padding: 12px 25px;
+  border-bottom: 2px solid var(--thermos-transparent-dark-gray);
+  text-transform: uppercase;
+  font-weight: var(--thermos-font-Weight-400);
+}
+.legal-content table thead th:last-child {
+  text-align: right;
+}
+.legal-content .warrenty-content table tr td:nth-child(2) {
+  text-align: right;
+}
+.legal-content .warrenty-content table tr td {
+  font-size: var(--thermos-font-size-18);
+  padding: 12px 25px;
+  border-bottom: 2px solid var(--thermos-transparent-dark-gray);
+  text-transform: uppercase;
+}
+
+.legal-content .privacy-content strong {
+  font-size: var(--thermos-font-size-33);
+  font-weight: var(--thermos-font-Weight-700) !important;
+  margin-top: 60px;
+  margin-bottom: 15px;
+}

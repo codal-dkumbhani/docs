@@ -1,0 +1,32 @@
+.worldwide-locations * {
+  font-family: var(--thermos-dinot-cond-bold);
+}
+.locations-heading h1 {
+  color: var(--thermos-black);
+  font-size: var(--thermos-font-size-35);
+}
+.locations-heading {
+  margin-top: 50px;
+}
+.locations-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.worldwide-locations {
+  padding: 0 30px;
+}
+.worldwide-locations .phone-text,
+.worldwide-locations .fax-text,
+.worldwide-locations .email-text {
+  font-family: var(--thermos-minion-pro) !important;
+}
+@media only screen and (min-width: 769px) {
+  .worldwide-locations {
+    padding-bottom: 34px;
+  }
+}
+@media (max-width: 767px) {
+  .worldwide-locations {
+    padding: 0 10px;
+  }
+}

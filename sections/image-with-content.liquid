@@ -1,0 +1,195 @@
+{{ 'image-with-content.css' | asset_url | stylesheet_tag }}
+{% style %}
+  .image-with-content-section{
+    background-color: {{ section.settings.section_background_color }};
+  }
+  .image-with-content-section .image-with-content-both-section .left-section{
+    color: {{ section.settings.text_color }};
+  }
+  .image-with-content-section .left-section .title{
+    font-size: {{ section.settings.title_font_size }}px;
+    color: {{ section.settings.title_color }};
+  }
+  .image-with-content-section .left-section a.image-with-content-button{
+    color:{{ section.settings.button_text_color }};
+    background: {{ section.settings.button_background_color }};
+  }
+  @media (max-width: 767px) {
+
+  }
+{% endstyle %}
+{% assign section_margin = section.settings['section-margin'] %}
+{% if section_margin > 0 %}
+  <style>
+    .image-with-content-section .image-with-content-both-section.image-with-content-both-section-{{ section.id }} {
+      padding: {{ section.settings.section-margin }}px;
+    }
+    @media (max-width: 767px) {
+      .image-with-content-section .image-with-content-both-section-{{ section.id }} {
+        padding: 0px !important;
+      }
+      .image-with-content-section .image-with-content-both-section-{{ section.id }} .left-section {
+        padding: 20px;
+      }
+    }
+  </style>
+{% endif %}
+
+<div class="image-with-content-section">
+  <div class="image-with-content-both-section image-with-content-both-section-{{ section.id }} ">
+    {% if section.settings.Image_alignment == 'right' %}
+      <div class="left-section">
+        {% if section.settings.title != empty %}
+          <p class="title">
+            {{ section.settings.title }}
+          </p>
+        {% endif %}
+        {% if section.settings.description != empty %}
+          <p class="description">{{ section.settings.description }}</p>
+        {% endif %}
+        {% if section.settings.button_text != empty %}
+          <a class="image-with-content-button button" href="{{ section.settings.button_url }}">
+            {{- section.settings.button_text -}}
+          </a>
+        {% endif %}
+      </div>
+      <div class="right-section">
+        {% if section.settings.selected_image != empty %}
+          <div class="section-image">
+            <img
+              src="{{ section.settings.selected_image | image_url }}"
+              alt="{{ block.settings.selected_image.alt }}"
+              height="auto"
+              width="auto"
+            >
+          </div>
+        {% endif %}
+      </div>
+    {% else %}
+      <div class="right-section left">
+        {% if section.settings.selected_image != empty %}
+          <div class="section-image">
+            <img
+              src="{{ section.settings.selected_image | image_url }}"
+              alt="{{ block.settings.selected_image.alt }}"
+              height="auto"
+              width="auto"
+            >
+          </div>
+        {% endif %}
+      </div>
+      <div class="left-section right">
+        {% if section.settings.title != empty %}
+          <p class="title">
+            {{ section.settings.title }}
+          </p>
+        {% endif %}
+        {% if section.settings.description != empty %}
+          <p class="description">{{ section.settings.description }}</p>
+        {% endif %}
+        {% if section.settings.button_text != empty %}
+          <a class="image-with-content-button button" href="{{ section.settings.button_url }}">
+            {{- section.settings.button_text -}}
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Image With Content",
+  "class": "image-with-content-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "Image_alignment",
+      "label": "Image alignment",
+      "options": [
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "number",
+      "id": "section-margin",
+      "label": "Section Margin",
+      "default": 0
+    },
+    {
+      "type": "image_picker",
+      "id": "selected_image",
+      "label": "Upload Image"
+    },
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Section Background Color",
+      "default": "#efe4df"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "number",
+      "id": "title_font_size",
+      "label": "Title font size",
+      "default": 16
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description Text"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button Color",
+      "default": "#6E5EE4"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "button_url",
+      "label": "Button URL"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Image With Content"
+    }
+  ]
+}
+{% endschema %}

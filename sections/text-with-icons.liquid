@@ -1,0 +1,300 @@
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div
+  class="text-with-icons"
+  data-section-id="{{ section.id }}"
+  data-section-type="text-with-icons"
+>
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <div
+        class="
+          text-with-icons__title
+          section-header
+        "
+      >
+        <h2 class="text-{{ section.settings.align_text }}">{{ section.settings.title }}</h2>
+      </div>
+    {%- endif -%}
+    <div
+      class="
+        text-with-icons__blocks
+        has-{{ section.settings.desktop_columns_per_row }}-per-row
+      "
+      data-block-count="{{ section.blocks.size }}"
+    >
+      {% for block in section.blocks %}
+        <div
+          class="text-with-icons__block text-{{ section.settings.align_text }}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="text-with-icons__block-icon">
+            {% case block.settings.icon %}
+              {% when 'bills' %}
+                {% render 'thermos-icon-bills' %}
+              {% when 'calendar' %}
+                {% render 'thermos-icon-calendar' %}
+              {% when 'cart' %}
+                {% render 'thermos-icon-tcwi-cart' %}
+              {% when 'charity' %}
+                {% render 'thermos-icon-charity' %}
+              {% when 'chat' %}
+                {% render 'thermos-icon-chat' %}
+              {% when 'envelope' %}
+                {% render 'thermos-icon-envelop' %}
+              {% when 'gears' %}
+                {% render 'thermos-icon-gears' %}
+              {% when 'gift' %}
+                {% render 'thermos-icon-gift' %}
+              {% when 'globe' %}
+                {% render 'thermos-icon-globe' %}
+              {% when 'package' %}
+                {% render 'thermos-icon-package' %}
+              {% when 'phone' %}
+                {% render 'thermos-icon-phone' %}
+              {% when 'plant' %}
+                {% render 'thermos-icon-plant' %}
+              {% when 'recycle' %}
+                {% render 'thermos-icon-recycle' %}
+              {% when 'ribbon' %}
+                {% render 'thermos-icon-ribbon' %}
+              {% when 'sales-tag' %}
+                {% render 'thermos-icon-sales-tag' %}
+              {% when 'shield' %}
+                {% render 'thermos-icon-shield' %}
+              {% when 'stopwatch' %}
+                {% render 'thermos-icon-stopwatch' %}
+              {% when 'store' %}
+                {% render 'thermos-icon-store' %}
+              {% when 'thumbs-up' %}
+                {% render 'thermos-icon-thumbs-up' %}
+              {% when 'trophy' %}
+                {% render 'thermos-icon-trophy' %}
+              {% when 'truck' %}
+                {% render 'thermos-icon-truck' %}
+              {% when 'wallet' %}
+                {% render 'thermos-icon-wallet' %}
+            {% endcase %}
+          </div>
+          <div class="text-with-icons__block-title">
+            <h3>{{ block.settings.title }}</h3>
+          </div>
+          <div class="text-with-icons__block-text">
+            {{ block.settings.text }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="text-with-icons__button">
+      {%- if section.settings.button_label != blank -%}
+        <a href="{{ section.settings.button_link }}" class="btn btn--secondary">
+          {{ section.settings.button_label }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% style %}
+  #shopify-section-{{ section.id }} .icon {
+    color: {{ section.settings.icon_color }};
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "t:common.text_with_icons.name.label",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:common.text_with_icons.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "align_text",
+      "label": "t:common.text_with_icons.settings.align_text.label",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:common.text_with_icons.settings.align_text.options.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:common.text_with_icons.settings.align_text.options.center.label"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns_per_row",
+      "label": "t:common.text_with_icons.settings.desktop_columns_per_row.label",
+      "default": 3,
+      "min": 2,
+      "max": 4,
+      "step": 1
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "t:common.text_with_icons.settings.icon_color.label",
+      "default": "#000"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:common.text_with_icons.settings.button_label.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:common.text_with_icons.settings.button_link.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:common.text_with_icons.settings.divider.label",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "t:common.text_with_icons.blocks.column.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "t:common.text_with_icons.blocks.column.settings.icon.label",
+          "default": "chat",
+          "options": [
+            {
+              "value": "bills",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.bills.label"
+            },
+            {
+              "value": "calendar",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.calendar.label"
+            },
+            {
+              "value": "cart",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.cart.label"
+            },
+            {
+              "value": "charity",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.charity.label"
+            },
+            {
+              "value": "chat",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.chat.label"
+            },
+            {
+              "value": "envelope",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.envelope.label"
+            },
+            {
+              "value": "gears",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.gears.label"
+            },
+            {
+              "value": "gift",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.gift.label"
+            },
+            {
+              "value": "globe",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.globe.label"
+            },
+            {
+              "value": "package",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.package.label"
+            },
+            {
+              "value": "phone",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.phone.label"
+            },
+            {
+              "value": "plant",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.plant.label"
+            },
+            {
+              "value": "recycle",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.recycle.label"
+            },
+            {
+              "value": "ribbon",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.ribbon.label"
+            },
+            {
+              "value": "sales-tag",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.sales-tag.label"
+            },
+            {
+              "value": "shield",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.shield.label"
+            },
+            {
+              "value": "stopwatch",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.stopwatch.label"
+            },
+            {
+              "value": "store",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.store.label"
+            },
+            {
+              "value": "thumbs-up",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.thumbs-up.label"
+            },
+            {
+              "value": "trophy",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.trophy.label"
+            },
+            {
+              "value": "truck",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.truck.label"
+            },
+            {
+              "value": "wallet",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.options.wallet.label"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:common.text_with_icons.blocks.column.settings.title.label",
+          "default": "Example title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:common.text_with_icons.blocks.column.settings.text.label",
+          "default": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:common.text_with_icons.presets.text_with_icons.name",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.popups"]
+  }
+}
+{% endschema %}

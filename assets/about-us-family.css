@@ -1,0 +1,24 @@
+.family-container-about .about-us-promo-1-heading {
+  color: var(--thermos-midnight-blue);
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-70);
+  letter-spacing: 0;
+  line-height: var(--thermos-line-height-73);
+}
+.family-container-about .family_description {
+  font-size: var(--thermos-font-size-22);
+  line-height: var(--thermos-line-height-36);
+  font-family: var(--thermos-minion-pro);
+}
+@media only screen and (max-width: 600px) {
+  .family-container-about .about-us-promo-1-heading {
+    font-size: var(--thermos-font-size-34);
+    font-weight: var(--thermos-font-Weight-700);
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: var(--thermos-line-height-40);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0%;
+  }
+}

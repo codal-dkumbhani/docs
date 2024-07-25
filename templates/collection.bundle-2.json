@@ -1,0 +1,244 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "blocks": {
+        "image_KpDn8M": {
+          "type": "image",
+          "settings": {
+            "maincollection": "sunset-pink",
+            "header_alignment": "full_width_image_with_text",
+            "backgroundcolor": ""
+          }
+        },
+        "image_FpQqLY": {
+          "type": "image",
+          "settings": {
+            "maincollection": "kids-bundles",
+            "header_alignment": "image_with_solid_block_of_text",
+            "backgroundcolor": "#39b0cb"
+          }
+        },
+        "image_kFUFki": {
+          "type": "image",
+          "settings": {
+            "maincollection": "bundle-shop-all",
+            "header_alignment": "image_with_solid_block_of_text",
+            "backgroundcolor": ""
+          }
+        }
+      },
+      "block_order": ["image_KpDn8M", "image_FpQqLY", "image_kFUFki"],
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": true
+      }
+    },
+    "bundle_rhFHEm": {
+      "type": "bundle",
+      "blocks": {
+        "bundle_xAqqiB": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x58\"></div>"
+          }
+        },
+        "bundle_CaT9AM": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x54\"></div>"
+          }
+        },
+        "bundle_Yx7awE": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x57\"></div>"
+          }
+        },
+        "bundle_XWXKfA": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x5d\"></div>"
+          }
+        },
+        "bundle_PHEamM": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x5e\"></div>"
+          }
+        },
+        "bundle_EgaUWW": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7caz\"></div>"
+          }
+        },
+        "bundle_thbnQY": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cb1\"></div>"
+          }
+        },
+        "bundle_nfa89B": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cb3\"></div>"
+          }
+        },
+        "bundle_qCbm3r": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cb4\"></div>"
+          }
+        },
+        "bundle_RrfxzV": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cb5\"></div>"
+          }
+        },
+        "bundle_WM4wmW": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cb8\"></div>"
+          }
+        },
+        "bundle_DCaitj": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cba\"></div>"
+          }
+        },
+        "bundle_jXLXyY": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cbb\"></div>"
+          }
+        },
+        "bundle_ikBpwa": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cbe\"></div>"
+          }
+        },
+        "bundle_9ngDyt": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"7cbi\"></div>"
+          }
+        },
+        "bundle_aFHTBL": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wme\"></div>"
+          }
+        },
+        "bundle_8XPJJ8": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wmg\"></div>"
+          }
+        },
+        "bundle_Vwwgry": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wnm\"></div>"
+          }
+        },
+        "bundle_TNFMpe": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wnz\"></div>"
+          }
+        },
+        "bundle_mtjUUb": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6wo0\"></div>"
+          }
+        },
+        "bundle_hyPHkC": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x1m\"></div>"
+          }
+        },
+        "bundle_4d9QRi": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x23\"></div>"
+          }
+        },
+        "bundle_WBQMak": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x1w\"></div>"
+          }
+        },
+        "bundle_mdxybJ": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x1o\"></div>"
+          }
+        },
+        "bundle_QJ9Kgr": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x2b\"></div>"
+          }
+        },
+        "bundle_qLghF8": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x2d\"></div>"
+          }
+        },
+        "bundle_eFL3Y7": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x3k\"></div>"
+          }
+        },
+        "bundle_WHDEjk": {
+          "type": "bundle",
+          "settings": {
+            "html": "<div class=\"bundler-target-element\" data-bndlr-ccid=\"6x52\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "bundle_xAqqiB",
+        "bundle_CaT9AM",
+        "bundle_Yx7awE",
+        "bundle_XWXKfA",
+        "bundle_PHEamM",
+        "bundle_EgaUWW",
+        "bundle_thbnQY",
+        "bundle_nfa89B",
+        "bundle_qCbm3r",
+        "bundle_RrfxzV",
+        "bundle_WM4wmW",
+        "bundle_DCaitj",
+        "bundle_jXLXyY",
+        "bundle_ikBpwa",
+        "bundle_9ngDyt",
+        "bundle_aFHTBL",
+        "bundle_8XPJJ8",
+        "bundle_Vwwgry",
+        "bundle_TNFMpe",
+        "bundle_mtjUUb",
+        "bundle_hyPHkC",
+        "bundle_4d9QRi",
+        "bundle_WBQMak",
+        "bundle_mdxybJ",
+        "bundle_QJ9Kgr",
+        "bundle_qLghF8",
+        "bundle_eFL3Y7",
+        "bundle_WHDEjk"
+      ],
+      "settings": {}
+    }
+  },
+  "order": ["collection-header", "bundle_rhFHEm"]
+}

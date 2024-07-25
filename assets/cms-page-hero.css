@@ -1,0 +1,46 @@
+.cms-page-hero .inner-banner {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  padding: 130px 0 100px;
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.cms-page-hero .inner-banner .inner-banner-cap {
+  text-align: center;
+  max-width: 738px;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
+
+.cms-page-hero .inner-banner .inner-banner-cap h2 {
+  color: var(--thermos-white);
+  font-family: var(--thermos-dinot-cond-bold);
+  font-size: var(--thermos-font-size-70);
+  line-height: var(--thermos-line-height-70);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.cms-page-hero .inner-banner .inner-banner-cap p {
+  font-size: var(--thermos-font-size-18);
+  line-height: var(--thermos-line-height-24);
+  color: var(--thermos-white);
+  font-family: var(--thermos-dinot) !important;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.cms-page-hero .inner-banner:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: var(--thermos-darkgray-transparency);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

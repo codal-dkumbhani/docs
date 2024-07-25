@@ -1,0 +1,3991 @@
+.main-histor-page.sofi-history img {
+  display: inline;
+}
+.main-histor-page.sofi-history .history-topimg {
+  margin-bottom: 60px;
+}
+.main-histor-page.sofi-history .history-topimg .the-top-img {
+  display: block;
+  width: 100%;
+}
+.main-histor-page.sofi-history .history-topimg .the-top-img-mobile {
+  display: none;
+  width: 100%;
+}
+.main-histor-page.sofi-history .breadcrumbs {
+  padding: 0 9.5vw;
+  margin: 0;
+  display: flex;
+}
+.main-histor-page.sofi-history .breadcrumbs li {
+  color: var(--thermos-masala);
+  font-family: var(--thermos-dinot-cond-bold), Arial, sans-serif;
+  font-size: var(--thermos-font-size-18);
+  padding-right: 15px;
+  position: relative;
+  cursor: default;
+  text-transform: uppercase;
+  list-style: none;
+  letter-spacing: normal;
+}
+.main-histor-page.sofi-history .breadcrumbs li a {
+  color: var(--thermos-natural-gray-2);
+  text-decoration: underline;
+}
+.main-histor-page.sofi-history .history-description {
+  padding: 1.9vw 9.5vw 0.65vw;
+}
+.main-histor-page.sofi-history .history-description .history-title h2 {
+  font-family: var(--thermos-dinot-cond-bold), Arial, sans-serif;
+  font-size: var(--thermos-font-size-100);
+  line-height: var(--thermos-line-height-100);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  color: var(--thermos-black);
+}
+.main-histor-page.sofi-history .history-description .history-text {
+  font-size: var(--thermos-font-size-22);
+  color: var(--thermos-natural-gray);
+  font-family: var(--thermos-MinionPro);
+}
+.main-histor-page.sofi-history .history-time-line {
+  background-color: var(--thermos-gallery);
+  margin-top: 50px;
+  padding-top: 5px;
+}
+.main-histor-page.sofi-history .history-time-line .history-container {
+  background: linear-gradient(
+      -45deg,
+      transparent 50%,
+      var(--thermos-mercury) 50%,
+      var(--thermos-mercury) 75%,
+      var(--thermos-white) 75%
+    ),
+    linear-gradient(-45deg, var(--thermos-mercury) 25%, var(--thermos-white) 25%);
+  background-size: 12px 12px;
+}
+.main-histor-page.sofi-history .history-time-line .history-container .the-inner-container {
+  background: var(--thermos-white);
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 80px;
+  position: relative;
+  width: 83vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .center-line {
+  background-color: var(--thermos-alizarin-crimson);
+  top: 0;
+  bottom: 0;
+  left: 43.5%;
+  width: 13%;
+  position: absolute;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .center-line:before {
+  content: '';
+  position: absolute;
+  left: calc(50% - 1px);
+  top: 87px;
+  bottom: 154px;
+  border-right: 2px dotted var(--thermos-white);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-left-block-d {
+  float: left;
+  clear: left;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-left-block-d
+  .the-content-f {
+  padding-right: 29.5%;
+  padding-left: 18%;
+  text-align: right;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-right-block-d {
+  float: right;
+  clear: right;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-right-block-d
+  .the-content-f {
+  padding-right: 15%;
+  padding-left: 29.5%;
+  text-align: left;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d {
+  display: inline-block;
+  width: 100% !important;
+  clear: both;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004 {
+  top: -125px;
+  margin: 0 0 -125px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .the-content-img-f {
+  display: flex;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .the-content-img-f
+  .the-image-wrap {
+  width: 50%;
+  display: flex;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .the-content-img-f
+  .the-image-wrap
+  .the-left-image-wrap {
+  margin-left: auto;
+  padding-right: 27.5%;
+  padding-left: 18%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .the-content-img-f
+  .the-image-wrap
+  .the-right-image-wrap {
+  align-self: flex-end;
+  padding-right: 15%;
+  padding-left: 29.5%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line {
+  margin-top: 20px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line::after {
+  content: none;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-date-center {
+  color: var(--thermos-white);
+  background-color: var(--thermos-alizarin-crimson);
+  font-family: var(--thermos-MinionPro), Arial, sans-serif;
+  font-size: var(--thermos-font-size-18);
+  font-style: italic;
+  font-weight: var(--thermos-font-Weight-700);
+  padding-top: 13px;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  width: 8vw;
+  transform: translateX(-50%);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-date-center
+  .the-circle {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  background-color: var(--thermos-white);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  z-index: 30;
+  transform: translateX(-50%);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-date-center
+  .the-circle-area {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  background-color: var(--thermos-alizarin-crimson);
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+  z-index: 20;
+  transform: translateX(-50%);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-date-center
+  .the-circle-wings {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-date-center
+  .the-circle-wings::before,
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-date-center
+  .the-circle-wings::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  height: 2px;
+  transform: translateX(-50%);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-date-center
+  .the-circle-wings::before {
+  background-color: var(--thermos-white);
+  width: 10.8vw;
+  z-index: 100;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-date-center
+  .the-circle-wings::after {
+  background-color: var(--thermos-alizarin-crimson);
+  width: 21.9vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-content-f {
+  display: flex;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-content-f
+  .the-content-f-inner {
+  width: 50%;
+  display: flex;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-content-f
+  .the-content-f-inner
+  .the-left-content-f-inner {
+  padding-right: 29.5%;
+  padding-left: 18%;
+  text-align: right;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-content-f
+  .the-content-f-inner
+  .the-left-content-f-inner
+  .the-text-regular {
+  letter-spacing: -0.3px;
+  margin-bottom: 0;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-content-f
+  .the-content-f-inner
+  .the-right-content-f-inner {
+  padding-right: 15%;
+  padding-left: 29.5%;
+  text-align: left;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .f-full-block-d.the-h-2004
+  .block-with-line
+  .the-content-f
+  .the-content-f-inner
+  .the-right-content-f-inner
+  .the-text-regular {
+  margin-bottom: 0;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block {
+  padding: 0;
+  position: relative;
+  margin: 85px 0 0 0;
+  width: 50%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .block-with-line {
+  position: relative;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .block-with-line:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: 0.7vw;
+  background-color: var(--thermos-white);
+  height: 2px;
+  width: 4.7vw;
+  z-index: 100;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .block-with-line:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: 5.4vw;
+  background-color: var(--thermos-alizarin-crimson);
+  height: 2px;
+  width: 5.5vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .block-with-line
+  .the-date {
+  color: var(--thermos-white);
+  background-color: var(--thermos-alizarin-crimson);
+  font-family: var(--thermos-MinionPro), Arial, sans-serif;
+  font-size: var(--thermos-font-size-18);
+  font-style: italic;
+  font-weight: var(--thermos-font-Weight-700);
+  padding-top: 13px;
+  position: absolute;
+  right: -4vw;
+  text-align: center;
+  width: 8vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .block-with-line
+  .the-date:before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: calc(50% - 11px);
+  background-color: var(--thermos-alizarin-crimson);
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+  z-index: 10;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .block-with-line
+  .the-date:after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: calc(50% - 5px);
+  background-color: var(--thermos-white);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  z-index: 20;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .block-with-line
+  .the-date.the-date-big {
+  font-family: var(--thermos-dinot-cond-bold), Arial, sans-serif;
+  font-size: var(--thermos-font-size-94);
+  font-style: normal;
+  letter-spacing: 6px;
+  line-height: var(--thermos-line-height-85);
+  padding-top: 27px;
+  word-break: break-all;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.f-right-block-d
+  .block-with-line:before {
+  right: auto;
+  left: 0.7vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.f-right-block-d
+  .block-with-line:after {
+  right: auto;
+  left: 5.4vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.f-right-block-d
+  .block-with-line
+  .the-date {
+  right: auto;
+  left: -4vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner {
+  position: relative;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .h3-din-bold-up-red,
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .h4-din-bold-up,
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .h5-din-bold-up {
+  font-family: var(--thermos-dinot-cond-bold), Arial, sans-serif;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .h3-din-bold-up-red {
+  color: var(--thermos-alizarin-crimson);
+  font-size: var(--thermos-font-size-75);
+  line-height: var(--thermos-line-height-75);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .h4-din-bold-up {
+  font-size: var(--thermos-font-size-38);
+  line-height: var(--thermos-line-height-38);
+  letter-spacing: 1.6px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .h5-din-bold-up {
+  color: var(--thermos-alizarin-crimson);
+  font-size: var(--thermos-font-size-24);
+  line-height: var(--thermos-line-height-24);
+  margin-bottom: 20px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .the-text-bold-it {
+  font-family: var(--thermos-MinionPro), Arial, sans-serif;
+  font-size: var(--thermos-font-size-15);
+  font-style: italic;
+  font-weight: var(--thermos-font-Weight-700);
+  line-height: var(--thermos-line-height-15);
+  margin-bottom: 4px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .the-text-regular {
+  color: var(--thermos-natural-gray);
+  font-family: var(--thermos-MinionPro), Arial, sans-serif;
+  font-size: var(--thermos-font-size-15);
+  font-style: normal;
+  font-weight: var(--thermos-font-Weight-400);
+  letter-spacing: -0.06px;
+  line-height: var(--thermos-line-height-20);
+  margin-bottom: 26px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .the-text-reg-it {
+  font-family: var(--thermos-MinionPro), Arial, sans-serif;
+  font-size: var(--thermos-font-size-16);
+  font-style: italic;
+  font-weight: var(--thermos-font-Weight-400);
+  line-height: var(--thermos-line-height-20);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .the-text-din-bold-up {
+  margin-bottom: 6px;
+  font-family: var(--thermos-dinot-cond-bold), Arial, sans-serif;
+  font-size: var(--thermos-font-size-17);
+  text-transform: uppercase;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .the-text-red {
+  color: var(--thermos-alizarin-crimson);
+  font-family: var(--thermos-dinot-cond-bold), Arial, sans-serif;
+  text-transform: uppercase;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .the-text-on-photo {
+  font-size: var(--thermos-font-size-14);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-bottom: 10px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .the-content-f
+  .the-content-f-inner
+  .the-photo-row {
+  position: relative;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1882
+  .the-norm-photo {
+  margin-top: 4px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1882
+  .the-mini-photo {
+  position: absolute;
+  left: -9%;
+  top: 53%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1882
+  p {
+  line-height: var(--thermos-line-height-17) !important;
+  padding: 3px 7% 0 85px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1903 {
+  margin-top: 76px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1903
+  .the-content-f {
+  padding-right: 14%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1903
+  .the-content-f
+  .the-content-f-inner
+  p.the-text-regular {
+  font-size: var(--thermos-font-size-15);
+  margin-top: -2px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1903
+  .h3-din-bold-up-red {
+  margin-bottom: 6px !important;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1904 {
+  margin-top: 24px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1904
+  .the-content-f {
+  padding-right: 15%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1904
+  .the-content-f
+  .the-text-din-bold-up {
+  line-height: var(--thermos-line-height-28);
+  margin-top: -3px;
+  letter-spacing: 0.2px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1906 {
+  margin-top: 63px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1906
+  .the-content-f {
+  padding-left: 15%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1906
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-bottom: 5px;
+  margin-right: -15px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1906
+  .the-content-f
+  .the-content-f-inner
+  .text-abs-block {
+  position: absolute;
+  bottom: 33px;
+  right: 108px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1907 {
+  margin-top: 98px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1907
+  .the-content-f {
+  padding-right: 10%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1907
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-bottom: 29px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1907
+  .the-content-f
+  .the-content-f-inner
+  .the-text-bold-it {
+  margin-bottom: 9px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909 {
+  margin-top: 52px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909
+  .the-content-f {
+  padding-left: 12%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-bottom: 28px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909
+  .the-content-f
+  .the-content-f-inner
+  .text-abs-block {
+  position: absolute;
+  background: var(--thermos-white);
+  border: 5px solid #dcdcdc;
+  width: 173px;
+  padding: 10px 12px 6px 10px;
+  top: -36px;
+  right: 152px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909
+  .the-content-f
+  .the-content-f-inner
+  .text-abs-block
+  p {
+  margin-bottom: 0;
+  font-size: var(--thermos-font-size-14);
+  line-height: var(-thermos-line-height-18);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909
+  .the-content-f
+  .the-content-f-inner
+  .h5-din-bold-up {
+  font-size: var(--thermos-font-size-25);
+  letter-spacing: 0.7px;
+  margin-bottom: 5px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909
+  .the-content-f
+  .the-content-f-inner
+  .the-text-din-bold-up {
+  font-size: var(--thermos-font-size-16);
+  letter-spacing: 0.59px;
+  line-height: var(--thermos-line-height-28);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909-r {
+  margin-top: 40px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909-r
+  .the-norm-photo {
+  margin-bottom: 9px;
+  margin-left: 5.4vw;
+  width: 35.1vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909-r
+  .the-content-f
+  .the-content-f-inner
+  .the-text-bold-it {
+  letter-spacing: -0.05px;
+  line-height: var(--thermos-line-height-19);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1911 {
+  margin-top: 77px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1911
+  .the-content-f {
+  padding-left: 13%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1912-r {
+  margin-top: 102px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1912-r
+  .the-content-f {
+  padding-right: 11%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1912-r
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-bottom: 21px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1912-r
+  .the-content-f
+  .the-content-f-inner
+  .the-text-on-photo {
+  letter-spacing: 0.39px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1912-r
+  .the-content-f
+  .the-content-f-inner
+  .the-text-regular {
+  letter-spacing: -0.13px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1912-l {
+  margin-top: 51px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1912-l
+  .the-content-f {
+  padding-left: 15%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1912-l
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-bottom: 14px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1912-l
+  .the-content-f
+  .the-content-f-inner
+  .the-text-on-photo {
+  letter-spacing: 0.39px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1923 {
+  margin-top: 120px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1923
+  .the-norm-photo-m {
+  display: none;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1923
+  .the-content-f {
+  padding-left: 16%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1923
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-bottom: 16px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1923
+  .the-content-f
+  .the-content-f-inner
+  .the-text-bold-it {
+  letter-spacing: -0.05px;
+  line-height: var(-thermos-line-height-18);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1923-r {
+  margin-top: 103px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1923-r
+  .the-content-f {
+  padding-right: 27%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1923-r-m {
+  display: none;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1925 {
+  margin-top: 53px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1925
+  .the-content-f {
+  padding-right: 11%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1928-r {
+  margin-top: 80px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1928-r
+  .the-content-f {
+  padding-right: 12%;
+  letter-spacing: 0.2px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1928-r
+  .the-content-f
+  .the-content-f-inner
+  .the-text-din-bold-up {
+  line-height: var(--thermos-line-height-28);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1928-l
+  .the-content-f {
+  padding-left: 8%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1928-l
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-bottom: 12px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1928-l
+  .the-content-f
+  .the-content-f-inner
+  .the-text-bold-it {
+  letter-spacing: -0.14px;
+  line-height: var(--thermos-line-height-20);
+  padding-left: 13%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1945 {
+  margin-top: 48px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1945
+  .s1945d {
+  display: inline-block;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1945
+  .s1945m {
+  display: none;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1945
+  .the-content-f {
+  padding-right: 10%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1945
+  .the-content-f
+  .the-content-f-inner
+  .the-text-din-bold-up {
+  letter-spacing: 0.25px;
+  line-height: var(--thermos-line-height-28);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1952 {
+  margin-top: 113px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1952
+  .the-content-f {
+  padding-left: 13%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1952
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-bottom: 16px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1953 {
+  margin-top: 50px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1953
+  .the-content-f {
+  padding-right: 24%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1953
+  .the-content-f
+  .the-content-f-inner
+  .h4-din-bold-up {
+  font-size: var(--thermos-font-size-47);
+  line-height: var(--thermos-line-height-47);
+  letter-spacing: 6px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1955 {
+  margin-top: 13px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1955
+  .the-content-f {
+  padding-right: 21%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1955
+  .the-content-f
+  .the-content-f-inner
+  .the-text-regular {
+  letter-spacing: -0.1px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1955
+  .the-content-f
+  .the-content-f-inner
+  .text-abs-block {
+  bottom: 19px;
+  left: 151px;
+  position: absolute;
+  width: 125px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1955
+  .the-content-f
+  .the-content-f-inner
+  .text-abs-block
+  p {
+  letter-spacing: 0.7px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1957 {
+  margin-top: 54px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1957
+  .the-content-f {
+  padding-left: 17%;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1957
+  .the-content-f
+  .the-content-f-inner
+  .the-text-din-bold-up {
+  letter-spacing: 0.28px;
+  line-height: var(--thermos-line-height-28);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1957
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-top: 54px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1960 {
+  margin-top: 75px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1960
+  .the-content-f
+  .the-content-f-inner
+  .the-text-regular {
+  margin-top: 20px;
+  padding-right: 80px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1962 {
+  margin-top: 50px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1962
+  .the-content-f
+  .the-content-f-inner
+  .the-text-regular {
+  margin-top: 20px;
+  padding-right: 80px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1966 {
+  margin-top: 20px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1966
+  .the-content-f
+  .the-content-f-inner
+  .the-text-regular {
+  padding-left: 80px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1966
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-top: 30px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1971 {
+  margin-top: 91px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1971
+  .the-content-f
+  .the-content-f-inner
+  .the-text-din-bold-up {
+  line-height: var(--thermos-line-height-28);
+  letter-spacing: 0.28px;
+  padding-right: 60px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1971
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-top: 70px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1985 {
+  margin-top: 10px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2002 {
+  margin-top: 15px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2002
+  .the-content-f
+  .the-content-f-inner
+  .the-text-regular {
+  padding-right: 70px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2008 {
+  margin: -16px 0 0;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2008
+  .the-content-f
+  .the-content-f-inner
+  .the-text-din-bold-up {
+  line-height: var(--thermos-line-height-28);
+  letter-spacing: 0.28px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2014 {
+  margin-top: -56px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2014
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-top: 20px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2014
+  .the-content-f
+  .the-content-f-inner
+  .the-text-regular {
+  margin-top: 23px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2017 {
+  margin-top: 41px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2017
+  .the-content-f
+  .the-norm-photo {
+  margin-right: -9px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2017
+  .the-content-f
+  .the-content-f-inner
+  .the-text-regular {
+  margin-top: 20px;
+  letter-spacing: -0.4px;
+}
+@media (min-width: 1530px) {
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date {
+    right: -3vw;
+    width: 6vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.f-right-block-d
+    .block-with-line
+    .the-date {
+    left: -3vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952 {
+    margin-top: 62px;
+  }
+}
+@media (max-width: 1270px) {
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date.the-date-big {
+    font-size: var(--thermos-font-size-85);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903
+    .the-content-f
+    .the-content-f-inner
+    .h4-din-bold-up {
+    font-size: var(--thermos-font-size-30);
+    line-height: var(--thermos-line-height-30);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903
+    .the-content-f
+    .the-content-f-inner
+    .h3-din-bold-up-red {
+    font-size: var(--thermos-font-size-60);
+    line-height: var(--thermos-line-height-60);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1911 {
+    margin-top: 57px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1912-r {
+    margin-top: 122px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1939 {
+    margin-top: 90px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952 {
+    margin-top: 66px;
+  }
+}
+@media (max-width: 1150px) {
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date {
+    font-size: var(--thermos-font-size-15);
+    right: -3.5vw;
+    width: 7vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date.the-date-big {
+    font-size: var(--thermos-font-size-75);
+    line-height: var(--thermos-line-height-75);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date-center {
+    font-size: var(--thermos-font-size-15) !important;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.f-right-block-d
+    .block-with-line
+    .the-date {
+    left: -3.5vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903
+    .the-content-f
+    .the-content-f-inner
+    .h4-din-bold-up {
+    font-size: var(--thermos-font-size-28);
+    line-height: var(--thermos-line-height-28);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903
+    .the-content-f
+    .the-content-f-inner
+    .h3-din-bold-up-red {
+    font-size: var(--thermos-font-size-56);
+    line-height: var(--thermos-line-height-55);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1906 {
+    margin-top: 35px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1907 {
+    margin-top: 130px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .text-abs-block {
+    right: 126px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909-r {
+    margin-top: 100px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1939 {
+    margin-top: 40px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945 {
+    margin-top: 20px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952 {
+    margin-top: 96px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1957 {
+    margin-top: 74px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2004 {
+    top: -80px;
+    margin: 0 0 -80px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2008 {
+    margin: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date {
+    font-size: var(--thermos-font-size-15);
+    right: -3vw;
+    width: 6vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date.the-date-big {
+    font-size: var(--thermos-font-size-70);
+    line-height: var(--thermos-line-height-70);
+    letter-spacing: 2px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.f-right-block-d
+    .block-with-line
+    .the-date {
+    left: -3vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903
+    .the-content-f
+    .the-content-f-inner
+    .h3-din-bold-up-red {
+    font-size: var(--thermos-font-size-52);
+    line-height: var(--thermos-line-height-52);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .text-abs-block {
+    right: 100px;
+  }
+}
+@media (max-width: 992px) {
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .center-line:before {
+    bottom: 200px;
+  }
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .block-with-line:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: 1.4vw;
+  background-color: var(--thermos-white);
+  height: 2px;
+  width: 4vw;
+  z-index: 100;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .block-with-line
+  .the-date {
+  font-size: var(--thermos-font-size-15);
+  right: -5vw;
+  width: 10vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block
+  .block-with-line
+  .the-date.the-date-big {
+  font-size: var(--thermos-font-size-70);
+  line-height: var(--thermos-line-height-70);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.f-right-block-d
+  .block-with-line:before {
+  left: 1.4vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.f-right-block-d
+  .block-with-line
+  .the-date {
+  left: -5vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1882
+  .the-mini-photo {
+  top: 37%;
+  width: 10vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1903
+  .the-content-f
+  .the-content-f-inner
+  .h4-din-bold-up {
+  font-size: var(--thermos-font-size-26);
+  line-height: var(--thermos-line-height-26);
+  letter-spacing: 1px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1903
+  .the-content-f
+  .the-content-f-inner
+  .h3-din-bold-up-red {
+  font-size: var(--thermos-font-size-44);
+  line-height: var(--thermos-line-height-44);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1904 {
+  margin-top: 0;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1909
+  .the-content-f
+  .the-content-f-inner
+  .text-abs-block {
+  right: 7.5vw;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1955
+  .the-content-f
+  .the-content-f-inner
+  .text-abs-block {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.the-mobile-only {
+  display: none;
+}
+@media (min-width: 850px) and (max-width: 1060px) {
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1966
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    margin-top: 80px;
+  }
+}
+@media (min-width: 841px) and (max-width: 992px) {
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date.the-date-big {
+    font-size: var(--thermos-font-size-85) !important;
+  }
+}
+@media (min-width: 767px) and (max-width: 849px) {
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1966
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    margin-top: 170px;
+  }
+}
+@media (max-width: 767px) {
+  .the-desktop-only {
+    display: none;
+  }
+  .the-mobile-only {
+    display: initial;
+  }
+  .main-histor-page.sofi-history .history-topimg {
+    margin-bottom: 33px;
+  }
+  .main-histor-page.sofi-history .history-topimg .the-top-img {
+    display: none;
+  }
+  .main-histor-page.sofi-history .history-topimg .the-top-img-mobile {
+    display: block;
+  }
+  .main-histor-page.sofi-history .breadcrumbs {
+    padding: 0 6vw;
+    margin: 0;
+  }
+
+  .main-histor-page.sofi-history .history-description {
+    padding: 5vw 6vw 0.65vw;
+  }
+  .main-histor-page.sofi-history .history-description .history-title h2 {
+    font-size: var(--thermos-font-size-45);
+    line-height: var(--thermos-line-height-50);
+    margin-bottom: 7px;
+  }
+  .main-histor-page.sofi-history .history-description .history-text {
+    font-size: var(--thermos-font-size-16);
+  }
+  .main-histor-page.sofi-history .history-time-line {
+    margin-top: 35px;
+  }
+  .main-histor-page.sofi-history .history-time-line .history-container .the-inner-container {
+    padding: 0 0 67px 12.2vw;
+    margin: 0;
+    width: 100vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .center-line:before {
+    bottom: 115px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block {
+    margin: 55px 0 0 0;
+    width: 100%;
+    float: left !important;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date {
+    font-size: var(--thermos-font-size-16);
+    padding-top: 20px;
+    right: auto !important;
+    left: -12.7% !important;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date.the-date-big {
+    font-family: var(--thermos-MinionPro), Arial, sans-serif;
+    font-size: var(--thermos-font-size-14) !important;
+    font-style: italic;
+    line-height: var(--thermos-line-height-21);
+    letter-spacing: 0;
+    padding-top: 20px;
+    word-break: normal;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date:before {
+    top: -6px;
+    right: calc(50% - 13px);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date:after {
+    top: 3px;
+    right: calc(50% - 5px);
+    height: 8px;
+    width: 8px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line:before,
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line:after {
+    content: none;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .the-content-f {
+    padding: 0 10.5%;
+    text-align: left;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .the-content-f
+    .the-content-f-inner
+    .h5-din-bold-up {
+    font-size: var(--thermos-font-size-26);
+    line-height: var(--thermos-line-height-26);
+    margin-bottom: 21px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .the-content-f
+    .the-content-f-inner
+    .h4-din-bold-up {
+    font-size: var(--thermos-font-size-26);
+    line-height: var(--thermos-line-height-26);
+    letter-spacing: 1.7px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .the-content-f
+    .the-content-f-inner
+    .h3-din-bold-up-red {
+    font-size: var(--thermos-font-size-54);
+    line-height: var(--thermos-line-height-52);
+    letter-spacing: 0.3px;
+    margin-bottom: 14px !important;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .the-content-f
+    .the-content-f-inner
+    .the-text-din-bold-up {
+    line-height: var(--thermos-line-height-28);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1882-l
+    .the-content-f {
+    padding-right: 7%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1882-l
+    .the-content-f
+    .the-content-f-inner
+    .h5-din-bold-up {
+    padding-right: 15%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1882-l
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    margin-bottom: 24px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1882-l
+    .the-content-f
+    .the-content-f-inner
+    .the-text-din-bold-up {
+    letter-spacing: 0.3px;
+    line-height: var(--thermos-line-height-28);
+    padding-right: 3%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1882 {
+    margin-top: -15px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1882
+    .the-content-f {
+    padding-right: 8%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1882
+    .the-content-f
+    .the-norm-photo {
+    margin-top: 5px;
+    padding-right: 3%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1882
+    .the-content-f
+    .the-mini-photo {
+    left: -4.5%;
+    top: 50%;
+    width: 21.5vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1882
+    .the-content-f
+    p {
+    padding: 6px 0 0 22vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903 {
+    margin-top: 100px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903
+    .the-content-f {
+    padding-right: 6%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903
+    .the-content-f
+    .the-content-f-inner
+    p.the-text-regular {
+    padding-right: 6%;
+    margin-bottom: 22px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903-r {
+    margin-top: 6px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1904 {
+    margin-top: 27px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1904
+    .the-content-f {
+    padding-right: 8%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1904
+    .the-content-f
+    .the-content-f-inner
+    p.the-text-regular {
+    padding-right: 6%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1904
+    .the-content-f
+    .the-text-din-bold-up {
+    letter-spacing: 0.2px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1906 {
+    margin-top: 26px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1906
+    .the-content-f {
+    padding-right: 7%;
+    padding-left: 10.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1906
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-bottom: 9px;
+    margin-left: -15px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1906
+    .the-content-f
+    .the-content-f-inner
+    .text-abs-block {
+    position: relative;
+    bottom: 18px;
+    left: 0;
+    right: auto;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1906
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    font-size: var(--thermos-font-size-14);
+    letter-spacing: 0.38px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1907 {
+    margin-top: 14px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1907
+    .the-content-f {
+    padding-right: 11%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1907
+    .block-with-line
+    .the-content-f {
+    padding-right: 9%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1907
+    .block-with-line
+    .the-content-f
+    .the-text-bold-it {
+    margin-bottom: 8px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 17px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f {
+    padding-left: 10.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-bottom: 0;
+    margin-top: 13px;
+    width: 100%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .text-abs-block {
+    left: 0;
+    top: 0;
+    padding: 9px 30px 6px 15px;
+    position: relative;
+    width: 100%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .text-abs-block
+    p {
+    font-size: var(--thermos-font-size-14);
+    line-height: var(-thermos-line-height-18);
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .h5-din-bold-up {
+    font-size: var(--thermos-font-size-27);
+    margin-bottom: 12px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .the-text-din-bold-up {
+    font-size: var(--thermos-font-size-16);
+    letter-spacing: 0.7px;
+    line-height: var(--thermos-line-height-28);
+    padding-right: 3%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909-r {
+    margin-top: 60px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909-r
+    .the-norm-photo {
+    margin-bottom: 14px;
+    margin-left: 0 !important;
+    padding-right: 4vw;
+    width: 100%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909-r
+    .the-content-f
+    .the-content-f-inner
+    .the-text-bold-it {
+    line-height: var(--thermos-line-height-19);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1911 {
+    margin-top: 48px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1911
+    .the-content-f {
+    padding-left: 10.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1911
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    letter-spacing: -0.1px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1912-r {
+    margin-top: 35px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1912-r
+    .the-content-f {
+    padding-right: 11%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1912-r
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-bottom: 16px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1912-r
+    .the-content-f
+    .the-content-f-inner
+    .the-text-on-photo {
+    font-size: var(--thermos-font-size-14);
+    line-height: var(--thermos-line-height-20);
+    letter-spacing: 0.45px;
+    padding-right: 10%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1912-l {
+    display: none;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923 {
+    margin-top: 26px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923
+    .the-norm-photo-m {
+    display: block;
+    padding-left: 7vw;
+    margin-bottom: 22px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923
+    .the-content-f {
+    padding-left: 10.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    display: none;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923
+    .the-content-f
+    .the-content-f-inner
+    .the-text-bold-it {
+    line-height: var(--thermos-line-height-20) !important;
+    letter-spacing: -0.1px;
+    padding-right: 17%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923-r {
+    display: none;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923-r-m {
+    display: block;
+    margin-top: 40px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1925 {
+    margin-top: 45px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1925
+    .the-content-f {
+    padding-right: 14%;
+    letter-spacing: -0.05px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-r {
+    margin-top: 2px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-r
+    .the-content-f
+    .the-content-f-inner
+    .the-text-din-bold-up {
+    letter-spacing: -0.3px;
+    padding-right: 5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-l {
+    margin-top: 43px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-l
+    .the-content-f {
+    padding-left: 10.5%;
+    padding-right: 8%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-l
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-bottom: 23px;
+    padding-right: 3.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-l
+    .the-content-f
+    .the-content-f-inner
+    .the-text-bold-it {
+    padding-left: 0;
+    line-height: var(--thermos-line-height-20);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1939 {
+    margin-top: 48px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1939
+    .the-content-f {
+    padding-right: 13%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945 {
+    margin-top: 42px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945
+    .s1945d {
+    display: none;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945
+    .s1945m {
+    display: block;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945
+    .the-content-f {
+    padding-left: 10.5%;
+    padding-right: 9%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945
+    .the-content-f
+    .the-text-din-bold-up {
+    letter-spacing: -0.3px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952 {
+    margin-top: 42px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952
+    .the-content-f {
+    padding-left: 10.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-bottom: 19px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952
+    .the-content-f-inner
+    .the-text-regular {
+    letter-spacing: -0.04px;
+    padding-right: 13%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1953 {
+    margin-top: 26px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1953
+    .the-content-f {
+    padding-right: 3%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1953
+    .h4-din-bold-up {
+    font-size: var(--thermos-font-size-47) !important;
+    line-height: var(--thermos-line-height-47) !important;
+    letter-spacing: 5.6px !important;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1955 {
+    margin-top: 3px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1955
+    .the-content-f {
+    padding-right: 9%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1955
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    margin-bottom: 52px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1957 {
+    margin-top: 30px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1957
+    .the-content-f {
+    letter-spacing: -0.35px;
+    padding-left: 10.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1960 {
+    margin-top: 40px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1960
+    .block-with-line
+    .the-date {
+    top: -95px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1960
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    margin-top: 20px;
+    padding-right: 35px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1960
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-top: 30px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1962 {
+    margin-top: 25px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1962
+    .the-date {
+    top: -105px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1962
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-right: 25px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1966 {
+    margin-top: 5px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1966
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1971 {
+    margin-top: 40px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1971
+    .the-content-f
+    .the-content-f-inner
+    .the-text-din-bold-up {
+    padding-right: 0;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1971
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-top: 35px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1985 {
+    margin-top: 15px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1985
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-top: 15px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2002
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    padding-right: 0;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2002
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-top: 0;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2004 {
+    top: 0;
+    margin: 0;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2004
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-top: 0;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2004
+    .the-content-f
+    .the-content-f-inner
+    p:nth-of-type(1) {
+    margin-top: 37px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2004
+    .the-content-f
+    .the-content-f-inner
+    p:nth-of-type(2) {
+    margin-top: 37px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2008 {
+    margin: 0;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2008
+    .the-content-f
+    .the-content-f-inner
+    .the-text-din-bold-up {
+    padding-right: 0;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2008
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-top: 40px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2014 {
+    margin-top: 40px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2014
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-top: 5px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2017 {
+    margin-top: 10px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .f-full-block-d {
+    display: none;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .center-line {
+    left: 0;
+    width: 12.2%;
+  }
+  .main-histor-page.sofi-history .breadcrumbs li {
+    font-size: var(--thermos-font-size-15);
+    padding-right: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903 {
+    margin-top: 54px;
+  }
+}
+@media (max-width: 320px) {
+  .main-histor-page.sofi-history .history-time-line .history-container .the-inner-container {
+    padding: 0 0 38px 12.2vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date:after {
+    right: calc(50% - 5px);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block
+    .block-with-line
+    .the-date.the-date-big {
+    font-size: var(--thermos-font-size-14) !important;
+    line-height: var(--thermos-line-height-21);
+    padding-top: 22px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903
+    .the-content-f
+    .the-content-f-inner
+    .h4-din-bold-up {
+    font-size: var(--thermos-font-size-28);
+    line-height: var(--thermos-line-height-28);
+    letter-spacing: 1px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903
+    .the-content-f
+    .the-content-f-inner
+    .h3-din-bold-up-red {
+    font-size: var(--thermos-font-size-52);
+    line-height: var(--thermos-line-height-50);
+    letter-spacing: 1px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1903-r {
+    margin-top: 6px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1904 {
+    margin-top: 32px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1904
+    .the-content-f {
+    padding-right: 8%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1904
+    .the-content-f
+    .the-content-f-inner
+    p.the-text-regular {
+    padding-right: 6%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1904
+    .the-content-f
+    .the-text-din-bold-up {
+    letter-spacing: 0.2px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1906
+    .the-content-f
+    .the-content-f-inner
+    .text-abs-block {
+    bottom: 25px;
+    left: 3px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1907 {
+    margin-top: 14px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1907
+    .the-content-f {
+    padding-right: 11%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1907
+    .block-with-line
+    .the-content-f {
+    padding-right: 9%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1907
+    .block-with-line
+    .the-content-f
+    .the-text-bold-it {
+    margin-bottom: 8px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 16px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f {
+    padding-right: 11%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-bottom: 0;
+    margin-top: 13px;
+    width: 100%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .text-abs-block {
+    left: 0;
+    top: 0;
+    padding: 9px 30px 6px 15px;
+    position: relative;
+    width: 100%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .text-abs-block
+    p {
+    font-size: var(--thermos-font-size-14);
+    line-height: var(-thermos-line-height-18);
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .h5-din-bold-up {
+    font-size: var(--thermos-font-size-24);
+    margin-bottom: 14px;
+    letter-spacing: 1.1px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909
+    .the-content-f
+    .the-content-f-inner
+    .the-text-din-bold-up {
+    font-size: var(--thermos-font-size-16) !important;
+    letter-spacing: 0.7px;
+    line-height: var(--thermos-line-height-28) !important;
+    padding-right: 3%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909-r {
+    margin-top: 60px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909-r
+    .the-norm-photo {
+    margin-bottom: 14px;
+    margin-left: 0 !important;
+    padding-right: 4vw;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1909-r
+    .the-content-f
+    .the-content-f-inner
+    .the-text-bold-it {
+    line-height: var(--thermos-line-height-19);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1911 {
+    margin-top: 48px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1911
+    .the-content-f {
+    padding-left: 10.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1911
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    letter-spacing: -0.1px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1912-r {
+    margin-top: 35px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1912-r
+    .the-content-f {
+    padding-right: 11%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1912-r
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-bottom: 16px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1912-r
+    .the-content-f
+    .the-content-f-inner
+    .the-text-on-photo {
+    font-size: var(--thermos-font-size-14);
+    line-height: var(--thermos-line-height-20);
+    letter-spacing: 0.45px;
+    padding-right: 10%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923 {
+    margin-top: 23px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923
+    .the-norm-photo-m {
+    display: block;
+    padding-left: 5vw;
+    margin-bottom: 22px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923
+    .the-content-f {
+    padding-left: 10.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    display: none;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1923
+    .the-content-f
+    .the-content-f-inner
+    .the-text-bold-it {
+    line-height: var(--thermos-line-height-20) !important;
+    letter-spacing: -0.1px;
+    padding-right: 17%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1925 {
+    margin-top: 45px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1925
+    .the-content-f {
+    padding-right: 14%;
+    letter-spacing: -0.05px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-r {
+    margin-top: 2px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-r
+    .the-content-f {
+    padding-right: 11%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-r
+    .the-content-f
+    .the-content-f-inner
+    .the-text-din-bold-up {
+    letter-spacing: -0.3px;
+    padding-right: 5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-l {
+    margin-top: 43px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-l:before {
+    color: var(--thermos-white);
+    content: '1929';
+    font-family: var(--thermos-MinionPro), Arial, sans-serif;
+    font-style: italic;
+    font-weight: var(--thermos-font-Weight-700);
+    position: absolute;
+    top: -7px;
+    right: 100%;
+    width: 12vw;
+    padding: 21px 0 4px;
+    text-align: center;
+    background-color: var(--thermos-alizarin-crimson);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-l:after {
+    background-color: var(--thermos-white);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    content: '';
+    right: calc(100% + 6vw - 4px);
+    top: 0;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-l
+    .the-content-f {
+    padding-left: 10.5%;
+    padding-right: 8%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-l
+    .the-content-f
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-bottom: 23px;
+    padding-right: 3.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1928-l
+    .the-content-f
+    .the-content-f-inner
+    .the-text-bold-it {
+    padding-left: 0;
+    line-height: var(--thermos-line-height-20);
+    letter-spacing: -0.04px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945 {
+    margin-top: 39px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945
+    .s1945d {
+    display: none;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945
+    .s1945m {
+    display: block;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945
+    .the-content-f {
+    padding-left: 10.5%;
+    padding-right: 11%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1945
+    .the-content-f
+    .the-content-f-inner
+    .the-text-din-bold-up {
+    font-size: var(--thermos-font-size-16);
+    letter-spacing: 0.03px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952 {
+    margin-top: 42px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952
+    .the-content-f {
+    padding-left: 10.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952
+    .the-content-f-inner
+    .the-norm-photo {
+    margin-bottom: 19px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1952
+    .the-content-f-inner
+    .the-text-regular {
+    letter-spacing: -0.04px;
+    padding-right: 13%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1953 {
+    margin-top: 26px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1953
+    .the-content-f {
+    padding-right: 3%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1953
+    .h4-din-bold-up {
+    font-size: var(--thermos-font-size-47) !important;
+    line-height: var(--thermos-line-height-47) !important;
+    letter-spacing: 5.6px !important;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1955 {
+    margin-top: 4px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1955
+    .the-content-f {
+    padding-right: 9%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1955
+    .the-content-f
+    .the-content-f-inner
+    .the-text-regular {
+    margin-bottom: 52px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1957 {
+    margin-top: 30px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1957
+    .the-content-f {
+    padding-left: 10.5%;
+    padding-right: 13%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-1957
+    .the-content-f
+    .the-content-f-inner
+    .the-text-din-bold-up {
+    letter-spacing: -0.35px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2004.the-mobile-only
+    > .the-content-f {
+    padding: 0 5.5%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2004.the-mobile-only
+    .the-content-f
+    .the-content-f-inner
+    p:nth-of-type(1) {
+    margin-top: 14px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2004.the-mobile-only
+    .the-content-f
+    .the-content-f-inner
+    p:nth-of-type(2) {
+    margin-top: 16px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2014 {
+    margin-top: 24px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2014
+    .the-content-f {
+    padding-right: 6%;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2017 {
+    margin-top: 26px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2017
+    .the-content-f {
+    padding-right: 8%;
+  }
+}
+
+/* history page 2023 and 2024 changes */
+
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .the-h-2000
+  .block-with-line
+  .the-date.the-date-big {
+  padding: 17px 0;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .the-h-2000 {
+  margin-top: 11px;
+}
+
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .the-h-2000
+  .block-with-line:after,
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .the-h-2000
+  .block-with-line:before {
+  position: unset;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .the-h-2000
+  .block-with-line
+  .the-date:after,
+main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .the-h-2000
+  .block-with-line
+  .the-date:before {
+  position: unset;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2002 {
+  margin-top: 214px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2023 {
+  margin-top: 31px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .the-h-2023
+  .block-with-line
+  .the-date,
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .the-h-2024
+  .block-with-line
+  .the-date {
+  font-size: var(--thermos-font-size-24);
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-2024 {
+  margin-top: 64px;
+}
+.main-histor-page.sofi-history
+  .history-time-line
+  .history-container
+  .the-inner-container
+  .history-block.the-h-1971
+  .the-content-f
+  .the-content-f-inner
+  .the-norm-photo {
+  margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .the-h-2023
+    .block-with-line
+    .the-date,
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .the-h-2024
+    .block-with-line
+    .the-date {
+    font-size: var(--thermos-font-size-16);
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .the-h-2000 {
+    margin-top: -3px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .history-block.the-h-2002 {
+    margin-top: 80px;
+  }
+  .main-histor-page.sofi-history
+    .history-time-line
+    .history-container
+    .the-inner-container
+    .the-h-2000
+    .block-with-line
+    .the-date.the-date-big {
+    padding: 20px 0;
+    font-size: var(--thermos-font-size-16) !important;
+  }
+}

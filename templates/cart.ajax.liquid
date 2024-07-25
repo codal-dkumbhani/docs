@@ -1,0 +1,102 @@
+{% comment %}
+  JS-load cart markup without bloat of a full layout.
+
+  This is used in both the cart drawer and cart page.
+  When a quantity is changed, this file is scraped and the .cart__item-price-col
+    is fully replaced to account for possible cart discounts changing
+
+  The cart-wide discount div also replaces what is originally in the cart
+    as it can change anytime a cart-item changes
+{% endcomment %}
+
+<div
+  class="cart__items d-flex flex-column"
+  data-count="{{ cart.item_count }}"
+  data-cart-subtotal="{{ cart.total_price | money | strip_html }}"
+>
+  <div class="flex-fill">
+    {% for item in cart.items %}
+      {%- render 'cart-drawer-item',
+        location: 'ajax',
+        product: item,
+        small: true,
+        removeBtn: false,
+        forloop: forloop
+      -%}
+    {% endfor %}
+  </div>
+  <div class="sidecart-bottom">
+    <div class="cart__discounts cart__item-sub cart__item-row{% if cart.cart_level_discount_applications == blank %} hide{% endif %}">
+      <div>{{ 'cart.general.discounts' | t }}</div>
+      <div>
+        {% for cart_discount in cart.cart_level_discount_applications %}
+          <div class="cart__discount">
+            {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money }})
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="order-sum-tfoot">
+      <div class="order-sum-tr d-flex align-items-center justify-content-between cart__item-sub cart__item-row m-0">
+        <span>{{ 'cart.general.subtotal' | t }}</span>
+        <span id="cart-total-price" data-subtotal>{{ cart.total_price | money }}</span>
+      </div>
+    </div>
+    <div class="cart__item-row text-center">
+      <p class="order-note m-0">{{ 'cart.general.shipping_at_checkout' | t }}</p>
+      <p class="order-note mt-2">
+        By clicking Checkout Now, you confirm agreement to the
+        <a href="{{ shop.url }}/pages/website-terms-of-use">Terms of Use</a> and included
+        <a href="{{ shop.url }}/pages/privacy-policy">Privacy Policy.</a>
+      </p>
+    </div>
+    <div class="cart__item-row cart__checkout-wrapper">
+      <button
+        type="submit"
+        class="btn btn--full checkout-button-cart"
+        name="checkout"
+        data-terms-required="{{ settings.cart_terms_conditions_enable }}"
+        class="btn cart__checkout"
+      >
+        {{ 'cart.general.cartcheckoutbtn' | t }}
+      </button>
+
+      {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+        <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
+      {% endif %}
+    </div>
+    <div class="checkout-section">
+      <p class="text-center">Checkout made easy with more option than ever</p>
+      <ul>
+        <li>
+          <img
+            width="auto"
+            height="auto"
+            src="{{ 'pay.png' | asset_url }}"
+            alt="shop pay"
+          >
+        </li>
+        <li>
+          <img
+            width="auto"
+            height="auto"
+            src="{{ 'Apple_Pay.svg' | asset_url }}"
+            alt="apple pay"
+          >
+        </li>
+        <li>
+          <img
+            width="auto"
+            height="auto"
+            src="{{ 'GPay.png' | asset_url }}"
+            alt="google pay"
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidecart-mobile">
+    <button type="submit" class="btn btn--full checkout-button-cart">VIEW CART</button>
+    <button type="submit" class="btn btn--full keep-shop-btn">KEEP SHOPPING</button>
+  </div>
+</div>

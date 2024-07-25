@@ -1,0 +1,280 @@
+{% comment %}
+  This section is about the trapeze section on the about us page
+{% endcomment %}
+
+{{ 'trapeze-section.css' | asset_url | stylesheet_tag }}
+
+<div class="kids-banner small--hide ">
+  <div class="kids-banner-title kids-banner-title--{{ section.id }}">
+    <div class="kids-banner-title-wrap">
+      <div class="trapeze-promo-title">
+        {% if section.settings.title != blank %}
+          {{ section.settings.title }}
+        {% endif %}
+      </div>
+      <div class="trapeze-promo-description">
+        {% if section.settings['trapeze-section-description'] != blank %}
+          {{ section.settings['trapeze-section-description'] }}
+        {% endif %}
+      </div>
+      {% if section.settings['btn-text'] != blank %}
+        <a class="btn btn-secondary" href="{{ section.settings.btn-url }}">
+          {{- section.settings['btn-text'] -}}
+        </a>
+      {% endif %}
+      <div class="container-fluid">
+        <br>
+        <div class="row">
+          <div class="col-6 pl-0">
+            <img
+              width="auto"
+              height="auto"
+              src="{{ 'school-icon.png' | asset_url }}"
+              alt="img-fluid"
+              class="img-fluid"
+            >
+          </div>
+          <div class="col-6 ">
+            <img
+              width="auto"
+              height="auto"
+              src="{{ 'school-icon-2_2x.png' | asset_url }}"
+              alt="img-fluid"
+              class="img-fluid"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="kids-banner-picture"></div>
+</div>
+
+<div class="container-fluid medium-up--hide">
+  <div class="row">
+    <div class="trapeze_image_wrapper">
+      {% if section.settings.trapeze_image_picker != blank %}
+        {% render 'image-element',
+          img: section.settings.trapeze_image_picker,
+          alt: section.settings.trapeze_image_picker.alt,
+          img_width: 600,
+          classes: 'img-fluid w-100',
+          loading: 'lazy'
+        %}
+      {% endif %}
+    </div>
+    <div class="trapeze_responsive_background">
+      <div class="text-white trapeze-promo-title">
+        {% if section.settings.title != blank %}
+          {{ section.settings.title }}
+        {% endif %}
+      </div>
+      <div class="trapeze-promo-description">
+        {% if section.settings['trapeze-section-description'] != blank %}
+          {{ section.settings['trapeze-section-description'] }}
+        {% endif %}
+      </div>
+      {% if section.settings['btn-text'] != blank %}
+        <a class="btn btn-secondary" href="{{ section.settings.btn-url }}">
+          {{- section.settings['btn-text'] -}}
+        </a>
+      {% endif %}
+
+      <div class="container-fluid images">
+        <br>
+        <div class="row">
+          <div class="fluid-img-wrapper">
+            <img
+              width="auto"
+              height="auto"
+              src="{{ 'school-icon.png' | asset_url }}"
+              alt="trapeze-custom-icons"
+              class="img-fluid trapeze-custom-icons"
+            >
+          </div>
+          <div class="fluid-img-wrapper">
+            <img
+              width="auto"
+              height="auto"
+              src="{{ 'school-icon-2_2x.png' | asset_url }}"
+              alt="trapeze-custom-icons"
+              class="img-fluid trapeze-custom-icons"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% style %}
+  .shopify_trapeze-section .kids-banner .kids-banner-title img {
+    margin-bottom: 25px;
+  }
+  .shopify_trapeze-section .kids-banner.small--hide {
+    max-height: 617px;
+  }
+  .shopify_trapeze-section .kids-banner .kids-banner-title p {
+    color: var(--thermos-white);
+    font-family: var(--thermos-dinot);
+    font-size: var(--thermos-font-size-19);
+    letter-spacing: 0;
+    line-height: var(--thermos-line-height-25-5);
+  }
+  .shopify_trapeze-section .trapeze-promo-title {
+    margin: 0;
+    padding: 0;
+  }
+  .shopify_trapeze-section .kids-banner .kids-banner-title p {
+    font-weight: var(--thermos-font-Weight-bold) !important;
+    color: white;
+    margin: 0;
+  }
+  .shopify_trapeze-section .kids-banner-title-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .shopify_trapeze-section .kids-banner .kids-banner-title:before {
+    display: none;
+  }
+  .shopify_trapeze-section .kids-banner .kids-banner-title:after {
+    background-color: var(--thermos-cornflower-blue) !important;
+  }
+  .shopify_trapeze-section .kids-banner .kids-banner-title {
+    width: 48% !important;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--thermos-cornflower-blue) !important;
+    padding: 5% 96px;
+    position: relative;
+  }
+  .shopify_trapeze-section .kids-banner .kids-banner-title .kids-banner-title-wrap {
+    max-width: 611px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .shopify_trapeze-section .kids-banner-picture {
+    background-image: url('{{ section.settings.trapeze_image_picker | image_url: width:1024 }}');
+  }
+  .shopify_trapeze-section .container-fluid.images {
+    padding-right: 15px;
+    margin-top: 24px;
+    padding-left: 0;
+  }
+  .shopify_trapeze-section .fluid-img-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .shopify_trapeze-section .trapeze-custom-icons {
+    width: 217px;
+  }
+  .shopify_trapeze-section .trapeze_responsive_background {
+    background-color: var(--thermos-cornflower-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px 48px;
+  }
+  .shopify_trapeze-section .trapeze_responsive_background * {
+    color: white;
+  }
+  .shopify_trapeze-section .trapeze-promo-title {
+    padding-top: 24px !important;
+  }
+  .shopify_trapeze-section .trapeze-promo-title > p {
+    font-family: var(--thermos-dinot-cond-bold) !important;
+    font-size: var(--thermos-font-size-70) !important;
+    letter-spacing: 0 !important;
+    line-height: var(--thermos-line-height-70) !important;
+    text-transform: uppercase !important;
+  }
+  .shopify_trapeze-section .btn.btn-secondary {
+    width: fit-content;
+    margin-top: 12px !important;
+    color: var(--thermos-onyx) !important;
+    border-radius: 40px;
+    background: var(--thermos-white) !important;
+    font-family: var(--thermos-dinot-cond-bold) !important;
+    font-size: var(--thermos-font-size-20) !important;
+    height: 42px;
+    font-style: normal;
+    letter-spacing: 0.3px !important;
+    line-height: var(--thermos-line-height-20-4);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 9.7px 25px !important;
+    border: none;
+    transition: all 0.2s ease;
+  }
+  @media only screen and (max-width: 600px) {
+    .shopify_trapeze-section .trapeze-promo-title {
+      margin-top: auto !important;
+      margin-bottom: auto !important;
+    }
+    .shopify_trapeze-section .trapeze_image_wrapper {
+      padding: 0;
+    }
+    .shopify_trapeze-section .trapeze-promo-title > p {
+      font-size: var(--thermos-font-size-34) !important;
+      font-weight: var(--thermos-font-Weight-700);
+      font-style: normal;
+      letter-spacing: normal !important;
+      line-height: var(--thermos-line-height-40) !important;
+      text-align: center;
+    }
+    .shopify_trapeze-section .trapeze-promo-description > p {
+      color: var(--thermos-white) !important;
+      font-family: var(--thermos-dinot) !important;
+      font-size: var(--thermos-font-size-14) !important;
+      font-style: normal !important;
+      letter-spacing: normal !important;
+      line-height: var(--thermos-line-height-20) !important;
+      text-align: center;
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Trapeze Section",
+  "class": "shopify_trapeze-section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "trapeze-section-description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "btn-url",
+      "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "btn-text",
+      "label": "Heading",
+      "default": "Shop Back To School"
+    },
+    {
+      "type": "image_picker",
+      "id": "trapeze_image_picker",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trapeze Section",
+      "category": "Promotional"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

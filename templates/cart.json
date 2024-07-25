@@ -1,0 +1,33 @@
+{
+  "sections": {
+    "main": {
+      "type": "cart-template",
+      "blocks": {
+        "bottomcommon_iy96n8": {
+          "type": "bottomcommon",
+          "settings": {
+            "title": "Free shipping",
+            "text": "<p>Free domestic ground shipping on all orders $50-$500<br/><a href=\"/pages/shipping-policy-2023\" target=\"_blank\" title=\"Shipping Policy\">Learn More about Shipping</a></p>"
+          }
+        },
+        "bottomcommon_rVbfPF": {
+          "type": "bottomcommon",
+          "settings": {
+            "title": "Hassle-Free Returns",
+            "text": "<p>Not satisfied with your purchase?<br/>Get a refund within 30 days.<br/><a href=\"/pages/returns\" target=\"_blank\" title=\"Returns\">Learn More</a></p>"
+          }
+        },
+        "bottomcommon_8nJGtM": {
+          "type": "bottomcommon",
+          "settings": {
+            "title": "Need Help?",
+            "text": "<p>Online Order Assistance<br/>Call: <a href=\"tel:1-800-831-9242\" title=\"tel:1-800-831-9242\">1-800-831-9242</a></p>"
+          }
+        }
+      },
+      "block_order": ["bottomcommon_iy96n8", "bottomcommon_rVbfPF", "bottomcommon_8nJGtM"],
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

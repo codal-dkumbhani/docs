@@ -1,0 +1,4 @@
+.btn--tertiary-active {
+  background-color: var(--thermos-white) !important;
+  color: var(--thermos-black) !important;
+}

@@ -1,0 +1,97 @@
+.image-with-3-column-div {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.image-with-3-column-div .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.image-with-3-column-div .image-data-section {
+  flex: 1 1 30%;
+  max-width: 30%;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+  padding-bottom: 61px;
+}
+
+.image-with-3-column-div .image-section {
+  height: 350px;
+  overflow: hidden;
+}
+.image-with-3-column-div .image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-with-3-column-div .content {
+  text-align: center;
+  padding-top: 20px;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+.image-with-3-column-div .content .title {
+  font-family: var(--thermos-aktiv-grotesk);
+  font-weight: var(--thermos-font-Weight-bold);
+}
+.image-with-3-column-div .content .description {
+  font-family: var(--thermos-aktiv-grotesk);
+}
+.image-with-3-column-div .content a.button {
+  font-family: var(--thermos-aktiv-grotesk);
+  width: 100%;
+  border-radius: 30px;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  font-weight: var(--thermos-font-Weight-bold);
+}
+
+@media (max-width: 767px) {
+  .image-with-3-column-div .slick-prev,
+  .image-with-3-column-div .slick-next {
+    width: 50px;
+    height: 50px;
+    background-color: var(--thermos-semi-transparent); /* Semi-transparent background */
+    color: transparent; /* Hide text color */
+    border-radius: 50%; /* Circle shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden; /* Ensure no text overflow */
+  }
+
+  .image-with-3-column-div .slick-prev {
+    left: 10px; /* Position to the left */
+  }
+
+  .image-with-3-column-div .slick-next {
+    right: 10px; /* Position to the right */
+  }
+
+  .image-with-3-column-div .slick-prev:before,
+  .image-with-3-column-div .slick-next:before {
+    font-size: var(--thermos-font-size-24); /* Increase arrow size */
+    color: var(--thermos-white); /* White arrow color */
+  }
+
+  .image-with-3-column-div .slick-prev:before {
+    content: '\2190'; /* Left arrow unicode character */
+    left: 15px;
+    position: absolute;
+    top: 5px;
+  }
+
+  .image-with-3-column-div .slick-next:before {
+    content: '\2192'; /* Right arrow unicode character */
+    left: 15px;
+    position: absolute;
+    top: 5px;
+  }
+}

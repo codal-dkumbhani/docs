@@ -1,0 +1,93 @@
+{% comment %}
+  This section consists of icon-series banner on the page icon-series
+{% endcomment %}
+
+{{ 'icon-series-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="icon-series-banner {{ section.id }}">
+  {% if section.settings.title1 != blank %}
+    <span class="banner-text-1" style="color: {{ section.settings.titlecolor1 }}">
+      {{- section.settings.title1 -}}
+    </span>
+  {% endif %}
+  {% if section.settings.title2 != blank %}
+    <h2 class="banner-text-2" style="color: {{ section.settings.titlecolor2 }}">
+      {{ section.settings.title2 }}
+    </h2>
+  {% endif %}
+  {% if section.settings.title3 != blank %}
+    <p class="banner-text-3" style="color: {{ section.settings.titlecolor3 }}">
+      {{- section.settings.title3 -}}
+    </p>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Icon Banner",
+  "class": "icon--banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "mimage",
+      "label": "Image Mobile"
+    },
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "Title Text 1"
+    },
+    {
+      "type": "html",
+      "id": "title2",
+      "label": "Title Text 2"
+    },
+    {
+      "type": "text",
+      "id": "title3",
+      "label": "Title Text 3"
+    },
+    {
+      "type": "color",
+      "id": "titlecolor1",
+      "label": "Title Color 1",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "titlecolor2",
+      "label": "Title Color 2",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "titlecolor3",
+      "label": "Title Color 3",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+  @media only screen and (min-width: 768px) {
+    .icon--banner .icon-series-banner {
+      background-image: url({{ section.settings.image | image_url: width:1920 }});
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .icon--banner .icon-series-banner {
+      background-image: url({{ section.settings.mimage | image_url: width: 375 }});
+    }
+  }
+{% endstyle %}

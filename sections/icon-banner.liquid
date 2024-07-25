@@ -1,0 +1,99 @@
+<div class="icon-banner {{ section.id }}">
+  {% if section.settings.title1 != blank %}
+    <span style="color:{{ section.settings.titlecolor1 }}">{{ section.settings.title1 }}</span>
+  {% endif %}
+  {% if section.settings.title2 != blank %}
+    <h2 style="color:{{ section.settings.titlecolor2 }}">{{ section.settings.title2 }}</h2>
+  {% endif %}
+  {% if section.settings.title3 != blank %}
+    <p style="color:{{ section.settings.titlecolor3 }}">{{ section.settings.title3 }}</p>
+  {% endif %}
+</div>
+
+<!-- CSS -->
+<style>
+  @media (min-width: 768px) {
+    .{{ section.id }}.icon-banner{
+      background-image:url({{ section.settings.image | image_url }})
+    }
+  }
+  @media (max-width: 767.98px) {
+    .{{ section.id }}.icon-banner{
+      background-image:url({{ section.settings.mimage | image_url }})
+    }
+  }
+  .icon-serires .icon-banner {
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 150px 0;
+    background-size: cover;
+    height: 530px;
+  }
+  .icon-serires .icon-banner span {
+    color: var(--thermos-white);
+    text-transform: uppercase;
+    font-size: var(--thermos-font-size-60);
+    line-height: normal;
+  }
+  .icon-serires .icon-banner h2 {
+    color: var(--thermos-white);
+    font-size: var(--thermos-font-size-120);
+    line-height: var(--thermos-line-height-90);
+  }
+  .icon-serires .icon-banner p {
+    font-size: var(--thermos-font-size-38);
+    font-weight: var(--thermos-font-Weight-600);
+    font-family: var(--thermos-minion-pro);
+    color: var(--thermos-saffron-mango);
+    margin: 0;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Icon Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "mimage",
+      "label": "Image Mobile"
+    },
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "Title Text 1"
+    },
+    {
+      "type": "html",
+      "id": "title2",
+      "label": "Title Text 2"
+    },
+    {
+      "type": "text",
+      "id": "title3",
+      "label": "Title Text 3"
+    },
+    {
+      "type": "color",
+      "id": "titlecolor1",
+      "label": "Title Color 1"
+    },
+    {
+      "type": "color",
+      "id": "titlecolor2",
+      "label": "Title Color 2"
+    },
+    {
+      "type": "color",
+      "id": "titlecolor3",
+      "label": "Title Color 3"
+    }
+  ]
+}
+{% endschema %}

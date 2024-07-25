@@ -1,0 +1,145 @@
+{%- render 'customize-product-template',
+  product: product,
+  freecustomization: section.settings.freecustomization,
+  maxlength1: section.settings.maxlength1,
+  quicknote: section.settings.quicknote,
+  notice: section.settings.notice,
+  legalnotice: section.settings.legalnotice,
+  pricenotice: section.settings.pricenotice,
+  uploadImagelogo: section.settings.uploadImagelogo,
+  uploadImageText: section.settings.uploadImageText,
+  uploadImageDesc: section.settings.uploadImageDesc,
+  logo1: section.settings.image1,
+  logo2: section.settings.image2,
+  logo3: section.settings.image3,
+  logo4: section.settings.image4,
+  label1: section.settings.text1,
+  label2: section.settings.text2,
+  label3: section.settings.text3,
+  label4: section.settings.text4,
+  block: block
+-%}
+
+{% schema %}
+{
+  "name": "Customizer pages",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "freecustomization",
+      "label": "Free customization",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "maxlength1",
+      "min": 3,
+      "max": 35,
+      "step": 1,
+      "label": "Input Line Maxlength For all 3 lines",
+      "default": 18
+    },
+
+    {
+      "type": "textarea",
+      "id": "quicknote",
+      "label": "Quick Note"
+    },
+    {
+      "type": "textarea",
+      "id": "notice",
+      "label": "Start over Notice"
+    },
+    {
+      "type": "textarea",
+      "id": "legalnotice",
+      "label": "Legal Notice"
+    },
+    {
+      "type": "textarea",
+      "id": "pricenotice",
+      "label": "Price Notice In Add text, Monogram, Select Image and Upload Image"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "uploadImagelogo",
+      "label": "Upload Image Title Logo"
+    },
+    {
+      "type": "text",
+      "id": "uploadImageText",
+      "label": "Upload Image Title"
+    },
+
+    {
+      "type": "richtext",
+      "id": "uploadImageDesc",
+      "label": "Upload Image Desc"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Upload Image Logo1"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "Lable1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Upload Image Logo2"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "Lable2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Upload Image Logo3"
+    },
+    {
+      "type": "text",
+      "id": "text3",
+      "label": "Lable3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "Upload Image Logo4"
+    },
+    {
+      "type": "text",
+      "id": "text4",
+      "label": "Lable4"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Thermos Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "Doogmaimage",
+          "label": "Doogma Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Image name"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

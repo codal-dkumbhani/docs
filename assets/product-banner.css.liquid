@@ -1,0 +1,20 @@
+.full-bg-image {
+  width: 100%;
+  overflow: hidden;
+}
+.full-bg-image img {
+  width: 100%;
+  max-height: 1000px;
+}
+.full-bg-image.product-detail-img {
+  height: 500px;
+}
+.full-bg-image.product-detail-img img {
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .full-bg-image.product-detail-img {
+    height: 320px;
+  }
+}

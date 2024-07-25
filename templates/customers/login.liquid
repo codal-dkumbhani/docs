@@ -1,0 +1,120 @@
+{{ 'account-page.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="custom-page login-page"
+  style="background-size: cover; background-image: url(https://cdn.shopify.com/s/files/1/0552/9731/0876/files/image_2.png?v=1621604578); background-repeat: no-repeat; background-position: center center;"
+>
+  <div class="login-box-block">
+    <h1>{{ 'customer.login.title' | t }}</h1>
+
+    <div class="note note--success hide" id="ResetSuccess">
+      {{ 'customer.recover_password.success' | t }}
+    </div>
+
+    <div id="CustomerLoginForm" class="form-vertical">
+      {%- form 'customer_login' -%}
+        {{ form.errors | default_errors }}
+
+        <input
+          type="email"
+          name="customer[email]"
+          placeholder="Email Address"
+          id="CustomerEmail"
+          class="input-full{% if form.errors contains 'email' %} error{% endif %}"
+          autocorrect="off"
+          autocapitalize="off"
+          autofocus
+        >
+
+        {%- if form.password_needed -%}
+          <input
+            type="password"
+            value=""
+            placeholder="Enter your password"
+            name="customer[password]"
+            id="CustomerPassword"
+            class="input-full{% if form.errors contains 'password' %} error{% endif %}"
+          >
+          <div class="dflex">
+            <div class="text-left">
+              {% comment %}
+                <div class="checkbox-type">
+                  <input id="remember" type="checkbox" />
+                  <label for="remember">Remember Me</label>
+                </div>
+              {% endcomment %}
+            </div>
+            <div class="text-right">
+              <a href="#recover" id="RecoverPassword"> Forgot Password? </a>
+            </div>
+          </div>
+        {%- endif -%}
+        <div class="checkbox-type">
+          <input id="agree" type="checkbox" required>
+          <label for="agree"
+            >I agree to
+            <a href="{{  shop.url}}/pages/privacy-policy" target="_blank">Privacy Policy</a> and
+            <a href="{{ shop.url }}/pages/website-terms-of-use" target="_blank">Terms</a>.</label
+          >
+        </div>
+        <div class="btn-group btn-wrap">
+          <button type="submit" class="btn-gray btn-full">
+            {{ 'customer.login.sign_in' | t }}
+          </button>
+          <div class="btn-text">
+            {{ 'layout.customer.create_account' | t | customer_register_link }}
+          </div>
+          <div id="livechat-thermos-order"></div>
+        </div>
+      {%- endform -%}
+    </div>
+
+    <div id="RecoverPasswordForm" class="hide">
+      <div class="form-vertical">
+        <h2>{{ 'customer.recover_password.title' | t }}</h2>
+        <p>{{ 'customer.recover_password.subtext' | t }}</p>
+
+        {%- form 'recover_customer_password' -%}
+          {{ form.errors | default_errors }}
+
+          {%- if form.posted_successfully? -%}
+            <span class="hide reset-password-success"></span>
+          {%- endif -%}
+
+          <label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
+          <input
+            type="email"
+            value=""
+            name="email"
+            id="RecoverEmail"
+            class="input-full"
+            autocorrect="off"
+            autocapitalize="off"
+          >
+
+          <p>
+            <button type="submit" class="btn">
+              {{ 'customer.recover_password.submit' | t }}
+            </button>
+          </p>
+          <button type="button" id="HideRecoverPasswordLink">
+            {{ 'customer.recover_password.cancel' | t }}
+          </button>
+        {%- endform -%}
+      </div>
+    </div>
+
+    {%- if shop.checkout.guest_login -%}
+      <hr class="hr--clear">
+
+      <h1>{{ 'customer.login.guest_title' | t }}</h1>
+      <hr class="hr--small">
+
+      {%- form 'guest_login' -%}
+        <button type="submit" class="btn">
+          {{ 'customer.login.guest_continue' | t }}
+        </button>
+      {%- endform -%}
+    {%- endif -%}
+  </div>
+</div>

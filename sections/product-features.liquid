@@ -1,0 +1,269 @@
+{{ 'features.css' | asset_url | stylesheet_tag }}
+<div class="features-section">
+  <div class="page-width">
+    {% assign variantMetafieldenable = false %}
+    {% for variant in product.variants %}
+      {% if variant.metafields.detailimage != blank %}
+        {% assign variantMetafieldenable = true %}
+      {% endif %}
+    {% endfor %}
+    {% if variantMetafieldenable == false %}
+      {% if product.metafields.detailimage != blank %}
+        <h2 class="d-none d-md-block">{{ section.settings.section_title }}</h2>
+        <div class="d-none d-md-flex features-section-wrap">
+          {% for detail_str in product.metafields.detailimage %}
+            {% assign details = detail_str | last | split: '|' %}
+            <div class="features-section-contain">
+              <figure>
+                <img
+                  src="{{ details[0] }}"
+                  width="auto"
+                  height="auto"
+                  {% if details[0] != blank %}
+                    class=""
+                  {% endif %}
+                  loading="lazy"
+                  alt="{{ details.last }}"
+                >
+              </figure>
+              <div>
+                <h5 class="feature-icon-text-heading">{{ details[1] }}</h5>
+                <p>{{ details[2] }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% else %}
+      {% for variant in product.variants %}
+        {% if variant.metafields.detailimage != blank %}
+          <div class="variant-metafield" data-variant="{{ variant.title }}">
+            <h2 class="d-none d-md-block">{{ section.settings.section_title }}</h2>
+            <div class="d-none d-md-flex features-section-wrap ">
+              {% for detail_str in variant.metafields.detailimage %}
+                {% assign details = detail_str | last | split: '|' %}
+                <div class="features-section-contain">
+                  <figure>
+                    <img
+                      src="{{ details[0] }}"
+                      width="auto"
+                      height="auto"
+                      {% if details[0] != blank %}
+                        class=""
+                      {% endif %}
+                      loading="lazy"
+                      alt="{{ details.last }}"
+                    >
+                  </figure>
+                  <div>
+                    <h5 class="feature-icon-text-heading">{{ details[1] }}</h5>
+                    <p>{{ details[2] }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if variantMetafieldenable == false %}
+      {% if product.metafields.detailimage != blank %}
+        <div
+          id="carouselExampleIndicators"
+          class="features-div d-md-none carousel slide container-fluid pl-1 pr-1"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner d-flex">
+            {% for detail_str in product.metafields.detailimage %}
+              {% assign details = detail_str | last | split: '|' %}
+              <div class="carousel-item {% if forloop.first %}active{% endif %} ">
+                <figure>
+                  <img
+                    src="{{ details[0] }}"
+                    width="auto"
+                    height="auto"
+                    {% if details[0] != blank %}
+                      class=""
+                    {% endif %}
+                    loading="lazy"
+                    alt="{{ details[0] }}"
+                  >
+                </figure>
+                <div>
+                  <h5>{{ details[1] }}</h5>
+                  <p>{{ details[2] }}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            {% render 'next-caurosel' %}
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            {% render 'prev-caurosel' %}
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      {% endif %}
+
+    {% else %}
+      {% for variant in product.variants %}
+        <div
+          id="carouselExampleIndicators"
+          class="features-div d-md-none carousel slide container-fluid pl-1 pr-1 variant-metafield-mobile"
+          data-ride="carousel"
+          data-variant="{{ variant.title }}"
+        >
+          <div class="variant-slider">
+            {% for detail_str in variant.metafields.detailimage %}
+              {% assign details = detail_str | last | split: '|' %}
+              <div class="">
+                <figure>
+                  <img
+                    src="{{ details[0] }}"
+                    width="auto"
+                    height="auto"
+                    {% if details[0] != blank %}
+                      class=""
+                    {% endif %}
+                    loading="lazy"
+                    alt="{{ details[0] }}"
+                  >
+                </figure>
+                <div>
+                  <h5>{{ details[1] }}</h5>
+                  <p>{{ details[2] }}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+{% if product.metafields.featuredvideo.videourl != blank %}
+  <div class="video-section">
+    <div class="page-width">
+      <div class="video-wrap">
+        {{ product.metafields.featuredvideo.videourl }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Product Features",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "FEATURES"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Features",
+      "category": "ADVANCED LAYOUT"
+    }
+  ]
+}
+{% endschema %}
+<script>
+  $(document).ready(function(){
+    function slick_slider_prd(){
+    $('.variant-slider').slick({
+      dots: false,
+      infinite: true,
+      speed: 500,
+      fade: false,
+      arrows: 'true',
+    });
+  }
+  $('.variantImagesShow .variant-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    fade: false,
+    arrows: 'true',
+  });
+  slick_slider_prd();
+    $('.add-to-cart-btn button').click(function(){
+      dataLayer.push({
+        event: "add_to_cart",
+        ecommerce: {
+          items: [
+          {
+            item_id: "{{ product.id }}",
+            item_name: "{{ product.title }}",
+            affiliation: "Thermos",
+            currency: "{{ shop.currency }}",
+            index: 0,
+            item_brand: "{{ product.vendor }}",
+            item_category: "{{ collection.title }}",
+            price: {{ product.price | money_without_currency }},
+            quantity: {{ product.variants.first.inventory_quantity }}
+          }
+          ]
+        }
+      });
+    });
+    let radioval = $('.variant-input-wrap input[type=radio]:checked').val();
+    $('.variant-metafield').removeClass('variantImagesShow');
+    $('.variant-metafield-mobile').removeClass('variantImagesShow');
+    $('.variant-metafield').each(function(){
+      let datavariant = $(this).attr('data-variant');
+      if(radioval == datavariant){
+        $(this).addClass('variantImagesShow');
+      }
+    });
+    $('.variant-metafield-mobile').each(function(){
+      let datavariant = $(this).attr('data-variant');
+      if(radioval == datavariant){
+        $(this).addClass('variantImagesShow');
+      }
+    });
+
+    $('.variant-input-wrap input[type=radio]').change(function(){
+      let radioval = $('.variant-input-wrap input[type=radio]:checked').val();
+      $('.variant-metafield').removeClass('variantImagesShow');
+      $('.variant-metafield-mobile').removeClass('variantImagesShow');
+      $('.variant-metafield').each(function(){
+        let datavariant = $(this).attr('data-variant');
+        if(radioval == datavariant){
+          $(this).addClass('variantImagesShow')
+        }
+      })
+      $('.variant-metafield-mobile').each(function(){
+        let datavariant = $(this).attr('data-variant');
+        if(radioval == datavariant){
+          $(this).addClass('variantImagesShow');
+           $('.variantImagesShow .variant-slider').slick('slickGoTo', 1)
+        }
+      })
+    });
+    $('.variant-input-wrap .variant-input input').change(function(){
+      let radioval = $(this).val();
+      str = radioval.replace(/ /g, '');
+      let datavariant = $('.pro_con_customize-btn a').attr('href');
+      if(datavariant){
+        datavariant = datavariant.split("?")[0];
+      let variantstring = datavariant+'?data-variant='+str;
+      $('.pro_con_customize-btn a').attr('href',variantstring)
+      }
+    });
+  });
+</script>

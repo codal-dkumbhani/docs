@@ -1,0 +1,91 @@
+{{ 'icon-featuredproduct.css' | asset_url | stylesheet_tag: preload: true }}
+
+<div class="back-to-school">
+  <div class="map-section">
+    {%- if section.settings.section_title != blank
+      or section.settings.designated_collection != blank
+    -%}
+      <div
+        style="background: url({{ section.settings.background_image | image_url: width:1800 }}); background-repeat: no-repeat; background-position: center; background-size: cover;"
+        class="h-100 w-100 map-section-space"
+        style="background-repeat: no-repeat; background-position: center; background-size: cover;"
+      >
+        <div class="page-width">
+          <div class="container-fluid">
+            <div class="row">
+              <div
+                class="featured-block-wrapper"
+                style="position: relative"
+              >
+                <div class="explore-collection-content desktop-explore-collection-content explore-collection-content--{{ section.id }}">
+                  <h1 class=" text-white mb-5 header-{{ section.id }}">
+                    {{ section_title }}
+                  </h1>
+                </div>
+              </div>
+              <div class="featured-block-wrapper-right">
+                <!-- <br class="small--hide"> -->
+                {%- assign product = all_products[section.settings.designated_product] -%}
+
+                {%- render 'product-grid-item-3',
+                  product: product,
+                  grid_item_width: grid_item_width,
+                  per_row: per_row
+                -%}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="explore-collection-content mobile-explore-collection-content explore-collection-content--{{ section.id }}">
+          <h1 class=" text-white mb-5 header-{{ section.id }}">
+            {{ section_title }}
+          </h1>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Icon Featured Product",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Custom Explore"
+    },
+    {
+      "type": "product",
+      "id": "designated_product",
+      "label": "Special Product",
+      "info": "Collection that holds this  product"
+    },
+    {
+      "id": "section_title",
+      "type": "richtext",
+      "label": "Title Text",
+      "default": "<p>DESIGNED FOR KIDS AND THEIR PARENTS </p>"
+    },
+    {
+      "type": "url",
+      "id": "section_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "buttonInDesktop",
+      "label": "Button Enable In Desktop"
+    },
+    {
+      "type": "checkbox",
+      "id": "buttonInMobile",
+      "label": "Button Enable In Mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}

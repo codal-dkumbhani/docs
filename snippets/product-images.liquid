@@ -1,0 +1,189 @@
+{% comment %}
+  Parameters
+  context - used to determine whether on the featured product or main product template
+  sizes
+  sizeVariable
+  fallback
+  mobile_layout
+{% endcomment %}
+
+{%- liquid
+  assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+  assign first_3d_model = product.media | where: 'media_type', 'model' | first
+
+  # Product images and thumbnails on the main product template should load early
+  if context == 'main-product'
+    assign loading = 'eager'
+  endif
+-%}
+
+{%- unless product.empty? -%}
+  <div
+    data-product-images
+    data-zoom="{{ product_zoom_enable }}"
+    data-has-slideshow="{% if product.media.size > 1 %}true{% else %}false{% endif %}"
+  >
+    <div class="product__photos product__photos-{{ section_id }} product__photos--{{ thumbnail_position }}">
+      <div class="product__main-photos" data-aos data-product-single-media-group>
+        <div
+          data-product-photos
+          data-zoom="{{ product_zoom_enable }}"
+          class="product-slideshow"
+          id="ProductPhotos-{{ section_id }}"
+        >
+          {%- for media in product.media -%}
+            {%- render 'media',
+              section_id: section_id,
+              media: media,
+              featured_media: featured_media,
+              loopIndex0: forloop.index0,
+              loopIndex: forloop.index,
+              product_zoom_enable: product_zoom_enable,
+              product_zoom_size: product_zoom_size,
+              product_image_size: product_image_size,
+              isModal: isModal,
+              video_looping: video_looping,
+              video_style: video_style,
+              sizes: sizes,
+              sizeVariable: sizeVariable,
+              fallback: fallback,
+              loading: loading,
+              mobile_layout: mobile_layout
+            -%}
+          {%- endfor -%}
+        </div>
+
+        {%- if first_3d_model -%}
+          <button
+            aria-label="{{ 'products.product.view_in_space_label' | t }}"
+            class="product-single__view-in-space"
+            data-shopify-xr
+            data-shopify-model3d-id="{{ first_3d_model.id }}"
+            data-shopify-title="{{ product.title }}"
+            data-shopify-xr-hidden
+          >
+            {% render 'thermos-icon-3d' %}
+            <span class="product-single__view-in-space-text">
+              {{ 'products.product.view_in_space' | t }}
+            </span>
+          </button>
+        {%- endif -%}
+      </div>
+
+      <div
+        data-product-thumbs
+        class="product__thumbs product__thumbs--{{ thumbnail_position }} product__thumbs-placement--{{ image_position }}{% if product.media.size == 1 %} medium-up--hide{% endif %} small--hide"
+        data-position="{{ thumbnail_position }}"
+        data-arrows="{{ thumbnail_arrows }}"
+        data-aos
+      >
+        {%- if thumbnail_arrows -%}
+          <button type="button" class="product__thumb-arrow product__thumb-arrow--prev hide">
+            {% render 'thermos-icon-chevron-left' %}
+          </button>
+        {%- endif -%}
+
+        <div class="product__thumbs--scroller">
+          {%- if product.media.size > 1 -%}
+            {%- for media in product.media -%}
+              {%- liquid
+                assign image_set = false
+                assign image_set_group = ''
+                if media.alt contains '#'
+                  assign image_set_full = media.alt | split: '#' | last
+                  if image_set_full contains '_'
+                    assign image_set = true
+                    assign image_set_group = image_set_full | split: '_' | first
+                  endif
+                endif
+              -%}
+              <div
+                class="product__thumb-item"
+                data-index="{{ forloop.index0 }}"
+                {% if image_set %}
+                  data-set-name="{{image_set_group}}"
+                  data-group="{{image_set_full}}"
+                {% endif %}
+              >
+                <a
+                  href="{{ media.preview_image |  image_url: product_zoom_size }}"
+                  data-product-thumb
+                  class="product__thumb"
+                  data-index="{{ forloop.index0 }}"
+                  data-id="{{ media.id }}"
+                >
+                  <div
+                    class="image-wrap image-wrap__thumbnail"
+                    style="height: 0; padding-bottom: {{ 100 | divided_by: media.preview_image.aspect_ratio }}%;"
+                  >
+                    {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+                      <span class="product__thumb-icon">
+                        {% render 'thermos-icon-play' %}
+                      </span>
+                    {%- endif -%}
+                    {%- if media.media_type == 'model' -%}
+                      <span class="product__thumb-icon">
+                        {% render 'thermos-icon-3d' %}
+                      </span>
+                    {%- endif -%}
+
+                    {%- capture image_classes -%}
+                      appear-delay-{{ forloop.index | times: 3 }}
+                    {%- endcapture -%}
+
+                    {%-
+                      render 'image-element',
+                      img: media.preview_image,
+                      alt: media.alt | escape | split: '#' | first,
+                      widths: '120, 360, 540, 720',
+                      sizeVariable: '80px',
+                      loading: loading,
+                    -%}
+                  </div>
+                </a>
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+
+        {%- if thumbnail_arrows -%}
+          <button type="button" class="product__thumb-arrow product__thumb-arrow--next">
+            {% render 'thermos-icon-chevron-right' %}
+          </button>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  {% if thumbnail_height == 'fixed' %}
+    {% style %}
+      .product__photos-{{ section_id }} .product__thumbs:not(.product__thumbs--below) {
+        min-height: 400px;
+        max-height: 400px;
+      }
+
+      @media screen and (max-width: 798px) {
+        .product__photos-{{ section_id }} .product__thumbs:not(.product__thumbs--below) {
+          min-height: 300px;
+          max-height: 300px;
+        }
+      }
+    {% endstyle %}
+  {% endif %}
+
+  <script type="application/json" id="ModelJson-{{ section_id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+{%- else -%}
+  <div class="product__photos product__photos-{{ section_id }}">
+    <div class="product__main-photos" style="width: 100%">
+      <div data-product-photos>
+        <div class="product-main-slide" data-index="{{ forloop.index0 }}">
+          <a href="#">
+            {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endunless -%}

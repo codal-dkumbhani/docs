@@ -1,0 +1,397 @@
+{%- liquid
+  unless limit
+    assign limit = main_menu.links.size
+  endunless
+  unless offset
+    assign offset = 0
+  endunless
+-%}
+
+<ul
+  class="site-nav site-navigation small--hide"
+>
+  {%- for link in main_menu.links limit: limit offset: offset -%}
+    {%- liquid
+      assign has_dropdown = false
+      assign is_megamenu = false
+      if link.links != blank
+        assign has_dropdown = true
+        if link.levels > 1
+          assign is_megamenu = true
+        endif
+      endif
+    -%}
+
+    <li class="site-nav__item site-nav__expanded-item{% if has_dropdown %} site-nav--has-dropdown{% endif %}{% if is_megamenu %} site-nav--is-megamenu{% endif %}">
+      {% if is_megamenu or has_dropdown %}
+        <details
+          data-hover="{{ hover_menu }}"
+          id="site-nav-item--{{ forloop.index }}"
+          class="site-nav__details"
+        >
+          <summary
+            data-link="{{ link.url }}"
+            aria-expanded="false"
+            aria-controls="site-nav-item--{{ forloop.index }}"
+            class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}"
+          >
+            {{ link.title }}
+            {%- if has_sub_dropdown -%}
+              {% render 'thermos-icon-chevron-down' %}
+            {%- endif -%}
+          </summary>
+      {% else %}
+        <a
+          href="{{ link.url }}"
+          class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}"
+        >
+          {{ link.title }}
+        </a>
+      {% endif %}
+      {%- if is_megamenu -%}
+        {%- assign previous_column_type = '' -%}
+        {%- assign animation_column = 1 -%}
+        {% if link.title == 'Collections' %}
+          <div class="site-nav__dropdown megamenu pt-4 text-left collection-image-div">
+        {% else %}
+          <div class="site-nav__dropdown megamenu pt-4 text-left">
+        {% endif %}
+
+        <div class="page-width">
+          <div class="row">
+            <div class="grid{% if dropdown_alignment == 'center' %} grid--center{% endif %}">
+              <div class=" {{ childlink.url }} grid__item col-3 pl-0 pr-4 medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}">
+                {%- assign animation_column = animation_column | plus: 1 -%}
+
+                {%- for childlink in link.links -%}
+                  {%- liquid
+                    assign create_new_column = false
+
+                    if childlink.levels > 0 and forloop.index != 1
+                      assign create_new_column = true
+                    endif
+
+                    if childlink.levels == 0 and previous_column_type == 'full'
+                      assign create_new_column = true
+                    endif
+                  -%}
+
+                  {%- if create_new_column -%}
+                    </div>
+                    <div
+                      {% if childlink.url contains 'drinkware' %}
+                        style="visibility:hidden;"
+                      {% endif %}
+
+                      class="grid__item col-3 pl-0 pr-4 medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}"
+                    >
+                      {%- assign animation_column = animation_column | plus: 1 -%}
+                  {%- endif -%}
+
+                  {% if link.title != 'Collections' %}
+                    <div class="h5 mb-0">
+                      <a
+                        href="{{ childlink.url }}"
+                        class="site-nav__dropdown-link site-nav__dropdown-link--top-level"
+                      >
+                        {{- childlink.title -}}
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  {%- liquid
+                    if childlink.levels > 0
+                      assign previous_column_type = 'full'
+                    else
+                      assign previous_column_type = 'single'
+                    endif
+                  -%}
+                  {%- for grandchildlink in childlink.links -%}
+                    {% if link.title != 'Collections' %}
+                      <div>
+                        <a
+                          href="{{ grandchildlink.url }}"
+                          class="site-nav__dropdown-link grandchild-links"
+                        >
+                          {{ grandchildlink.title }}
+                        </a>
+                      </div>
+                    {% endif %}
+
+                    {% if grandchildlink.url == '#' or grandchildlink.title == '#' %}
+                      <div>
+                        <a
+                          style="visibility:hidden"
+                          href="#"
+                          class="site-nav__dropdown-link grandchild-links"
+                        >
+                          #
+                        </a>
+                      </div>
+                    {% endif %}
+                  {%- endfor -%}
+
+                  {% if childlink.levels == 0 %}
+                    <div>
+                      <br>
+                    </div>
+                  {% endif %}
+
+                  {% assign currentIndex = forloop.index %}
+                  {%- if childlink.levels >= 0 -%}
+                    {% for block in section.blocks %}
+                      {% if block.type == 'megamenu' %}
+                        {% if block.settings.text == link.title %}
+                          {% if currentIndex == 1 %}
+                            {% if block.settings.image1url %}
+                              <a href="{{ block.settings.image1url }}">
+                            {% endif %}
+                            <div class="svg-mask svg-mask--landscape">
+                              {%- render 'image-element',
+                                img: block.settings.image1,
+                                sizeVariable: '20vw',
+                                alt: collections[childlink.object.handle].title,
+                                classes: 'megamenu__collection-image'
+                              -%}
+                            </div>
+                            {% if block.settings.image1url %}
+                              </a>
+                            {% endif %}
+                          {% endif %}
+                          {% if currentIndex == 2 %}
+                            {% if block.settings.image2url %}
+                              <a href="{{ block.settings.image2url }}">
+                            {% endif %}
+                            <div class="svg-mask svg-mask--landscape">
+                              {%- render 'image-element',
+                                img: block.settings.image2,
+                                sizeVariable: '20vw',
+                                alt: collections[childlink.object.handle].title,
+                                classes: 'megamenu__collection-image'
+                              -%}
+                            </div>
+                            {% if block.settings.image2url %}
+                              </a>
+                            {% endif %}
+                          {% endif %}
+                          {% if currentIndex == 3 %}
+                            {% if block.settings.image3url %}
+                              <a href="{{ block.settings.image3url }}">
+                            {% endif %}
+                            <div class="svg-mask svg-mask--landscape">
+                              {%- render 'image-element',
+                                img: block.settings.image3,
+                                sizeVariable: '20vw',
+                                alt: collections[childlink.object.handle].title,
+                                classes: 'megamenu__collection-image'
+                              -%}
+                            </div>
+                            {% if block.settings.image3url %}
+                              </a>
+                            {% endif %}
+                          {% endif %}
+                          {% if currentIndex == 4 %}
+                            {% if block.settings.image4TextURL %}
+                              <a href="{{ block.settings.image4TextURL }}">
+                            {% endif %}
+                            <div class="svg-mask svg-mask--landscape promo-banner">
+                              {%- render 'image-element',
+                                img: block.settings.image4,
+                                sizeVariable: '20vw',
+                                alt: collections[childlink.object.handle].title,
+                                classes: 'megamenu__collection-image'
+                              -%}
+                            </div>
+                            {% if block.settings.image4TextURL %}
+                              </a>
+                            {% endif %}
+                          {% endif %}
+                        {% endif %}
+                      {% endif %}
+                      {% if block.type == 'megamenu_collection' %}
+                        {% if block.settings.text == link.title %}
+                          {% if currentIndex == 1 %}
+                            {% if block.settings['nav-collection-img1'] %}
+                              <div class="promo-banner">
+                                <div class="collection-menu-div">
+                                  <!-- Photo 1 -->
+                                  <a
+                                    role="menu"
+                                    href="{{ block.settings.nav-collection-url1 }}"
+                                    style="background-image: url({{ block.settings.nav-collection-img1 | image_url: width: 400 }})"
+                                    id="megamenu__colection-image-promo"
+                                    class="megamenu__colection-image"
+                                    aria-label="{{ link.title }}"
+                                  >
+                                    <div class="nav-special-content">
+                                      <h1 class="text-white">
+                                        {{ block.settings['nav-collection-text1'] }}
+                                      </h1>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endif %}
+                          {% if currentIndex == 2 %}
+                            {% if block.settings['nav-collection-img2'] %}
+                              <div class="promo-banner">
+                                <div class="collection-menu-div">
+                                  <!-- Photo 2 -->
+                                  <a
+                                    role="menu"
+                                    href="{{ block.settings.nav-collection-url2 }}"
+                                    style="background-image: url({{ block.settings.nav-collection-img2 | image_url: width: 400 }})"
+                                    id="megamenu__colection-image-promo"
+                                    class="megamenu__colection-image"
+                                    aria-label="{{ link.title }}"
+                                  >
+                                    <div class="nav-special-content">
+                                      <h1 class="text-white">
+                                        {{ block.settings['nav-collection-text2'] }}
+                                      </h1>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endif %}
+                          {% if currentIndex == 3 %}
+                            {% if block.settings['nav-collection-img3'] %}
+                              <div class="promo-banner">
+                                <div class="collection-menu-div">
+                                  <!-- Photo 3 -->
+                                  <a
+                                    role="menu"
+                                    href="{{ block.settings.nav-collection-url3 }}"
+                                    style="background-image: url({{ block.settings.nav-collection-img3 | image_url: width: 400 }})"
+                                    id="megamenu__colection-image-promo"
+                                    class="megamenu__colection-image"
+                                    aria-label="{{ link.title }}"
+                                  >
+                                    <div class="nav-special-content">
+                                      <h1 class="text-white">
+                                        {{ block.settings['nav-collection-text3'] }}
+                                      </h1>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endif %}
+                          {% if currentIndex == 4 %}
+                            {% if block.settings['nav-collection-img4'] %}
+                              <div class="promo-banner">
+                                <div class="collection-menu-div">
+                                  <!-- Photo 4 -->
+                                  <a
+                                    role="menu"
+                                    href="{{ block.settings.nav-collection-url4 }}"
+                                    style="background-image: url({{ block.settings.nav-collection-img4 | image_url: width: 400 }})"
+                                    id="megamenu__colection-image-promo"
+                                    class="megamenu__colection-image"
+                                    aria-label="{{ link.title }}"
+                                  >
+                                    <div class="nav-special-content">
+                                      <h1 class="text-white">
+                                        {{ block.settings['nav-collection-text4'] }}
+                                      </h1>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endif %}
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+              {% for block in section.blocks %}
+                {% if block.settings.text == link.title %}
+                  {% if block.settings.image4 %}
+                    <div class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }} col-3 pl-0 promo-banner">
+                      <!-- Photo 4 -->
+                      <a
+                        role="menu"
+                        href="{{ block.settings.image4TextURL }}"
+                        style="background-image: url({{ block.settings.image4 | image_url: width: 400 }})"
+                        id="megamenu__colection-image-promo"
+                        class="megamenu__colection-image"
+                        aria-label="{{ link.title }}"
+                      >
+                        <div class="nav-special-content">
+                          <h1 class="text-white">
+                            {{ block.settings.image4Text }}
+                          </h1>
+                          <h3 class="text-white">
+                            {{ block.settings.image4SubText }}
+                          </h3>
+                        </div>
+                      </a>
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row mt-3" style="height: 24px;">
+            {% for i in (1..3) %}
+              <div class="col-4 p-0">
+                <img
+                  src="{{ 'Hatch_Gray_r_2.png' | asset_url }}"
+                  width="auto"
+                  height="25"
+                  class="img-fluid w-100   img-reduced-opacity"
+                  loading="lazy"
+                  alt=""
+                >
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        </div>
+      {%- elsif has_dropdown -%}
+        <ul class="site-nav__dropdown text-left">
+          {%- for childlink in link.links -%}
+            {%- liquid
+              assign has_sub_dropdown = false
+              if childlink.links != blank
+                assign has_sub_dropdown = true
+              endif
+            -%}
+
+            <li class="{% if has_sub_dropdown %} site-nav__deep-dropdown-trigger{% endif %}">
+              <a
+                href="{{ childlink.url }}"
+                class="site-nav__dropdown-link site-nav__dropdown-link--second-level{% if has_sub_dropdown %} site-nav__dropdown-link--has-children{% endif %}"
+              >
+                {{ childlink.title | escape }}
+                {%- if has_sub_dropdown -%}
+                  {% render 'thermos-icon-chevron-down' %}
+                {%- endif -%}
+              </a>
+              {%- if has_sub_dropdown -%}
+                <ul class="site-nav__deep-dropdown">
+                  {%- for grandchildlink in childlink.links -%}
+                    <li>
+                      <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
+                        {{- grandchildlink.title | escape -}}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+      {% if is_megamenu or has_dropdown %}
+        </details>
+      {% endif %}
+    </li>
+  {%- endfor -%}
+</ul>

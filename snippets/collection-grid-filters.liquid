@@ -1,0 +1,24 @@
+{% comment %}
+  - collection: Liquid 'collection' or 'search' object
+  - enable_sidebar: boolean
+  - filter_style: 'sidebar' or 'drawer'
+  - enable_color_swatches: boolean
+  - collapsed: boolean
+{% endcomment %}
+
+{%- assign animation_row = 1 -%}
+
+{%- if enable_sidebar -%}
+  <div id="CollectionSidebar" data-style="{{ filter_style }}">
+    {%- if filter_style == 'sidebar' -%}
+      <div class="collection-sidebar small--hide">
+        {%- render 'collection-grid-filters-form',
+          location: 'CollectionSidebar',
+          filters: collection.filters,
+          collapsed: collapsed,
+          enable_color_swatches: enable_color_swatches
+        -%}
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}

@@ -1,0 +1,193 @@
+{
+  "wrapper": "div.icon-serires.landing-page",
+  "sections": {
+    "main": {
+      "type": "icon-banner",
+      "settings": {
+        "image": "shopify://shop_images/Banner_IS3012MS_IS1112MS_EMC_AK_4313_Desktop_1920x420_fa8a8261-8926-4df2-9ffd-b5028aff897e.jpg",
+        "mimage": "shopify://shop_images/Banner_IS3012MS_IS1112MS_EMC_AK_4313_Mobile_375x420_b0f6ad7a-df96-4f26-8351-2b1a4434386d.jpg",
+        "title1": "",
+        "title2": "",
+        "title3": "",
+        "titlecolor1": "#ffffff",
+        "titlecolor2": "#ffffff",
+        "titlecolor3": "#faca54"
+      }
+    },
+    "featured_content_xzGhpE": {
+      "type": "featured-content",
+      "settings": {
+        "title": "Affiliate Program",
+        "text": "<p>Apply to Partner with Thermos Brand, a leader in insulated food and beverage storage since 1904, and make money! </p><p>Earn commissions for purchases made by customers you refer.</p><p>Already a partner?</p>",
+        "link": "https://app.impact.com/bla/Thermos-LLC/login.user?",
+        "link_text": "Sign-in",
+        "align_text": "center",
+        "narrow_column": false,
+        "enlarge_text": true,
+        "divider": false
+      }
+    },
+    "text_columns_BVepgc": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_T6xYG4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Thermos_Affliate_Program_Left_1000x1000_f46db6f8-83f0-40fb-9b07-ca5bdd375677.jpg",
+            "image_width": 650,
+            "title": "Thermos Affiliate Program",
+            "text": "<p>Publications, Bloggers, Media</p><p>Powered by Impact.com*</p>",
+            "button_label": "Sign-up",
+            "button_link": "https://app.impact.com/signup/none/create-new-mediapartner-account-flow.ihtml?execution=e7s1#/?viewkey=signUpPreStart"
+          }
+        },
+        "text_block_x6UAQD": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Creator_Network_Right_1000x1000_35549d0e-3707-4af7-b9bd-b0d7959cda41.jpg",
+            "image_width": 650,
+            "title": "Thermos Creator Network",
+            "text": "<p>Social Media Content Creators</p><p>Powered by Impact.com*</p>",
+            "button_label": "Sign-Up",
+            "button_link": "https://app.impact.com/signup/none/create-new-mediapartner-account-flow.ihtml?execution=e11s1#/?viewkey=signUpPreStart"
+          }
+        }
+      },
+      "block_order": ["text_block_T6xYG4", "text_block_x6UAQD"],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "threeimage": {
+      "type": "icon-threeImage",
+      "blocks": {
+        "c9260e72-a763-47b2-8927-3615b70c9b1e": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Step1_IS1002SD_Saddle_375x460_e88fec99-3a69-40e7-907a-66b276f8d77c.jpg",
+            "title": "Step 1",
+            "subtitle": "Create an account with our affiliate network partner, Impact.com, and apply to collaborate with Thermos Brand",
+            "url": "",
+            "colorfortitle": "#000000",
+            "colorforsubtitle": "#000000"
+          }
+        },
+        "3c5dc2f8-4edd-4df1-9fcb-d23591b52bdd": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Step2_IS3012SP_SunsetPink_375x460_533066c8-272d-4738-a2f0-c5c5ac5d8142.jpg",
+            "title": "Step 2",
+            "subtitle": "If selected for a collab, get acquainted with our brand’s style and guidelines and unleash your creativity by sharing our links in your unique, imaginative ways.",
+            "url": "",
+            "colorfortitle": "#000000",
+            "colorforsubtitle": "#000000"
+          }
+        },
+        "7c5ece64-c890-4265-8837-55391518e231": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Step3_Kids_375x460_12e96afb-e4a5-4433-a570-13cad2a2899a.jpg",
+            "title": "Step 3",
+            "subtitle": "Turn your influence into income by earning commission on purchases made through your personalized affiliate link.",
+            "url": "",
+            "colorfortitle": "#000000",
+            "colorforsubtitle": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "c9260e72-a763-47b2-8927-3615b70c9b1e",
+        "3c5dc2f8-4edd-4df1-9fcb-d23591b52bdd",
+        "7c5ece64-c890-4265-8837-55391518e231"
+      ],
+      "settings": {}
+    },
+    "featured_content_MbamBt": {
+      "type": "featured-content",
+      "blocks": {
+        "text_inhVYB": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "home_page_richtext": "<p><em>*Impact.com is run by Impact Tech, Inc. Subject to Impact’s Terms & Privacy Policy, see Sign Up link for details.  </em></p><p><em>Also, Thermos.com </em><a href=\"https://thermos.com/pages/website-terms-of-use\"><em>Terms</em></a><em>, </em><a href=\"https://thermos.com/pages/privacy-policy\"><em>Privacy Policy</em></a><em>, plus Custom Terms for Partners will apply.</em></p>"
+          }
+        }
+      },
+      "block_order": ["text_inhVYB"],
+      "settings": {
+        "title": "",
+        "text": "<p>See how other Creators are contributing to the Thermos Brand Legacy</p>",
+        "link": "https://www.instagram.com/thermosbrand/",
+        "link_text": "#THERMOSBRANDCREATOR",
+        "align_text": "center",
+        "narrow_column": false,
+        "enlarge_text": true,
+        "divider": false
+      }
+    },
+    "faq_8CGArw": {
+      "type": "faq",
+      "blocks": {
+        "question_zmRLqJ": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "question_PdTXTw": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "question_zEnwq9": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "question_RtCdHm": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "question_i6cV37": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_zmRLqJ",
+        "question_PdTXTw",
+        "question_zEnwq9",
+        "question_RtCdHm",
+        "question_i6cV37"
+      ],
+      "disabled": true,
+      "custom_css": ["h2 {text-align: left !important;}"],
+      "settings": {
+        "title": "FAQs"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_content_xzGhpE",
+    "text_columns_BVepgc",
+    "threeimage",
+    "featured_content_MbamBt",
+    "faq_8CGArw"
+  ]
+}
